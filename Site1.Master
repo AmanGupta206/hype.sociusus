@@ -1,0 +1,202 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="hype.sociusus.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+     <%--bootstrap css--%>
+    <link href="Bootstrap/cs/bootstrap.min.css" rel="stylesheet" />
+     <%--datatable css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+     <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+
+
+     <%--Custom css--%>
+    <link href="css/CustomStyleSheet.css" rel="stylesheet" />
+
+
+    <%--jquery--%>
+    <script src="Bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+    <%--popper js--%>
+    <script src="Bootstrap/js/popper.min.js"></script>
+    <%--bootstrap js--%>
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
+
+
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+
+<body>
+
+
+   <!--HEADER AND NAVIGATION PART START-->
+    <form id="form1" runat="server">
+          <nav class="navbar navbar-inverse">
+              <div class="container-fluid"> 
+                <div class ="navbar header">
+                   <a href="https://localhost:44367/homepage.aspx">
+                       <img width="150px" src="images/hype.%202023-04-17%20195423.png"/ style="   border: none;max-width: 100px;height: auto;" href="https://localhost:44367/homepage.aspx">
+                   </a>
+               </div>
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                       <!--<a href="userregister.aspx"  class="btn btn-primary active" aria-current="page" style="text-align:end;">Join Now</a> -->
+                       <div class="form-group">
+                           <a href="userlogin.aspx"><input class="btn btn-info btn-block btn-lg" id="Button1" type="button" value="JOIN NOW" /></a>
+                       </div>          
+                   </li>
+              
+            <li> 
+               <div style="position: relative;display: inline-block;">
+                   <label for="Language"></label>
+                   <select name="Languge" id="Languge">
+                       <option value="English">English</option>
+                       <option value=" Arabic "> Arabic </option>
+                       <option value="Bangali">Bangali</option>
+                       <option value="Bulgarian">Bulgarian</option>
+                       <option value="Chinese">Chinese</option>
+                       <option value="English">English</option>
+                       <option value="French">French</option>
+                       <option value="German">German</option>
+                       <option value="Hebrew">Hebrew</option>
+                       <option value="Hindi">Hindi</option>
+                       <option value="Italian">Italian</option>
+                       <option value="Hindi">Hindi</option>
+                       <option value="Japanese">Japanese</option>
+                       <option value="Polish">Polish</option>
+                       <option value="Romanian">Romanian</option>
+                       <option value="Russian">Russian</option>
+                       <option value="Spanish">Spanish</option>
+                       <option value="Swedish">Swedish</option>
+                       <option value="Thai">Thai</option>
+                       <option value="Turkish">Turkish</option>
+                       <option value="Urdu">Urdu</option>
+                       <option value="Vietnamese">Vietnamese</option>
+                    </select>
+                 </div>
+               </li>
+             </ul>
+           </div>
+         </nav>
+       
+                   
+
+              
+
+
+      <!--HEADER AND NAVIGATION PART ENDS-->
+
+                
+      
+
+
+        <%--maincontent placeholder--%>
+        <div>
+           <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+           </asp:ContentPlaceHolder>
+        </div>
+        <%--maincontent placeholder--%>
+
+
+  
+             <!-- Footer -->
+     <hr style="border-top: dotted 1px;" /> 
+      <div id="footer">
+        <div class="footer-middle-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-5 col-md-12">
+                        <div class="footer-logo">
+                            <img src="images/hype.%202023-04-17%20195423.png" alt="Footer Logo">
+                        </div>
+                        <p>Create SEO-optimized and unique content for your blogs, ads, emails, and website 10X faster &amp; save hours of work with hype</p>
+                    </div>
+               <div class="col-xl-1 col-lg-1">
+                 </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4">
+                        <div class="footer-links">
+                            <h3>My Account</h3>
+                                <ul>
+                                    <li><a href="#">Login</a></li><li><a href="#">Register</a></li>                        
+                               </ul>
+                          </div>
+                      </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4">
+                        <div class="footer-links">
+                            <h3>Helpful Links</h3>
+                                <ul>
+                                    <li><a href="#">Blog</a></li>                            
+                                    <li><a href="http://hype.sociusus.com/feedback">Feedback</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                  <div class="col-xl-2 col-lg-2 col-md-4">
+                        <div class="footer-links">
+                            <h3>Information</h3>
+                                 <ul>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">Testimonials</a></li>                        
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     <hr style="border-top: dotted 1px;" /> 
+        <div class="footer-bottom-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                    
+                            <div class="footer-row">
+                                <center><span class="footer-copyright-text">2023 Socius IGB Pvt Ltd, All right reserved</span></center>
+                            </div>
+                                      
+                </div>
+            </div>
+        </div>
+
+            <hr style="border-top: dotted 1px;" /> 
+
+                    
+                            <div class="footer-row">
+                                 <div class="row">
+                                    <div class="col-md-2">                               
+                                         <a href="#"target="_blank" rel="nofollow"><img width="65px" src="images/Footer%20all%20images/623dd7d270712bdafc63c38a.png" /></a>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                         <a href="#" target="_blank" rel="nofollow"><img width="50px" src="images/Footer%20all%20images/images.png" /> </a>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <a href="#" target="_blank" rel="nofollow"> <img width="50px" src="images/Footer%20all%20images/Instagram-black-and-white-logo-vector-png-(5).png" /></a>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                         <a href="#" target="_blank" rel="nofollow"><img width="50px" src="images/Footer%20all%20images/linkedin-icon-on-white-vecto.jpg" /></a>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                         <a href="#" target="_blank" rel="nofollow"><img width="50px" src="images/Footer%20all%20images/9fe6e9cc5739b9fb1e192b13532e4788.jpg" /></a>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                         <a href="#" target="_blank" rel="nofollow"><img width="50px" src="images/Footer%20all%20images/60-600201_image-black-and-white-png-icon-free-download.png" /></a>
+                                    </div>      <!--<i class="fa-brands fa-facebook-f"></i>  ==> it is using css for fb logo-->                                    
+                            </div>
+                        </div>
+                   </div>
+    </form>
+</body>
+
+
+</html>
