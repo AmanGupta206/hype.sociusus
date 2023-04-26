@@ -26,14 +26,15 @@
                        
                       
                         <div class="form-group">
-                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="USER NAME/EMAIL ADDRESS" ></asp:TextBox>
+                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="USER NAME/EMAIL ADDRESS" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
                         </div>
                          <div class="form-group">
                             <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="PASSWORD" ></asp:TextBox>
                         </div>
                             <a href="forgetpassword.aspx">Forget Password? </a><br><br>
                         <div class="form-group">
-                           <a href="#"><input class="btn btn-info btn-block btn-lg" id="Button2" type="button" value="LOGIN" /></a>
+                            <asp:Button  class="btn btn-info btn-block btn-lg" ID="Button1" runat="server" Text="LOGIN" OnClick="Button1_Click"  />
+                          <%-- <a href="#"><input class="btn btn-info btn-block btn-lg" id="Button2" type="button" value="LOGIN" /></a>--%>
                         </div>
                      </div>
                   </div> 

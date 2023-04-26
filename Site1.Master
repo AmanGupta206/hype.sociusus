@@ -49,7 +49,10 @@
                     <li>
                        <!--<a href="userregister.aspx"  class="btn btn-primary active" aria-current="page" style="text-align:end;">Join Now</a> -->
                        <div class="form-group">
-                           <a href="userlogin.aspx"><input class="btn btn-info btn-block btn-lg" id="Button1" type="button" value="JOIN NOW" /></a>
+                         <a href="userlogin.aspx"><input class="btn btn-info btn-block btn-lg" id="Button1" type="button" value="JOIN NOW" /></a>
+
+                           <%--<asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" OnClick="Buttom1_Click">JOIN NOW</asp:LinkButton>--%>
+
                        </div>          
                    </li>
               
@@ -86,7 +89,7 @@
            </div>
          </nav>
        
-                   
+      <hr style="border-top: dotted 1px;" />                
 
               
 

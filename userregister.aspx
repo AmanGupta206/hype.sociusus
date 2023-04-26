@@ -24,7 +24,7 @@
                   <div class="row">
                      <div class="col">                       
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="FULL NAME"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="FULL NAME" ></asp:TextBox>
                         </div>
                       
                         <div class="form-group">
@@ -40,8 +40,8 @@
                         </div>
 
                         <div class="form-group">
-                            <asp:Button Class="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="REGISTER" OnClick="Button1_Click"/>
-                          
+                        
+                            <asp:Button Class="btn btn-success btn-block btn-lg" ID="Button2" runat="server" Text="REGISTER" OnClick="Buttonsignup_Click" />
                         </div>
                      </div>
                   </div> 

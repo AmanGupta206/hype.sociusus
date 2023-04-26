@@ -16,8 +16,7 @@
                 </div>
 
                 
-
-    <!-- Colored text -->
+ <!-- Colored text -->
 
 <style>
 .animated_rainbow_2 {
@@ -57,10 +56,17 @@
                             emails,and website 10X faster & save hours of work. <p>  </h4>
                </div>     
                <div class="form-group">
-                       <a href="userregister.aspx"><input  class="btn btn-info btn" id="Button2" type="button" value="Get Started For Free" /></a>
+                       <a href="userregister.aspx"><input  class="btn btn-info btn200" id="Button2" type="button"  value="Get Started For Free" /></a>
                </div>
          </center>
-    
+
+        <style>  
+            .btn btn-info btn200
+            {
+               border : 5px solid;
+            }
+       </style>  
+
         <center>
                <p>
                  <h7>   No credit card required.  <h7>
@@ -136,12 +142,17 @@
            
             .col-md-4             
             {
-               border : 10px solid;
+               border : 2px solid;
             }
             .btn btn-default
             {
-               border : 10px solid;
+               border : 2px solid;
             }
+            .btn btn-info btn200
+            {
+               border : 2px solid;
+            }
+          
 
                
         </style>           

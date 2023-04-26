@@ -28,7 +28,8 @@
                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="EMAIL ADDRESS" ></asp:TextBox>
                         </div>                       
                         <div class="form-group">
-                           <a href="#"><input class="btn btn-info btn-block btn-lg" id="Button2" type="button" value="REQUEST PASSWORD" /></a>
+                            <asp:Button class="btn btn-info btn-block btn-lg" ID="Button1" runat="server" Text="REQUEST PASSWORD" OnClick="Button1_Click" />
+                        <%--   <a href="#"><input class="btn btn-info btn-block btn-lg" id="Button2" type="button" value="REQUEST PASSWORD" /></a>--%>
                         </div>
                      </div>
                   </div> 
