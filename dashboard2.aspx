@@ -1,61 +1,22 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="hype.sociusus.Site1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dashboard2.aspx.cs" Inherits="hype.sociusus.dashboard2" %>
 
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-
-     <%--bootstrap css--%>
-    <link href="Bootstrap/cs/bootstrap.min.css" rel="stylesheet" />
-     <%--datatable css--%>
-    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
-     <%--fontawesome css--%>
-    <link href="fontawesome/css/all.css" rel="stylesheet" />
-
-
-     <%--Custom css--%>
-    <link href="css/CustomStyleSheet.css" rel="stylesheet" />
-
-
-    <%--jquery--%>
-    <script src="Bootstrap/js/jquery-3.3.1.slim.min.js"></script>
-    <%--popper js--%>
-    <script src="Bootstrap/js/popper.min.js"></script>
-    <%--bootstrap js--%>
-    <script src="Bootstrap/js/bootstrap.min.js"></script>
-
-
-
-
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
 </head>
-
-
 <body>
-
-
-   <!--HEADER AND NAVIGATION PART START-->
     <form id="form1" runat="server">
-          <nav class="navbar navbar-inverse">
-              <div class="container-fluid"> 
+        <nav class="navbar navbar-inverse">
+        <div class="container-fluid"> 
                 <div class ="navbar header">
                    <a href="https://localhost:44367/homepage.aspx">
                        <img width="150px" src="images/hype.%202023-04-17%20195423.png"/ style="   border: none;max-width: 100px;height: auto;" href="https://localhost:44367/homepage.aspx">
                    </a>
                </div>
             <class="nav navbar-nav navbar-right">
-                    
-                       <!--<a href="userregister.aspx"  class="btn btn-primary active" aria-current="page" style="text-align:end;">Join Now</a> -->
-                       <div class="form-group" style="display:flex">
-                         <a href="userlogin.aspx"><input class="btn btn-info btn-block btn-lg" id="Button1" type="button" value="JOIN NOW" /></a>
-
-                           <%--<asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" OnClick="Buttom1_Click">JOIN NOW</asp:LinkButton>--%>
-
-                       </div>          
-                  
-            
+                              
             
                <div style="position: relative;display: inline-block;">
                    <label for="Language"></label>
@@ -89,27 +50,77 @@
            </div>
          </nav>
        
-      <hr style="border-top: dotted 1px;" />                
+      <hr style="border-top: dotted 1px;" />            
+        
+<%--Dashboard part starts--%>
+            
 
+        <div class="sidebar">
+            <div class ="sidebar-brand">
+                <h1>My Account</h1>
+            </div>
               
+               <div class ="sidebar- menu">
+                   <ul>
+                       <li>
+                           <a href="#"><span><i class="fa-solid fa-grid-horizontal fa-fade"></i>DashBoard</span></a>
+                       </li>
+                        <li>
+                           <a href="#"><span>My Documents</span></a>
+                       </li>
+                       
+                        <li>
+                           <h1>Organise and Manage</h1>
+                       </li>
+                       
+                        <li>
+                           <a href="#"><span class="fa-solid fa-grid-horizontal fa-fade"></span><span>Templates</span></a>
+                       </li>
+                       
+                        <li>
+                           <a href="#"><span class="fa-solid fa-grid-horizontal fa-fade"></span><span>AI Images</span></a>
+                       </li>
 
+                       <li>
+                           <a href="#"><span class="fa-solid fa-grid-horizontal fa-fade"></span><span>AI Chat</span></a>
+                       </li>
 
-      <!--HEADER AND NAVIGATION PART ENDS-->
+                       <li>
+                           <a href="#"><span>Speach To Text</span></a>
+                       </li>
 
-                
-      
-
-
-        <%--maincontent placeholder--%>
-        <div>
-           <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-           </asp:ContentPlaceHolder>
+                       <li>
+                           <a href="#"><span class="fa-solid fa-grid-horizontal fa-fade"></span><span>AI Code</span></a>
+                       </li>
+                       
+           
+                     
+                   </ul>
+               </div>
         </div>
-        <%--maincontent placeholder--%>
 
 
-  
-             <!-- Footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <%--Dashboard part ends--%>
+
+         <!-- Footer -->
   
 
       <div id="footer" style="background-color:#303030">
@@ -181,14 +192,13 @@
                              
 
                                          <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a></span></div>                        
-                            </div>
-                        
-                   </div>
-                   </div>
-                   </div>
-             </div>
+                       </div>                        
+                 </div>
+              </div>
+          </div>
+       </div>
+         <!-- Footer -->
+
     </form>
 </body>
-
-
 </html>

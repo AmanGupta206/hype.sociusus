@@ -140,10 +140,10 @@
             
          <style>
            
-            .col-md-4             
+          /*  .col-md-4             
             {
                border : 2px solid;
-            }
+            }*/
             .btn btn-default
             {
                border : 2px solid;

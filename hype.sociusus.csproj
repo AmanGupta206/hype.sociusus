@@ -98,6 +98,7 @@
   <ItemGroup>
     <Content Include="App_Data\hype.sociusus.mdf" />
     <Content Include="DashBoard.aspx" />
+    <Content Include="dashboard2.aspx" />
     <Content Include="forgetpassword.aspx" />
     <Content Include="Bootstrap\cs\bootstrap.min.css" />
     <Content Include="Bootstrap\js\bootstrap.min.js" />
@@ -2188,6 +2189,7 @@
     <Content Include="images\Footer all images\images.png" />
     <Content Include="images\Footer all images\Instagram-black-and-white-logo-vector-png-%285%29.png" />
     <Content Include="images\Footer all images\linkedin-icon-on-white-vecto.jpg" />
+    <Content Include="images\Footer all images\Screenshot 2023-04-27 130014.png" />
     <Content Include="images\front.png" />
     <Content Include="images\General Writibg\Screenshot 2023-04-19 152534.png" />
     <Content Include="images\General Writibg\Screenshot 2023-04-19 152626.png" />
@@ -2239,6 +2241,13 @@
     </Compile>
     <Compile Include="DashBoard.aspx.designer.cs">
       <DependentUpon>DashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard2.aspx.cs">
+      <DependentUpon>dashboard2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashboard2.aspx.designer.cs">
+      <DependentUpon>dashboard2.aspx</DependentUpon>
     </Compile>
     <Compile Include="forgetpassword.aspx.cs">
       <DependentUpon>forgetpassword.aspx</DependentUpon>
