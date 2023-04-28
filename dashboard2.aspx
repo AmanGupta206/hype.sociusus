@@ -8,112 +8,130 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <nav class="navbar navbar-inverse">
-        <div class="container-fluid"> 
-                <div class ="navbar header">
-                   <a href="https://localhost:44367/homepage.aspx">
-                       <img width="150px" src="images/hype.%202023-04-17%20195423.png"/ style="   border: none;max-width: 100px;height: auto;" href="https://localhost:44367/homepage.aspx">
-                   </a>
-               </div>
-            <class="nav navbar-nav navbar-right">
-                              
-            
-               <div style="position: relative;display: inline-block;">
-                   <label for="Language"></label>
-                   <select name="Languge" id="Languge">
-                       <option value="English">English</option>
-                       <option value=" Arabic "> Arabic </option>
-                       <option value="Bangali">Bangali</option>
-                       <option value="Bulgarian">Bulgarian</option>
-                       <option value="Chinese">Chinese</option>
-                       <option value="English">English</option>
-                       <option value="French">French</option>
-                       <option value="German">German</option>
-                       <option value="Hebrew">Hebrew</option>
-                       <option value="Hindi">Hindi</option>
-                       <option value="Italian">Italian</option>
-                       <option value="Hindi">Hindi</option>
-                       <option value="Japanese">Japanese</option>
-                       <option value="Polish">Polish</option>
-                       <option value="Romanian">Romanian</option>
-                       <option value="Russian">Russian</option>
-                       <option value="Spanish">Spanish</option>
-                       <option value="Swedish">Swedish</option>
-                       <option value="Thai">Thai</option>
-                       <option value="Turkish">Turkish</option>
-                       <option value="Urdu">Urdu</option>
-                       <option value="Vietnamese">Vietnamese</option>
-                    </select>
-                 </div>
-               
-            
-           </div>
-         </nav>
        
-      <hr style="border-top: dotted 1px;" />            
-        
 <%--Dashboard part starts--%>
-            
 
-        <div class="sidebar">
-            <div class ="sidebar-brand">
-                <h1>My Account</h1>
-            </div>
-              
-               <div class ="sidebar- menu">
-                   <ul>
-                       <li>
-                           <a href="#"><span><i class="fa-solid fa-grid-horizontal fa-fade"></i>DashBoard</span></a>
-                       </li>
-                        <li>
-                           <a href="#"><span>My Documents</span></a>
-                       </li>
-                       
-                        <li>
-                           <h1>Organise and Manage</h1>
-                       </li>
-                       
-                        <li>
-                           <a href="#"><span class="fa-solid fa-grid-horizontal fa-fade"></span><span>Templates</span></a>
-                       </li>
-                       
-                        <li>
-                           <a href="#"><span class="fa-solid fa-grid-horizontal fa-fade"></span><span>AI Images</span></a>
-                       </li>
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
 
-                       <li>
-                           <a href="#"><span class="fa-solid fa-grid-horizontal fa-fade"></span><span>AI Chat</span></a>
-                       </li>
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
 
-                       <li>
-                           <a href="#"><span>Speach To Text</span></a>
-                       </li>
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
 
-                       <li>
-                           <a href="#"><span class="fa-solid fa-grid-horizontal fa-fade"></span><span>AI Code</span></a>
-                       </li>
-                       
-           
-                     
-                   </ul>
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+</style>
+
+
+<div class="sidebar">
+  <h3>My Account</h3>
+  <a class="active" href="#home">Dashboard</a>
+  <a href="#">My Documents</a>
+  <ul> 
+  <li><a href="#">All Documents</a></li>
+  <li><a href="#">All AI Documents</a></li>
+  </ul>
+  <h3>Organize And Manage</h3>  
+  <a href="#">Templates</a>
+  <a href="#">AI Images</a>
+  <a href="#">AI Chat</a>
+  <a href="#">Speech to Text</a>
+  <a href="#">AI Code</a>
+  <h3>Account</h3> 
+  <a href="#">Affiliate Program</a>
+  <ul> 
+  <li><a href="#">Affiliate Program</a></li>
+  <li><a href="#">Withdrawals</a></li>
+  </ul>
+  <a href="#">Membership</a>
+  <a href="#">Transaction</a>
+  <a href="#">Account Settings</a>
+  <a href="#">Logout</a>
+</div>
+
+<div class="content">
+  <h2>Dashboard</h2>
+   <div class="container">
+         <div class="row">
+               <div class="col-md-4"> 
+                  
+                        <h4>Words Used</h4>
+                        <p >
+                          0/10,000
+                        </p>
+                        <img src="images/Dashboard%20Icons%20images/Screenshot%202023-04-28%20185928.png" />
+                                   
+                </div>
+
+                <div class="col-md-4"> 
+                  
+                        <h4>Images Used</h4>
+                        <p >
+                          0/100
+                        </p>
+                       <img src="images/Dashboard%20Icons%20images/Screenshot%202023-04-28%20190005.png" />
+                                   
+                </div>
+                 <div class="col-md-4"> 
+                  
+                        <h4>Speech to text</h4>
+                        <p >
+                          0/0
+                        </p>
+                         <img src="images/Dashboard%20Icons%20images/Screenshot%202023-04-28%20190034.png" />
+                                   
+                </div>
                </div>
-        </div>
+            </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
+ 
 
 
 
@@ -123,48 +141,7 @@
          <!-- Footer -->
   
 
-      <div id="footer" style="background-color:#303030">
-        <div class="footer-middle-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-5 col-lg-5 col-md-12">
-                        <div class="footer-logo">
-                            <img src="images/Footer%20all%20images/Screenshot%202023-04-27%20130014.png" alt="Logo">                           
-                        </div>
-                        <p style="color: white;">Create SEO-optimized and unique content for your blogs, ads, emails, and website 10X faster &amp; save hours of work with hype</p>
-                    </div>
-               <div class="col-xl-1 col-lg-1">
-                 </div>
-                    <div class="col-xl-2 col-lg-2 col-md-4">
-                        <div style="color: white;" class="footer-links">
-                            <h3>My Account</h3>
-                                <ul>
-                                    <li><a style="color: white;" href="#">Login</a></li><li><a style="color: white;" href="#">Register</a></li>                        
-                               </ul>
-                          </div>
-                      </div>
-                    <div class="col-xl-2 col-lg-2 col-md-4">
-                        <div style="color: white;" class="footer-links">
-                            <h3>Helpful Links</h3>
-                                <ul>
-                                    <li><a style="color: white;" href="#">Blog</a></li>                            
-                                    <li><a style="color: white;"  href="http://hype.sociusus.com/feedback">Feedback</a></li>
-                                    <li><a style="color: white;"  href="#">Contact</a></li>
-                                </ul>
-                        </div>
-                    </div>
-                  <div class="col-xl-2 col-lg-2 col-md-4">
-                        <div style="color: white;" class="footer-links">
-                            <h3>Information</h3>
-                                 <ul>
-                                    <li><a style="color: white;" href="#">FAQ</a></li>
-                                    <li><a style="color: white;" href="#">Testimonials</a></li>                        
-                                </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+ 
      <hr style="border-top: dotted 1px;" /> 
         <div class="footer-bottom-section">
        
@@ -202,3 +179,34 @@
     </form>
 </body>
 </html>
+<body>
+
+<%--<div class="sidebar">
+  <h3>My Account</h3>
+  <a class="active" href="#home">Dashboard</a>
+  <a href="#">My Documents</a>
+  <ul> 
+  <li><a href="#">All Documents</a></li>
+  <li><a href="#">All AI Documents</a></li>
+  </ul>
+  <h3>Organize And Manage</h3>
+  <ul> 
+  <li><a href="#">Templates</a></li>
+  <li><a href="#">AI Images</a></li>
+  <li><a href="#">AI Chat</a></li>
+  <li><a href="#">Speech to Text</a></li>
+  <li><a href="#">AI Code</a></li>  
+  </ul>
+  <a href="#">Contact</a>
+  <a href="#">About</a>
+  <h1></hi>
+</div>
+
+<div class="content">
+  <h2>Responsive Sidebar Example</h2>
+  <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.</p>
+  <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
+  <h3>Resize the browser window to see the effect.</h3>
+</div>
+
+</body>--%>

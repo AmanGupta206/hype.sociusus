@@ -165,7 +165,7 @@
    <Center> <h2>Articles and Blogs</h2></Center>
       <div class="container">
          <div class="row" >            
-               <div class="col-md-4"; > 
+               <div class="col-md-4";style="box-sizing:border-box;border:12px;" > 
                    <img width="75px" src="images/Articles%20and%20blogs/Screenshot%202023-04-19%20123131.png" />
                         <h4>Blog Ideas</h4>
                         <p class="text-justify">
@@ -213,7 +213,7 @@
                     
                 </div>
                  <div class="col-md-4"> 
-                     <img width="75px"  src="images/Articles%20and%20blogs/Screenshot%202023-04-19%20132624.png" />
+                  <img width="75px"  src="images/Articles%20and%20blogs/Screenshot%202023-04-19%20132624.png" />
                         <h4>Article Writer(Pro)</h4>
                         <p class="text-justify">
                          Create a fully complete high quality article from a title and outline text.
