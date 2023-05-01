@@ -65,12 +65,12 @@ body {
 div.content {
   margin-left: 0px;
   padding: 1px 0px;
-  height: 500px;
+  height: auto;
 }
 
 @media screen and (max-width: 700px) {
   .sidebar {
-    width: 100%;
+    width: 120%;
     height: auto;
     position: relative;
   }
@@ -147,17 +147,17 @@ div.content {
        <div class="content">
            <div class="sidebar" style="position:relative;float:left">
     
-                      <h5>&nbsp;My Account</h5>        
-                      <a class="active" href="#home"><i class="fa-solid fa-grid-horizontal"></i> Dashboard</a>
+                      <h5>&nbsp;&nbsp;My Account</h5>        
+                      <a href="#"><i class="fa-solid fa-grid-horizontal"></i> Dashboard</a>
                       <a href="#"><i class="fa-solid fa-file"></i> My Documents</a>
-                      <h5>&nbsp;Organize And Manage</h5>
+                      <h5>Organize And Manage</h5>
                       <a href="#"><i class="fa-solid fa-bars"></i> Templates</a>
                       <a href="#"><i class="fa-solid fa-image"></i> AI Images</a>
                       <a href="#"><i class="fa-solid fa-comment"></i> AI Chat</a>
                       <a href="#"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
-                      <a href="#"><i class="fa-solid fa-code-simple"></i>AI Code</a>        
-                      <h5>&nbsp;Account</h5> 
-                      <a href="#"><i class="fa-sharp fa-regular fa-share-nodes"></i> Affiliate Program</a>                   
+                      <a href="#"><i class="fa-solid fa-code"></i> AI Code</a>        
+                      <h5>&nbsp;&nbsp;Account</h5> 
+                      <a href="#"><i class="fa-solid fa-share-nodes"></i> Affiliate Program</a>                   
                       <a href="#"><i class="fa-solid fa-gift"></i> Membership</a>
                       <a href="#"><i class="fa-solid fa-money-bill"></i> Transaction</a>
                       <a href="#"><i class="fa-solid fa-gear"></i> Account Settings</a>
@@ -190,53 +190,44 @@ div.content {
                 </div>
 
 
+          <%--chart code starts--%>
 
-   <div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3>Line Series</h3>
-                </div>
-                <div class="panel-body">
-                    <div id="chart1"></div>
-                </div>
-            </div>
-        </div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-<link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light-bootstrap/all.min.css" />
-<script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+<div id="myChart" style="width:1800px;  height:450px;"></div>
 
-<script type="text/javascript">
-    jQuery(function ($) {
-        var data1 = [12, 3, 4, 2, 12, 3, 4, 17, 22, 34, 54, 67];
-        var data2 = [3, 9, 12, 14, 22, 32, 45, 12, 67, 45, 55, 7];
-        var data3 = [23, 19, 11, 134, 242, 352, 435, 22, 637, 445, 555, 57];
-        var data4 = [13, 19, 112, 114, 212, 332, 435, 132, 67, 45, 55, 7];
+<script>
+    google.charts.load('current', { packages: ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
 
-        $("#chart1").shieldChart({
-            exportOptions: {
-                image: false,
-                print: false
-            },
-            axisY: {
-                title: {
-                    text: "Break-Down for selected quarter"
-                }
-            },
-            dataSeries: [{
-                seriesType: "line",
-                data: data1
-            }]
-        });
-   
+    function drawChart() {
+        // Set Data
+        const data = google.visualization.arrayToDataTable([
+            ['May Month', 'Size'],
+            [01, 0], [04, 0], [07, 0], [10, 0], [13, 0],
+            [16, 0], [19, 0], [22, 0],
+            [25, 0], [28, 0], [31, 1]
+        ]);
+        // Set Options
+        const options = {
+            title: 'Word used this month',
+            hAxis: { title: 'May Month' },
+            vAxis: { title: 'Words' },
+            legend: 'none'
+        };
+        // Draw
+        const chart = new google.visualization.LineChart(document.getElementById('myChart'));
+        chart.draw(data, options);
+    }
 </script>
 
-            </div>
-          </div>
- 
+             
+          <%--chart code ends--%>
 
+               
 
+             </div>
+  
 
 
  <%--Dashboard part ends--%>
@@ -313,3 +304,39 @@ div.content {
 </div>
 
 </body>--%>
+
+
+
+
+    
+   <%--chart code starts--%>
+<%--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Year', 'Sales', 'Expenses'],
+                ['2004', 1000, 400],
+                ['2005', 1170, 460],
+                ['2006', 660, 1120],
+                ['2007', 1030, 540]
+            ]);
+
+            var options = {
+                title: ' Word used this month',
+                curveType: 'function',
+                legend: { position: 'bottom' }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('Line Chart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+
+<div id="Line Chart" style="width: 1350px; height: 500px"></div>--%>
+
+             
+          <%--chard code ends--%>

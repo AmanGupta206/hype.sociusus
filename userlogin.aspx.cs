@@ -35,7 +35,7 @@ namespace hype.sociusus
                         Response.Write("<script>alert('Login Successful');</script>"); //"+dr.GetValue(3).ToString()+"//
                         Session["emailid"] = dr.GetValue(3).ToString();
                     }
-                    Response.Redirect("DashBoard.aspx");
+                    Response.Redirect("dashboard2.aspx");
                 }
                 else
                 {
