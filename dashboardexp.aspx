@@ -1,11 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dashboard2.aspx.cs" Inherits="hype.sociusus.dashboard2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dashboardexp.aspx.cs" Inherits="hype.sociusus.dashboardexp" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <%--bootstrap css--%>
+
+     <%--bootstrap css--%>
     <link href="Bootstrap/cs/bootstrap.min.css" rel="stylesheet" />
      <%--datatable css--%>
     <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -29,13 +30,10 @@
   
 
 
-
 </head>
 <body>
     <form id="form1" runat="server">
-
-
-
+       
        
 <%--Dashboard part starts--%>
 
@@ -96,15 +94,7 @@ div.content {
 }
 
 
-/*css color-profile main section*/
-.main{
-    position:absolute;
-    width:85%;
-    left : 200px;
-    min-height: calc(100vh-60px);
-    background:#f5f5f5;
 
-}
 .cards{
     width: 100%;
     padding: 35px 20px;
@@ -205,14 +195,67 @@ div.content {
 
       <!--HEADER AND NAVIGATION PART ENDS-->
 
+<style>
+.content{
+    min-width:17rem;
+    width:17rem;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    box-shadow:3px 3px 10px rgba(0,-0,-0,-0.1);
+    transition:all 0.4s;
+}
+/*css color-profile main section*/
+.main{
+   
+    width:calc(100% - 17rem);
+    margin-left : 17rem;
+     transition:all 0.4s;
+    min-height: calc(100vh-60px);
+    background:#f5f5f5;
 
+}
+#sidebar.active{
+    margin-left:-17rem;
 
+}
+#main.active{
+    width:100%;
+    margin:0;
+}
+.seperator{
+    margin:3rem 0;
+    border-button: 1px dashed white;
+}
 
+@media(max-width: 768px) {
+    #sidebar{
+        margin-left: -17rem;
+    }
+    #sidebar.active{
+        margin-left:0;
+    }
+    #main{
+        width:100%;
+        margin:0;
+    }
+    #main.active{
+       
+         margin-left: 17rem;
+          width:calc(100%-17rem);
+    }
+}
+
+$(function(){$('#sidebarcollapse').on('click',function() {$('#sidebar,#main').toggleclass('active');});});
      
+</style>
+
+
 
   
 <%--side navigation box starts--%>
-       <div class="content">
+         <div class="content" id="sidebar">
            <div class="sidebar" style="position:relative;float:left">
     
                       <h5>&nbsp;&nbsp;My Account</h5>        
@@ -236,7 +279,10 @@ div.content {
 
 <%--side navigation ends --%>  
 
-  <div class ="main">
+      <%--  Toggler Button--%>
+        <button id ="sidebarcollapse" type ="button" class=" btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4>">Toggler</button>
+
+  <div class ="main" id="main">
        <h2>&nbsp;Dashboard</h2>
       <div class ="cards">
                  <div class="card">             
@@ -351,75 +397,6 @@ div.content {
         }
     });
 </script>
-
-
-
+    
 </body>
 </html>
-
-
-<%--<div class="sidebar">
-  <h3>My Account</h3>
-  <a class="active" href="#home">Dashboard</a>
-  <a href="#">My Documents</a>
-  <ul> 
-  <li><a href="#">All Documents</a></li>
-  <li><a href="#">All AI Documents</a></li>
-  </ul>
-  <h3>Organize And Manage</h3>
-  <ul> 
-  <li><a href="#">Templates</a></li>
-  <li><a href="#">AI Images</a></li>
-  <li><a href="#">AI Chat</a></li>
-  <li><a href="#">Speech to Text</a></li>
-  <li><a href="#">AI Code</a></li>  
-  </ul>
-  <a href="#">Contact</a>
-  <a href="#">About</a>
-  <h1></hi>
-</div>
-
-<div class="content">
-  <h2>Responsive Sidebar Example</h2>
-  <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.</p>
-  <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
-  <h3>Resize the browser window to see the effect.</h3>
-</div>
-
-</body>--%>
-
-
-
-
-    
-   <%--chart code starts--%>
-<%--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load('current', { 'packages': ['corechart'] });
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-                ['Year', 'Sales', 'Expenses'],
-                ['2004', 1000, 400],
-                ['2005', 1170, 460],
-                ['2006', 660, 1120],
-                ['2007', 1030, 540]
-            ]);
-
-            var options = {
-                title: ' Word used this month',
-                curveType: 'function',
-                legend: { position: 'bottom' }
-            };
-
-            var chart = new google.visualization.LineChart(document.getElementById('Line Chart'));
-
-            chart.draw(data, options);
-        }
-    </script>
-
-<div id="Line Chart" style="width: 1350px; height: 500px"></div>--%>
-
-             
-          <%--chard code ends--%>

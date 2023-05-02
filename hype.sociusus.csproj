@@ -99,6 +99,7 @@
     <Content Include="App_Data\hype.sociusus.mdf" />
     <Content Include="DashBoard.aspx" />
     <Content Include="dashboard2.aspx" />
+    <Content Include="dashboardexp.aspx" />
     <Content Include="forgetpassword.aspx" />
     <Content Include="Bootstrap\cs\bootstrap.min.css" />
     <Content Include="Bootstrap\js\bootstrap.min.js" />
@@ -2183,6 +2184,9 @@
     <Content Include="images\Dashboard Icons images\Screenshot 2023-04-28 185928.png" />
     <Content Include="images\Dashboard Icons images\Screenshot 2023-04-28 190005.png" />
     <Content Include="images\Dashboard Icons images\Screenshot 2023-04-28 190034.png" />
+    <Content Include="images\Dashboard Icons images\Screenshot 2023-05-02 154408.png" />
+    <Content Include="images\Dashboard Icons images\Screenshot 2023-05-02 155445.png" />
+    <Content Include="images\Dashboard Icons images\Screenshot 2023-05-02 155743.png" />
     <Content Include="images\Ecommerce\Screenshot 2023-04-23 125826.png" />
     <Content Include="images\Ecommerce\Screenshot 2023-04-23 125930.png" />
     <Content Include="images\Footer all images\3.png" />
@@ -2251,6 +2255,13 @@
     </Compile>
     <Compile Include="dashboard2.aspx.designer.cs">
       <DependentUpon>dashboard2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashboardexp.aspx.cs">
+      <DependentUpon>dashboardexp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashboardexp.aspx.designer.cs">
+      <DependentUpon>dashboardexp.aspx</DependentUpon>
     </Compile>
     <Compile Include="forgetpassword.aspx.cs">
       <DependentUpon>forgetpassword.aspx</DependentUpon>
