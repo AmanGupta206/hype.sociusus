@@ -1,11 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dashboard2.aspx.cs" Inherits="hype.sociusus.dashboard2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="account_setting_page.aspx.cs" Inherits="hype.sociusus.account_setting_page" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <%--bootstrap css--%>
+
+    
+     <%--bootstrap css--%>
     <link href="Bootstrap/cs/bootstrap.min.css" rel="stylesheet" />
      <%--datatable css--%>
     <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -29,15 +31,10 @@
   
 
 
-
 </head>
 <body>
     <form id="form1" runat="server">
-
-
-
-       
-<%--Dashboard part starts--%>
+<%--Css of side bar starts  --%>      
 
 <style>
 body {
@@ -51,10 +48,8 @@ body {
   width: 200px;
   background-color: #f1f1f1;
   position: relative;
-
   height: 100%;
   overflow: auto;
-
 }
 
 .sidebar a {
@@ -96,52 +91,21 @@ div.content {
     float: none;
   }
 }
-
-
-/*css color-profile main section*/
-.main{
-    position:absolute;
-    width:85%;
-    left : 250px;
-    min-height: calc(100vh-60px);
-    background:#f5f5f5;
-
-}
-.cards{
-    width: 100%;
-    padding: 35px 20px;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap:20px;
-
-}
-.cards .card{
-    padding:5px;
-    padding-top:20px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    background: #fff;
-    border-radius:10px;
-    box-shadow:0 7px 25px 0 inherit;
-}
-
-
 </style>
+<%--css of side bar ends--%>
 
-
-   <!--HEADER START-->
+  <!--HEADER START-->
 
          
               <div class="Header"> 
-                 <div class ="row" >
+                 <div class ="row">
                         <div class="col-md-10"> 
                          <a href="https://localhost:44367/homepage.aspx">
                            <img width:"20px" src="images/hype.%202023-04-17%20195423.png"/ style="   border: none;max-width: 100px;height: auto;" href="https://localhost:44367/homepage.aspx">
                          </a>
                         </div>
 
-                    <%--FOR DROP DOWN BUTTON IN TOP--%> 
+ <%--FOR DROP DOWN BUTTON IN TOP--%> 
             <div class="col-md-1"> 
                          <div class="dropdown show"  style="padding-top:10px">
                                   <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink"  data-toggle="dropdown" >
@@ -164,12 +128,7 @@ div.content {
                         </div>
                </div>
 
-               <%-- END OF CODE FOR DROP DOWN--%>
-
-           
-          
-              
-                
+ <%-- END OF CODE FOR DROP DOWN--%>               
           <div class="col-md-1"> 
                    <div style="position: relative;display: inline-block; margin-bottom:auto ; padding-top:40px;">
                        <label for="Language"></label>
@@ -200,23 +159,14 @@ div.content {
                      </div>              
                 </div>
            </div>
-        </div>
+        </div>       
       <hr style="border-top: dotted 1px;" />                
-
-              
-
-
       <!--HEADER ENDS-->
-
-
-
-
-     
 
   
 <%--side navigation box starts--%>
        
-           <div class="sidebar" style="position:absolute;float:left; width:300px; font-size: 20px;" >
+           <div class="sidebar" style="position:relative;float:left; width:300px; font-size: 20px;" >
     
                       <h4>&nbsp;&nbsp;My Account</h4>        
                       <a href="#">
@@ -239,51 +189,171 @@ div.content {
 
 <%--side navigation ends --%>  
 
-  <div class ="main">
 
-             <div class="row">
+<%--Account settings page code starts--%>
+
+               <div class="row">
                          <div class="col-md-6"  style="padding-top: 50px"; >  
-                                 <h2  style="padding-top: 50px;">&nbsp;&nbsp;&nbsp;Dashboard</h2>                               
+                                 <h2  style="padding-top: 50px;">&nbsp;&nbsp;&nbsp;Account Settings</h2>                               
                          </div>
                            <div class="col-md-6"   style="padding-top: 100px;">  
                                <center>
-                               <asp:Button class="btn btn-secondary" ID="Button1" runat="server" Text="Home >> Dashboard" /> 
+                               <asp:Button class="btn btn-secondary" ID="Button2" runat="server" Text="Home >> Account Setting" /> 
                                 </center>
                            </div>
                       </div>
 
 
-       
-             <div class ="cards">
-                 <div class="card">             
-                          <div class="row">                  
-                                <div class="col-md-6"><h2>Words Used <p>0/10,000</p></h2></div>                                  
-                                <div class="col-md-6"><img src="images/Dashboard%20Icons%20images/Screenshot%202023-04-28%20185928.png" /></div>                                   
-                          </div>
-                 </div>
-                 <div class="card">             
-                           <div class="row">
-                                   <div class="col-md-6"><h2>Images Used <p>0/100</p></h2></div> 
-                                   <div class="col-md-6"><img src="images/Dashboard%20Icons%20images/Screenshot%202023-04-28%20190005.png" /></div>                                    
-                            </div>
+     <div class="container">
+      <div class="row">
+         <div class="col-md-12 mx-auto">
+            <div class="card">
+               <div class="card-body">
+                  <div class="row">
+                     <div class="col">                       
+                            <h4><i class="fa-solid fa-gear"></i> Account Settings</h4>                                                   
+                     </div>
+                  </div>                 
+                  <div class="row">
+                     <div class="col">
+                        <hr>
+                     </div>
                   </div>
-                   <div class="card">             
-                           <div class="row">                    
-                                 <div class="col-md-6"><h2>Speech to text<p>0/0</p></h2></div> 
-                                 <div class="col-md-6"><img src="images/Dashboard%20Icons%20images/Screenshot%202023-04-28%20190034.png" /></div>                                    
-                            </div>
+
+                   <div class="row">                            
+                           <div class="col-md-4">                                   
+                                <div class="form-group">                                
+                                    <label class="form-label" for="customFile">Upload Your Avatar</label>
+                                    <input type="file" class="form-control" id="customFile" />
+                                </div>
+                           </div>
+                      </div>
+
+                  <div class="row">
+                         <div class="col-md-6">  
+                                 <label>USER NAME</label>
+                                <div class="form-group">
+                                   <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="USER NAME" ></asp:TextBox>
+                                </div>
+                         </div>
+
+                           <div class="col-md-6">  
+                                 <label>Email Address</label>
+                                <div class="form-group">
+                                   <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="Email Address" ></asp:TextBox>
+                                </div>
+                           </div>
+                      </div>
+
+                    <div class="row">
+                         <div class="col-md-6">  
+                                 <label>New Password</label>
+                                <div class="form-group">
+                                   <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="New Password" ></asp:TextBox>
+                                </div>
+                         </div>
+
+                           <div class="col-md-6">  
+                                 <label>Confirm Password</label>
+                                <div class="form-group">
+                                   <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Confirm Password" ></asp:TextBox>
+                                </div>
+                           </div>
+                      </div>
+
+                     <div class="row">                            
+                           <div class="col-md-3">                                   
+                                <div class="form-group">                                
+                                    <asp:Button class="btn btn-primary btn-block btn-lg" ID="Button3" runat="server" Text="Save Changes" />
+                                </div>
+                           </div>
+                      </div>
+
+                    </div>
+                 </div>
+             <%--   --------------------------------------------------------------------------------------------------%>
+    
+     
+            <div class="card">
+               <div class="card-body">
+                  <div class="row">
+                     <div class="col">                       
+                            <h4>Billing Details</h4>                                                   
+                     </div>
+                  </div>                 
+                  <div class="row">
+                     <div class="col">
+                        <hr>
+                     </div>
+                  </div>
+                  <div class="row">
+                         <div class="col-md-10">  
+                                 <label>Type</label>
+                                <div class="form-group">
+                                   <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Personal/Business" ></asp:TextBox>
+                                </div>
+                         </div>
+                  </div>
+                  <div class="row">
+                           <div class="col-md-10">  
+                                 <label>Name*</label>
+                                <div class="form-group">
+                                   <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Name" ></asp:TextBox>
+                                </div>
+                           </div>
                    </div>
-                </div>
 
-               <div>
-                  <h3>&nbsp;Words used this month</h3>
-                  <div >
-                   <canvas id="myChart" ></canvas>
+                    <div class="row">                            
+                           <div class="col-md-10">  
+                                 <label>Address*</label>
+                                <div class="form-group">
+                                   <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Address" ></asp:TextBox>
+                                </div>
+                           </div>
+                      </div>
+                    <div class="row">                            
+                           <div class="col-md-6">  
+                                 <label>City*</label>
+                                <div class="form-group">
+                                   <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="Bengaluru" ></asp:TextBox>
+                                </div>
+                           </div>
+                           <div class="col-md-3">  
+                                 <label>State</label>
+                                <div class="form-group">
+                                   <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="Karnataka" ></asp:TextBox>
+                                </div>
+                           </div>
+                         <div class="col-md-2">  
+                                 <label>Zip Code</label>
+                                <div class="form-group">
+                                   <asp:TextBox CssClass="form-control" ID="TextBox10" runat="server" placeholder="560093" ></asp:TextBox>
+                                </div>
+                           </div>
+                      </div>
+
+                    <div class="row">                            
+                           <div class="col-md-10">  
+                                 <label>Country*</label>
+                                <div class="form-group">
+                                   <asp:TextBox CssClass="form-control" ID="TextBox11" runat="server" placeholder="India" ></asp:TextBox>
+                                </div>
+                           </div>
+                      </div>
+
+                    <div class="row">                            
+                           <div class="col-md-3">                                   
+                                <div class="form-group">
+                                    <asp:Button  class="btn btn-primary btn-block btn-lg" ID="Button1" runat="server" Text="Save Changes" />
+                                </div>
+                           </div>
+                      </div>
+                    </div>
+                 </div>
                </div>
-  </div>
-<%--Dashboard part ends--%>
-
- <!-- Footer -->
+             </div>
+<%--Account settings part ends  --%>
+             <!-- Footer -->
     <hr style="border-top: dotted 1px;" /> 
         <div class="footer-bottom-section">
        
@@ -320,41 +390,5 @@ div.content {
          <!-- Footer -->
 
     </form>
-
-<script>
-    const ctx = document.getElementById('myChart');
-
-    new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ["01 May", "02 May", "03 May", "04 May", "05 May", "06 May", "07 May", "08 May", "09 May", "10 May", "11 May", "12 May", "13 May", "14 May", "15 May", "16 May", "17 May", "18 May", "19 May", "20 May", "21 May", "22 May", "23 May", "24 May", "25 May", "26 May", "27 May", "28 May", "29 May", "30 May", "31 May"],
-            // Information about the dataset
-            datasets: [{
-                label: "Words Used Graphical Representation",
-                backgroundColor: '#18469815',
-                borderColor: '#184698',
-                borderWidth: "3",
-                data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                pointRadius: 5,
-                pointHoverRadius: 5,
-                pointHitRadius: 10,
-                pointBackgroundColor: "#fff",
-                pointHoverBackgroundColor: "#fff",
-                pointBorderWidth: "2",
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-</script>
-
-
-
 </body>
 </html>
-

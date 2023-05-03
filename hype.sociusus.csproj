@@ -96,6 +96,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="account_setting_page.aspx" />
     <Content Include="App_Data\hype.sociusus.mdf" />
     <Content Include="DashBoard.aspx" />
     <Content Include="dashboard2.aspx" />
@@ -2242,6 +2243,13 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="account_setting_page.aspx.cs">
+      <DependentUpon>account_setting_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="account_setting_page.aspx.designer.cs">
+      <DependentUpon>account_setting_page.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DashBoard.aspx.cs">
       <DependentUpon>DashBoard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
