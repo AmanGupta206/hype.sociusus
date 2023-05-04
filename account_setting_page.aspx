@@ -1,4 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="account_setting_page.aspx.cs" Inherits="hype.sociusus.account_setting_page" %>
+﻿
+
+
+
+
+
+
+
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="account_setting_page.aspx.cs" Inherits="hype.sociusus.account_setting_page" %>
 
 <!DOCTYPE html>
 
@@ -43,13 +52,15 @@ body {
 }
 
 .sidebar {
-  margin: 0;
+  top: 90px;
   padding: 0;
-  width: 200px;
+  width: 250px;
   background-color: #f1f1f1;
-  position: relative;
-  height: 100%;
-  overflow: auto;
+  position: fixed;
+  height: calc(100% - 70px);
+  overflow:scroll;
+  margin-bottom: 90px;
+
 }
 
 .sidebar a {
@@ -77,7 +88,7 @@ div.content {
 
 @media screen and (max-width: 700px) {
   .sidebar {
-    width: 120%;
+    width: 10%;
     height: auto;
     position: relative;
   }
@@ -91,21 +102,23 @@ div.content {
     float: none;
   }
 }
-</style>
+
+
+ </style>
 <%--css of side bar ends--%>
 
-  <!--HEADER START-->
+   <!--HEADER START-->
 
          
-              <div class="Header"> 
-                 <div class ="row">
+              <div style="height:90px;position:fixed;  z-index:1;background-color:white;width:100%;margin-top:-1px;" class="Header"> 
+                 <div  style="height:90px;position:fixed;  z-index:1;background-color:white;width:100%;margin-top:0px;" class ="row" >
                         <div class="col-md-10"> 
                          <a href="https://localhost:44367/homepage.aspx">
                            <img width:"20px" src="images/hype.%202023-04-17%20195423.png"/ style="   border: none;max-width: 100px;height: auto;" href="https://localhost:44367/homepage.aspx">
                          </a>
                         </div>
 
- <%--FOR DROP DOWN BUTTON IN TOP--%> 
+                    <%--FOR DROP DOWN BUTTON IN TOP--%> 
             <div class="col-md-1"> 
                          <div class="dropdown show"  style="padding-top:10px">
                                   <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink"  data-toggle="dropdown" >
@@ -128,7 +141,12 @@ div.content {
                         </div>
                </div>
 
- <%-- END OF CODE FOR DROP DOWN--%>               
+               <%-- END OF CODE FOR DROP DOWN--%>
+
+           
+          
+              
+                
           <div class="col-md-1"> 
                    <div style="position: relative;display: inline-block; margin-bottom:auto ; padding-top:40px;">
                        <label for="Language"></label>
@@ -159,14 +177,19 @@ div.content {
                      </div>              
                 </div>
            </div>
-        </div>       
-      <hr style="border-top: dotted 1px;" />                
+        </div>
+                 
+
+              
+
+
       <!--HEADER ENDS-->
 
+ 
   
 <%--side navigation box starts--%>
        
-           <div class="sidebar" style="position:relative;float:left; width:300px; font-size: 20px;" >
+           <div class="sidebar"  >
     
                       <h4>&nbsp;&nbsp;My Account</h4>        
                       <a href="#">
@@ -192,8 +215,12 @@ div.content {
 
 <%--Account settings page code starts--%>
 
-               <div class="row">
-                         <div class="col-md-6"  style="padding-top: 50px"; >  
+              
+
+
+     <div class="container" >
+          <div class="row"  ;>
+                         <div class="col-md-6"   >  
                                  <h2  style="padding-top: 50px;">&nbsp;&nbsp;&nbsp;Account Settings</h2>                               
                          </div>
                            <div class="col-md-6"   style="padding-top: 100px;">  
@@ -203,8 +230,6 @@ div.content {
                            </div>
                       </div>
 
-
-     <div class="container">
       <div class="row">
          <div class="col-md-12 mx-auto">
             <div class="card">

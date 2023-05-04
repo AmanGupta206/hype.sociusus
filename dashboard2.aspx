@@ -46,14 +46,14 @@ body {
 }
 
 .sidebar {
-  margin: 0;
+  top: 90px;
   padding: 0;
-  width: 200px;
+  width: 250px;
   background-color: #f1f1f1;
-  position: relative;
-
-  height: 100%;
-  overflow: auto;
+  position: fixed;
+  height: calc(100% - 70px);
+  overflow:scroll;
+  margin-bottom: 90px;
 
 }
 
@@ -82,7 +82,7 @@ div.content {
 
 @media screen and (max-width: 700px) {
   .sidebar {
-    width: 120%;
+    width: 10%;
     height: auto;
     position: relative;
   }
@@ -101,10 +101,11 @@ div.content {
 /*css color-profile main section*/
 .main{
     position:absolute;
-    width:85%;
+    width:calc(100% - 250px);
     left : 250px;
     min-height: calc(100vh-60px);
     background:#f5f5f5;
+  
 
 }
 .cards{
@@ -133,8 +134,8 @@ div.content {
    <!--HEADER START-->
 
          
-              <div class="Header"> 
-                 <div class ="row" >
+              <div style="height:90px;position:fixed;  z-index:1;background-color:white;width:100%;margin-top:-1px;" class="Header"> 
+                 <div  style="height:90px;position:fixed;  z-index:1;background-color:white;width:100%;margin-top:0px;" class ="row" >
                         <div class="col-md-10"> 
                          <a href="https://localhost:44367/homepage.aspx">
                            <img width:"20px" src="images/hype.%202023-04-17%20195423.png"/ style="   border: none;max-width: 100px;height: auto;" href="https://localhost:44367/homepage.aspx">
@@ -201,7 +202,7 @@ div.content {
                 </div>
            </div>
         </div>
-      <hr style="border-top: dotted 1px;" />                
+                 
 
               
 
@@ -216,7 +217,7 @@ div.content {
   
 <%--side navigation box starts--%>
        
-           <div class="sidebar" style="position:absolute;float:left; width:300px; font-size: 20px;" >
+           <div class="sidebar"  >
     
                       <h4>&nbsp;&nbsp;My Account</h4>        
                       <a href="#">
@@ -239,7 +240,7 @@ div.content {
 
 <%--side navigation ends --%>  
 
-  <div class ="main">
+  <div style="height:calc(100%-60px);" class ="main">
 
              <div class="row">
                          <div class="col-md-6"  style="padding-top: 50px"; >  
