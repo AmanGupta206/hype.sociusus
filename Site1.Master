@@ -34,9 +34,33 @@
 
 
 <body>
+<%--Yellow email varification part--%>
+            <div class="container-fluid" style="margin-left: 0px; margin-right: 0px; padding-left:0px;padding-right:0px; ">
+                <div class="row">
+                    <div class="col-md-12" style="display:flex" >  
+                        <label style="height:50px;width:100%;padding:10px 10px 10px 135px;background-color:lightgoldenrodyellow;"><i class="fa fa-lock" aria-hidden="true">
+                            Your email address is not verified. Please verify your email address to use all the features.</i></label>  
+                         <button onclick="myFunction()" style="background-color:gray;margin-left:0px;width:134px;height:48px">Verify Email</button>
+                          <p id="click"></p>
+                    </div>
+                    <%--<div class="col-md-2">  
+                      <button onclick="myFunction()" style="background-color:gray;margin-left:0px;width:105px;height:55px">Resent Email</button>
+                       <p id="click"></p>
+                                                         
+                    </div> --%>                            
+                 </div>
+             </div>
+
+     <%--<div>
+        <span><label style="height:50px;width:100%;padding:10px 10px 10px 10px;background-color:lightgoldenrodyellow;"><i class="fa fa-lock" aria-hidden="true">Your email address is not verified. Please verify your email address to use all the features.</i>
+            <button onclick="myFunction()" style="background-color:gray;margin-left:500px;width:105px;height:55px">Verify Email</button>
+            <p id="click"></p>
+        </label></span>
+     </div> --%>   
+                      
 
 
-   <!--HEADER AND NAVIGATION PART START-->
+<!--HEADER AND NAVIGATION PART START-->
     <form id="form1" runat="server">
           <nav class="navbar navbar-inverse">
               <div class="container-fluid"> 
@@ -47,15 +71,10 @@
                </div>
             <class="nav navbar-nav navbar-right">
                     
-                       <!--<a href="userregister.aspx"  class="btn btn-primary active" aria-current="page" style="text-align:end;">Join Now</a> -->
+                      
                        <div class="form-group" style="display:flex">
                          <a href="userlogin.aspx"><input class="btn btn-info btn-block btn-lg" id="Button1" type="button" value="JOIN NOW" /></a>
-
-                           <%--<asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" OnClick="Buttom1_Click">JOIN NOW</asp:LinkButton>--%>
-
                        </div>          
-                  
-            
             
                <div style="position: relative;display: inline-block;">
                    <label for="Language"></label>
@@ -188,6 +207,20 @@
                    </div>
              </div>
     </form>
+<%--Script of above pop up email varication part--%>
+<script>
+function myFunction() {
+  let text;
+  let email = prompt("Please enter your email:", "");
+  if (email == null || email == "") {
+    text = "Try Again.";
+  } else {
+      text = "Email Verified";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
 </body>
 
 

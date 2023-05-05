@@ -1,13 +1,4 @@
-﻿
-
-
-
-
-
-
-
-
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="account_setting_page.aspx.cs" Inherits="hype.sociusus.account_setting_page" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="account_setting_page.aspx.cs" Inherits="hype.sociusus.account_setting_page" %>
 
 <!DOCTYPE html>
 
@@ -218,7 +209,7 @@ div.content {
               
 
 
-     <div class="container" >
+     <div class="container" style="max-width: 80%;    margin-right: -53px;" >
           <div class="row"  ;>
                          <div class="col-md-6"   >  
                                  <h2  style="padding-top: 50px;">&nbsp;&nbsp;&nbsp;Account Settings</h2>                               
@@ -232,11 +223,11 @@ div.content {
 
       <div class="row">
          <div class="col-md-12 mx-auto">
-            <div class="card">
+            <div class="card" style="width: 800px;">
                <div class="card-body">
                   <div class="row">
                      <div class="col">                       
-                            <h4><i class="fa-solid fa-gear"></i> Account Settings</h4>                                                   
+                            <h4><i class="fa-solid fa-gear"></i>Account Settings</h4>                                                   
                      </div>
                   </div>                 
                   <div class="row">
@@ -296,10 +287,12 @@ div.content {
 
                     </div>
                  </div>
+             <br />
+             <br>
              <%--   --------------------------------------------------------------------------------------------------%>
     
      
-            <div class="card">
+            <div class="card" style="width: 800px;">
                <div class="card-body">
                   <div class="row">
                      <div class="col">                       
@@ -384,7 +377,8 @@ div.content {
        
                     
                 <div class="container-fluid"  >
-                     <div class="row">
+                     <div class="row" style="    width: 749px;
+}">
                         <div class="col-xl-12">
                           <div style="color: white;" class="footer-row">
                               

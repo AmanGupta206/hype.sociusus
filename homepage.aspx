@@ -47,8 +47,7 @@
 
 
 
-        <!-- Written part and a button -->
-
+ <!-- Written part and a button -->
    <section>
          <center>
                 <div>                
@@ -74,7 +73,7 @@
         <center>
    </section>
 
-       <!-- How its work part -->
+ <!-- How its work part -->
   <hr style="border-top: dotted 1px;" /> 
     <section>       
         <div class="container">
@@ -120,7 +119,7 @@
     </section>
     <hr style="border-top: dotted 1px;" /> 
 
-      <!-- Templete section starting -->
+<!-- Templete section starting -->
       <br>
       <section>
           <div class="container">
@@ -155,11 +154,8 @@
           
 
                
-        </style>           
-
-
-         <!--Next Part-->
-
+</style>           
+<!--Next Part-->
    <hr style="border-top: dotted 1px;" /> 
  <section>             
    <Center> <h2>Articles and Blogs</h2></Center>
