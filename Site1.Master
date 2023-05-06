@@ -62,14 +62,14 @@
 
 <!--HEADER AND NAVIGATION PART START-->
     <form id="form1" runat="server">
-          <nav class="navbar navbar-inverse">
-              <div class="container-fluid"> 
-                <div class ="navbar header">
+          <nav class="navbar navbar-inverse" style="border-width:1px; border-bottom:solid; border-top:solid "  >
+              <div class="container-fluid" > 
+                <div class ="navbar header"   >
                    <a href="https://localhost:44367/homepage.aspx">
                        <img width="150px" src="images/hype.%202023-04-17%20195423.png"/ style="   border: none;max-width: 100px;height: auto;" href="https://localhost:44367/homepage.aspx">
                    </a>
                </div>
-            <class="nav navbar-nav navbar-right">
+            <class="nav navbar-nav navbar-right"    >
                     
                       
                        <div class="form-group" style="display:flex">
@@ -108,7 +108,7 @@
            </div>
          </nav>
        
-      <hr style="border-top: dotted 1px;" />                
+                 
 
               
 
@@ -126,11 +126,7 @@
         </div>
         <%--maincontent placeholder--%>
 
-
-  
-             <!-- Footer -->
-  
-
+<!-- Footer -->
       <div id="footer" style="background-color:#303030">
         <div class="footer-middle-section">
             <div class="container">

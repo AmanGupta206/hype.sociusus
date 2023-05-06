@@ -209,7 +209,7 @@ div.content {
               
 
 
-     <div class="container" style="max-width: 80%;    margin-right: -53px;" >
+     <div class="container" style="max-width: 80%; margin-right: 0px; margin-left: 254px; background-color: #f5f5f5;" >
           <div class="row"  ;>
                          <div class="col-md-6"   >  
                                  <h2  style="padding-top: 50px;">&nbsp;&nbsp;&nbsp;Account Settings</h2>                               
@@ -223,7 +223,7 @@ div.content {
 
       <div class="row">
          <div class="col-md-12 mx-auto">
-            <div class="card" style="width: 800px;">
+            <div class="card" style="width: 800px; margin-left: 60px;">
                <div class="card-body">
                   <div class="row">
                      <div class="col">                       
@@ -292,7 +292,7 @@ div.content {
              <%--   --------------------------------------------------------------------------------------------------%>
     
      
-            <div class="card" style="width: 800px;">
+            <div class="card" style="width: 800px; margin-left: 60px; ">
                <div class="card-body">
                   <div class="row">
                      <div class="col">                       
@@ -380,7 +380,7 @@ div.content {
                      <div class="row" style="    width: 749px;
 }">
                         <div class="col-xl-12">
-                          <div style="color: white;" class="footer-row">
+                          <div style="color: white; width: 950px;" class="footer-row">
                               
                                  
                                      <span style="color: Black;" class="footer-copyright-text">2023 Socius IGB Pvt Ltd, All right reserved</span>

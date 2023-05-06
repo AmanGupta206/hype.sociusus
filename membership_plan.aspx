@@ -127,15 +127,15 @@ div.content {
    <!--HEADER START-->
 
          
-              <div style="height:90px;position:fixed;  z-index:1; background-color:white; width:100%; margin-top:-1px;" class="Header"> 
-                 <div  style="height:90px;position:fixed;  z-index:1;background-color:white;width:100%;margin-top:0px;" class ="row" >
+              <div style="height:90px;position:fixed;  z-index:1; background-color:white; width:100%; margin-top:-1px; " class="Header           "> 
+                 <div  style="height:90px;position:fixed;  z-index:1;background-color:white;width:100%;margin-top:0px; border-width:0.5px; border-bottom:solid " class ="row">
                         <div class="col-md-10"> 
                              <a href="https://localhost:44367/homepage.aspx">
                                <img width:"20px" src="images/hype.%202023-04-17%20195423.png"/ style="   border: none;max-width: 100px;height: auto;" href="https://localhost:44367/homepage.aspx">
                              </a>
                         </div>
  <%--button for toggle--%>
-                      <div>
+                       <div>
                             <nav style="margin-left:200px; height: 31px; width: 869px;" class="navbar navbar-toggleable-md fixed-top">
                             <button id="nav-btn"class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarDiv"  aria-expanded="true" aria-label="Toggle navigation">
                                 <span class="fa fa-bars"></span>
@@ -209,7 +209,7 @@ div.content {
       <!--HEADER ENDS-->
 
 <%--sidebar starts--%>
-       <%-- <div class="container-fluid">
+       <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3" id="side1">--%>
         
@@ -232,11 +232,12 @@ div.content {
                       <a href="#"><i class="fa-solid fa-gear"></i> Account Settings</a>
                       <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
             </div>
+                    </div>
        <%--  </div>--%>
 <%--sidebar ends --%>  
 <%--main part of page starts--%>
-              <%--  <div class="col-md-9" id="main1">--%>
-        <div style="height:calc(100%-60px);" class ="main"> 
+               <div class="col-md-9" id="main1">--%>
+        <div  class ="main"> 
              <div class="row"  >
                            <div class="col-md-6"  style="padding-top: 100px"; >  
                                      <h2  style="padding-top: 100px; padding-left:100px;">Current Plan</h2>                             
@@ -309,16 +310,17 @@ div.content {
                         </div>
                     </div>
                  </div>
-              <%--  </div>--%>
-               <%-- </div>--%>
-      <%-- </div>--%>
+              </div>
+                </div>
+       </div>
+       
        
     </form>
      <%-- menu hide --%>
     <script>
         $("#nav-btn").on("click", function () {
-                $(".sidebar").toggle();
-            $("#main").toggleClass(); /*'col-lg-12 full-width'*/
+                $("#side1").toggle();
+            $("#main1").toggleClass('col-lg-12 full-width'); 
 
         });
     </script>
