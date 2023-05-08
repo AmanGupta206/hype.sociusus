@@ -1,13 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="membership_plan.aspx.cs" Inherits="hype.sociusus.membership_plan" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Membership_page2.aspx.cs" Inherits="hype.sociusus.Membership_page2" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta charset="utf-8" />
     <title></title>
-
-    <%--bootstrap css--%>
+     <%--bootstrap css--%>
     <link href="Bootstrap/cs/bootstrap.min.css" rel="stylesheet" />
      <%--datatable css--%>
     <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -27,10 +25,11 @@
     <script src="Bootstrap/js/bootstrap.min.js"></script>
     <%--for graph--%>
    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
     <form id="form1" runat="server">
-
+        
 <style>
 body {
   margin: 0;
@@ -93,15 +92,15 @@ div.content {
 /*css color-profile main section*/
 .main{
     position:relative;
-    width:calc(105%);
-    left : 250px;
+    width:100%;
+    
     min-height: calc(100vh-60px);
     background:#f5f5f5;
     bottom: 50px;
 
 }
 .cards{
-    width: 100%;
+  
     padding: 35px 20px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -122,12 +121,8 @@ div.content {
 
 </style>
 
-
-        
-   <!--HEADER START-->
-
-         
-              <div style="height:90px;position:fixed;  z-index:1; background-color:white; width:100%; margin-top:-1px; " class="Header           "> 
+ <!--HEADER START-->
+              <div style="height:90px;position:fixed;  z-index:1; background-color:white; width:100%; margin-top:-1px; " class="Header"> 
                  <div  style="height:90px;position:fixed;  z-index:1;background-color:white;width:100%;margin-top:0px; border-width:0.5px; border-bottom:solid " class ="row">
                         <div class="col-md-10"> 
                              <a href="https://localhost:44367/homepage.aspx">
@@ -167,12 +162,7 @@ div.content {
                         </div>
                </div>
 
-               <%-- END OF CODE FOR DROP DOWN--%>
-
-           
-          
-              
-                
+<%-- END OF CODE FOR DROP DOWN--%>              
           <div class="col-md-1"> 
                    <div style="position: relative;display: inline-block; margin-bottom:auto ; padding-top:40px;">
                        <label for="Language"></label>
@@ -206,15 +196,12 @@ div.content {
         </div>
                  
 
-      <!--HEADER ENDS-->
-
-<%--sidebar starts--%>
-       <div class="container-fluid">
+<!--HEADER ENDS-->
+<%--sidebar  and main part starts--%>
+<div class="container-fluid">
             <div class="row">
-                <div class="col-md-3" id="side1">--%>
-        
-           <div class="sidebar"  >
-    
+                <div class="col-md-2" id="side1"  style="padding-left: 0px; padding-right: 0px;" > 
+                    <div class="sidebar" >    
                       <h4>&nbsp;&nbsp;My Account</h4>        
                       <a href="#">
                           <img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard</a>
@@ -231,14 +218,11 @@ div.content {
                       <a href="#"><i class="fa-solid fa-money-bill"></i> Transaction</a>
                       <a href="#"><i class="fa-solid fa-gear"></i> Account Settings</a>
                       <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
-            </div>
-                    </div>
-       <%--  </div>--%>
-<%--sidebar ends --%>  
-<%--main part of page starts--%>
-               <div class="col-md-9" id="main1">--%>
-        <div  class ="main"> 
-             <div class="row"  >
+                   </div>
+                </div>
+                 <div class="col-md-10" id="main1"  style="padding-right: 0px;">
+                  <div  class ="main"> 
+                    <div class="row"  >
                            <div class="col-md-6"  style="padding-top: 100px"; >  
                                      <h2  style="padding-top: 100px; padding-left:100px;">Current Plan</h2>                             
                            </div>
@@ -247,76 +231,76 @@ div.content {
                                <asp:Button class="btn btn-secondary"  ID="Button1" runat="server" Text="Home >> Current Plan" /> 
                                
                            </div>
-                      </div>
-            <div class="row">
-                
-               <div class="col-md-12 mx-auto">
-                 <div class="card" style="width: 800px; margin-top: 100px; margin-bottom: 100px;  margin-left: 100px; margin-right: 100px ";>
-                     
-
-                   <div class="card-body">
-                      <div class="row">
-                         <div class="col">                       
-                            <h4><i class="fa-solid fa-gift"></i>&nbsp;Current Plan</h4>                                                   
-                          </div>
-                     </div>
-                     <div class="row">
-                        <div class="col"><hr></div>
-                     </div>
-
-                     <div class="row"  style="background-color: gainsboro;">
-                                 <div class="col-md-3">  
-                                         <label>Membership</label>                                  
-                                 </div>
-
-                               <div class="col-md-3">  
-                                     <label>Payment Mode</label>                                   
-                               </div>
-                                 <div class="col-md-3">  
-                                         <label>Start Date</label>                                     
-                                 </div>
-                               <div class="col-md-3">  
-                                    <label>Expiry Date</label>
-                               </div>
-                     </div>
-
-                    <div class="row">
-                                 <div class="col-md-3">  
-                                         <label>Free Plan</label>                                       
-                                 </div>
-
-                               <div class="col-md-3">  
-                                     <label>One Time</label>                                   
-                               </div>
-                                 <div class="col-md-3">  
-                                         <label>-</label>                                     
-                                 </div>
-                               <div class="col-md-3">  
-                                    <label>-</label>
-                               </div>
-                          </div>
-
-                       <div class="row">
-                                <div class="col-md-9">                                                                                
-                                </div>
-                                 <div class="col-md-3">                                   
-                                <div class="form-group">
-                                    <asp:Button  class="btn btn-primary btn-block btn-sm" ID="Button2" runat="server" Text="Change Plan" />
-                                </div>
-                               </div>                             
-                              </div>
+                    </div>
+                    <div class="row">                
+                       <div class="col-md-12 mx-auto">
+                         <div class="card" style="width: 80%; margin-top: 100px; margin-bottom: 100px;  margin-left: 100px; margin-right: 100px ";>                     
+                           <div class="card-body">
+                              <div class="row">
+                                 <div class="col">                       
+                                    <h4><i class="fa-solid fa-gift"></i>&nbsp;Current Plan</h4>                                                   
+                                  </div>
                              </div>
-                           </div>
+                             <div class="row">
+                                <div class="col"><hr></div>
+                             </div>
+
+                             <div class="row"  style="background-color: gainsboro;">
+                                         <div class="col-md-3">  
+                                                 <label>Membership</label>                                  
+                                         </div>
+
+                                       <div class="col-md-3">  
+                                             <label>Payment Mode</label>                                   
+                                       </div>
+                                         <div class="col-md-3">  
+                                                 <label>Start Date</label>                                     
+                                         </div>
+                                       <div class="col-md-3">  
+                                            <label>Expiry Date</label>
+                                       </div>
+                             </div>
+
+                            <div class="row">
+                                         <div class="col-md-3">  
+                                                 <label>Free Plan</label>                                       
+                                         </div>
+
+                                       <div class="col-md-3">  
+                                             <label>One Time</label>                                   
+                                       </div>
+                                         <div class="col-md-3">  
+                                                 <label>-</label>                                     
+                                         </div>
+                                       <div class="col-md-3">  
+                                            <label>-</label>
+                                       </div>
+                                  </div>
+
+                               <div class="row">
+                                        <div class="col-md-9">                                                                                
+                                        </div>
+                                         <div class="col-md-3">                                   
+                                        <div class="form-group">
+                                            <asp:Button  class="btn btn-primary btn-block btn-sm" ID="Button2" runat="server" Text="Change Plan" />
+                                      </div>
+                                   </div>                             
+                               </div>
+                            </div>
                         </div>
                     </div>
                  </div>
-              </div>
-                </div>
+               </div>
+           </div>
        </div>
-       
-       
+     </div>
+
+
+
+
     </form>
-     <%-- menu hide --%>
+
+<%--Script for Toggle Option--%>
     <script>
         $("#nav-btn").on("click", function () {
                 $("#side1").toggle();
@@ -324,5 +308,6 @@ div.content {
 
         });
     </script>
+
 </body>
 </html>

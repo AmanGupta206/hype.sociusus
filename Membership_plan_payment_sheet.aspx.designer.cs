@@ -11,7 +11,7 @@ namespace hype.sociusus
 {
 
 
-    public partial class membership_plan
+    public partial class Membership_plan_payment_sheet
     {
 
         /// <summary>
@@ -33,12 +33,39 @@ namespace hype.sociusus
         protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// Button2 control.
+        /// RadioButtonList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
+
+        /// <summary>
+        /// btn1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListItem btn1;
+
+        /// <summary>
+        /// btn2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListItem btn2;
+
+        /// <summary>
+        /// btn3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListItem btn3;
     }
 }

@@ -127,7 +127,8 @@
                    <div class="card-body">
                       <div class="row">
                          <div class="col">                       
-                            <h4>&nbsp;Transactions</h4>                                                   
+                            <h4>&nbsp;Transactions</h4>  
+                             <div><b>Free</b></div>
                           </div>
                      </div>
                      <div class="row">
