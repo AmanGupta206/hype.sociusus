@@ -874,10 +874,102 @@
       <!--Next Part-->    
       <!--Next Part-->
       <!--Next Part-->
-
-
-
    </section>
+
+<%--Testimonials code starts--%>
+      
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"   >
+          <div class="carousel-inner" style="background-color:LightGray;" >
+                           <div style="padding-left: 575px;padding-right: 730px;">
+                                <h2>Testimonials</h2>
+                            </div>    
+                        <div class="carousel-item active">
+                                               
+                          <div class="card" style="width: 650px;margin-left: 350px; margin-bottom: 20px;">
+                              <div class="card-body">                            
+                                   <h4> <img src="images/last.png" />&nbsp;Tony Stark</h4>
+                                   <p class="text-primary"  style="padding-right: 67px;">Social Marketing</p>                                                  
+                                   <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paria tur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                               </div>
+                             </div>
+                          </div>
+                       
+                
+                    <div class="carousel-item">
+                                         
+                          <div class="card" style="width: 650px;margin-left: 350px; margin-bottom: 20px;">
+                              <div class="card-body">                            
+                                   <h4> <img src="images/last.png" />&nbsp;Natasha</h4>
+                                   <p class="text-primary"  style="padding-right: 67px;">Designer</p>                                                  
+                                   <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo do consequat. Elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                               </div>
+                             </div>
+                    </div>
+                    <div class="carousel-item">
+                                             
+                          <div class="card" style="width: 650px;margin-left: 350px; margin-bottom: 20px;">
+                              <div class="card-body">                            
+                                   <h4> <img src="images/last.png" />&nbsp;Steve Roger</h4>
+                                   <p class="text-primary"  style="padding-right: 67px;">Content Writer</p>                                                  
+                                   <p class="card-text">Elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e</p>
+                               </div>
+                             </div>
+                        
+                    </div>
+                         <div >
+                                
+                         </div>
+          </div>
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+           </div>
+<%--Recent blogs codes start--%>
+<style>
+.container_of_recent_blog {
+  position: relative;
+  height:400px;
+  margin-left: 0px;
+  margin-right: 0px;
+  color: white;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+</style>
+
+    <div class="container_of_recent_blog  bg-light" >
+        <div  style="margin-left: 300px;">
+         <div style="margin-top:0px"; margin-bottom: 45px">
+                        <h3 class="text-dark">Recent Blog</h3>
+                        <a href="#" class="text-dark"  style="padding-left: 700px;">View Blog -></a>
+         </div>
+        <div class="row" style="height: 325px;">
+                    
+             <div class="col-md-4">
+                  <a href="#"><img src="images/Other%20Images/image%20logo.png" alt="Image Logo" style="width:100%;">
+                  <div class="top-left text-dark">Admin</div>
+                  <div class="bottom-left text-dark">First Blog
+                  <p class="text-dark">Consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore    et dolore magna aliqua Ut eni...</p>                 
+                 </div></a>
+          </div>
+       </div>
+        </div>
+    </div>
 
 
 

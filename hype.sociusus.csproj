@@ -2198,6 +2198,7 @@
     <Content Include="images\Footer all images\Instagram-black-and-white-logo-vector-png-%285%29.png" />
     <Content Include="images\Footer all images\linkedin-icon-on-white-vecto.jpg" />
     <Content Include="images\Footer all images\Screenshot 2023-04-27 130014.png" />
+    <Content Include="images\for testimonials.png" />
     <Content Include="images\front.png" />
     <Content Include="images\General Writibg\Screenshot 2023-04-19 152534.png" />
     <Content Include="images\General Writibg\Screenshot 2023-04-19 152626.png" />
@@ -2217,13 +2218,17 @@
     <Content Include="images\General Writibg\Screenshot 2023-04-19 153252.png" />
     <Content Include="images\General Writibg\Screenshot 2023-04-19 153329.png" />
     <Content Include="images\hype. 2023-04-17 195423.png" />
+    <Content Include="images\last.png" />
     <Content Include="images\login2.png" />
     <Content Include="images\logo.png" />
+    <Content Include="images\new human.png" />
+    <Content Include="images\Other Images\image logo.png" />
     <Content Include="images\Others\Screenshot 2023-04-24 090001.png" />
     <Content Include="images\Others\Screenshot 2023-04-24 090149.png" />
     <Content Include="images\Others\Screenshot 2023-04-24 090239.png" />
     <Content Include="images\Others\Screenshot 2023-04-24 090309.png" />
     <Content Include="images\Others\Screenshot 2023-04-24 090334.png" />
+    <Content Include="images\person-icon.png" />
     <Content Include="images\Screenshot 2023-04-18 102209.png" />
     <Content Include="images\Screenshot 2023-04-18 102226.png" />
     <Content Include="images\Screenshot 2023-04-18 102238.png" />
