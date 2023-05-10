@@ -282,7 +282,7 @@ div.content {
                                         </div>
                                          <div class="col-md-3">                                   
                                         <div class="form-group">
-                                            <asp:Button  class="btn btn-primary btn-block btn-sm" ID="Button2" runat="server" Text="Change Plan" />
+                                            <a href="Membership_plan_payment_sheet.aspx"><asp:Button  class="btn btn-primary btn-block btn-sm" ID="Button2" runat="server" Text="Change Plan" OnClick="Button2_Click" /></a>
                                       </div>
                                    </div>                             
                                </div>

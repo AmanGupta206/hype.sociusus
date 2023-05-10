@@ -150,27 +150,36 @@ body {
                     <div class="container">
                          <div class="row">
                            <div class="col-md-12 mx-auto">
-                                <div class="row">
-                                     <div class="col">                                              
-                                        <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal" class="checkmark" 
-                                            style="Margin-left: 400px; margin-right: 400px; Margin-top: 60px; margin-bottom: 60px;">
-                                            <asp:ListItem id="btn1">Monthly&nbsp;</asp:ListItem>
-                                            <asp:ListItem  id="btn2">Yearly&nbsp;</asp:ListItem>
-                                            <asp:ListItem id="btn3">Lifetime&nbsp;</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                                                            
-                                                                                
-                                     </div>
+                                <div class="row" style="padding-left: 422px;padding-bottom: 30px;">
+                                     <%--<div class="col">                                              
+                                            <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal" class="checkmark" 
+                                                style="Margin-left: 400px; margin-right: 400px; Margin-top: 60px; margin-bottom: 60px;">
+                                                <asp:ListItem id="btn1">Monthly&nbsp;</asp:ListItem>
+                                                <asp:ListItem  id="btn2">Yearly&nbsp;</asp:ListItem>
+                                                <asp:ListItem id="btn3">Lifetime&nbsp;</asp:ListItem>
+                                            </asp:RadioButtonList>                                                                            
+                                     </div>--%>
+                                    <div class="radform">
+                                        <div class="radio">
+                                            <input type="radio" name="radio-buttons" value="monthly" onchange="enableInputField(5)" />
+                                            Monthly&nbsp; &nbsp; &nbsp;
+              
+                                            <input type="radio" name="radio-buttons" value="yearly" onchange="enableInputField(50)" />
+                                            Yearly&nbsp; &nbsp; &nbsp;
+              
+                                            <input type="radio" name="radio-buttons" value="Lifetime" onchange="enableInputField(550)" />
+                                            Life Time&nbsp; &nbsp; &nbsp;
+               
+                                        </div>
+                </div>
                                  </div>  
                                 <div class="row">
                                      <div class="col-md-4">  
                                           <div class="card">
                                               <div class="card-body">
                                                  <h4>Free Plan</h4>
-                                                  <div style="background-color: #f5f5f5; padding-left: 110px; padding-right: 100px;"><h2>Free</h2></div>
-                                                     
-                                                        <div class="card-body">
-            
+                                                  <div style="background-color: #f5f5f5; padding-left: 110px; padding-right: 100px;"><h2>Free</h2></div>                                                   
+                                                        <div class="card-body">           
                                                             <ul class="list-unstyled mt-3 mb-4" style="text-align:left">
                                                                 <li><h5>Features of Free Plan</h5></li>
                                                               <li>32 AI Document Templates<br /></li>
@@ -184,7 +193,7 @@ body {
                                                                 <li><i class="fa-solid fa-circle-xmark"></i> Free Setup <span class="font-weight-bold"></span></li>
                                                                 <li><i class="fa-solid fa-circle-xmark"></i> Free Support <span class="font-weight-bold"></span></li>
                                                             </ul>
-                                                            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Upgrade</button>
+                                                            <a href="upgrade_membership_page2.aspx"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Upgrade</button></a>
                                                           </div>
                                                         
                                                   </div>
@@ -197,65 +206,165 @@ body {
                                              <div class="card">
                                               <div class="card-body">
                                                  <h4>Trial Plan</h4>
-                                                  <div style="background-color: #f5f5f5; padding-left: 110px; padding-right: 100px;"><h2>Trial</h2></div>
-                                                     
-                                                        <div class="card-body">
-            
+                                                  <div style="background-color: #f5f5f5; padding-left: 110px; padding-right: 100px;"><h2>Trial</h2></div>                                                   
+                                                        <div class="card-body">          
                                                             <ul class="list-unstyled mt-3 mb-4" style="text-align:left">
                                                                 <li><h5>Features of Trial Plan</h5></li>
                                                                <li>61 AI Document Templates<br /></li>
-                                                                  <li>100,000 Words per month<br /></li>
-                                                                  <li>1000 Images per month<br /></li>
+                                                                  <li>50,000 Words per month<br /></li>
+                                                                  <li>500 Images per month<br /></li>
                                                                   <li>0 Speech to Text per month<br /></li>
                                                                   <li>0 MB Audio file size limit<br /></li>
-                                                                    <li><i class="mdi mdi-close"></i> AI Chat <span class="font-weight-bold">?</span></li>
-                                                                    <li><i class="mdi mdi-close"></i> AI Code <span class="font-weight-bold">?</span></li>
-                                                                    <li><i class="mdi mdi-check"></i>  Hide Ads <span class="font-weight-bold"></span></li>
-                                                                    <li><i class="mdi mdi-check"></i> Free Setup <span class="font-weight-bold"></span></li>
-                                                                    <li><i class="mdi mdi-check"></i> Free Support <span class="font-weight-bold"></span></li>
+                                                                   <li><i class="fa-solid fa-circle-xmark"></i> AI Chat <span class="font-weight-bold">?</span></li>
+                                                                   <li><i class="fa-solid fa-circle-xmark"></i> AI Code <span class="font-weight-bold">?</span></li>
+                                                                   <li><i class="fa-sharp fa-solid fa-square-check"></i> Hide Ads <span class="font-weight-bold"></span></li>
+                                                                   <li><i class="fa-solid fa-circle-xmark"></i> Free Setup <span class="font-weight-bold"></span></li>
+                                                                   <li><i class="fa-solid fa-circle-xmark"></i> Free Support <span class="font-weight-bold"></span></li>
                                                             </ul>
-                                                            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Upgrade</button>
-                                                          </div>
-                                                        
+                                                            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Current Plan</button>
+                                                          </div>                                                        
                                                   </div>
-
                                               </div>
                                              </div>
                                        
                                         <div class="col-md-4">  
                                              <div class="card">
                                               <div class="card-body">
-                                                 <h4>Free Plan</h4>
-                                                  <div style="background-color: #f5f5f5; padding-left: 110px; padding-right: 100px;"><h2>Extended Plan</h2></div>
-                                                  <div><h4>Features of Free Plan</h4>
-                                                        <div class="card-body">
-            
+                                                 <h4>Extended Plan</h4>
+                                                  <div style="background-color: #f5f5f5; padding-left: 48px; padding-right: 70px;">
+                                                      <input class="labl" type="text" id="input-field" style="background-color: #f5f5f5;"/>
+                                                  </div>                                                   
+                                                        <div class="card-body">          
                                                             <ul class="list-unstyled mt-3 mb-4" style="text-align:left">
-                                                               <li>Features of Free Plan</li>
-                                                              <li>32 AI Document Templates<br /></li>
-                                                              <li>10,000 Words per month<br /></li>
-                                                              <li>100 Images per month<br /></li>
-                                                              <li>0 Speech to Text per month<br /></li>
-                                                              <li>0 MB Audio file size limit<br /></li>
-                                                                <li><i class="fa-solid fa-circle-xmark"></i> AI Chat <span class="font-weight-bold">?</span></li>
-                                                                <li><i class="mdi mdi-close"></i> AI Code <span class="font-weight-bold">?</span></li>
-                                                                <li><i class="mdi mdi-check"></i>  Hide Ads <span class="font-weight-bold"></span></li>
-                                                                <li><i class="mdi mdi-close"></i> Free Setup <span class="font-weight-bold"></span></li>
-                                                                <li><i class="mdi mdi-close"></i> Free Support <span class="font-weight-bold"></span></li>
+                                                                <li><h5>Features of Trial Plan</h5></li>
+                                                               <li>61 AI Document Templates<br /></li>
+                                                                  <li>50,000 Words per month<br /></li>
+                                                                  <li>500 Images per month<br /></li>
+                                                                  <li>0 Speech to Text per month<br /></li>
+                                                                  <li>0 MB Audio file size limit<br /></li>
+                                                                   <li><i class="fa-solid fa-circle-xmark"></i> AI Chat <span class="font-weight-bold">?</span></li>
+                                                                   <li><i class="fa-solid fa-circle-xmark"></i> AI Code <span class="font-weight-bold">?</span></li>
+                                                                   <li><i class="fa-sharp fa-solid fa-square-check"></i> Hide Ads <span class="font-weight-bold"></span></li>
+                                                                   <li><i class="fa-sharp fa-solid fa-square-check"></i> Free Setup <span class="font-weight-bold"></span></li>
+                                                                   <li><i class="fa-sharp fa-solid fa-square-check"></i> Free Support <span class="font-weight-bold"></span></li>
                                                             </ul>
-                                                            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Upgrade</button>
-                                                          </div>
-                                                        </div>
+                                                            <button type="button" class="btn btn-lg bg-primary text-white btn-block btn-outline-primary">Upgrade</button>
+                                                          </div>                                                        
                                                   </div>
-                                               </div>
-                                           </div>
+                                              </div>
+                                             </div>
                                       </div> 
                                 </div> 
                             </div>
                           </div>
-            
+                     </div>
+<!-- Footer PART CODES-->
+      <div id="footer" style="background-color:#303030">
+        <div class="footer-middle-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-5 col-md-12">
+                        <div class="footer-logo">
+                            <img src="images/Footer%20all%20images/Screenshot%202023-04-27%20130014.png" alt="Logo">                           
+                        </div>
+                        <p style="color: white;">Create SEO-optimized and unique content for your blogs, ads, emails, and website 10X faster &amp; save hours of work with hype</p>
+                    </div>
+               <div class="col-xl-1 col-lg-1">
+                 </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4">
+                        <div style="color: white;" class="footer-links">
+                            <h3>My Account</h3>
+                                <ul>
+                                    <li><a style="color: white;" href="#">Login</a></li><li><a style="color: white;" href="#">Register</a></li>                        
+                               </ul>
+                          </div>
+                      </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4">
+                        <div style="color: white;" class="footer-links">
+                            <h3>Helpful Links</h3>
+                                <ul>
+                                    <li><a style="color: white;" href="#">Blog</a></li>                            
+                                    <li><a style="color: white;"  href="#">Feedback</a></li>
+                                    <li><a style="color: white;"  href="#">Contact</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                  <div class="col-xl-2 col-lg-2 col-md-4">
+                        <div style="color: white;" class="footer-links">
+                            <h3>Information</h3>
+                                 <ul>
+                                    <li><a style="color: white;" href="#">FAQ</a></li>
+                                    <li><a style="color: white;" href="#">Testimonials</a></li>                        
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     <hr style="border-top: dotted 1px;" /> 
+        <div class="footer-bottom-section">
+       
+                    
+                <div class="container-fluid"  >
+                     <div class="row">
+                        <div class="col-xl-12">
+                          <div style="color: white;" class="footer-row">
+                              
+                                 
+                                     <span style="float:left" class="footer-copyright-text">2023 Socius IGB Pvt Ltd, All right reserved</span>
+                              
+
+                                         <span style="float:right"> <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-twitter"></i> </a>
+                               
+
+                                  
+                                        <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>
+                            
+
+                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>
+                             
+                      
+                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-pinterest"></i></a>
+                             
+
+                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a></span></div>                        
+                            </div>                  
+                          </div>
+                       </div>
+                   </div>
+                </div>
 
        
     </form>
+<%--script for change amount options--%>
+    <script>
+        function enableInputField(value) {
+            const radioButtons = document.getElementsByName('radio-buttons');
+            const inputField = document.getElementById('input-field');
+            for (let i = 0; i < radioButtons.length; i++) {
+                if (radioButtons[i].checked) {
+                    inputField.disabled = false;
+                    switch (value) {
+                        case 5:
+                            inputField.value = "₹" + value + " /per month ";
+                            break;
+                        case 50:
+                            inputField.value = "₹" + value + " /per year";
+                            break;
+                        case 550:
+                            inputField.value = "₹" + value + " /lifetime";
+                            break;
+                        default:
+                            inputField.value = "";
+                            break;
+                    }
+                    return;
+                }
+            }
+            inputField.disabled = true;
+            inputField.value = "";
+        }
+
+    </script>
 </body>
 </html>

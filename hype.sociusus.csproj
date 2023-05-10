@@ -98,7 +98,6 @@
   <ItemGroup>
     <Content Include="account_setting_page.aspx" />
     <Content Include="App_Data\hype.sociusus.mdf" />
-    <Content Include="DashBoard.aspx" />
     <Content Include="dashboard2.aspx" />
     <Content Include="dashboardexp.aspx" />
     <Content Include="forgetpassword.aspx" />
@@ -2242,9 +2241,11 @@
     <Content Include="images\Social Media\Screenshot 2023-04-23 130333.png" />
     <Content Include="images\Social Media\Screenshot 2023-04-23 130429.png" />
     <Content Include="images\Websites\Screenshot 2023-04-24 085918.png" />
+    <Content Include="membership_billing_page.aspx" />
     <Content Include="Membership_page2.aspx" />
     <Content Include="Membership_plan_payment_sheet.aspx" />
     <Content Include="transaction_page.aspx" />
+    <Content Include="upgrade_membership_page2.aspx" />
     <Content Include="userlogin.aspx" />
     <Content Include="userregister.aspx" />
     <Content Include="Web.config" />
@@ -2257,13 +2258,6 @@
     </Compile>
     <Compile Include="account_setting_page.aspx.designer.cs">
       <DependentUpon>account_setting_page.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DashBoard.aspx.cs">
-      <DependentUpon>DashBoard.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DashBoard.aspx.designer.cs">
-      <DependentUpon>DashBoard.aspx</DependentUpon>
     </Compile>
     <Compile Include="dashboard2.aspx.cs">
       <DependentUpon>dashboard2.aspx</DependentUpon>
@@ -2296,6 +2290,13 @@
     <Compile Include="homepage.aspx.designer.cs">
       <DependentUpon>homepage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="membership_billing_page.aspx.cs">
+      <DependentUpon>membership_billing_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="membership_billing_page.aspx.designer.cs">
+      <DependentUpon>membership_billing_page.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Membership_page2.aspx.cs">
       <DependentUpon>Membership_page2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2324,6 +2325,13 @@
     </Compile>
     <Compile Include="transaction_page.aspx.designer.cs">
       <DependentUpon>transaction_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="upgrade_membership_page2.aspx.cs">
+      <DependentUpon>upgrade_membership_page2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="upgrade_membership_page2.aspx.designer.cs">
+      <DependentUpon>upgrade_membership_page2.aspx</DependentUpon>
     </Compile>
     <Compile Include="userlogin.aspx.cs">
       <DependentUpon>userlogin.aspx</DependentUpon>

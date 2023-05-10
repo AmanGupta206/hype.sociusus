@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace hype.sociusus
 {
-    public partial class DashBoard : System.Web.UI.Page
+    public partial class membership_billing_page : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

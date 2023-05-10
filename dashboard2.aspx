@@ -157,7 +157,7 @@ div.content {
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-comment"></i> AI Chat</a>
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-file"></i> All Documents</a>
-                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-gift"></i> Membership</a>
+                                  <a class="dropdown-item" href="Membership_page2.aspx"><i class="fa-solid fa-gift"></i> Membership</a>
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-gear"></i> Account Settings</a>
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
                     
