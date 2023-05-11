@@ -162,7 +162,7 @@
                             <h3>Information</h3>
                                  <ul>
                                     <li><a style="color: white;" href="#">FAQ</a></li>
-                                    <li><a style="color: white;" href="#">Testimonials</a></li>                        
+                                    <li><a style="color: white;" href="testimonials_inner_page.aspx">Testimonials</a></li>                        
                                 </ul>
                         </div>
                     </div>

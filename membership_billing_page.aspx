@@ -104,18 +104,18 @@
 
              <div style="height:calc(100%-60px);background-color: #f5f5f5;" class ="main"  > 
              <div class="row"  >
-                           <div class="col-md-6"  style="padding-top: 100px"; >  
-                                     <h2  style="padding-top: 100px; padding-left:250px">Upgrade Membership</h2>                             
+                           <div class="col-md-6"  style="padding-top: 72px"; >  
+                                     <h2  style="padding-top: 100px; padding-left:190px">Billing Details</h2>                             
                            </div>
-                           <div class="col-md-6"   style="padding-top: 200px; padding-left:275px;">  
+                           <div class="col-md-6"   style="padding-top: 175px; padding-left:175px;">  
                               
-                               <asp:Button class="btn btn-secondary"  ID="Button2" runat="server" Text="Home >> Upgrade" /> 
+                               <asp:Button class="btn btn-secondary"  ID="Button2" runat="server" Text="Home >> Membership Plan >> Billing Details" /> 
                                
                            </div>
                       </div>
         <div class="row">
          <div class="col-md-12 mx-auto">
-           <div class="card" style="width: 800px; margin-left: 60px; ">
+           <div class="card" style="width: 875px; margin-left: 240px; margin-bottom: 25px; ">
                <div class="card-body">
                   <div class="row">
                      <div class="col">                       
@@ -123,12 +123,12 @@
                      </div>
                   </div>                 
                   <div class="row">
-                     <div class="col">
-                        <hr>
+                     <div class="col" style="padding-left: 20px; background-color: lightblue;">
+                        <p style="padding-top: 17px;">These Details will be used in invoice and tax handeling</p>
                      </div>
                   </div>
                   <div class="row">
-                         <div class="col-md-10">  
+                         <div class="col-md-12">  
                                  <label>Type</label>
                                 <div class="form-group">
                                    <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Personal/Business" ></asp:TextBox>
@@ -136,7 +136,7 @@
                          </div>
                   </div>
                   <div class="row">
-                           <div class="col-md-10">  
+                           <div class="col-md-12">  
                                  <label>Name*</label>
                                 <div class="form-group">
                                    <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Name" ></asp:TextBox>
@@ -145,7 +145,7 @@
                    </div>
 
                     <div class="row">                            
-                           <div class="col-md-10">  
+                           <div class="col-md-12">  
                                  <label>Address*</label>
                                 <div class="form-group">
                                    <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Address" ></asp:TextBox>
@@ -159,7 +159,7 @@
                                    <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="Bengaluru" ></asp:TextBox>
                                 </div>
                            </div>
-                           <div class="col-md-3">  
+                           <div class="col-md-4">  
                                  <label>State</label>
                                 <div class="form-group">
                                    <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="Karnataka" ></asp:TextBox>
@@ -174,7 +174,7 @@
                       </div>
 
                     <div class="row">                            
-                           <div class="col-md-10">  
+                           <div class="col-md-12">  
                                  <label>Country*</label>
                                 <div class="form-group">
                                    <asp:TextBox CssClass="form-control" ID="TextBox11" runat="server" placeholder="India" ></asp:TextBox>
@@ -183,9 +183,9 @@
                       </div>
 
                     <div class="row">                            
-                           <div class="col-md-3">                                   
+                           <div class="col-md-5">                                   
                                 <div class="form-group">
-                                    <asp:Button  class="btn btn-primary btn-block btn-lg" ID="Button1" runat="server" Text="Save Changes" />
+                                    <asp:Button  class="btn btn-primary btn-block btn-lg" ID="Button1" runat="server" Text="Save and Continue to checkout" />
                                 </div>
                            </div>
                       </div>
@@ -193,6 +193,84 @@
                  </div>
                </div>
              </div>
+           </div>
+
+
+<!-- Footer PART CODES-->
+      <div id="footer" style="background-color:#303030">
+        <div class="footer-middle-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-5 col-md-12">
+                        <div class="footer-logo">
+                            <img src="images/Footer%20all%20images/Screenshot%202023-04-27%20130014.png" alt="Logo">                           
+                        </div>
+                        <p style="color: white;">Create SEO-optimized and unique content for your blogs, ads, emails, and website 10X faster &amp; save hours of work with hype</p>
+                    </div>
+               <div class="col-xl-1 col-lg-1">
+                 </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4">
+                        <div style="color: white;" class="footer-links">
+                            <h3>My Account</h3>
+                                <ul>
+                                    <li><a style="color: white;" href="#">Login</a></li><li><a style="color: white;" href="#">Register</a></li>                        
+                               </ul>
+                          </div>
+                      </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4">
+                        <div style="color: white;" class="footer-links">
+                            <h3>Helpful Links</h3>
+                                <ul>
+                                    <li><a style="color: white;" href="#">Blog</a></li>                            
+                                    <li><a style="color: white;"  href="#">Feedback</a></li>
+                                    <li><a style="color: white;"  href="#">Contact</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                  <div class="col-xl-2 col-lg-2 col-md-4">
+                        <div style="color: white;" class="footer-links">
+                            <h3>Information</h3>
+                                 <ul>
+                                    <li><a style="color: white;" href="#">FAQ</a></li>
+                                    <li><a style="color: white;" href="#">Testimonials</a></li>                        
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     <hr style="border-top: dotted 1px;" /> 
+        <div class="footer-bottom-section">
+       
+                    
+                <div class="container-fluid"  >
+                     <div class="row">
+                        <div class="col-xl-12">
+                          <div style="color: white;" class="footer-row">
+                              
+                                 
+                                     <span style="float:left" class="footer-copyright-text">2023 Socius IGB Pvt Ltd, All right reserved</span>
+                              
+
+                                         <span style="float:right"> <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-twitter"></i> </a>
+                               
+
+                                  
+                                        <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>
+                            
+
+                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>
+                             
+                      
+                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-pinterest"></i></a>
+                             
+
+                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a></span></div>                        
+                            </div>                  
+                          </div>
+                       </div>
+                   </div>
+                </div>
     </form>
 </body>
 </html>
