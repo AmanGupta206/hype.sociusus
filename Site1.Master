@@ -142,16 +142,16 @@
                     <div class="col-xl-2 col-lg-2 col-md-4">
                         <div style="color: white;" class="footer-links">
                             <h3>My Account</h3>
-                                <ul>
-                                    <li><a style="color: white;" href="#">Login</a></li><li><a style="color: white;" href="#">Register</a></li>                        
+                                <ul >
+                                    <li ><a style="color: white;" href="#">Login</a></li><li><a style="color: white;" href="#">Register</a></li>                        
                                </ul>
                           </div>
                       </div>
                     <div class="col-xl-2 col-lg-2 col-md-4">
                         <div style="color: white;" class="footer-links">
                             <h3>Helpful Links</h3>
-                                <ul>
-                                    <li><a style="color: white;" href="#">Blog</a></li>                            
+                                <ul">
+                                    <li><a style="color: white;" href="recent_blog_internal_page.aspx">Blog</a></li>                            
                                     <li><a style="color: white;"  href="#">Feedback</a></li>
                                     <li><a style="color: white;"  href="#">Contact</a></li>
                                 </ul>

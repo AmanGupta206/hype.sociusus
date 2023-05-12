@@ -33,7 +33,9 @@ body {
   margin: 0;
   font-family: "Lato", sans-serif;
 }
-
+.blogicon{
+    padding:8px;
+}
 
 
 /*css color-profile main section*/
@@ -134,7 +136,7 @@ body {
                  
 
 <!--HEADER ENDS-->
-        <style>
+<style>
 .container_of_recent_blog {
   position: relative;
   height:400px;
@@ -151,16 +153,15 @@ body {
 .bottom-left {
   position: absolute;
   top: 8px;
-  left: 16px;
+  left: 16px;   
 }
-
 </style>
 <%--Codes for main body--%>
-
-             <div style="height:calc(100%-60px);background-color: #f5f5f5;" class ="main"  > 
+             <div style="height:100%-60px;background-color: #f5f5f5; bottom:0px" class ="main"  > 
                      <div class="row"  >
                            <div class="col-md-6"  style="padding-top: 100px"; >  
-                                     <h2  style="padding-top: 100px; padding-left:250px">Blogs</h2>                             
+                                     <h2  style="padding-top: 100px; padding-left:250px">Blogs</h2>
+                                     <p style="padding-left: 250px;">Recent Blog</p>
                            </div>
                            <div class="col-md-6"   style="padding-top: 200px; padding-left:215px;">  
                               
@@ -168,13 +169,13 @@ body {
                                
                            </div>
                       </div>
-   <%--Recent blogs codes start--%>
+<%--Recent blogs codes start--%>
                 <div class="row">
                    <div class="col-md-12 mx-auto" style="display: flex;">
-                     <div class="col-md-8" >
+                     <div class="col-md-8"  style="background-color: rgba(230, 230, 230, 0.1);">
                             <div class="container_of_recent_blog  bg-light" >
-                                <div  style="margin-left: 300px;">
-                                 <div style="margin-top:0px"; margin-bottom: 45px">
+                                <div  style="margin-left: 0px;margin-top: 50px; background-color: #f5f5f5; padding-left: 250px;">
+                                 <div style="margin-top:0px; margin-bottom: 45px ;">
                                         <h3 class="text-dark">Recent Blog</h3>
                                         
                                  </div>
@@ -184,18 +185,189 @@ body {
                                           <a href="#"><img src="images/Other%20Images/image%20logo.png" alt="Image Logo" style="width:100%;">
                                          <div class="top-bottom text-dark">Admin</div></a>
                                     </div>
-                                    <div class="col-md-6">                                        
-                                          <div class="bottom-left text-dark">First Blog
-                                          <p class="text-dark">Consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore    et dolore magna aliqua Ut eni...</p>                 
+                                    <div class="col-md-6" style="margin-bottom: 188px;background-color: white;">                                   
+                                          <div class="bottom-left text-dark" ><h4 style="background-color: white;">First Blog</h4> 
+                                          <p class="text-dark" style="background-color: white;">Consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore    et dolore magna aliqua Ut eni...</p>                 
                                          </div>
                                   </div>
                                </div>
                                 </div>
                             </div>
                      </div>
-                     <div class="col-md-4" ></div>
+        <div class="col-md-4" style="padding-top: 45px;" >
+            <div>
+                            
+                    <%--search button--%>
+                    <div class="input-group rounded">
+                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                        <span class="input-group-text border-0" id="search-addon">
+                        <i class="fas fa-search"></i>
+                        </span>
+                    </div>
+                <h3 style="padding-top: 20px;">Categories</h3>
+                <p style="padding-top: 20px;">Testimonials</p>
+                </div>
+            <%--crousal of testimonials part code--%>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="background-color: #fff;">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card-body">                                            
+                            <i class="fa-solid fa-quote-left testiconleft" ></i><br />
+                            <p style="width:auto" > Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paria tur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                            <i class="fa-solid fa-quote-right "></i>  
+                            <div style="display:flex">
+                                <img src="images/default_user.png" style="width:80px;height:75px;border-radius:50px" />
+                                <div style="Margin-left:25px; padding-top: 10px; "><h5>Tony Stark</h5>
+                                <h6 style="color:#184698">Social Marketing</h6>
+                                    </div>
+                            </div>
+                            </div>
+                    </div>
+                    <div class="carousel-item">
+
+                        <div class="card-body">
+                            <i class="fa-solid fa-quote-left testiconleft" ></i><br />
+                            <p  style="width:auto" > Elitsed do eiusmod tempor incididunt ut labore laboris nisi ut aliquip ex ea et dolore magna aliqua Ut enim ad minim veniam, 
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip e
+
+                            </p>
+                            <i class="fa-solid fa-quote-right "></i>   
+                                <div style="display:flex">
+                                <img src="images/default_user.png" style="width:80px;height:75px;border-radius:50px" />
+                                <div style="Margin-left:25px; padding-top: 10px; "><h5>Steve Roger</h5>
+                                <h6 style="color:#184698">Content Writer</h6>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card-body">
+                            <i class="fa-solid fa-quote-left testiconleft" ></i><br />
+                            <p  style="width:auto" >
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo do consequat.
+                                Elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+
+                            </p>
+                            <i class="fa-solid fa-quote-right " ></i>     
+                                <div style="display:flex">
+                                <img src="images/default_user.png" style="width:80px;height:75px;border-radius:50px" />
+                                <div style="Margin-left:25px; padding-top: 10px; "><h5>Natasha</h5>
+                                <h6 style="color:#184698">Designer</h6>
+                                    </div>
+                                </div>
+                        </div>
+                     </div>
+                    </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <h3 style="padding-top: 20px;">Tags</h3>
+                <p style="padding-top: 10px;"><span style="background-color: rgba(0,123,255,.25);">travel fun</span>&nbsp;
+                    <span style="background-color: rgba(0,123,255,.25);">love</span></p>
+                <div>
+                    <h3>Social Profiles</h3>
+                    <i class="fa-brands fa-facebook-f  blogicon"></i>
+                    <i class="fa-brands fa-twitter blogicon"></i>
+                    <i class="fa-brands fa-instagram blogicon"></i>
+                    <i class="fa-brands fa-linkedin-in blogicon"></i>
+                    <i class="fa-brands fa-pinterest  blogicon"></i>
+                </div>
+
+            </div>  
+        </div>
+    </div>
+<!-- Footer -->
+      <div id="footer" style="background-color:#303030">
+        <div class="footer-middle-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-5 col-md-12">
+                        <div class="footer-logo">
+                            <img src="images/Footer%20all%20images/Screenshot%202023-04-27%20130014.png" alt="Logo">                           
+                        </div>
+                        <p style="color: white;">Create SEO-optimized and unique content for your blogs, ads, emails, and website 10X faster &amp; save hours of work with hype</p>
+                    </div>
+               <div class="col-xl-1 col-lg-1">
+                 </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4">
+                        <div style="color: white;" class="footer-links">
+                            <h3>My Account</h3>
+                                <ul >
+                                    <li ><a style="color: white;" href="#">Login</a></li><li><a style="color: white;" href="#">Register</a></li>                        
+                               </ul>
+                          </div>
+                      </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4">
+                        <div style="color: white;" class="footer-links">
+                            <h3>Helpful Links</h3>
+                                <ul">
+                                    <li><a style="color: white;" href="#">Blog</a></li>                            
+                                    <li><a style="color: white;"  href="#">Feedback</a></li>
+                                    <li><a style="color: white;"  href="#">Contact</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                  <div class="col-xl-2 col-lg-2 col-md-4">
+                        <div style="color: white;" class="footer-links">
+                            <h3>Information</h3>
+                                 <ul>
+                                    <li><a style="color: white;" href="#">FAQ</a></li>
+                                    <li><a style="color: white;" href="testimonials_inner_page.aspx">Testimonials</a></li>                        
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     <hr style="border-top: dotted 1px;" /> 
+        <div class="footer-bottom-section">
+       
+                    
+                <div class="container-fluid"  >
+                     <div class="row">
+                        <div class="col-xl-12">
+                          <div style="color: white;" class="footer-row">
+                              
+                                 
+                                     <span style="float:left" class="footer-copyright-text">2023 Socius IGB Pvt Ltd, All right reserved</span>
+                              
+
+                                         <span style="float:right"> <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-twitter"></i> </a>
+                               
+
+                                  
+                                        <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>
+                            
+
+                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>
+                             
+                      
+                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-pinterest"></i></a>
+                             
+
+                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a></span></div>                        
+                            </div>                  
+                          </div>
+                       </div>
                    </div>
                 </div>
+
+
+
+        </div>
     </form>
 </body>
 </html>

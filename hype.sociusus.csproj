@@ -100,8 +100,7 @@
     <Content Include="all_ai_image_page.aspx" />
     <Content Include="all_documents_page.aspx" />
     <Content Include="App_Data\hype.sociusus.mdf" />
-    <Content Include="dashboard2.aspx" />
-    <Content Include="dashboardexp.aspx" />
+    <Content Include="dashboard_page.aspx" />
     <Content Include="forgetpassword.aspx" />
     <Content Include="Bootstrap\cs\bootstrap.min.css" />
     <Content Include="Bootstrap\js\bootstrap.min.js" />
@@ -2278,19 +2277,12 @@
     <Compile Include="all_documents_page.aspx.designer.cs">
       <DependentUpon>all_documents_page.aspx</DependentUpon>
     </Compile>
-    <Compile Include="dashboard2.aspx.cs">
-      <DependentUpon>dashboard2.aspx</DependentUpon>
+    <Compile Include="dashboard_page.aspx.cs">
+      <DependentUpon>dashboard_page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="dashboard2.aspx.designer.cs">
-      <DependentUpon>dashboard2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="dashboardexp.aspx.cs">
-      <DependentUpon>dashboardexp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="dashboardexp.aspx.designer.cs">
-      <DependentUpon>dashboardexp.aspx</DependentUpon>
+    <Compile Include="dashboard_page.aspx.designer.cs">
+      <DependentUpon>dashboard_page.aspx</DependentUpon>
     </Compile>
     <Compile Include="forgetpassword.aspx.cs">
       <DependentUpon>forgetpassword.aspx</DependentUpon>

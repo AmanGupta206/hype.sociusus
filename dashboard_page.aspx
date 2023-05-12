@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dashboard2.aspx.cs" Inherits="hype.sociusus.dashboard2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dashboard_page.aspx.cs" Inherits="hype.sociusus.dashboard_page" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <%--bootstrap css--%>
+      <%--bootstrap css--%>
     <link href="Bootstrap/cs/bootstrap.min.css" rel="stylesheet" />
      <%--datatable css--%>
     <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -25,20 +25,10 @@
     <script src="Bootstrap/js/bootstrap.min.js"></script>
     <%--for graph--%>
    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-   <%-- for dropdown--%>
-  
-
-
-
 </head>
 <body>
     <form id="form1" runat="server">
-
-
-
-       
-<%--Dashboard part starts--%>
-
+        
 <style>
 body {
   margin: 0;
@@ -100,16 +90,16 @@ div.content {
 
 /*css color-profile main section*/
 .main{
-    position:absolute;
-    width:calc(100% - 250px);
-    left : 250px;
+    position:relative;
+    width:100%;
+    
     min-height: calc(100vh-60px);
     background:#f5f5f5;
-  
+    
 
 }
 .cards{
-    width: 100%;
+  
     padding: 35px 20px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -130,20 +120,26 @@ div.content {
 
 </style>
 
+ <!--HEADER START-->
+              <div style="height:90px;position:fixed; border-bottom: solid;  z-index:1; background-color:white; width:100%; margin-top:-1px; " class="Header"> 
+                 <div class ="row" style="height:90px;position:fixed;  z-index:1;background-color:white;width:100%;margin-top:0px; border-width:0.5px; border-bottom:solid " >
+                        <div class="col-md-2"> 
+                             <a href="https://localhost:44367/homepage.aspx">
+                               <img width:"20px" src="images/hype.%202023-04-17%20195423.png"/ style="   border: none;max-width: 100px;height: auto;" href="https://localhost:44367/homepage.aspx">
+                             </a>
+                       </div>      
+ <%--button for toggle--%>
+                     <div class="col-md-8"> 
+                         <nav style="margin-left:185px; height: 31px; width: 869px;" class="navbar navbar-toggleable-md fixed-top">
+                                    <button id="nav-btn"class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarDiv"  aria-expanded="true" aria-label="Toggle navigation">
+                                        <span class="fa fa-bars"></span>
 
-   <!--HEADER START-->
+                                    </button>
+                                    </nav>
+                     </div> 
 
-         
-              <div style="height:90px;position:fixed;  z-index:1;background-color:white;width:100%;margin-top:-1px;" class="Header"> 
-                 <div  style="height:90px;position:fixed;  z-index:1;background-color:white;width:100%;margin-top:0px;" class ="row" >
-                        <div class="col-md-10"> 
-                         <a href="https://localhost:44367/homepage.aspx">
-                           <img width:"20px" src="images/hype.%202023-04-17%20195423.png"/ style="   border: none;max-width: 100px;height: auto;" href="https://localhost:44367/homepage.aspx">
-                         </a>
-                        </div>
-
-                    <%--FOR DROP DOWN BUTTON IN TOP--%> 
-            <div class="col-md-1"> 
+  <%--FOR DROP DOWN BUTTON IN TOP--%> 
+            <div class="col-md-1" style="border-right: inset;border-left: outset;"> 
                          <div class="dropdown show"  style="padding-top:10px">
                                   <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink"  data-toggle="dropdown" >
                                       <img src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20154408.png" />
@@ -152,12 +148,12 @@ div.content {
                               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                 <a class="dropdown-item" href="#"><img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard</a>
                                 <a class="dropdown-item" href="#"><i class="fa-solid fa-file"></i> My Documents</a>
-                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-bars"></i> Templates</a>
+                                <a class="dropdown-item" href="#"><i class="fa-solid fa-bars"></i> Templates</a>
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-image"></i> AI Images</a>
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-comment"></i> AI Chat</a>
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-file"></i> All Documents</a>
-                                  <a class="dropdown-item" href=""><i class="fa-solid fa-gift"></i> Membership</a>
+                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-gift"></i> Membership</a>
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-gear"></i> Account Settings</a>
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
                     
@@ -165,12 +161,7 @@ div.content {
                         </div>
                </div>
 
-               <%-- END OF CODE FOR DROP DOWN--%>
-
-           
-          
-              
-                
+<%-- END OF CODE FOR DROP DOWN--%>              
           <div class="col-md-1"> 
                    <div style="position: relative;display: inline-block; margin-bottom:auto ; padding-top:40px;">
                        <label for="Language"></label>
@@ -204,34 +195,24 @@ div.content {
         </div>
                  
 
-              
-
-
-      <!--HEADER ENDS-->
-
-
-
-
-     
-
-  
-<%--side navigation box starts--%>
-       
-           <div class="sidebar"  >
-    
+<!--HEADER ENDS-->
+<%--sidebar  and main part starts--%>
+<div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2" id="side1"  style="padding-left: 0px; padding-right: 0px;" > 
+                    <div class="sidebar" >    
                       <h4>&nbsp;&nbsp;My Account</h4>        
                       <a href="#">
-                          <img width="15" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard</a>
-                     
-                                     <div class="dropdown">
-                                          <button class="btn btn-secondary dropdown-toggle"  style="background: #f5f5f5; border-color: #f5f5f5;color:black" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fa-solid fa-file"></i>&nbsp;My Documents
-                                          </button>
-                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="all_documents_page.aspx">All Documents</a>
-                                            <a class="dropdown-item" href="all_ai_image_page.aspx">All AI Images</a>                                  
-                                          </div>
-                                    </div>
+                          <img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard</a>
+                           <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle"  style="background: #f5f5f5; border-color: #f5f5f5;color:black" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-solid fa-file"></i>&nbsp;My Documents
+                                    </button>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="all_documents_page.aspx">All Documents</a>
+                                    <a class="dropdown-item" href="all_ai_image_page.aspx">All AI Images</a>                                  
+                                 </div>
+                            </div>
                       <h4>Organize And Manage</h4>
                       <a href="#"><i class="fa-solid fa-bars"></i> Templates</a>
                       <a href="#"><i class="fa-solid fa-image"></i> AI Images</a>
@@ -244,27 +225,22 @@ div.content {
                       <a href="#"><i class="fa-solid fa-money-bill"></i> Transaction</a>
                       <a href="#"><i class="fa-solid fa-gear"></i> Account Settings</a>
                       <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
-            </div>
-         
-
-<%--side navigation ends --%>  
-
-  <div style="height:calc(100%-60px);" class ="main">
-
-             <div class="row">
-                         <div class="col-md-6"  style="padding-top: 50px"; >  
-                                 <h2  style="padding-top: 50px;">&nbsp;&nbsp;&nbsp;Dashboard</h2>                               
-                         </div>
-                           <div class="col-md-6"   style="padding-top: 100px;">  
-                               <center>
-                               <asp:Button class="btn btn-secondary" ID="Button1" runat="server" Text="Home >> Dashboard" /> 
-                                </center>
+                   </div>
+                </div>
+                 <div class="col-md-10" id="main1"  style="padding-right: 0px;">
+                  <div  class ="main"> 
+                    <div class="row"  >
+                           <div class="col-md-6"  style="padding-top: 100px"; >  
+                                     <h2  style="padding-top: 100px; padding-left:100px;">Dashboard</h2>                             
                            </div>
-                      </div>
-
-
-       
-             <div class ="cards">
+                           <div class="col-md-6"   style="padding-top: 200px; padding-left:275px;">  
+                              
+                               <asp:Button class="btn btn-secondary"  ID="Button1" runat="server" Text="Home >> Dashboard" /> 
+                               
+                           </div>
+                    </div>
+                  <%-- main part code--%>
+                        <div class ="cards">
                  <div class="card">             
                           <div class="row">                  
                                 <div class="col-md-6"><h2>Words Used <p>0/10,000</p></h2></div>                                  
@@ -329,42 +305,65 @@ div.content {
        
          <!-- Footer -->
 
+
+
+
+
+
+
+               </div>
+           </div>
+       </div>
+     </div>
+
+
+
+
     </form>
 
-<script>
-    const ctx = document.getElementById('myChart');
+<%--Script for Toggle Option--%>
+    <script>
+        $("#nav-btn").on("click", function () {
+                $("#side1").toggle();
+            $("#main1").toggleClass('col-lg-12 full-width'); 
 
-    new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ["01 May", "02 May", "03 May", "04 May", "05 May", "06 May", "07 May", "08 May", "09 May", "10 May", "11 May", "12 May", "13 May", "14 May", "15 May", "16 May", "17 May", "18 May", "19 May", "20 May", "21 May", "22 May", "23 May", "24 May", "25 May", "26 May", "27 May", "28 May", "29 May", "30 May", "31 May"],
-            // Information about the dataset
-            datasets: [{
-                label: "Words Used Graphical Representation",
-                backgroundColor: '#18469815',
-                borderColor: '#184698',
-                borderWidth: "3",
-                data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                pointRadius: 5,
-                pointHoverRadius: 5,
-                pointHitRadius: 10,
-                pointBackgroundColor: "#fff",
-                pointHoverBackgroundColor: "#fff",
-                pointBorderWidth: "2",
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
+        });
+    </script>
+<%--script for graph--%>
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["01 May", "02 May", "03 May", "04 May", "05 May", "06 May", "07 May", "08 May", "09 May", "10 May", "11 May", "12 May", "13 May", "14 May", "15 May", "16 May", "17 May", "18 May", "19 May", "20 May", "21 May", "22 May", "23 May", "24 May", "25 May", "26 May", "27 May", "28 May", "29 May", "30 May", "31 May"],
+                // Information about the dataset
+                datasets: [{
+                    label: "Words Used Graphical Representation",
+                    backgroundColor: '#18469815',
+                    borderColor: '#184698',
+                    borderWidth: "3",
+                    data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    pointRadius: 5,
+                    pointHoverRadius: 5,
+                    pointHitRadius: 10,
+                    pointBackgroundColor: "#fff",
+                    pointHoverBackgroundColor: "#fff",
+                    pointBorderWidth: "2",
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
                 }
             }
-        }
-    });
-</script>
+        });
+    </script>
+
 
 
 
 </body>
 </html>
-
