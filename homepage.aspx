@@ -1,19 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="homepage.aspx.cs" Inherits="hype.sociusus.homepage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="homepage.aspx.cs" Inherits="hype.sociusus.homepage1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <!-- Brain logo -->
-
-         <br> 
-                <p style="text-align:center;"><img src="images/logo.png" alt="image" alt="Logo"></p> <br/>
-                <div class="animated_rainbow_2" style="margin-left:425px/;text-align:center;">
-                    <h1>Best AI Content Writer</h1>
-
-                </div>
-
-                
- <!-- Colored text -->
+<!-- Brain logo -->
+        <br> 
+        <p style="text-align:center;"><img src="images/logo.png" alt="image" alt="Logo"></p> <br/>
+        <div class="animated_rainbow_2" style="margin-left:425px/;text-align:center;">
+            <h1>Best AI Content Writer</h1>
+        </div>               
+<!-- Colored text CSS -->
 
 <style>
 .animated_rainbow_2 {
@@ -39,12 +35,7 @@
 </style>
 
 
-
-
-
-
-
- <!-- Written part and a button -->
+<!-- Written part and a button -->
    <section>
          <center>
                 <div>                
@@ -56,12 +47,12 @@
                </div>
          </center>
 
-        <style>  
-            .btn btn-info btn200
-            {
-               border : 5px solid;
-            }
-       </style>  
+<style>  
+.btn btn-info btn200
+{
+    border : 5px solid;
+}
+</style>  
 
         <center>
                <p>
@@ -115,763 +106,816 @@
         </div>
     </section>
     <hr style="border-top: dotted 1px;" /> 
-
+<%--CSS of templates--%>
+<style>
+.card6-block{
+   padding: 1em;
+  border: 0px solid gray;
+  border-radius: 20px;
+  width: fit-content;
+  transition: 0.2s;
+}
+.card6-block:hover{
+  margin-top: -10px;
+  transition: 0.2s;
+}
+</style>
 <!-- Templete section starting -->
-      <br>
-      <section>
-          <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <center>
-                        <h2>Templates</h2>
-                        <h3>Generate your required content with over 60+ content creation templates<h3>
-
-                    <center>
+ <br>
+ <section>
+ <%-- temp body --%>
+    <p style="font-size:20px;margin-left:600px"><b>Templates</b></p>
+    <p style="font-size:20px;margin-left:350px">Generate your required content with over 60+ content creation templates</p>
+            <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm" 
+                id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); 
+                --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);height:50px;width:990px;
+                margin-left:200px;font-size:13px;">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active rounded-5" onclick="toggleData()" id="All-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">All Templates</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link rounded-5" onclick="toggleData()" id="ab-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Article and Blogs</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link rounded-5" onclick="toggleData()" id="am-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Ads and Marketing Tools</button>
+                      </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link rounded-5" onclick="toggleData()" id="gw-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">General Writing</button>
+                      </li>
+                            <li class="nav-item" role="presentation">
+                        <button class="nav-link rounded-5" onclick="toggleData()" id="ecom-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Ecommerce</button>
+                      </li>
+                            <li class="nav-item" role="presentation">
+                        <button class="nav-link rounded-5" onclick="toggleData()" id="ss-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Social Media</button>
+                      </li>
+                            <li class="nav-item" role="presentation">
+                        <button class="nav-link rounded-5" onclick="toggleData()" id="web-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Website</button>
+                      </li>
+                            <li class="nav-item" role="presentation">
+                        <button class="nav-link rounded-5" onclick="toggleData()" id="other-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Other</button>
+                      </li>
+             </ul>
+    <style>
+        i{
+            color:darkblue;
+        }
+        i:hover{
+            color:gray;
+        }
+    </style>
+    
+    <div class="py-5">
+    <div class="container5" id="data" style="width:1000px;margin-left:200px">
+      <div class="row hidden-md-up" style="padding:20px 20px" id="data1">
+                  <div class="row">
+                  <h5>Article And Blogs</h5>
+                  </div>
+       
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card6-block">
+                      <h4 class="card-title"><i class="fa fa-comment" ></i></h4>
+                       <p class="card-subtitle text-muted">Blogs Ideas</p> 
+                      <p class="card-text p-y-1">Article/blog ideas that you can use to generate more traffic, leads,<br /> and sales for your business.</p>
+              
+                    </div>
+                  </div>
                 </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card6-block">
+                      <h4 class="card-title"><i class="fa fa-align-left" aria-hidden="true"></i></h4>
+                      <p class="card-subtitle text-muted">Blog Intros</p>
+                      <p class="card-text p-y-1"> Enticing article/blog introductions that capture the attention of the audience.</p>
+              
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card6-block">
+                      <h4 class="card-title"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></h4>
+                      <h6 class="card-subtitle text-muted">Blog Titles</h6>
+                      <p class="card-text p-y-1">Nobody wants to read boring blog titles, generate catchy blog titles with this tool.</p>
+              
+                    </div>
+                  </div>
+                </div>
+              <br>
+              <div class="row hidden-md-up" style="padding:20px 20px">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card6-block">
+                      <h4 class="card-title"><i class="fa fa-address-book" aria-hidden="true"></i></h4>
+                      <h6 class="card-subtitle text-muted">Blog Section</h6>
+                      <p class="card-text p-y-1">Write a few paragraphs about a subheading of your article.</p>
+              
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card6-block">
+                      <h4 class="card-title"><i class="fa fa-check-square" aria-hidden="true"></i></h4>
+                      <h6 class="card-subtitle text-muted">Blog Conclusion</h6>
+                      <p class="card-text p-y-1">Create powerful conclusion that will make a reader take action.</p>
+              
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card6-block">
+                      <h4 class="card-title"><i class="fa fa-pencil-square" aria-hidden="true"></i></h4>
+                      <h6 class="card-subtitle text-muted">Article Write</h6>
+                      <p class="card-text p-y-1"> Create a fully complete high quality article from a title and outline text.</p>
+              
+                    </div>
+                  </div>
+                </div>
+                  </div>
+                <div class="row hidden-md-up" style="padding:20px 20px">
+                  <div class="col-md-4">
+                  <div class="card">
+                    <div class="card6-block">
+                      <h4 class="card-title"><i class="fa fa-pencil-square" ></i></h4>
+                      <h6 class="card-subtitle text-muted">Article Rewrite</h6>
+                      <p class="card-text p-y-1"> Copy an article, paste it in to the program, and with just one click
+                                you'll have an entirely different article to read.</p>             
+                    </div>
+                  </div>
+                </div>
+                  <div class="col-md-4">
+                  <div class="card">
+                    <div class="card6-block">
+                      <h4 class="card-title"><i class="fa fa-list" aria-hidden="true"></i></h4>
+                      <h6 class="card-subtitle text-muted">Article Outlines</h6>
+                      <p class="card-text p-y-1"> Detailed article outlines that help you write better content on a consistent basis.</p>   
+                    </div>
+                  </div>
+                </div>
+                  <div class="col-md-4">
+                  <div class="card">
+                    <div class="card6-block">
+                      <h4 class="card-title"><i class="fa fa-list-ol" aria-hidden="true"></i></h4>
+                      <h6 class="card-subtitle text-muted">Talking Points</h6>
+                      <p class="card-text p-y-1"> Write short, simple and informative points for the subheadings of your article</p>
+              
+                    </div>
+                  </div>
+                </div>
+                    </div>
+                <div class="row hidden-md-up" style="padding:20px 20px">
+                  <div class="col-md-4">
+                  <div class="card">
+                    <div class="card6-block">
+                      <h4 class="card-title"><i class="fa fa-align-justify" aria-hidden="true"></i></h4>
+                      <h6 class="card-subtitle text-muted">Paragrapher Writer</h6>
+                      <p class="card-text p-y-1"> Perfectly structured paragraphs that are easy 
+                                to read and packed with persuasive words.</p>
+              
+                    </div>
+                  </div>
+                </div>
+                  <div class="col-md-4">
+                  <div class="card">
+                    <div class="card6-block">
+                      <h4 class="card-title"><i class="fa fa-refresh" aria-hidden="true"></i></h4>
+                      <h6 class="card-subtitle text-muted">Content Rephrase</h6>
+                      <p class="card-text p-y-1">Rephrase your content in a different voice and style to appeal to different readers.</p>    
+                    </div>
+                  </div>
+                </div>
+                    </div>
+          </div>
+         <%-- ads and marketing --%>
+        <div class="row hidden-md-up" style="padding:20px 20px" id="data2">
+          <h5>Ads And Marketing Tools</h5><hr style="border:2px dotted"/>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa-brands fa-square-facebook"></i></h4>
+               <p class="card-subtitle text-muted">Facebook Ads</p> 
+              <p class="card-text p-y-1">Facebook ad copies that make your ads truly stand out.</p>
+              
             </div>
-         </div>
-      </section>
-           <br>
-         <!--Next Part-->
-            
-         <style>
-           
-          /*  .col-md-4             
-            {
-               border : 2px solid;
-            }*/
-            .btn btn-default
-            {
-               border : 2px solid;
-            }
-            .btn btn-info btn200
-            {
-               border : 2px solid;
-            }
-          
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa-brands fa-square-facebook"></i></h4>
+              <p class="card-subtitle text-muted">Facebook Ads Headlines</p>
+              <p class="card-text p-y-1">Write catchy and convincing headlines to make your Facebook Ads stand out.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa-brands fa-google"></i></h4>
+              <h6 class="card-subtitle text-muted">Google Ad Titles</h6>
+              <p class="card-text p-y-1">Creating ads with unique and appealing titles that entice people to click on your ad and purchase from your site.</p>
+              
+            </div>
+          </div>
+        </div>
+      <br>
+      <div class="row hidden-md-up" style="padding:20px 20px">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa-brands fa-google"></i></h4>
+              <h6 class="card-subtitle text-muted">Google Ad Descriptions</h6>
+              <p class="card-text p-y-1">The best-performing Google ad copy converts visitors into customers.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa-brands fa-linkedin"></i></h4>
+              <h6 class="card-subtitle text-muted">Linkedin Ad Headlines</h6>
+              <p class="card-text p-y-1">Attention-grabbing, click-inducing, and high-converting ad headlines for Linkedin.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa-brands fa-linkedin"></i></h4>
+              <h6 class="card-subtitle text-muted">Linkedin Ad Descriptions</h6>
+              <p class="card-text p-y-1">Professional and eye-catching ad descriptions that will make your product shine.</p>
+              
+            </div>
+          </div>
+        </div>
+          </div>
+        
+          <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-bell" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">Apps and SMS Notifications</h6>
+              <p class="card-text p-y-1">Notification messages for your apps, websites, and mobile devices that keep users coming back for more.</p>
+              
+            </div>
+          </div>
+        </div>
+         </div> 
+        <%-- General Writing --%>
+        <div class="row hidden-md-up" style="padding:20px 20px" id="data3">
+          <h5>General Writing</h5><hr style="border:2px dotted"/>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-text-width" aria-hidden="true"></i></h4>
+               <p class="card-subtitle text-muted">Text Extender</p> 
+              <p class="card-text p-y-1">Extend short sentences into more descriptive and interesting ones.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-text-width" aria-hidden="true"></i></h4>
+              <p class="card-subtitle text-muted">Content Shorten</p>
+              <p class="card-text p-y-1">Short your content in a different voice and style to appeal to different readers.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa-brands fa-quora"></i></h4>
+              <h6 class="card-subtitle text-muted">Quora Answers</h6>
+              <p class="card-text p-y-1">Answers to Quora questions that will position you as an authority.</p>
+              
+            </div>
+          </div>
+        </div>
+     <br>
+      <div class="row hidden-md-up" style="padding:20px 20px">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-child" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">Summarize for a 2nd grader</h6>
+              <p class="card-text p-y-1">Translates difficult text into simpler concepts.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa-regular fa-heart"></i></h4>
+              <h6 class="card-subtitle text-muted">Stories</h6>
+              <p class="card-text p-y-1">Engaging and persuasive stories that will capture your reader's attention and interest.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-list" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">Bullet Point Answers</h6>
+              <p class="card-text p-y-1">Precise and informative bullet points that provide quick and valuable answers to your customers' questions.</p>
+              
+            </div>
+          </div>
+        </div>
+          </div>
+        <div class="row hidden-md-up" style="padding:20px 20px">
+          <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-server" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">Definition</h6>
+              <p class="card-text p-y-1">A definition for a word, phrase, or acronym that's used often by your target buyers.</p>
+              
+            </div>
+          </div>
+        </div>
+          <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-check-circle" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">Answers</h6>
+              <p class="card-text p-y-1">Instant, quality answers to any questions or concerns that your audience might have.</p>
+              
+            </div>
+          </div>
+        </div>
+          <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-question-circle" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">Questions</h6>
+              <p class="card-text p-y-1">A tool to create engaging questions and polls that increase audience participation and engagement.</p>
+              
+            </div>
+          </div>
+        </div>
+            </div>
+        <div class="row hidden-md-up" style="padding:20px 20px">
+          <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-sort-alpha-desc" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">Passive to Active Voice</h6>
+              <p class="card-text p-y-1">Easy and quick solution to converting your passive voice sentences into active voice sentences.</p>
+              
+            </div>
+          </div>
+        </div>
+          <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-key" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">Pros and Cons</h6>
+              <p class="card-text p-y-1">List of the main benefits versus the most common problems and concerns.</p>
+              
+            </div>
+          </div>
+        </div>
+            <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-refresh" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">Rewrite With Keywords</h6>
+              <p class="card-text p-y-1">Rewrite your existing content to include more keywords and boost your search engine rankings.</p>
+              
+            </div>
+          </div>
+        </div>
+            </div>
+            <div class="row hidden-md-up" style="padding:20px 20px">
+          <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-envelope" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">Emails</h6>
+              <p class="card-text p-y-1">Professional-looking emails that help you engage leads and customers.</p>
+              
+            </div>
+          </div>
+        </div>
+          <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-envelope" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">Emails V2</h6>
+              <p class="card-text p-y-1">Personalized email outreach to your target prospects that get better results.</p>
+              
+            </div>
+          </div>
+        </div>
+          <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa-solid fa-envelope"></i></h4>
+              <h6 class="card-subtitle text-muted">Email Subject Lines</h6>
+              <p class="card-text p-y-1">Powerful email subject lines that increase open rates.</p>
+              
+            </div>
+          </div>
+        </div>
+            </div>
+            <div class="row hidden-md-up" style="padding:20px 20px">
+          <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-bullhorn" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">Startup Name Generator</h6>
+              <p class="card-text p-y-1">Generate cool, creative, and catchy names for your startup in seconds.</p>
+              
+            </div>
+          </div>
+        </div>
+          <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-file-text" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">Company Bios</h6>
+              <p class="card-text p-y-1">Short and sweet company bio that will help you connect with your target audience.</p>
+              
+            </div>
+          </div>
+        </div>
+          <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-list-ol" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">Company Mission</h6>
+              <p class="card-text p-y-1">A clear and concise statement of your company's goals and purpose.</p>
+              
+            </div>
+          </div>
+        </div>
+                </div>
+                <div class="row hidden-md-up" style="padding:20px 20px">
+          <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-align-left" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">Company Vision</h6>
+              <p class="card-text p-y-1">A vision that attracts the right people, clients, and employees.</p>
+              
+            </div>
+          </div>
+        </div>
+            </div>
+             </div>
+        <%-- Ecommerce --%>
+        <div class="row hidden-md-up" style="padding:20px 20px" id="data4">
+          <h5>Ecommerce</h5><hr style="border:2px dotted"/>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-gift" aria-hidden="true"></i></h4>
+               <p class="card-subtitle text-muted">Product Name Generator</p> 
+              <p class="card-text p-y-1">Create creative product names from examples words.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-gift" aria-hidden="true"></i></h4>
+              <p class="card-subtitle text-muted">Product Descriptions</p>
+              <p class="card-text p-y-1">Authentic product descriptions that will compel, inspire, and influence.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa-brands fa-amazon"></i></h4>
+              <h6 class="card-subtitle text-muted">Amazon Product Titles</h6>
+              <p class="card-text p-y-1">Product titles that will make your product stand out in a sea of competition.</p>
+              
+            </div>
+          </div>
+        </div>
+      <br>
+      <div class="row hidden-md-up" style="padding:20px 20px">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa-brands fa-amazon"></i></h4>
+              <h6 class="card-subtitle text-muted">Amazon Product Descriptions</h6>
+              <p class="card-text p-y-1">Descriptions for Amazon products that rank on the first page of the search results.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa-brands fa-amazon"></i></h4>
+              <h6 class="card-subtitle text-muted">Amazon Product Features</h6>
+              <p class="card-text p-y-1">Advantages and features of your products that will make them irresistible to shoppers.</p>
+              
+            </div>
+          </div>
+        </div>
+        
+        </div>
+            </div>
+         <%-- Social Media --%>
+        <div class="row hidden-md-up" style="padding:20px 20px" id="data5">
+          <h5>Social Media</h5><hr style="border:2px dotted"/>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-facebook-square" aria-hidden="true"></i></h4>
+               <p class="card-subtitle text-muted">Social Media Post (Personal)</p> 
+              <p class="card-text p-y-1">Write a social media post for yourself to be published on any platform.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-facebook-square" aria-hidden="true"></i></h4>
+              <p class="card-subtitle text-muted">Social Media Post (Business)</p>
+              <p class="card-text p-y-1">Write a post for your business to be published on any social media platform.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-instagram" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">Instagram Captions</h6>
+              <p class="card-text p-y-1">Captions that turn your images into attention-grabbing Instagram posts.</p>
+              
+            </div>
+          </div>
+        </div>
+     <br>
+      <div class="row hidden-md-up" style="padding:20px 20px" >
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-instagram" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">Instagram Hashtags</h6>
+              <p class="card-text p-y-1">Trending and highly relevant hashtags to help you get more followers and engagement.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-twitter" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">Twitter Tweets</h6>
+              <p class="card-text p-y-1">Generate tweets using AI, that are relevant and on-trend.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-youtube-play" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">YouTube Titles</h6>
+              <p class="card-text p-y-1">Catchy titles that attract more views and increase the number of shares.</p>
+              
+            </div>
+          </div>
+        </div>
+          </div>
+        <div class="row hidden-md-up" style="padding:20px 20px">
+          <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-youtube-play" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">YouTube Descriptions</h6>
+              <p class="card-text p-y-1"> Catchy and persuasive YouTube descriptions that help your videos rank higher.</p>
+              
+            </div>
+          </div>
+        </div>
+          <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-youtube-play" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">YouTube Outlines</h6>
+              <p class="card-text p-y-1">Video outlines that are a breeze to create and uber-engaging.</p>
+              
+            </div>
+          </div>
+        </div>
+          <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-linkedin-square" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">LinkedIn Posts</h6>
+              <p class="card-text p-y-1">Inspiring LinkedIn posts that will help you build trust and authority in your industry.</p>
+              
+            </div>
+          </div>
+        </div>
+            </div>
+        <div class="row hidden-md-up" style="padding:20px 20px">
+          <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-film" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">TikTok Video Scripts</h6>
+              <p class="card-text p-y-1">Video scripts that are ready to shoot and will make you go viral.</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+             </div>
+         <%-- Website --%>
+        <div class="row hidden-md-up" style="padding:20px 20px" id="data6">
+          <h5>Website</h5><hr style="border:2px dotted" />
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-google" aria-hidden="true"></i></h4>
+               <p class="card-subtitle text-muted">SEO Meta Tags (Blog Post)</p> 
+              <p class="card-text p-y-1">A set of optimized meta title and meta description tags that will boost your search rankings for your blog.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-google" aria-hidden="true"></i></h4>
+              <p class="card-subtitle text-muted">SEO Meta Tags (Homepage)</p>
+              <p class="card-text p-y-1">A set of optimized meta title and meta description tags that will boost your search rankings for your home page.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-google" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">SEO Meta Tags (Product Page)</h6>
+              <p class="card-text p-y-1">A set of optimized meta title and meta description tags that will boost your search rankings for your product page.</p>
+              
+            </div>
+          </div>
+        </div>
+      </div><br>
+      
+         <%-- Other --%>
+        <div class="row hidden-md-up" style="padding:20px 20px" id="data7">
+          <h5>Other</h5><hr style="border:2px dotted"/>
+        <div class="col-md-4" >
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-refresh" aria-hidden="true"></i></h4>
+               <p class="card-subtitle text-muted">Tone Changer</p> 
+              <p class="card-text p-y-1">Change the tone of your writing to match your audience and copy.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" >
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-music" aria-hidden="true"></i></h4>
+              <p class="card-subtitle text-muted">Song Lyrics</p>
+              <p class="card-text p-y-1">Unique song lyrics that will be perfect for your next hit song.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-globe" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">Translate</h6>
+              <p class="card-text p-y-1">Translate your content into any language you want.</p>
+              
+            </div>
+          </div>
+        </div>
+      <br>
+      <div class="row hidden-md-up" style="padding:20px 20px">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-question-circle-o" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">FAQs</h6>
+              <p class="card-text p-y-1">Generate frequently asked questions based on your product description.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-question-circle-o" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">FAQ Answers</h6>
+              <p class="card-text p-y-1">Generate creative answers to questions (FAQs) about your business or website.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card6-block">
+              <h4 class="card-title"><i class="fa fa-star-half-o" aria-hidden="true"></i></h4>
+              <h6 class="card-subtitle text-muted">Testimonials / Reviews</h6>
+              <p class="card-text p-y-1">Add social proof to your website by generating user testimonials.</p>
+              
+            </div>
+          </div>
+        </div>
+          </div>
+        
+    </div>
+  </div>
+      </div>
 
-               
+
+
+
+
+
+
+
+
+ </section>
+           <br>
+<!--Next Part-->          
+<style>       
+.btn btn-default
+{
+    border : 2px solid;
+}
+.btn btn-info btn200
+{
+    border : 2px solid;
+}               
 </style>           
 <!--Next Part-->
    <hr style="border-top: dotted 1px;" /> 
- <section>             
-   <Center> <h2>Articles and Blogs</h2></Center>
-      <div class="container">
-         <div class="row" >            
-               <div class="col-md-4";style="box-sizing:border-box;border:12px;" > 
-                   <img width="75px" src="images/Articles%20and%20blogs/Screenshot%202023-04-19%20123131.png" />
-                        <h4>Blog Ideas</h4>
-                        <p class="text-justify">
-                           Article/blog ideas that you can use to generate more traffic, leads, and sales for your business.
-                        </p>
-                   <p><a class="btn btn-default " href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>
-                 <div class="col-md-4";>                       
-                   <img width="75px" src="images/Articles%20and%20blogs/Screenshot%202023-04-19%20124600.png" />
-                        <h4>Blog Intros</h4>
-                        <p class="text-justify">
-                          Enticing article/blog introductions that capture the attention of the audience.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>
-                 <div class="col-md-4";> 
-                   <img width="75px"  src="images/Articles%20and%20blogs/Screenshot%202023-04-19%20124631.png" />
-                        <h4>Blog Titles</h4>
-                        <p class="text-justify">
-                          Nobody wants to read boring blog titles, generate catchy blog titles with this tool.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-               </div>
-            </div>
-       </div>
-                       
-      <div class="container">
-         <div class="row">
-               <div class="col-md-4"> 
-                   <img width="75px"  src="images/Articles%20and%20blogs/Screenshot%202023-04-19%20132516.png" />
-                        <h4>Blog Section(Pro)</h4>
-                        <p class="text-justify">
-                          Write a few paragraphs about a subheading of your article.
-                        </p>
-                   <p><a class="btn btn-default " href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-                </div>
-
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/Articles%20and%20blogs/Screenshot%202023-04-19%20132601.png" />
-                        <h4>Blog Conclusion</h4>
-                        <p class="text-justify">
-                        Create powerful conclusion that will make a reader take action.     
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>
-                    
-                </div>
-                 <div class="col-md-4"> 
-                  <img width="75px"  src="images/Articles%20and%20blogs/Screenshot%202023-04-19%20132624.png" />
-                        <h4>Article Writer(Pro)</h4>
-                        <p class="text-justify">
-                         Create a fully complete high quality article from a title and outline text.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>
-               </div>
-            </div>
-
-           <!--Next Part-->
-
-                   
-      <div class="container">
-         <div class="row">
-               <div class="col-md-4"> 
-                   <img width="75px" src="images/Articles%20and%20blogs/Screenshot%202023-04-19%20134820.png" />
-                        <h4>Article Rewriter</h4>
-                        <p class="text-justify">
-                          Copy an article, paste it in to the program, and with just one click you'll have an entirely different article to read.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-                </div>
-
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/Articles%20and%20blogs/Screenshot%202023-04-19%20134838.png" />
-                        <h4>Article Outlines</h4>
-                        <p class="text-justify">
-                        Detailed article outlines that help you write better content on a consistent basis.    
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>
-                    
-                </div>
-                 <div class="col-md-4"> 
-                     <img  width="75px" src="images/Articles%20and%20blogs/Screenshot%202023-04-19%20134856.png" />
-                        <h4>Talking Points</h4>
-                        <p class="text-justify">
-                         Write short, simple and informative points for the subheadings of your article
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>
-            </div>
-          </div>
-
-           <!--Next Part-->
-
-       <div class="container">
-         <div class="row">
-               <div class="col-md-4"> 
-                  <img width="75px" src="images/Articles%20and%20blogs/Screenshot%202023-04-19%20134929.png" />
-                        <h4>Paragraph Writer(Pro)</h4>
-                        <p class="text-justify">
-                           Perfectly structured paragraphs that are easy to read and packed with persuasive words.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-               </div>
-
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/Articles%20and%20blogs/Screenshot%202023-04-19%20134952.png" />
-                        <h4>Content Rephrase</h4>
-                        <p class="text-justify">
-                           Rephrase your content in a different voice and style to appeal to different readers.  
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>
-                 </div>
-              </div>
-           </div>
-
-           <!--Next Part-->
-
-    <hr style="border-top: dotted 1px;" /> 
-    <Center> <h2>Ads And Marketing Tools</h2> </Center> 
-
-           <!--Next Part-->
-
-      <div class="container">
-         <div class="row">
-               <div class="col-md-4"> 
-                   <img width="75px" src="images/Ads%20and%20Marketing%20Tools/Screenshot%202023-04-19%20151736.png" />
-                        <h4>Facebook Ads</h4>
-                        <p class="text-justify">
-                          Facebook ad copies that make your ads truly stand out.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-                </div>
-
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/Articles%20and%20blogs/Screenshot%202023-04-19%20134838.png" />
-                        <h4>Facebook Ads Headlines</h4>
-                        <p class="text-justify">
-                          Write catchy and convincing headlines to make your Facebook Ads stand out.   
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>
-                    
-                </div>
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/Ads%20and%20Marketing%20Tools/Screenshot%202023-04-19%20151814.png" />
-                        <h4>Google Ad Titles(Pro)</h4>
-                        <p class="text-justify">
-                          Creating ads with unique and appealing titles that entice people to click on your ad and purchase from your site.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>
-            </div>
-          </div>
-
-             <!--Next Part-->
-
-       <div class="container">
-         <div class="row">
-               <div class="col-md-4"> 
-                   <img  width="75px" src="images/Ads%20and%20Marketing%20Tools/Screenshot%202023-04-19%20151814.png" />
-                        <h4>Google Ad Descriptions(Pro)</h4>
-                        <p class="text-justify">
-                          The best-performing Google ad copy converts visitors into customers.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-                </div>
-                 <div class="col-md-4"> 
-                     <img width="75px"  src="images/Ads%20and%20Marketing%20Tools/Screenshot%202023-04-19%20151845.png" />
-                        <h4>LinkedIn Ad Headlines</h4>
-                        <p class="text-justify">
-                           Attention-grabbing, click-inducing, and high-converting ad headlines for Linkedin.    
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>
-                    
-                </div>
-                 <div class="col-md-4"> 
-                     <img width="75px"  src="images/Ads%20and%20Marketing%20Tools/Screenshot%202023-04-19%20151845.png" />
-                        <h4>LinkedIn Ad Descriptions</h4>
-                        <p class="text-justify">
-                         Professional and eye-catching ad descriptions that will make your product shine.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>
-            </div>
-
-             <!--Next Part-->
-
-            <div class="row">
-               <div class="col-md-4"> 
-                   <img width="75px" src="images/Ads%20and%20Marketing%20Tools/Screenshot%202023-04-19%20151912.png" />
-                        <h4>App and SMS Notifications</h4>
-                        <p class="text-justify">
-                          Notification messages for your apps, websites, and mobile devices that keep users coming back for more.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-                </div>
-             </div>
-          </div>
-
-
-             <!--Next Part-->
-
-             <hr style="border-top: dotted 1px;" /> 
-             <center>  <h2>General Writing</h2> </center>
-
-             <!--Next Part-->
-
-       <div class="container">
-         <div class="row">
-               <div class="col-md-4"> 
-                   <img width="75px" src="images/General%20Writibg/Screenshot%202023-04-19%20152534.png" />
-                        <h4>Text Extender</h4>
-                        <p class="text-justify">
-                           Extend short sentences into more descriptive and interesting ones.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-                </div>
-
-                 <div class="col-md-4"> 
-                     <img width="75px"  src="images/General%20Writibg/Screenshot%202023-04-19%20152534.png" />
-                        <h4>Content Shorten</h4>
-                        <p class="text-justify">
-                          Short your content in a different voice and style to appeal to different readers.   
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>
-                    
-                </div>
-                 <div class="col-md-4"> 
-                     <img  width="75px"  src="images/General%20Writibg/Screenshot%202023-04-19%20152626.png" />
-                        <h4>Quora Answers(Pro)</h4>
-                        <p class="text-justify">
-                           Answers to Quora questions that will position you as an authority.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>
-            </div>
-         </div>
-
-
-
-             <!--Next Part-->
-
-       <div class="container">
-         <div class="row">
-               <div class="col-md-4"> 
-                   <img width="75px" src="images/General%20Writibg/Screenshot%202023-04-19%20152703.png" />
-                        <h4>Summarize for a 2nd grader</h4>
-                        <p class="text-justify">
-                           Translates difficult text into simpler concepts.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-                </div>
-
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/General%20Writibg/Screenshot%202023-04-19%20152738.png" />
-                        <h4>Stories(Pro)</h4>
-                        <p class="text-justify">
-                          Engaging and persuasive stories that will capture your reader's attention and interest.   
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>
-                    
-                </div>
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/General%20Writibg/Screenshot%202023-04-19%20152813.png" />
-                        <h4>Bullet Point Answers</h4>
-                        <p class="text-justify">
-                           Precise and informative bullet points that provide quick and valuable answers to your customers' questions.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>
-            </div>
-        </div>
-
-             <!--Next Part-->
-
-       <div class="container">
-         <div class="row">
-               <div class="col-md-4"> 
-                   <img width="75px" src="images/General%20Writibg/Screenshot%202023-04-19%20152844.png" />
-                        <h4>Definition</h4>
-                        <p class="text-justify">
-                           A definition for a word, phrase, or acronym that's used often by your target buyers.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-                </div>
-
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/General%20Writibg/Screenshot%202023-04-19%20152902.png" />
-                        <h4>Answers</h4>
-                        <p class="text-justify">
-                          Instant, quality answers to any questions or concerns that your audience might have.   
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>
-                    
-                </div>
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/General%20Writibg/Screenshot%202023-04-19%20152923.png" />
-                        <h4>Questions</h4>
-                        <p class="text-justify">
-                           A tool to create engaging questions and polls that increase audience participation and engagement.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>
-            </div>
-         </div>
-
-             <!--Next Part-->
-
-       <div class="container">
-         <div class="row">
-               <div class="col-md-4"> 
-                   <img width="75px"  src="images/General%20Writibg/Screenshot%202023-04-19%20153007.png" />
-                        <h4>Passive to Active Voice</h4>
-                        <p class="text-justify">
-                           Easy and quick solution to converting your passive voice sentences into active voice sentences.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-                </div>
-
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/General%20Writibg/Screenshot%202023-04-19%20153027.png" />
-                        <h4>Pros and Cons(Pro)</h4>
-                        <p class="text-justify">
-                          List of the main benefits versus the most common problems and concerns.   
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>
-                    
-                </div>
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/General%20Writibg/Screenshot%202023-04-19%20153048.png" />
-                        <h4>Rewrite With Keywords(Pro)</h4>
-                        <p class="text-justify">
-                           Rewrite your existing content to include more keywords and boost your search engine rankings.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>
-            </div>
-         </div>
-
-             <!--Next Part-->
-
-      <div class="container">
-         <div class="row">
-               <div class="col-md-4">                  
-                   <img width="75px" src="images/General%20Writibg/Screenshot%202023-04-19%20153106.png" />
-                        <h4>Emails(Pro)</h4>
-                        <p class="text-justify">
-                           Professional-looking emails that help you engage leads and customers.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-               </div>
-
-                 <div class="col-md-4">                     
-                     <img width="75px" src="images/General%20Writibg/Screenshot%202023-04-19%20153106.png" />
-                        <h4>Emails V2(Pro)</h4>
-                        <p class="text-justify">
-                          Personalized email outreach to your target prospects that get better results.   
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>
-                 <div class="col-md-4">                     
-                     <img width="75px" src="images/General%20Writibg/Screenshot%202023-04-19%20153134.png" />
-                        <h4>Email Subject Lines</h4>
-                        <p class="text-justify">
-                           Powerful email subject lines that increase open rates.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>
-            </div>
-         </div>
-
-             <!--Next Part-->
-
-       <div class="container">
-         <div class="row">
-               <div class="col-md-4">                                    
-                   <img width="75px" src="images/General%20Writibg/Screenshot%202023-04-19%20153209.png" />
-                        <h4>Startup Name Generator</h4>
-                        <p class="text-justify">
-                           Generate cool, creative, and catchy names for your startup in seconds.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-               </div>
-
-                 <div class="col-md-4">                                         
-                     <img width="75px" src="images/General%20Writibg/Screenshot%202023-04-19%20153233.png" />
-                        <h4>Company Bios</h4>
-                        <p class="text-justify">
-                           Short and sweet company bio that will help you connect with your target audience.  
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>
-                 <div class="col-md-4">                                          
-                     <img width="75px" src="images/General%20Writibg/Screenshot%202023-04-19%20153252.png" />
-                        <h4>Company Mission(Pro)</h4>
-                             <p class="text-justify">
-                               A clear and concise statement of your company's goals and purpose.
-                            </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>
-            </div>
-         </div>
-
-             <!--Next Part-->
-
-      <div class="container">
-         <div class="row">
-               <div class="col-md-4">                                                       
-                   <img width="75px" src="images/General%20Writibg/Screenshot%202023-04-19%20153329.png" />
-                        <h4>Company Vision(Pro)</h4>
-                        <p class="text-justify">
-                           A vision that attracts the right people, clients, and employees.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-               </div>                
-            </div>
-         </div>
-
-
-             <!--Next Part-->
-
-        <hr style="border-top: dotted 1px;" /> 
-             <center><h2>Ecommerce</h2> </center>
-
-             <!--Next Part-->
-
-       <div class="container">
-         <div class="row">
-               <div class="col-md-4"> 
-                   <img width="75px" src="images/Ecommerce/Screenshot%202023-04-23%20125826.png" />
-                        <h4>Product Name Generator</h4>
-                        <p class="text-justify">
-                           Create creative product names from examples words.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-                </div>
-
-                 <div class="col-md-4">                    
-                     <img width="75px"  src="images/Ecommerce/Screenshot%202023-04-23%20125826.png" />
-                        <h4>Product Descriptions</h4>
-                        <p class="text-justify">
-                           Authentic product descriptions that will compel, inspire, and influence.   
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>
-                    
-                </div>
-                 <div class="col-md-4">                      
-                     <img width="75px"  src="images/Ecommerce/Screenshot%202023-04-23%20125930.png" />
-                        <h4>Amazon Product Titles(Pro)</h4>
-                        <p class="text-justify">
-                           Product titles that will make your product stand out in a sea of competition.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>
-            </div>
-         </div>
-
-
-             <!--Next Part-->
-
-      <div class="container">
-         <div class="row">
-               <div class="col-md-4">                   
-                   <img width="75px"  src="images/Ecommerce/Screenshot%202023-04-23%20125930.png" />
-                        <h4>Amazon Product Descriptions(Pro)</h4>
-                        <p class="text-justify">
-                           Descriptions for Amazon products that rank on the first page of the search results.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-                </div>
-                 <div class="col-md-4">                      
-                     <img width="75px"  src="images/Ecommerce/Screenshot%202023-04-23%20125930.png" />
-                        <h4>Amazon Product Features(Pro)</h4>
-                        <p class="text-justify">
-                           Advantages and features of your products that will make them irresistible to shoppers.   
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>                
-            </div>
-         </div>
-
-        <!--Next Part-->
-
-        <hr style="border-top: dotted 1px;" /> 
-        <center><h2>Social Media</h2> </center>
-
-        <!--Next Part-->
-
-       <div class="container">
-         <div class="row">
-               <div class="col-md-4"> 
-                   <img width="75px" src="images/Social%20Media/Screenshot%202023-04-23%20130025.png" />
-                        <h4>Social Media Post (Personal)</h4>
-                        <p class="text-justify">
-                           Write a social media post for yourself to be published on any platform.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-                </div>
-
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/Social%20Media/Screenshot%202023-04-23%20130051.png" />
-                        <h4>Social Media Post-Business(Pro)</h4>
-                        <p class="text-justify">
-                           Write a post for your business to be published on any social media platform.   
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>
-                    
-                </div>
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/Social%20Media/Screenshot%202023-04-23%20130115.png" />
-                        <h4>Instagram Captions</h4>
-                        <p class="text-justify">
-                           Captions that turn your images into attention-grabbing Instagram posts.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>
-            </div>
-         </div>
-
-      <!--Next Part-->
-
-      <div class="container">
-         <div class="row">
-               <div class="col-md-4"> 
-                   <img width="75px" src="images/Social%20Media/Screenshot%202023-04-23%20130139.png" />
-                        <h4>Instagram Hashtags(Pro)</h4>
-                        <p class="text-justify">
-                           Trending and highly relevant hashtags to help you get more followers and engagement.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-                </div>
-
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/Social%20Media/Screenshot%202023-04-23%20130156.png" />
-                        <h4>Twitter Tweets</h4>
-                        <p class="text-justify">
-                           Generate tweets using AI, that are relevant and on-trend.   
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>
-                    
-                </div>
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/Social%20Media/Screenshot%202023-04-23%20130219.png" />
-                        <h4>YouTube Titles</h4>
-                        <p class="text-justify">
-                            Catchy titles that attract more views and increase the number of shares.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>
-            </div>
-         </div>
-
-      <!--Next Part-->
-
-      <div class="container">
-         <div class="row">
-               <div class="col-md-4"> 
-                   <img width="75px" src="images/Social%20Media/Screenshot%202023-04-23%20130257.png" />
-                        <h4>YouTube Descriptions(Pro)</h4>
-                        <p class="text-justify">
-                           Catchy and persuasive YouTube descriptions that help your videos rank higher.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-                </div>
-
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/Social%20Media/Screenshot%202023-04-23%20130257.png" />
-                        <h4>YouTube Outlines</h4>
-                        <p class="text-justify">
-                           Video outlines that are a breeze to create and uber-engaging.   
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>
-                    
-                </div>
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/Social%20Media/Screenshot%202023-04-23%20130333.png" />
-                        <h4>LinkedIn Posts</h4>
-                        <p class="text-justify">
-                           Inspiring LinkedIn posts that will help you build trust and authority in your industry.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>
-            </div>
-         </div>
-
-      <!--Next Part-->
-
-      <div class="container">
-         <div class="row">
-               <div class="col-md-4"> 
-                   <img width="75px" src="images/Social%20Media/Screenshot%202023-04-23%20130429.png" />
-                        <h4>TikTok Video Scripts(Pro)</h4>
-                        <p class="text-justify">
-                           Video scripts that are ready to shoot and will make you go viral.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-                </div>                                
-            </div>
-       </div>     
-
-        <!--Next Part-->
-
-        <hr style="border-top: dotted 1px;" /> 
-        <center><h2>Website</h2> </center>
-
-        <!--Next Part-->
-
-       <div class="container">
-         <div class="row">
-               <div class="col-md-4"> 
-                   <img width="75px" src="images/Websites/Screenshot%202023-04-24%20085918.png" />
-                        <h4>SEO Meta Tags-Blog Post(Pro)</h4>
-                        <p class="text-justify">
-                           A set of optimized meta title and meta description tags that will boost your search rankings for your blog.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-                </div>
-
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/Websites/Screenshot%202023-04-24%20085918.png" />
-                        <h4>SEO Meta Tags-Homepage(Pro)</h4>
-                        <p class="text-justify">
-                           A set of optimized meta title and meta description tags that will boost your search rankings for your home page.   
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>
-                    
-                </div>
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/Websites/Screenshot%202023-04-24%20085918.png" />
-                        <h4>SEO Meta Tags-Product Page(Pro)</h4>
-                        <p class="text-justify">
-                           A set of optimized meta title and meta description tags that will boost your search rankings for your product page.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>
-            </div>
-         </div>
-
-       <!--Next Part-->
-
-     
-        <hr style="border-top: dotted 1px;" /> 
-        <center><h2>Other</h2> </center>
-
-        <!--Next Part-->
-
-       <div class="container">
-         <div class="row">
-               <div class="col-md-4"> 
-                   <img width="75px" src="images/Others/Screenshot%202023-04-24%20090001.png" />
-                        <h4>Tone Changer(Pro)</h4>
-                        <p class="text-justify">
-                           Change the tone of your writing to match your audience and copy.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-                </div>
-
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/Others/Screenshot%202023-04-24%20090149.png" />
-                        <h4>Song Lyrics(Pro)</h4>
-                         <p class="text-justify">
-                           Unique song lyrics that will be perfect for your next hit song.   
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>
-                    
-                </div>
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/Others/Screenshot%202023-04-24%20090239.png" />
-                        <h4>Translate</h4>
-                          <p class="text-justify">
-                           Translate your content into any language you want.
-                         </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>
-            </div>
-         </div>
-
-      <!--Next Part-->
-
-      <div class="container">
-         <div class="row">
-               <div class="col-md-4"> 
-                   <img width="75px" src="images/Others/Screenshot%202023-04-24%20090309.png" />
-                        <h4>FAQs(Pro)</h4>
-                        <p class="text-justify">
-                           Generate frequently asked questions based on your product description.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                   
-                </div>
-
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/Others/Screenshot%202023-04-24%20090309.png" />
-                        <h4>FAQ Answers(Pro)</h4>
-                        <p class="text-justify">
-                           Generate creative answers to questions (FAQs) about your business or website.   
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>
-                    
-                </div>
-                 <div class="col-md-4"> 
-                     <img width="75px" src="images/Others/Screenshot%202023-04-24%20090334.png" />
-                        <h4>Testimonials / Reviews(Pro)</h4>
-                        <p class="text-justify">
-                           Add social proof to your website by generating user testimonials.
-                        </p>
-                   <p><a class="btn btn-default" href="write next page address" rode ="button">CREATE &raquo</a></p>                    
-                </div>
-            </div>
-         </div>
-
-      <!--Next Part-->    
-      <!--Next Part-->
-      <!--Next Part-->
-   </section>
+<%--CSS of Templates Part--%>
+    <style>
+.filterDiv {
+  float: left;
+  background-color: #2196F3;
+  color: #ffffff;
+  width: 25%;
+  line-height: 20px;
+  text-align: center;
+  margin: 2px;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+<section>
+       
+
+
+</section>    
 
 <%--Testimonials code starts--%>
       
@@ -951,23 +995,23 @@
 
     <div class="container_of_recent_blog  bg-light" >
         <div  style="margin-left: 300px;">
-         <div style="margin-top:0px"; margin-bottom: 45px">
-                        <h3 class="text-dark">Recent Blog</h3>
-                        <a href="#" class="text-dark"  style="padding-left: 700px;">View Blog -></a>
-         </div>
-        <div class="row" style="height: 325px;">
-                    
-             <div class="col-md-4">
-                  <a href="#"><img src="images/Other%20Images/image%20logo.png" alt="Image Logo" style="width:100%;">
-                  <div class="top-left text-dark">Admin</div>
-                  <div class="bottom-left text-dark">First Blog
-                  <p class="text-dark">Consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore    et dolore magna aliqua Ut eni...</p>                 
-                 </div></a>
-          </div>
-       </div>
+             <div style="margin-top:0px"; margin-bottom: 45px">
+                <h3 class="text-dark">Recent Blog</h3>
+                <a href="#" class="text-dark"  style="padding-left: 700px;">View Blog -></a>
+             </div>
+            <div class="row" style="height: 325px;">                    
+               <div class="col-md-4">
+                <a href="#"><img src="images/Other%20Images/image%20logo.png" alt="Image Logo" style="width:100%;">
+                <div class="top-left text-dark">Admin</div>
+                <div class="bottom-left text-dark">First Blog
+                <p class="text-dark">Consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore    et dolore magna aliqua Ut eni...</p>                 
+                </div></a>
+              </div>
+           </div>
         </div>
     </div>
 
+<%--Java Script for templates filteration part--%>
 
 
 </asp:Content>

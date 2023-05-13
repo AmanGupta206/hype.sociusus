@@ -2166,6 +2166,7 @@
     <Content Include="fontawesome\svgs\solid\yin-yang.svg" />
     <Content Include="fontawesome\svgs\solid\z.svg" />
     <Content Include="Global.asax" />
+    <Content Include="homepage%28original%29.aspx" />
     <Content Include="homepage.aspx" />
     <Content Include="images\Ads and Marketing Tools\Screenshot 2023-04-19 151736.png" />
     <Content Include="images\Ads and Marketing Tools\Screenshot 2023-04-19 151814.png" />
@@ -2293,6 +2294,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="homepage%28original%29.aspx.cs">
+      <DependentUpon>homepage%28original%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homepage%28original%29.aspx.designer.cs">
+      <DependentUpon>homepage%28original%29.aspx</DependentUpon>
     </Compile>
     <Compile Include="homepage.aspx.cs">
       <DependentUpon>homepage.aspx</DependentUpon>

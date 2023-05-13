@@ -10,7 +10,7 @@
 
 namespace hype.sociusus
 {
-    public partial class homepage1
+    public partial class homepage
     {
     }
 }
