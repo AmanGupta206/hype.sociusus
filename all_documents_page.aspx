@@ -214,7 +214,7 @@ div.content {
                 <div class="col-md-2" id="side1"  style="padding-left: 0px; padding-right: 0px;" > 
                     <div class="sidebar" >    
                       <h4>&nbsp;&nbsp;My Account</h4>        
-                      <a href="#">
+                      <a href="dashboard_page.aspx">
                           <img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard</a>
                       
                                      <div class="dropdown">
@@ -244,7 +244,7 @@ div.content {
                   <div  class ="main"> 
                     <div class="row"  >
                            <div class="col-md-6 "  style="padding-top: 200px;padding-left:100px;display:flex" >  
-                                     <div class="alldoc" style="display:flex"><h2 ">All Documents</h2><p><i class="fa-solid fa-chart-simple docicon"></i> 0/50,000 words used</p></div>
+                                     <div class="alldoc" style="display:flex"><h2>All Documents</h2><p><i class="fa-solid fa-chart-simple docicon"></i> 0/50,000 words used</p></div>
                            </div>
                            <div class="col-md-6"   style="padding-top: 200px; padding-left:275px;">  
                               

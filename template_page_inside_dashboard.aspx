@@ -1,111 +1,240 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="homepage.aspx.cs" Inherits="hype.sociusus.homepage1" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="template_page_inside_dashboard.aspx.cs" Inherits="hype.sociusus.template_page_inside_dashboard" %>
 
-<!-- Brain logo -->
-        <br> 
-        <p style="text-align:center;"><img src="images/logo.png" alt="image" alt="Logo"></p> <br/>
-        <div class="animated_rainbow_2" style="margin-left:425px/;text-align:center;">
-            <h1>Best AI Content Writer</h1>
-        </div>               
-<!-- Colored text CSS -->
+<!DOCTYPE html>
 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <%--bootstrap css--%>
+    <link href="Bootstrap/cs/bootstrap.min.css" rel="stylesheet" />
+     <%--datatable css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+     <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+
+
+     <%--Custom css--%>
+    <link href="css/CustomStyleSheet.css" rel="stylesheet" />
+
+
+    <%--jquery--%>
+    <script src="Bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+    <%--popper js--%>       
+    <script src="Bootstrap/js/popper.min.js"></script>
+    <%--bootstrap js--%>
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
+    <%--for graph--%>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
 <style>
-.animated_rainbow_2 {
-	font-size: 42px;
-	font-family: Arial Black, Gadget, sans-serif;
-    -webkit-animation: animatedBackground_b 5s linear infinite alternate;
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
 }
 
-@keyframes animatedBackground_b{
-	0% {color: #ff8b00}
-	10% {color: #e8ff00}
-	20% {color: #5dff00}
-	30% {color: #00ff2e}
-	40% {color: #00ffb9}
-	50% {color: #00b9ff}
-	60% {color: #002eff}
-	70% {color: #5d00ff}
-	80% {color: #e800ff}
-	90% {color: #ff008b}
-	100% {color: #ff0000}
+.sidebar {
+  top: 90px;
+  padding: 0;
+  width: 250px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: calc(100% - 70px);
+  overflow:scroll;
+  margin-bottom: 90px;
+
 }
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 0px;
+  padding: 1px 0px;
+  height: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 10%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+
+/*css color-profile main section*/
+.main{
+    position:relative;
+    width:100%;
+    
+    min-height: calc(100vh-60px);
+    background:#f5f5f5;
+    
+
+}
+.cards{
+  
+    padding: 35px 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:20px;
+
+}
+.cards .card{
+    padding:5px;
+    padding-top:20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background: #fff;
+    border-radius:10px;
+    box-shadow:0 7px 25px 0 inherit;
+}
+
 
 </style>
 
+ <!--HEADER START-->
+              <div style="height:90px;position:fixed; border-bottom: solid;  z-index:1; background-color:white; width:100%; margin-top:-1px; " class="Header"> 
+                 <div class ="row" style="height:90px;position:fixed;  z-index:1;background-color:white;width:100%;margin-top:0px; border-width:0.5px; border-bottom:solid " >
+                        <div class="col-md-2"> 
+                             <a href="https://localhost:44367/homepage.aspx">
+                               <img width:"20px" src="images/hype.%202023-04-17%20195423.png"/ style="   border: none;max-width: 100px;height: auto;" href="https://localhost:44367/homepage.aspx">
+                             </a>
+                       </div>      
+<%--button for toggle--%>
+                     <div class="col-md-8"> 
+                         <nav style="margin-left:185px; height: 31px; width: 869px;" class="navbar navbar-toggleable-md fixed-top">
+                                    <button id="nav-btn"class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarDiv"  aria-expanded="true" aria-label="Toggle navigation">
+                                        <span class="fa fa-bars"></span>
+                                    </button>
+                         </nav>
+                     </div> 
 
-<!-- Written part and a button -->
-   <section>
-         <center>
-                <div>                
-                    <h4><p> SEO-optimized and unique content for your blogs,ads, <br>
-                            emails,and website 10X faster & save hours of work. <p>  </h4>
-               </div>     
-               <div class="form-group">
-                       <a href="userregister.aspx"><input  class="btn btn-info btn200" id="Button2" type="button"  value="Get Started For Free" /></a>
-               </div>
-         </center>
+<%--FOR DROP DOWN BUTTON IN TOP--%> 
+            <div class="col-md-1" style="border-right:1px solid #e0e0e0;border-left:1px solid #e0e0e0"> 
+                         <div class="dropdown show">
+                                  <a  style="align-content:center;" class="btn1" href="#" role="button" id="dropdownMenuLink"  data-toggle="dropdown" >
+                                      <img style="align-content:center;margin:10px;height:60px;width:60px;" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20154408.png" />
+                                  </a>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="dashboard_page.aspx"><img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard</a>                            
+                                <a class="dropdown-item" href="#"><i class="fa-solid fa-bars"></i> Templates</a>
+                                  <a class="dropdown-item" href="all_ai_image_page.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
+                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-comment"></i> AI Chat</a>
+                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
+                                  <a class="dropdown-item" href="all_documents_page.aspx"><i class="fa-solid fa-file"></i> All Documents</a>
+                                  <a class="dropdown-item" href="Membership_page2.aspx"><i class="fa-solid fa-gift"></i> Membership</a>
+                                  <a class="dropdown-item" href="account_setting_page.aspx"><i class="fa-solid fa-gear"></i> Account Settings</a>
+                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>        
+                              </div>
+                        </div>
+              </div>
 
-<style>  
-.btn btn-info btn200
-{
-    border : 5px solid;
-}
-</style>  
-
-        <center>
-               <p>
-                 <h7>   No credit card required.  <h7>
-              </p>
-        <center>
-   </section>
-
- <!-- How its work part -->
-  <hr style="border-top: dotted 1px;" /> 
-    <section>       
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <center>
-                        <h2>How it Works?</h2>
-                    <center>
+<%-- END OF CODE FOR DROP DOWN--%>              
+          <div class="col-md-1"> 
+                   <div style="position: relative;display: inline-block;padding:30px 0px; ">
+                       <select name="Languge" id="Languge">
+                           <option value="English">English</option>
+                           <option value=" Arabic "> Arabic </option>
+                           <option value="Bangali">Bangali</option>
+                           <option value="Bulgarian">Bulgarian</option>
+                           <option value="Chinese">Chinese</option>
+                           <option value="English">English</option>
+                           <option value="French">French</option>
+                           <option value="German">German</option>
+                           <option value="Hebrew">Hebrew</option>
+                           <option value="Hindi">Hindi</option>
+                           <option value="Italian">Italian</option>
+                           <option value="Hindi">Hindi</option>
+                           <option value="Japanese">Japanese</option>
+                           <option value="Polish">Polish</option>
+                           <option value="Romanian">Romanian</option>
+                           <option value="Russian">Russian</option>
+                           <option value="Spanish">Spanish</option>
+                           <option value="Swedish">Swedish</option>
+                           <option value="Thai">Thai</option>
+                           <option value="Turkish">Turkish</option>
+                           <option value="Urdu">Urdu</option>
+                           <option value="Vietnamese">Vietnamese</option>
+                        </select>
+                     </div>              
                 </div>
-            </div>
-              <div class="row">
-                <div class="col-md-4">
-                    <center>
-                        <img width="190px" src="images/Screenshot%202023-04-18%20102209.png" />
-                        <h2>Select a template</h2>
-                        <p class="text-justify">
-                            Choose a content creation template. Multiple templates are available for your all needs.
-                        </p>
-                    <center>
-                </div>
-
-                <div class="col-md-4">
-                        <center>
-                                <img width="150px" src="images/Screenshot%202023-04-18%20102226.png" />
-                                <h2>Fill the form</h2>
-                                <p class="text-justify">
-                                    Enter a detailed description of your content. Tell the AI what do you want.
-                                </p>
-                        <center>
-                </div>
-
-                    <div class="col-md-4">
-                        <center>
-                                <img width="150px" src="images/Screenshot%202023-04-18%20102238.png" />
-                                <h2>Get your content</h2>
-                                    <p class="text-justify">
-                                       Get a unique high quality content. The content is plagiarism free and you can use it anywhere.
-                                    </p>
-                        <center>
-                </div>
-            </div>
+           </div>
         </div>
-    </section>
-    <hr style="border-top: dotted 1px;" /> 
+                 
+
+<!--HEADER ENDS-->
+<%--sidebar  and main part starts--%>
+<div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2" id="side1"  style="padding-left: 0px; padding-right: 0px;" > 
+                    <div class="sidebar" >    
+                      <h4>&nbsp;&nbsp;My Account</h4>        
+                      <a href="dashboard_page.aspx">
+                          <img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png"/> Dashboard
+                      </a>
+                           <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle"  style="background: #f5f5f5; border-color: #f5f5f5;color:black" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-solid fa-file"></i>&nbsp;My Documents
+                                    </button>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="all_documents_page.aspx">All Documents</a>
+                                    <a class="dropdown-item" href="all_ai_image_page.aspx">All AI Images</a>                                  
+                                 </div>
+                            </div>
+                      <h4>Organize And Manage</h4>
+                      <a href="#"><i class="fa-solid fa-bars"></i> Templates</a>
+                      <a href="all_ai_image_page.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
+                      <a href="#"><i class="fa-solid fa-comment"></i> AI Chat</a>
+                      <a href="#"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
+                      <a href="#"><i class="fa-solid fa-code"></i> AI Code</a>        
+                      <h4>&nbsp;&nbsp;Account</h4> 
+                      <a href="#"><i class="fa-solid fa-share-nodes"></i> Affiliate Program</a>                   
+                      <a href="Membership_page2.aspx"><i class="fa-solid fa-gift"></i> Membership</a>
+                      <a href="transaction_page.aspx"><i class="fa-solid fa-money-bill"></i> Transaction</a>
+                      <a href="account_setting_page.aspx"><i class="fa-solid fa-gear"></i> Account Settings</a>
+                      <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                   </div>
+                </div>
+                 <div class="col-md-10" id="main1"  style="padding-right: 0px;">
+                  <div  class ="main"> 
+                    <div class="row"  >
+                           <div class="col-md-6 "  style="padding-top: 200px;padding-left:100px;display:flex" >  
+                                     <div class="alldoc" style="display:flex"><h2>All Documents</h2><p style= " padding-top: 10px; padding-left: 10px;"><i class="fa-solid fa-chart-simple docicon"></i> 0/10,000 words used</p></div>
+                           </div>
+                           <div class="col-md-6"   style="padding-top: 200px; padding-left:275px;">                              
+                               <asp:Button class="btn btn-secondary"  ID="Button1" runat="server" Text="Home >> All Documents" />                               
+                           </div>
+                    </div>
+<%-- main part code--%>
+                        
 <%--CSS of templates--%>
 <style>
 .card6-block{
@@ -119,19 +248,25 @@
   margin-top: -10px;
   transition: 0.2s;
 }
-
+ 
+i{
+    color:darkblue;
+}
+i:hover{
+    color:gray;
+}
+ 
 
 </style>
 <!-- Templete section starting -->
  <br>
  <section>
  <%-- temp body --%>
-    <p style="font-size:20px;margin-left:600px"><b>Templates</b></p>
-    <p style="font-size:20px;margin-left:350px">Generate your required content with over 60+ content creation templates</p>
+   
             <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-secondary rounded-5 shadow-sm" 
                 id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); 
                 --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);height:50px;width:990px;
-                margin-left:200px;font-size:13px;">
+                margin-left:50px;font-size:13px;">
                       <li class="nav-item" role="presentation">
                         <button class="nav-link active rounded-5" onclick="toggleData()" id="All-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">All Templates</button>
                       </li>
@@ -157,17 +292,10 @@
                         <button class="nav-link rounded-5" onclick="toggleData()" id="other-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Other</button>
                       </li>
              </ul>
-    <style>
-        i{
-            color:darkblue;
-        }
-        i:hover{
-            color:gray;
-        }
-    </style>
+
     
     <div class="py-5">
-    <div class="container5" id="data" style="width:1000px;margin-left:200px">
+    <div class="container5" id="data" style="width:1000px;margin-left:45px">
       <div class="row hidden-md-up" style="padding:20px 20px" id="data1">
                   <div class="template_head">
                      <h5>Article And Blogs</h5>
@@ -291,7 +419,7 @@
                 </div>
                     </div>
           </div>
-         <%-- ads and marketing --%>
+<%-- ads and marketing --%>
         <div class="row hidden-md-up" style="padding:20px 20px" id="data2">
           <div class="template_head" >
               <h5>Ads And Marketing Tools</h5>
@@ -372,7 +500,7 @@
               </div>
             </div>
          </div> 
-        <%-- General Writing --%>
+<%-- General Writing --%>
         <div class="row hidden-md-up" style="padding:20px 20px" id="data3">
           <div class="template_head" >
               <h5>General Writing</h5>
@@ -585,7 +713,7 @@
                     </div>
             </div>
              </div>
-        <%-- Ecommerce --%>
+<%-- Ecommerce --%>
         <div class="row hidden-md-up" style="padding:20px 20px" id="data4">
          <div class="template_head" >
           <h5>Ecommerce</h5>
@@ -646,7 +774,7 @@
         
         </div>
             </div>
-         <%-- Social Media --%>
+<%-- Social Media --%>
         <div class="row hidden-md-up" style="padding:20px 20px" id="data5">
           <div class="template_head" >
           <h5>Social Media</h5>
@@ -760,7 +888,7 @@
         </div>
       </div>
              </div>
-         <%-- Website --%>
+<%-- Website --%>
         <div class="row hidden-md-up" style="padding:20px 20px" id="data6">
           <div class="template_head">
             <h5 class="Template head">Website</h5>
@@ -798,7 +926,7 @@
         </div>
       </div><br>
       
-         <%-- Other --%>
+<%-- Other --%>
         <div class="row hidden-md-up" style="padding:20px 20px" id="data7">
           <div class="template_head" >
             <h5 >Other</h5>
@@ -874,15 +1002,9 @@
 
 
 
-
-
-
-
-
-
  </section>
-           <br>
-<!--Next Part-->          
+ <br>
+     
 <style>       
 .btn btn-default
 {
@@ -951,186 +1073,144 @@
 
 </section>    
 
-<%--Testimonials code starts--%>
-      
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"   >
-          <div class="carousel-inner" style="background-color:LightGray;" >
-                           <div style="padding-left: 575px;padding-right: 730px;">
-                                <h2>Testimonials</h2>
-                            </div>    
-                        <div class="carousel-item active">
-                                               
-                          <div class="card" style="width: 650px;margin-left: 350px; margin-bottom: 20px;">
-                              <div class="card-body">                            
-                                   <h4> <img src="images/last.png" />&nbsp;Tony Stark</h4>
-                                   <p class="text-primary"  style="padding-right: 67px;">Social Marketing</p>                                                  
-                                   <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paria tur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                               </div>
-                             </div>
-                          </div>
-                       
-                
-                    <div class="carousel-item">
-                                         
-                          <div class="card" style="width: 650px;margin-left: 350px; margin-bottom: 20px;">
-                              <div class="card-body">                            
-                                   <h4> <img src="images/last.png" />&nbsp;Natasha</h4>
-                                   <p class="text-primary"  style="padding-right: 67px;">Designer</p>                                                  
-                                   <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo do consequat. Elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                               </div>
-                             </div>
-                    </div>
-                    <div class="carousel-item">
-                                             
-                          <div class="card" style="width: 650px;margin-left: 350px; margin-bottom: 20px;">
-                              <div class="card-body">                            
-                                   <h4> <img src="images/last.png" />&nbsp;Steve Roger</h4>
-                                   <p class="text-primary"  style="padding-right: 67px;">Content Writer</p>                                                  
-                                   <p class="card-text">Elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e</p>
-                               </div>
-                             </div>
-                        
-                    </div>
-                         <div >
-                                
-                         </div>
-          </div>
-              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-           </div>
-<%--Recent blogs codes start--%>
-<style>
-.container_of_recent_blog {
-  position: relative;
-  height:400px;
-  margin-left: 0px;
-  margin-right: 0px;
-  color: white;
-}
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-}
-
-.top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-
-</style>
-
-    <div class="container_of_recent_blog  bg-light" >
-        <div  style="margin-left: 300px;">
-             <div style="margin-top:0px"; margin-bottom: 45px">
-                <h3 class="text-dark">Recent Blog</h3>
-                <a href="#" class="text-dark"  style="padding-left: 700px;">View Blog -></a>
-             </div>
-            <div class="row" style="height: 325px;">                    
-               <div class="col-md-4">
-                <a href="#"><img src="images/Other%20Images/image%20logo.png" alt="Image Logo" style="width:100%;">
-                <div class="top-left text-dark">Admin</div>
-                <div class="bottom-left text-dark">First Blog
-                <p class="text-dark">Consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore    et dolore magna aliqua Ut eni...</p>                 
-                </div></a>
+ <!-- Footer -->
+        <div class="footer-bottom-section">                 
+                <div class="container-fluid"  >
+                     <div class="row">
+                        <div class="col-xl-12">
+                          <div style="color: white;" class="footer-row">                    
+                                 
+                                     <span style="color: Black;" class="footer-copyright-text">2023 Socius IGB Pvt Ltd, All right reserved</span>
+                              
+                                         <span style="float:right"> <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-twitter"></i> </a>
+                                                       
+                                        <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>
+ 
+                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>
+                                           
+                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-pinterest"></i></a>
+                             
+                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a></span>
+                          </div>                        
+                       </div>                        
+                 </div>
               </div>
-           </div>
-        </div>
-    </div>
+          </div>
+      </div>
+       
+         <!-- Footer -->
 
+
+
+
+
+
+
+               </div>
+           </div>
+       </div>
+    
+
+
+
+
+    </form>
+
+<%--Script for Toggle Option--%>
+    <script>
+        $("#nav-btn").on("click", function () {
+                $("#side1").toggle();
+            $("#main1").toggleClass('col-lg-12 full-width'); 
+
+        });
+    </script>
 <%--Java Script for templates filteration part--%>
      <script>
-        $("#All-tab2").on("click", function () {
-                $("#data").show();
-                $("#data1").show();
-                $("#data2").show();
-                $("#data3").show();
-                $("#data4").show();
-                $("#data5").show();
-                $("#data6").show();
-                $("#data7").show();
+         $("#All-tab2").on("click", function () {
+             $("#data").show();
+             $("#data1").show();
+             $("#data2").show();
+             $("#data3").show();
+             $("#data4").show();
+             $("#data5").show();
+             $("#data6").show();
+             $("#data7").show();
 
-            });
-        
-        $("#ab-tab2").on("click", function () {
-           $("#data1").show();
-            $("#data2").hide();
-            $("#data3").hide();
-            $("#data4").hide();
-            $("#data5").hide();
-            $("#data6").hide();
-            $("#data7").hide();
+         });
 
-        });
-        $("#am-tab2").on("click", function () {
+         $("#ab-tab2").on("click", function () {
+             $("#data1").show();
+             $("#data2").hide();
+             $("#data3").hide();
+             $("#data4").hide();
+             $("#data5").hide();
+             $("#data6").hide();
+             $("#data7").hide();
+
+         });
+         $("#am-tab2").on("click", function () {
              $("#data1").hide();
-            $("#data2").show();
-            $("#data3").hide();
-            $("#data4").hide();
-            $("#data5").hide();
-            $("#data6").hide();
-            $("#data7").hide();
+             $("#data2").show();
+             $("#data3").hide();
+             $("#data4").hide();
+             $("#data5").hide();
+             $("#data6").hide();
+             $("#data7").hide();
 
-        });
-        $("#gw-tab2").on("click", function () {
-            $("#data1").hide();
-            $("#data2").hide();
-            $("#data3").show();
-            $("#data4").hide();
-            $("#data5").hide();
-            $("#data6").hide();
-            $("#data7").hide();
+         });
+         $("#gw-tab2").on("click", function () {
+             $("#data1").hide();
+             $("#data2").hide();
+             $("#data3").show();
+             $("#data4").hide();
+             $("#data5").hide();
+             $("#data6").hide();
+             $("#data7").hide();
 
-        });
-        $("#ecom-tab2").on("click", function () {
-           $("#data1").hide();
-            $("#data2").hide();
-            $("#data3").hide();
-            $("#data4").show();
-            $("#data5").hide();
-            $("#data6").hide();
-            $("#data7").hide();
+         });
+         $("#ecom-tab2").on("click", function () {
+             $("#data1").hide();
+             $("#data2").hide();
+             $("#data3").hide();
+             $("#data4").show();
+             $("#data5").hide();
+             $("#data6").hide();
+             $("#data7").hide();
 
-        });
-        $("#ss-tab2").on("click", function () {
-            $("#data1").hide();
-            $("#data2").hide();
-            $("#data3").hide();
-            $("#data4").hide();
-            $("#data5").show();
-            $("#data6").hide();
-            $("#data7").hide();
+         });
+         $("#ss-tab2").on("click", function () {
+             $("#data1").hide();
+             $("#data2").hide();
+             $("#data3").hide();
+             $("#data4").hide();
+             $("#data5").show();
+             $("#data6").hide();
+             $("#data7").hide();
 
-        });
-        $("#web-tab2").on("click", function () {
-           $("#data1").hide();
-            $("#data2").hide();
-            $("#data3").hide();
-            $("#data4").hide();
-            $("#data5").hide();
-            $("#data6").show();
-            $("#data7").hide();
+         });
+         $("#web-tab2").on("click", function () {
+             $("#data1").hide();
+             $("#data2").hide();
+             $("#data3").hide();
+             $("#data4").hide();
+             $("#data5").hide();
+             $("#data6").show();
+             $("#data7").hide();
 
-        });
-        $("#other-tab2").on("click", function () {
-           $("#data1").hide();
-            $("#data2").hide();
-            $("#data3").hide();
-            $("#data4").hide();
-            $("#data5").hide();
-            $("#data6").hide();
-            $("#data7").show();
+         });
+         $("#other-tab2").on("click", function () {
+             $("#data1").hide();
+             $("#data2").hide();
+             $("#data3").hide();
+             $("#data4").hide();
+             $("#data5").hide();
+             $("#data6").hide();
+             $("#data7").show();
 
-        });
- 
+         });
+
      </script>
+  
 
-
-</asp:Content>
+</body>
+</html>

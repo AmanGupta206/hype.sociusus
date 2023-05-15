@@ -5,18 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace hype.sociusus
+namespace hype.sociusus.Pages_of_Dashboard
 {
-    public partial class dashboard_page : System.Web.UI.Page
+    public partial class AI_Image : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("homepage.aspx");
         }
     }
 }

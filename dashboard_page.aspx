@@ -138,7 +138,7 @@ div.content {
                                     </nav>
                      </div> 
 
-  <%--FOR DROP DOWN BUTTON IN TOP--%> 
+       <%--FOR DROP DOWN BUTTON IN TOP--%> 
             <div class="col-md-1" style="border-right: inset;border-left: outset;"> 
                          <div class="dropdown show"  style="padding-top:10px">
                                   <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink"  data-toggle="dropdown" >
@@ -146,15 +146,14 @@ div.content {
                                   </a>
 
                               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="#"><img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard</a>
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-file"></i> My Documents</a>
+                                <a class="dropdown-item" href="dashboard_page.aspx"><img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard</a>                            
                                 <a class="dropdown-item" href="#"><i class="fa-solid fa-bars"></i> Templates</a>
-                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-image"></i> AI Images</a>
+                                  <a class="dropdown-item" href="all_ai_image_page.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-comment"></i> AI Chat</a>
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
-                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-file"></i> All Documents</a>
-                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-gift"></i> Membership</a>
-                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-gear"></i> Account Settings</a>
+                                  <a class="dropdown-item" href="all_documents_page.aspx"><i class="fa-solid fa-file"></i> All Documents</a>
+                                  <a class="dropdown-item" href="Membership_page2.aspx"><i class="fa-solid fa-gift"></i> Membership</a>
+                                  <a class="dropdown-item" href="account_setting_page.aspx"><i class="fa-solid fa-gear"></i> Account Settings</a>
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
                     
                               </div>
@@ -202,8 +201,9 @@ div.content {
                 <div class="col-md-2" id="side1"  style="padding-left: 0px; padding-right: 0px;" > 
                     <div class="sidebar" >    
                       <h4>&nbsp;&nbsp;My Account</h4>        
-                      <a href="#">
-                          <img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard</a>
+                      <a href="dashboard_page.aspx">
+                          <img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png"/> Dashboard
+                      </a>
                            <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle"  style="background: #f5f5f5; border-color: #f5f5f5;color:black" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fa-solid fa-file"></i>&nbsp;My Documents
@@ -215,15 +215,15 @@ div.content {
                             </div>
                       <h4>Organize And Manage</h4>
                       <a href="#"><i class="fa-solid fa-bars"></i> Templates</a>
-                      <a href="#"><i class="fa-solid fa-image"></i> AI Images</a>
+                      <a href="all_ai_image_page.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
                       <a href="#"><i class="fa-solid fa-comment"></i> AI Chat</a>
                       <a href="#"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
                       <a href="#"><i class="fa-solid fa-code"></i> AI Code</a>        
                       <h4>&nbsp;&nbsp;Account</h4> 
                       <a href="#"><i class="fa-solid fa-share-nodes"></i> Affiliate Program</a>                   
                       <a href="Membership_page2.aspx"><i class="fa-solid fa-gift"></i> Membership</a>
-                      <a href="#"><i class="fa-solid fa-money-bill"></i> Transaction</a>
-                      <a href="#"><i class="fa-solid fa-gear"></i> Account Settings</a>
+                      <a href="transaction_page.aspx"><i class="fa-solid fa-money-bill"></i> Transaction</a>
+                      <a href="account_setting_page.aspx"><i class="fa-solid fa-gear"></i> Account Settings</a>
                       <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
                    </div>
                 </div>
@@ -235,7 +235,7 @@ div.content {
                            </div>
                            <div class="col-md-6"   style="padding-top: 200px; padding-left:275px;">  
                               
-                               <asp:Button class="btn btn-secondary"  ID="Button1" runat="server" Text="Home >> Dashboard" /> 
+                               <asp:Button class="btn btn-secondary"  ID="Button1" runat="server" Text="Home >> Dashboard" OnClick="Button1_Click" /> 
                                
                            </div>
                     </div>
