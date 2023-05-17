@@ -215,7 +215,7 @@ div.content {
                             </div>
                       <h4>Organize And Manage</h4>
                       <a href="#"><i class="fa-solid fa-bars"></i> Templates</a>
-                      <a href="all_ai_image_page.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
+                      <a href="AI_image_page_in_dashboard.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
                       <a href="#"><i class="fa-solid fa-comment"></i> AI Chat</a>
                       <a href="#"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
                       <a href="#"><i class="fa-solid fa-code"></i> AI Code</a>        

@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace hype.sociusus.Pages_of_Dashboard
+namespace hype.sociusus
 {
 
 
-    public partial class AI_Image
+    public partial class AI_chat_inside_dashboard
     {
 
         /// <summary>
@@ -22,5 +22,14 @@ namespace hype.sociusus.Pages_of_Dashboard
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

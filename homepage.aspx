@@ -123,8 +123,9 @@
 
 </style>
 <!-- Templete section starting -->
- <br>
- <section>
+    <br>
+
+    <section>
  <%-- temp body --%>
     <p style="font-size:20px;margin-left:600px"><b>Templates</b></p>
     <p style="font-size:20px;margin-left:350px">Generate your required content with over 60+ content creation templates</p>
@@ -881,7 +882,8 @@
 
 
  </section>
-           <br>
+
+    <br>
 <!--Next Part-->          
 <style>       
 .btn btn-default
@@ -945,11 +947,6 @@
   color: white;
 }
 </style>
-<section>
-       
-
-
-</section>    
 
 <%--Testimonials code starts--%>
       
@@ -980,21 +977,18 @@
                                </div>
                              </div>
                     </div>
-                    <div class="carousel-item">
-                                             
+                    <div class="carousel-item">                                      
                           <div class="card" style="width: 650px;margin-left: 350px; margin-bottom: 20px;">
                               <div class="card-body">                            
                                    <h4> <img src="images/last.png" />&nbsp;Steve Roger</h4>
                                    <p class="text-primary"  style="padding-right: 67px;">Content Writer</p>                                                  
                                    <p class="card-text">Elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e</p>
                                </div>
-                             </div>
-                        
+                             </div>                     
+                          </div>
+                        <div >
                     </div>
-                         <div >
-                                
-                         </div>
-          </div>
+                 </div>
               <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
@@ -1044,6 +1038,169 @@
            </div>
         </div>
     </div>
+<%--Carousel part below recent bog code starts--%>
+  <%-- HTML--%>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script> <div class="brands"> 
+                    <div class="container"> 
+                        <div class="row"> 
+                            <div class="col"> 
+                                <div class="brands_slider_container"> 
+                                    <div class="owl-carousel owl-theme brands_slider"> 
+                                            <div class="owl-item">
+                                                <div class="brands_item d-flex flex-column justify-content-center">
+                                                    <img  width="60" height="60"src="images/Carosal%20above%20footer%20images/logo-carousel-01.png" />
+                                               </div>
+                                            </div> 
+                                            <div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center">
+                                                <img src="images/Carosal%20above%20footer%20images/logo-carousel-02.png" />
+                                            </div>
+                                            </div> 
+                                            <div class="owl-item">
+                                                <div class="brands_item d-flex flex-column justify-content-center">
+                                                    <img src="images/Carosal%20above%20footer%20images/logo-carousel-03.png" />
+                                                </div>
+                                            </div> 
+                                            <div class="owl-item">
+                                                <div class="brands_item d-flex flex-column justify-content-center">
+                                                    <img src="images/Carosal%20above%20footer%20images/logo-carousel-04.png" />
+                                                </div>
+                                            </div> 
+                                            <div class="owl-item">
+                                                <div class="brands_item d-flex flex-column justify-content-center">
+                                                    <img src="images/Carosal%20above%20footer%20images/logo-carousel-05.png" />
+                                                </div>
+                                            </div> 
+                                            <div class="owl-item">
+                                                <div class="brands_item d-flex flex-column justify-content-center">
+                                                    <img src="images/Carosal%20above%20footer%20images/logo-carousel-06.png" />
+                                                </div>
+                                            </div>                                        
+                                    </div> 
+   <!-- Brands Slider Navigation --> 
+                                    <div class="brands_nav brands_prev">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </div> 
+                                    <div class="brands_nav brands_next">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </div> 
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div> 
+                </div>
+   <%-- CSS--%>
+  <style>
+    body
+    {
+         background:#eee;
+    }
+ .brands {
+     width: 100%;
+     padding-top: 50px;
+     padding-bottom: 50px
+ }
+
+ .brands_slider_container {
+     height: 130px;
+     border: solid 1px #e8e8e8;
+     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+     padding-left: 80px;
+     padding-right: 80px;
+     background: #fff;
+ }
+
+ .brands_slider {
+     height: 100%;
+     margin-top: 35px
+ }
+
+ .brands_item {
+     height: 100%
+ }
+
+ .brands_item img {
+     max-width: 100%
+ }
+
+ .brands_nav {
+     position: absolute;
+     top: 50%;
+     -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+     -ms-transform: translateY(-50%);
+     -o-transform: translateY(-50%);
+     transform: translateY(-50%);
+     padding: 5px;
+     cursor: pointer
+ }
+
+ .brands_nav i {
+     color: #e5e5e5;
+     -webkit-transition: all 200ms ease;
+     -moz-transition: all 200ms ease;
+     -ms-transition: all 200ms ease;
+     -o-transition: all 200ms ease;
+     transition: all 200ms ease
+ }
+
+ .brands_nav:hover i {
+     color: #676767
+ }
+
+ .brands_prev {
+     left: 40px
+ }
+
+ .brands_next {
+     right: 40px
+ }
+ </style>
+   <%-- JavaScript--%>
+    <script>
+    $(document).ready(function(){
+
+       if($('.brands_slider').length)
+            {
+                var brandsSlider = $('.brands_slider');
+
+                brandsSlider.owlCarousel(
+                {
+                    loop:true,
+                    autoplay:true,
+                    autoplayTimeout:5000,
+                    nav:false,
+                    dots:false,
+                    autoWidth:true,
+                    items:8,
+                    margin:42
+                });
+
+                if($('.brands_prev').length)
+                {
+                    var prev = $('.brands_prev');
+                    prev.on('click', function()
+                    {
+                        brandsSlider.trigger('prev.owl.carousel');
+                    });
+                }
+
+                if($('.brands_next').length)
+                {
+                    var next = $('.brands_next');
+                    next.on('click', function()
+                    {
+                        brandsSlider.trigger('next.owl.carousel');
+                    });
+                }
+            }
+
+
+    });
+    </script>
+
+
 
 <%--Java Script for templates filteration part--%>
      <script>
@@ -1130,7 +1287,7 @@
 
         });
  
-     </script>
+    </script>
 
 
 </asp:Content>
