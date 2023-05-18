@@ -5,6 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <%--For responsiveness--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
       <%--bootstrap css--%>
     <link href="Bootstrap/cs/bootstrap.min.css" rel="stylesheet" />
      <%--datatable css--%>
@@ -28,6 +31,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+
 <style>
 body {
   margin: 0;
@@ -94,7 +98,7 @@ div.content {
     
     min-height: calc(100vh-60px);
     background:#f5f5f5;
-    bottom: 50px;
+    
 
 }
 .cards{
@@ -130,6 +134,8 @@ div.content {
 
 
 </style>
+
+
 
  <!--HEADER START-->
               <div style="height:90px;position:fixed; border-bottom: solid;  z-index:1; background-color:white; width:100%; margin-top:-1px; " class="Header"> 
@@ -214,8 +220,7 @@ div.content {
                     <div class="sidebar" >    
                       <h4>&nbsp;&nbsp;My Account</h4>        
                       <a href="dashboard_page.aspx">
-                          <img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard</a>
-                      
+                          <img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png"/>Dashboard</a>                 
                                      <div class="dropdown">
                                           <button class="btn btn-secondary dropdown-toggle"  style="background: #f5f5f5; border-color: #f5f5f5;color:black" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fa-solid fa-file"></i>&nbsp;My Documents
@@ -239,7 +244,7 @@ div.content {
                       <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
                    </div>
                 </div>
-                <div class="col-md-10" id="main1"  style="padding-right: 0px; padding-left: 25px;">
+                <div class="col-md-10 " id="main1"  style="padding-right: 0px; ">
                   <div  class ="main"> 
                             <div class="row">
                                    <div class="col-md-6 "  style="padding-top: 200px;padding-left:100px;display:flex" >  
@@ -249,15 +254,46 @@ div.content {
                                        <asp:Button class="btn btn-secondary"  ID="Button1" runat="server" Text="Home >>AI Chat" />                             
                                    </div>
                             </div>                              
-                               <div class="row">
-                                   <div style="margin-left: 5%; margin-right: 5%;padding: 3%;">
-                                     You can not use the chat feature with your OpenAI model. Upgrade your membership plan to use this feature.    
+                               <div class="row">    
+                                   <div   style="margin-left: 6%; margin-right: 6%;margin-top: 2%;">
+                                     <p style="background-color: pink;" >You can not use the chat feature with your OpenAI model. Upgrade your membership plan to use this feature.</p>    
                                    </div>
                                </div>
                             <br/> 
+<%--Code for AI Chat box and functionality --%>                 
+  <style>
+    #chatbox {
+      width: 100%;
+      height: 300px;
+      border: 1px solid #ccc;
+      overflow-y: scroll;
+      margin-bottom: 10px;
+    }
+  </style>                     
+                      <div class="card">
+                      <div class="card-header">
+                          <div class="row">
+                                  <div class="col-sm-6 col-md-10">
+                                         AI Chat Bot
+                                  </div>
+                                <div class="col-sm-6 col-md-2" style="padding-left: 65px;">
+                                    <a href="#" id="downloadButton"><i class="fa-solid fa-file-arrow-down fa-lg"></i></a>
 
-        
-                 </div>                   
+                                   <a href="#" id="deleteButton"> <i class="fa-solid fa-trash fa-lg"></i></a>
+                                </div>                         
+                          </div>
+                        </div>
+                        <div class="card-body">
+                            <div id="chatbox"></div>
+                            <input type="text" id="messageInput" placeholder="Type your message here..." style="width:84%;"/>
+                            <input type="button" id="sendButton" value="Send" />
+                          
+                        </div>
+                    </div>
+                     
+
+          
+            </div>                   
 <!-- Footer -->
     <hr style="border-top: dotted 1px;" /> 
         <div class="footer-bottom-section">          
@@ -274,11 +310,8 @@ div.content {
                                    </div>                        
                              </div>
                           </div>
-                      </div>
-     
-
-       
-         <!-- Footer -->
+                      </div>    
+<!-- Footer -->
 
                </div>
             </div>
@@ -288,12 +321,77 @@ div.content {
 
 
     </form>
+<%--Java Script for Chat box--%>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const chatbox = document.getElementById('chatbox');
+        const messageInput = document.getElementById('messageInput');
+        const sendButton = document.getElementById('sendButton');
+        const deleteButton = document.getElementById('deleteButton');
+        const downloadButton = document.getElementById('downloadButton');
+        let chatContent = '';
 
+        // Event listener for send button
+        sendButton.addEventListener('click', () => {
+            const message = messageInput.value;
+            if (message.trim() !== '') {
+                appendMessage('You: ' + message);
+                replyToMessage(message);
+                messageInput.value = '';
+            }
+        });
+
+        // Event listener for delete button
+        deleteButton.addEventListener('click', () => {
+            clearChat();
+        });
+
+        // Event listener for download button
+        downloadButton.addEventListener('click', () => {
+            downloadChat();
+        });
+
+        // Function to append message to the chat box
+        function appendMessage(message) {
+            const p = document.createElement('p');
+            p.textContent = message;
+            chatbox.appendChild(p);
+            chatContent += message + '\n';
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        // Function to generate a fixed reply
+        function replyToMessage(message) {
+            const reply = "You can not use the chat feature with your OpenAI model. Upgrade your membership plan to use this feature.";
+            appendMessage('Bot: ' + reply);
+        }
+
+        // Function to clear the chat box
+        function clearChat() {
+            chatbox.innerHTML = '';
+            chatContent = '';
+        }
+
+        // Function to download the chat
+        function downloadChat() {
+            const filename = 'chat.txt';
+            const element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(chatContent));
+            element.setAttribute('download', filename);
+            element.style.display = 'none';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+    });
+
+
+</script>
 <%--Script for Toggle Option--%>
     <script>
         $("#nav-btn").on("click", function () {
             $("#side1").toggle();
-            $("#main1").toggleclass('col-lg-12 full-width');
+            $("#main1").toggleclass('col-md-10 col-lg-12 full-width');
         });
     </script>
 
