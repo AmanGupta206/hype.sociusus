@@ -97,14 +97,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="account_setting_page.aspx" />
-    <Content Include="AI_chat_inside_dashboard.aspx" />
     <Content Include="AI_image_page_in_dashboard.aspx" />
     <Content Include="all_ai_image_page.aspx" />
     <Content Include="all_documents_page.aspx" />
     <Content Include="App_Data\hype.sociusus.mdf" />
-    <Content Include="Blog Ideas .aspx" />
+    <Content Include="Dashboard_AI_Chat_Page2.aspx" />
+    <Content Include="Dashboard_AI_Code_Page.aspx" />
     <Content Include="dashboard_page.aspx" />
     <Content Include="Footer_FAQ.aspx" />
+    <Content Include="Footer_Feedback_Page.aspx" />
     <Content Include="forgetpassword.aspx" />
     <Content Include="Bootstrap\cs\bootstrap.min.css" />
     <Content Include="Bootstrap\js\bootstrap.min.js" />
@@ -2279,13 +2280,6 @@
     <Compile Include="account_setting_page.aspx.designer.cs">
       <DependentUpon>account_setting_page.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AI_chat_inside_dashboard.aspx.cs">
-      <DependentUpon>AI_chat_inside_dashboard.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AI_chat_inside_dashboard.aspx.designer.cs">
-      <DependentUpon>AI_chat_inside_dashboard.aspx</DependentUpon>
-    </Compile>
     <Compile Include="AI_image_page_in_dashboard.aspx.cs">
       <DependentUpon>AI_image_page_in_dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2307,12 +2301,19 @@
     <Compile Include="all_documents_page.aspx.designer.cs">
       <DependentUpon>all_documents_page.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Blog Ideas .aspx.cs">
-      <DependentUpon>Blog Ideas .aspx</DependentUpon>
+    <Compile Include="Dashboard_AI_Chat_Page2.aspx.cs">
+      <DependentUpon>Dashboard_AI_Chat_Page2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Blog Ideas .aspx.designer.cs">
-      <DependentUpon>Blog Ideas .aspx</DependentUpon>
+    <Compile Include="Dashboard_AI_Chat_Page2.aspx.designer.cs">
+      <DependentUpon>Dashboard_AI_Chat_Page2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_AI_Code_Page.aspx.cs">
+      <DependentUpon>Dashboard_AI_Code_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard_AI_Code_Page.aspx.designer.cs">
+      <DependentUpon>Dashboard_AI_Code_Page.aspx</DependentUpon>
     </Compile>
     <Compile Include="dashboard_page.aspx.cs">
       <DependentUpon>dashboard_page.aspx</DependentUpon>
@@ -2327,6 +2328,13 @@
     </Compile>
     <Compile Include="Footer_FAQ.aspx.designer.cs">
       <DependentUpon>Footer_FAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Footer_Feedback_Page.aspx.cs">
+      <DependentUpon>Footer_Feedback_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Footer_Feedback_Page.aspx.designer.cs">
+      <DependentUpon>Footer_Feedback_Page.aspx</DependentUpon>
     </Compile>
     <Compile Include="forgetpassword.aspx.cs">
       <DependentUpon>forgetpassword.aspx</DependentUpon>

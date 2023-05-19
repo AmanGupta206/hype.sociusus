@@ -1,6 +1,4 @@
-﻿ 
-  
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Speech_to_text.aspx.cs" Inherits="hype.sociusus.Speech_to_text" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Dashboard_AI_Code_Page.aspx.cs" Inherits="hype.sociusus.Dashboard_AI_Code_Page" %>
 
 <!DOCTYPE html>
 
@@ -28,8 +26,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
-        
+       
 <style>
 body {
   margin: 0;
@@ -244,28 +241,24 @@ div.content {
                   <div  class ="main"> 
                     <div class="row"  >
                                    <div class="col-md-6 "  style="padding-top: 200px; padding-left:100px; padding-bottom: 50px; display:flex" >  
-                                             <div class="alldoc" style="display:flex"><h2 ">Speech to text</h2><p><i class="fa-solid fa-chart-simple docicon"></i> 0/0 Used</p></div>
+                                             <div class="alldoc" style="display:flex"><h2 ">AI Code</h2><p><i class="fa-solid fa-chart-simple docicon"></i> 0/10000 Words Used</p></div>
                                    </div>
                                    <div class="col-md-6"   style="padding-top: 200px; padding-left:275px;">                              
-                                       <asp:Button class="btn btn-secondary"  ID="Button1" runat="server" Text="Home >>Speech to text" />                             
+                                       <asp:Button class="btn btn-secondary"  ID="Button1" runat="server" Text="Home >>AI Code" />                             
                                    </div>
                     </div>
 
 
 <%--CSS for Items inside main part--%>
         <%--CSS for textarea--%>
- <style>
-     textarea {
-        width: 80%;
-        height: 25px;
-     }
-     .textarea2 {
-        width: 80%; 
-        height: 70px;
-     }
 
-     
-  </style>
+<style>
+#myTextarea
+{
+width: 90%;
+height: 30px;
+}
+</style>
 
 <%--CSS of below text editor--%>
  <style>
@@ -298,19 +291,17 @@ div.content {
 }
   </style>
 
-
-<%-- main part code--%>
-
+ <%-- main part code--%>
                         <div class="row" style="margin: 10px;">   
                             <div class="col-12 col-sm-6 col-md-3">
                                 <div class ="card" style="padding: 17px;">
                                     <div>
-                                       <h5><i class="fa-solid fa-headphones"></i>
-                                        <b>Speech to text</b></h5>
+                                       <h5><b><> AI Code</b></h5>
                                     </div>
-                                    <hr>
+                                   
+                                        
                                     <div>
-                                        <p style="background-color: #e9f7fe; color:#3184ae"">Create audio transcription from a file.</p>
+                                        <p style="background: #68b9e3;">Use this code generator to create code in any programming language.</p>
                                     </div>
 
                                     <div>
@@ -320,26 +311,14 @@ div.content {
                                           <p><span id="charCount">100</span> characters remaining</p>
                                         </div>
                                     </div>
-                                        
+                                
                                     <div>
-                                        <h5 >Upload Media</h5>
-                                        <form action="/action_page.php">
-                                          <input type="file" id="myFile" name="filename"/ >
-                                        </form>
-                                       
-                                        <p>.mp3, .mp4, .mpeg, .mpga, .m4a, .wav, .webm allowed. Max file size: 0 MB</p>
+                                        <h5>Description*</h5>
+                                          <textarea class="form-control"  placeholder="Write a Java Script function" rows="4"></textarea>                       
                                     </div>
 
                                     <div>
-                                        <h5>Audio Description</h5>
-                                         <textarea class="textArea2" maxlength="200"></textarea>
-                                         <p id="charCount2">Characters remaining: 200</p>
-                                         <p>Describe the speech from the file to help the AI. (Optional)</p>
-                                    </div>
-
-                                    <div>
-                                        <button type="button" class="btn btn-primary">Generate</button>
-                                        <p style="background-color: #e9f7fe; color:#3184ae">Audio transcription may takes time due to the file size.</p>
+                                        <button type="button" class="btn btn-primary" style="width: 100%;Margin-top:8px;" >Generate</button>
                                     </div>
                                 </div>
                             </div>   
@@ -347,35 +326,17 @@ div.content {
                             <div class="col-12 col-sm-6 col-md-9">
                                 <div class ="card" style="padding: 30px;"> 
                                     <div>   
-                                        <div>
-                                            
-                                             <h5><i class="fa-sharp fa-solid fa-bars-progress fa-lg"></i>
+                                        <div>                                         
+                                            <h5><i class="fa-sharp fa-solid fa-bars-progress fa-lg"></i>
                                             <b>Generated Result</b></h5>
                                         </div>
-                                        <div>
-                                            <div class="toolbar">                                        
-                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('formatBlock', 'p')" value="Paragraph"/>                     
-                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('bold')" value="Bold"/>  
-                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('italic')" value="Italic"/>
-                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('underline')" value="Underline"/> 
-                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('strikeThrough')" value="Strike Through"/>  
-                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('justifyLeft')" value="Justify Left"/>
-                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('justifyCenter')" value="Justify Center"/>                     
-                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('justifyRight')" value="Justify Right"/>  
-                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('createLink', prompt('Enter the URL:'))" value="Insert/Edit Link"/>
-                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('insertHTML', createTableHTML())" value="Insert Table"/>                     
-                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('insertUnorderedList')" value="Unordered List"/>  
-                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('insertOrderedList')" value="Ordered List"/>                             
-                                            </div>
-                                        </div>
+                                          <div>
+                                              <p style="background: #68b9e3;">Generated code will appear here.</p>
+                                         </div>
+                                       
                                     </div>
-                                    <div id="textEditor" contenteditable="true">                                      
-                                    </div>
-                                    <div class="toolbar">
-                                         <input class="btn btn-outline-dark" type="button" onclick="exportAsWord()" value="Export as Word"/>                     
-                                         <input class="btn btn-outline-dark" type="button" onclick="exportAsText()" value="Export as Text"/>  
-                                         <input class="btn btn-outline-dark" type="button" onclick="copyText()" value="Copy Text"/>                  
-                                    </div>
+                                    
+                                   
                                 </div>
                             </div> 
                         </div>  
@@ -462,72 +423,7 @@ div.content {
             }
         });
     </script>
-<%--Java Script for 200 words text area 1--%>
-    <script>
-        const textArea = document.getElementById('textArea');
-        const charCount2 = document.getElementById('charCount2');
 
-        textArea.addEventListener('input', function () {
-            const remainingChars = 200 - textArea.value.length;
-            charCount2.textContent = `Characters remaining: ${remainingChars}`;
-        });
-    </script>
-
-<%--Java Script for Text editor--%>
-<script>
-    function executeCommand(command, value = null) {
-        document.execCommand(command, false, value);
-    }
-
-    function createTableHTML() {
-        const rows = prompt('Enter the number of rows:');
-        const columns = prompt('Enter the number of columns:');
-        let html = '<table>';
-
-        for (let i = 0; i < rows; i++) {
-            html += '<tr>';
-            for (let j = 0; j < columns; j++) {
-                html += '<td contenteditable="true">Cell</td>';
-            }
-            html += '</tr>';
-        }
-
-        html += '</table>';
-        return html;
-    }
-
-    function exportAsWord() {
-        const content = document.getElementById('textEditor').innerHTML;
-        const filename = 'document.doc';
-        const blob = new Blob(['\ufeff', content], { type: 'application/msword' });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.setAttribute('download', filename);
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    }
-
-    function exportAsText() {
-        const content = document.getElementById('textEditor').innerText;
-        const filename = 'document.txt';
-        const blob = new Blob([content], { type: 'text/plain' });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.setAttribute('download', filename);
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    }
-
-    function copyText() {
-        const content = document.getElementById('textEditor').innerText;
-        navigator.clipboard.writeText(content);
-    }
-</script>
 
 </body>
-
 </html>

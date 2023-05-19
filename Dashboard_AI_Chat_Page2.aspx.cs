@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace hype.sociusus
 {
-    public partial class AI_chat_inside_dashboard : System.Web.UI.Page
+    public partial class Dashboard_AI_Chat_Page2 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

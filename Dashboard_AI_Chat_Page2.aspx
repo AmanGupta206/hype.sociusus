@@ -1,37 +1,32 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AI_chat_inside_dashboard.aspx.cs" Inherits="hype.sociusus.AI_chat_inside_dashboard" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Dashboard_AI_Chat_Page2.aspx.cs" Inherits="hype.sociusus.Dashboard_AI_Chat_Page2" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <%--For responsiveness--%>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-      <%--bootstrap css--%>
+     <%--bootstrap css--%>
     <link href="Bootstrap/cs/bootstrap.min.css" rel="stylesheet" />
      <%--datatable css--%>
     <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
      <%--fontawesome css--%>
     <link href="fontawesome/css/all.css" rel="stylesheet" />
+
+
      <%--Custom css--%>
     <link href="css/CustomStyleSheet.css" rel="stylesheet" />
+
+
     <%--jquery--%>
     <script src="Bootstrap/js/jquery-3.3.1.slim.min.js"></script>
     <%--popper js--%>       
     <script src="Bootstrap/js/popper.min.js"></script>
     <%--bootstrap js--%>
     <script src="Bootstrap/js/bootstrap.min.js"></script>
-    <%--for graph--%>
-   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-   <%-- for responsive--%>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 </head>
 <body>
     <form id="form1" runat="server">
-
+      
 <style>
 body {
   margin: 0;
@@ -119,6 +114,7 @@ div.content {
     border-radius:10px;
     box-shadow:0 7px 25px 0 inherit;
 }
+
 .docicon{
 }
 .alldoc p{
@@ -132,10 +128,7 @@ div.content {
 }
 
 
-
 </style>
-
-
 
  <!--HEADER START-->
               <div style="height:90px;position:fixed; border-bottom: solid;  z-index:1; background-color:white; width:100%; margin-top:-1px; " class="Header"> 
@@ -146,16 +139,16 @@ div.content {
                              </a>
                        </div>      
  <%--button for toggle--%>
-                     <div class="col-md-8">
-                         <nav style="margin-left: 185px; height: 31px; width: 869px;" class="navbar navbar-toggleable-md fixed-top">
-                             <button id="nav-btn" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarDiv" aria-expanded="true" aria-label="Toggle navigation">
-                                 <span class="fa fa-bars"></span>
+                     <div class="col-md-8"> 
+                         <nav style="margin-left:185px; height: 31px; width: 869px;" class="navbar navbar-toggleable-md fixed-top">
+                                    <button id="nav-btn"class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarDiv"  aria-expanded="true" aria-label="Toggle navigation">
+                                        <span class="fa fa-bars"></span>
 
-                             </button>
-                         </nav>
-                     </div>
+                                    </button>
+                                    </nav>
+                     </div> 
 
-                     <%--FOR DROP DOWN BUTTON IN TOP--%> 
+       <%--FOR DROP DOWN BUTTON IN TOP--%> 
             <div class="col-md-1" style="border-right: inset;border-left: outset;"> 
                          <div class="dropdown show"  style="padding-top:10px">
                                   <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink"  data-toggle="dropdown" >
@@ -163,15 +156,14 @@ div.content {
                                   </a>
 
                               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="#"><img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard</a>
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-file"></i> My Documents</a>
+                                <a class="dropdown-item" href="dashboard_page.aspx"><img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard</a>                            
                                 <a class="dropdown-item" href="#"><i class="fa-solid fa-bars"></i> Templates</a>
-                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-image"></i> AI Images</a>
+                                  <a class="dropdown-item" href="all_ai_image_page.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-comment"></i> AI Chat</a>
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
-                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-file"></i> All Documents</a>
-                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-gift"></i> Membership</a>
-                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-gear"></i> Account Settings</a>
+                                  <a class="dropdown-item" href="all_documents_page.aspx"><i class="fa-solid fa-file"></i> All Documents</a>
+                                  <a class="dropdown-item" href="Membership_page2.aspx"><i class="fa-solid fa-gift"></i> Membership</a>
+                                  <a class="dropdown-item" href="account_setting_page.aspx"><i class="fa-solid fa-gear"></i> Account Settings</a>
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
                     
                               </div>
@@ -220,46 +212,48 @@ div.content {
                     <div class="sidebar" >    
                       <h4>&nbsp;&nbsp;My Account</h4>        
                       <a href="dashboard_page.aspx">
-                          <img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png"/>Dashboard</a>                 
-                                     <div class="dropdown">
-                                          <button class="btn btn-secondary dropdown-toggle"  style="background: #f5f5f5; border-color: #f5f5f5;color:black" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fa-solid fa-file"></i>&nbsp;My Documents
-                                          </button>
-                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="all_documents_page.aspx">All Documents</a>
-                                            <a class="dropdown-item" href="all_ai_image_page.aspx">All AI Images</a>                                    
-                                          </div>
-                                    </div>
+                          <img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png"/> Dashboard
+                      </a>
+                           <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle"  style="background: #f5f5f5; border-color: #f5f5f5;color:black" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-solid fa-file"></i>&nbsp;My Documents
+                                    </button>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="all_documents_page.aspx">All Documents</a>
+                                    <a class="dropdown-item" href="all_ai_image_page.aspx">All AI Images</a>                                  
+                                 </div>
+                            </div>
                       <h4>Organize And Manage</h4>
                       <a href="#"><i class="fa-solid fa-bars"></i> Templates</a>
-                      <a href="#"><i class="fa-solid fa-image"></i> AI Images</a>
+                      <a href="AI_image_page_in_dashboard.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
                       <a href="#"><i class="fa-solid fa-comment"></i> AI Chat</a>
                       <a href="#"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
                       <a href="#"><i class="fa-solid fa-code"></i> AI Code</a>        
                       <h4>&nbsp;&nbsp;Account</h4> 
                       <a href="#"><i class="fa-solid fa-share-nodes"></i> Affiliate Program</a>                   
-                      <a href="#"><i class="fa-solid fa-gift"></i> Membership</a>
-                      <a href="#"><i class="fa-solid fa-money-bill"></i> Transaction</a>
-                      <a href="#"><i class="fa-solid fa-gear"></i> Account Settings</a>
+                      <a href="Membership_page2.aspx"><i class="fa-solid fa-gift"></i> Membership</a>
+                      <a href="transaction_page.aspx"><i class="fa-solid fa-money-bill"></i> Transaction</a>
+                      <a href="account_setting_page.aspx"><i class="fa-solid fa-gear"></i> Account Settings</a>
                       <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
                    </div>
                 </div>
-                <div class="col-md-10 " id="main1"  style="padding-right: 0px; ">
+                 <div class="col-md-10" id="main1"  style="padding-right: 0px;">
                   <div  class ="main"> 
-                            <div class="row">
-                                   <div class="col-md-6 "  style="padding-top: 200px;padding-left:100px;display:flex" >  
+                    <div class="row"  >
+                                   <div class="col-md-6 "  style="padding-top: 200px; padding-left:100px; display:flex" >  
                                              <div class="alldoc" style="display:flex"><h2 ">AI  Chat</h2><p><i class="fa-solid fa-chart-simple docicon"></i> 0/10000 Words used</p></div>
                                    </div>
                                    <div class="col-md-6"   style="padding-top: 200px; padding-left:275px;">                              
-                                       <asp:Button class="btn btn-secondary"  ID="Button1" runat="server" Text="Home >>AI Chat" />                             
+                                       <asp:Button class="btn btn-secondary"  ID="Button1" runat="server" Text="Home >> AI  Chat" />                             
                                    </div>
-                            </div>                              
+                    </div>
                                <div class="row">    
                                    <div   style="margin-left: 6%; margin-right: 6%;margin-top: 2%;">
-                                     <p style="background-color: pink;" >You can not use the chat feature with your OpenAI model. Upgrade your membership plan to use this feature.</p>    
+                                     <p style="background-color:#ffe9e9; color: #de5959" >You can not use the chat feature with your OpenAI model. Upgrade your membership plan to use this feature.</p>    
                                    </div>
                                </div>
                             <br/> 
+
 <%--Code for AI Chat box and functionality --%>                 
   <style>
     #chatbox {
@@ -270,7 +264,7 @@ div.content {
       margin-bottom: 10px;
     }
   </style>                     
-                      <div class="card">
+                <div class="card">
                       <div class="card-header">
                           <div class="row">
                                   <div class="col-sm-6 col-md-10">
@@ -321,79 +315,16 @@ div.content {
 
 
     </form>
-<%--Java Script for Chat box--%>
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-        const chatbox = document.getElementById('chatbox');
-        const messageInput = document.getElementById('messageInput');
-        const sendButton = document.getElementById('sendButton');
-        const deleteButton = document.getElementById('deleteButton');
-        const downloadButton = document.getElementById('downloadButton');
-        let chatContent = '';
 
-        // Event listener for send button
-        sendButton.addEventListener('click', () => {
-            const message = messageInput.value;
-            if (message.trim() !== '') {
-                appendMessage('You: ' + message);
-                replyToMessage(message);
-                messageInput.value = '';
-            }
-        });
-
-        // Event listener for delete button
-        deleteButton.addEventListener('click', () => {
-            clearChat();
-        });
-
-        // Event listener for download button
-        downloadButton.addEventListener('click', () => {
-            downloadChat();
-        });
-
-        // Function to append message to the chat box
-        function appendMessage(message) {
-            const p = document.createElement('p');
-            p.textContent = message;
-            chatbox.appendChild(p);
-            chatContent += message + '\n';
-            chatbox.scrollTop = chatbox.scrollHeight;
-        }
-
-        // Function to generate a fixed reply
-        function replyToMessage(message) {
-            const reply = "You can not use the chat feature with your OpenAI model. Upgrade your membership plan to use this feature.";
-            appendMessage('Bot: ' + reply);
-        }
-
-        // Function to clear the chat box
-        function clearChat() {
-            chatbox.innerHTML = '';
-            chatContent = '';
-        }
-
-        // Function to download the chat
-        function downloadChat() {
-            const filename = 'chat.txt';
-            const element = document.createElement('a');
-            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(chatContent));
-            element.setAttribute('download', filename);
-            element.style.display = 'none';
-            document.body.appendChild(element);
-            element.click();
-            document.body.removeChild(element);
-        }
-    });
-
-
-</script>
 <%--Script for Toggle Option--%>
     <script>
         $("#nav-btn").on("click", function () {
-            $("#side1").toggle();
-            $("#main1").toggleclass('col-md-10 col-lg-12 full-width');
+                $("#side1").toggle();
+            $("#main1").toggleClass('col-lg-12 full-width'); 
+
         });
     </script>
+
 
 </body>
 </html>

@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="recent_blog_internal_page.aspx.cs" Inherits="hype.sociusus.recent_blog_internal_page" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Footer_Feedback_Page.aspx.cs" Inherits="hype.sociusus.Footer_Feedback_Page" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <%--bootstrap css--%>
+     <%--bootstrap css--%>
     <link href="Bootstrap/cs/bootstrap.min.css" rel="stylesheet" />
      <%--datatable css--%>
     <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -23,8 +23,6 @@
     <script src="Bootstrap/js/popper.min.js"></script>
     <%--bootstrap js--%>
     <script src="Bootstrap/js/bootstrap.min.js"></script>
-    <%--for graph--%>
-   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -81,7 +79,7 @@ body {
   <%--FOR DROP DOWN BUTTON IN TOP--%> 
             <div class="col-md-1" style="border-right: inset;border-left: outset; padding-left: 7px;"> 
                          <div class="dropdown show"  style="padding-top:10px">
-                                  <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink" style="background-color: white; border-color: white;"  data-toggle="dropdown" >
+                                  <a class="btn btn-secondary " href="#" role="button" style="background-color: white; border-color: white;"  id="dropdownMenuLink"  data-toggle="dropdown" >
                                       <img src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20154408.png" />
                                   </a>
 

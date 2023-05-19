@@ -11,7 +11,7 @@ namespace hype.sociusus
 {
 
 
-    public partial class AI_chat_inside_dashboard
+    public partial class Footer_Feedback_Page
     {
 
         /// <summary>
