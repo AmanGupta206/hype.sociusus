@@ -101,9 +101,12 @@
     <Content Include="all_ai_image_page.aspx" />
     <Content Include="all_documents_page.aspx" />
     <Content Include="App_Data\hype.sociusus.mdf" />
+    <Content Include="css\Dashboard_main_page.css" />
     <Content Include="Dashboard_AI_Chat_Page2.aspx" />
     <Content Include="Dashboard_AI_Code_Page.aspx" />
+    <Content Include="Dashboard_main_page.aspx" />
     <Content Include="dashboard_page.aspx" />
+    <Content Include="Footer_Contact_Page.aspx" />
     <Content Include="Footer_FAQ.aspx" />
     <Content Include="Footer_Feedback_Page.aspx" />
     <Content Include="forgetpassword.aspx" />
@@ -2315,12 +2318,26 @@
     <Compile Include="Dashboard_AI_Code_Page.aspx.designer.cs">
       <DependentUpon>Dashboard_AI_Code_Page.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard_main_page.aspx.cs">
+      <DependentUpon>Dashboard_main_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard_main_page.aspx.designer.cs">
+      <DependentUpon>Dashboard_main_page.aspx</DependentUpon>
+    </Compile>
     <Compile Include="dashboard_page.aspx.cs">
       <DependentUpon>dashboard_page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="dashboard_page.aspx.designer.cs">
       <DependentUpon>dashboard_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Footer_Contact_Page.aspx.cs">
+      <DependentUpon>Footer_Contact_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Footer_Contact_Page.aspx.designer.cs">
+      <DependentUpon>Footer_Contact_Page.aspx</DependentUpon>
     </Compile>
     <Compile Include="Footer_FAQ.aspx.cs">
       <DependentUpon>Footer_FAQ.aspx</DependentUpon>

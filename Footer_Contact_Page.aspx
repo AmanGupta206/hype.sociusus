@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Footer_Feedback_Page.aspx.cs" Inherits="hype.sociusus.Footer_Feedback_Page" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Footer_Contact_Page.aspx.cs" Inherits="hype.sociusus.Footer_Contact_Page" %>
 
 <!DOCTYPE html>
 
@@ -158,12 +158,12 @@ body {
              <div style="height:100%-60px;background-color: #f5f5f5; bottom:0px" class ="main"  > 
                      <div class="row"  >
                            <div class="col-md-6"  style="padding-top: 100px"; >  
-                                     <h2  style="padding-top: 100px; padding-left:250px">Feedback</h2>
+                                     <h2  style="padding-top: 100px; padding-left:250px">Contact Us</h2>
                                      
                            </div>
                            <div class="col-md-6"   style="padding-top: 200px; padding-left:215px;">  
                               
-                               <asp:Button class="btn btn-secondary"  ID="Button1" runat="server" Text="Home >> Feedback"  /> 
+                               <asp:Button class="btn btn-secondary"  ID="Button1" runat="server" Text="Home >> Contact Us"  /> 
                                
                            </div>
                       </div>
@@ -177,62 +177,41 @@ body {
                <div class="card-body">
                   <div class="row">
                      <div class="col">                       
-                            <h4>Tell us what you think of us</h4>                                                   
+                            <h4>Contact Us</h4>                                                   
                      </div>
                   </div>                 
+                 
                   <div class="row">
-                     <div class="col-md-12">
-                        <p style="padding-top: 17px;">We would like to hear your opinions about the website. We would be grateful if you could take the time to fill out this form</p>
-                     </div>
-                  </div>
-                  <div class="row">
-                         <div class="col-md-12">  
-                                 <label>Full Name</label>
+                         <div class="col-md-6">  
                                 <div class="form-group">
-                                   <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" ></asp:TextBox>
+                                   <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Your Name" ></asp:TextBox>
                                 </div>
+                             </div>
+                            <div class="col-md-6">  
+                            <div class="form-group">
+                                <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Your E-mail" ></asp:TextBox>
+                            </div>
                          </div>
+                         
                   </div>
                   <div class="row">
                            <div class="col-md-12">  
-                                 <label>Email Address</label>
-                                <div class="form-group">
-                                   <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" ></asp:TextBox>
+                                  <div class="form-group">
+                                   <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Subject" ></asp:TextBox>
                                 </div>
                            </div>
                    </div>
 
                     <div class="row">                            
                            <div class="col-md-12">  
-                                 <label>Phone Number</label>
-                                <div class="form-group">
-                                   <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" ></asp:TextBox>
-                                </div>
+                                <textarea name="message" id="message" style="width: 29rem;" required="required" class="with-border" rows="7" placeholder="Message"></textarea>
                            </div>
-                      </div>
-                    
+                      </div>                   
 
                     <div class="row">                            
-                           <div class="col-md-12">  
-                                 <label>Subject</label>
+                           <div class="col-md-4">                                   
                                 <div class="form-group">
-                                   <asp:TextBox CssClass="form-control" ID="TextBox11" runat="server" ></asp:TextBox>
-                                </div>
-                           </div>
-                      </div>
-                    <div class="row">                            
-                           <div class="col-md-12">  
-                                 <label>Is there anything you would like to tell us?</label>
-                                <div class="form-group">
-                                   <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Message..." ></asp:TextBox>
-                                </div>
-                           </div>
-                      </div>
-
-                    <div class="row">                            
-                           <div class="col-md-3">                                   
-                                <div class="form-group">
-                                    <asp:Button  class="btn btn-primary  btn-block btn-lg" ID="Button2" runat="server" Text="Submit" />
+                                    <asp:Button  class="btn btn-primary  btn-block btn-lg" ID="Button2" runat="server" Text="Send Message" />
                                 </div>
                            </div>
                       </div>
@@ -241,88 +220,16 @@ body {
                </div>
              </div>
                      </div>
-        <div class="col-md-4" style="padding-top: 45px;" >
-                <div>             
-                        <h3 style="padding-top: 20px;">Recent Blog</h3>
-                              <div class="row" ">           
-                                             <div class="col-md-4">
-                                                  <a href="#"><img src="images/Other%20Images/image%20logo.png" alt="Image Logo" style="width:100%;">
-                                                 <div class="top-bottom text-dark" style="padding-left: 20%;padding-right: 18%;">Admin</div></a>
-                                            </div>
-                                            <div class="col-md-6" style="background-color: white;">                                   
-                                                  <div class="bottom-left text-dark" ><h4 style="background-color: white;">First Blog</h4> 
-                                                  <p class="text-dark" style="background-color: white;">3 Years Ago</p>                 
-                                                 </div>
-                                          </div>
-                              </div>
-                        <p style="padding-top: 20px;">Testimonials</p>
-                </div>
-            <%--crousal of testimonials part code--%>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="background-color: #fff;">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="card-body">                                            
-                            <i class="fa-solid fa-quote-left testiconleft" ></i><br />
-                            <p style="width:auto" > Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paria tur.
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                            <i class="fa-solid fa-quote-right "></i>  
-                            <div style="display:flex">
-                                <img src="images/default_user.png" style="width:80px;height:75px;border-radius:50px" />
-                                <div style="Margin-left:25px; padding-top: 10px; "><h5>Tony Stark</h5>
-                                <h6 style="color:#184698">Social Marketing</h6>
-                                    </div>
-                            </div>
-                            </div>
-                    </div>
-                    <div class="carousel-item">
-
-                        <div class="card-body">
-                            <i class="fa-solid fa-quote-left testiconleft" ></i><br />
-                            <p  style="width:auto" > Elitsed do eiusmod tempor incididunt ut labore laboris nisi ut aliquip ex ea et dolore magna aliqua Ut enim ad minim veniam, 
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip e
-
-                            </p>
-                            <i class="fa-solid fa-quote-right "></i>   
-                                <div style="display:flex">
-                                <img src="images/default_user.png" style="width:80px;height:75px;border-radius:50px" />
-                                <div style="Margin-left:25px; padding-top: 10px; "><h5>Steve Roger</h5>
-                                <h6 style="color:#184698">Content Writer</h6>
-                                    </div>
-                                </div>
+                 <div class="col-md-4" style="padding-top: 45px;" >
+                     <div class="card">
+                          <div class="card-header">
+                            Get In Touch
+                          </div>
+                          <div class="card-body">                  
+                              <p>Please get in touch and our expert support team will answer all your questions.</p>                          
+                          </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card-body">
-                            <i class="fa-solid fa-quote-left testiconleft" ></i><br />
-                            <p  style="width:auto" >
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo do consequat.
-                                Elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-
-                            </p>
-                            <i class="fa-solid fa-quote-right " ></i>     
-                                <div style="display:flex">
-                                <img src="images/default_user.png" style="width:80px;height:75px;border-radius:50px" />
-                                <div style="Margin-left:25px; padding-top: 10px; "><h5>Natasha</h5>
-                                <h6 style="color:#184698">Designer</h6>
-                                    </div>
-                                </div>
-                        </div>
-                     </div>
-                    </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+           
                 </div>
              
                 <div style="Padding-top: 2rem;">
