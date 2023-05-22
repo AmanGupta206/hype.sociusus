@@ -7,16 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace hype.sociusus
 {
-    public partial class all_documents_page : System.Web.UI.Page
+    public partial class Dashboard_Affiliate_Program : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("homepage.aspx");
         }
     }
 }

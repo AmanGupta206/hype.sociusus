@@ -102,6 +102,7 @@
     <Content Include="all_documents_page.aspx" />
     <Content Include="App_Data\hype.sociusus.mdf" />
     <Content Include="css\Dashboard_main_page.css" />
+    <Content Include="Dashboard_Affiliate_Program.aspx" />
     <Content Include="Dashboard_AI_Chat_Page2.aspx" />
     <Content Include="Dashboard_AI_Code_Page.aspx" />
     <Content Include="Dashboard_main_page.aspx" />
@@ -2180,6 +2181,9 @@
     <Content Include="images\Ads and Marketing Tools\Screenshot 2023-04-19 151814.png" />
     <Content Include="images\Ads and Marketing Tools\Screenshot 2023-04-19 151845.png" />
     <Content Include="images\Ads and Marketing Tools\Screenshot 2023-04-19 151912.png" />
+    <Content Include="images\Affiliate Program\1.png" />
+    <Content Include="images\Affiliate Program\2.png" />
+    <Content Include="images\Affiliate Program\3.png" />
     <Content Include="images\AI Chat page images\delete.png" />
     <Content Include="images\AI Chat page images\download.png" />
     <Content Include="images\Articles and blogs\Screenshot 2023-04-19 123131.png" />
@@ -2303,6 +2307,13 @@
     </Compile>
     <Compile Include="all_documents_page.aspx.designer.cs">
       <DependentUpon>all_documents_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_Affiliate_Program.aspx.cs">
+      <DependentUpon>Dashboard_Affiliate_Program.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard_Affiliate_Program.aspx.designer.cs">
+      <DependentUpon>Dashboard_Affiliate_Program.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard_AI_Chat_Page2.aspx.cs">
       <DependentUpon>Dashboard_AI_Chat_Page2.aspx</DependentUpon>

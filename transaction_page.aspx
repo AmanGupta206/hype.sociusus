@@ -118,12 +118,9 @@
                                
                            </div>
                       </div>
-            <div class="row">
-                
+            <div class="row">      
                <div class="col-md-12 mx-auto">
                  <div class="card" style="width: 800px; margin-top: 100px; margin-bottom: 100px;  margin-left: 255px; margin-right: 100px ";>
-                     
-
                    <div class="card-body">
                       <div class="row">
                          <div class="col">                       
@@ -134,7 +131,6 @@
                      <div class="row">
                         <div class="col"><hr></div>
                      </div>
-
                      <div class="row"  style="background-color: gainsboro;">
                                  <div class="col-md-2">  
                                          <label>Title</label>                                  

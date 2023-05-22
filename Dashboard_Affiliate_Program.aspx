@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dashboard_page.aspx.cs" Inherits="hype.sociusus.dashboard_page" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Dashboard_Affiliate_Program.aspx.cs" Inherits="hype.sociusus.Dashboard_Affiliate_Program" %>
 
 <!DOCTYPE html>
 
@@ -23,8 +23,7 @@
     <script src="Bootstrap/js/popper.min.js"></script>
     <%--bootstrap js--%>
     <script src="Bootstrap/js/bootstrap.min.js"></script>
-    <%--for graph--%>
-   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -212,66 +211,119 @@ div.content {
                                  </div>
                             </div>
                       <h4>Organize And Manage</h4>
-                          <a href="template_page_inside_dashboard.aspx"><i class="fa-solid fa-bars"></i> Templates</a>
-                          <a href="AI_image_page_in_dashboard.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
-                          <a href="Dashboard_AI_Chat_Page2.aspx"><i class="fa-solid fa-comment"></i> AI Chat</a>
-                          <a href="Speech_to_text.aspx"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
-                          <a href="Dashboard_AI_Code_Page.aspx"><i class="fa-solid fa-code"></i> AI Code</a>        
-                          <h4>&nbsp;&nbsp;Account</h4> 
-                            <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle"  style="background: #f5f5f5; border-color: #f5f5f5;color:black" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa-solid fa-share-nodes"></i>&nbsp;Affiliate Program
-                                        </button>
-                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="Dashboard_Affiliate_Program.aspx">Affiliate Program</a>
-                                        <a class="dropdown-item" href="#">Withdrawls</a>                                  
-                                     </div>
-                                </div>
-                          <a href="Membership_page2.aspx"><i class="fa-solid fa-gift"></i> Membership</a>
-                          <a href="transaction_page.aspx"><i class="fa-solid fa-money-bill"></i> Transaction</a>
-                          <a href="account_setting_page.aspx"><i class="fa-solid fa-gear"></i> Account Settings</a>
-                          <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                      <a href="template_page_inside_dashboard.aspx"><i class="fa-solid fa-bars"></i> Templates</a>
+                      <a href="AI_image_page_in_dashboard.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
+                      <a href="Dashboard_AI_Chat_Page2.aspx"><i class="fa-solid fa-comment"></i> AI Chat</a>
+                      <a href="Speech_to_text.aspx"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
+                      <a href="Dashboard_AI_Code_Page.aspx"><i class="fa-solid fa-code"></i> AI Code</a>        
+                      <h4>&nbsp;&nbsp;Account</h4> 
+                      <a href="#"><i class="fa-solid fa-share-nodes"></i> Affiliate Program</a>                   
+                      <a href="Membership_page2.aspx"><i class="fa-solid fa-gift"></i> Membership</a>
+                      <a href="transaction_page.aspx"><i class="fa-solid fa-money-bill"></i> Transaction</a>
+                      <a href="account_setting_page.aspx"><i class="fa-solid fa-gear"></i> Account Settings</a>
+                      <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
                    </div>
                 </div>
                  <div class="col-md-10" id="main1"  style="padding-right: 0px;">
                   <div  class ="main"> 
                     <div class="row"  >
                            <div class="col-md-6"  style="padding-top: 100px"; >  
-                                     <h2  style="padding-top: 100px; padding-left:100px;">Dashboard</h2>                             
+                                     <h2  style="padding-top: 100px; padding-left:100px;">Affiliate Program</h2>                             
                            </div>
-                           <div class="col-md-6"   style="padding-top: 200px; padding-left:275px;">  
-                              
-                               <asp:Button class="btn btn-secondary"  ID="Button1" runat="server" Text="Home >> Dashboard" OnClick="Button1_Click" /> 
-                               
+                           <div class="col-md-6"   style="padding-top: 200px; padding-left:275px;">         
+                               <asp:Button class="btn btn-secondary"  ID="Button1" runat="server" Text="Home >> Affiliate Program"  />        
                            </div>
                     </div>
                   <%-- main part code--%>
                         <div class ="cards">
-                 <div class="card">             
-                          <div class="row">                  
-                                <div class="col-md-6"><h2>Words Used <p>0/10,000</p></h2></div>                                  
-                                <div class="col-md-6"><img src="images/Dashboard%20Icons%20images/Screenshot%202023-04-28%20185928.png" /></div>                                   
-                          </div>
-                 </div>
-                 <div class="card">             
-                           <div class="row">
-                                   <div class="col-md-6"><h2>Images Used <p>0/100</p></h2></div> 
-                                   <div class="col-md-6"><img src="images/Dashboard%20Icons%20images/Screenshot%202023-04-28%20190005.png" /></div>                                    
-                            </div>
-                  </div>
-                   <div class="card">             
-                           <div class="row">                    
-                                 <div class="col-md-6"><h2>Speech to text<p>0/0</p></h2></div> 
-                                 <div class="col-md-6"><img src="images/Dashboard%20Icons%20images/Screenshot%202023-04-28%20190034.png" /></div>                                    
-                            </div>
-                   </div>
-                </div>
+                             <div class="card">             
+                                      <div class="row">                  
+                                            <div class="col-md-6"><h3>Wallet <p>0.00</p></h3></div>                                  
+                                            <div class="col-md-6"><img src="images/Affiliate%20Program/1.png" />
+                                            </div>                                   
+                                      </div>
+                             </div>
+                             <div class="card">             
+                                       <div class="row">
+                                               <div class="col-md-6"><h3>Total Referred <p>0</p></h3></div> 
+                                               <div class="col-md-6"><img src="images/Affiliate%20Program/2.png" /></div>                                    
+                                        </div>
+                              </div>
+                               <div class="card">             
+                                       <div class="row">                    
+                                             <div class="col-md-6"><h3>Total Earning</h3></div> 
+                                             <div class="col-md-6"><img src="images/Affiliate%20Program/3.png" /></div>                                    
+                                        </div>
+                               </div>
+                       </div>
 
-               <div>
-                  <h3>&nbsp;Words used this month</h3>
-                  <div >
-                   <canvas id="myChart" ></canvas>
-               </div>
+                        
+                             <div class="card" style="margin-right: 3%;margin-left: 3%; margin-bottom: 3%;">      
+                                 <div style="padding: 2%; padding-bottom: 0%;">  
+                                     <i class="fa-solid fa-share-nodes"></i> Start earning with the affiliate program
+                                 </div><hr/>
+                                 <div style="background-color: #e9f7fe;color: #3184ae; margin: 2%; margin-top: 0px;">
+                                     Invite new customers to our site using your affiliate link and when they purchase any membership plan, you will get a commission.
+                                 </div>
+                                      <div class="row" style="margin-left: 9%; margin-right: 7%; margin-top: 0%; margin-bottom: 0%; ">                  
+                                            <div class="col-md-6">
+                                                <p>Current:Commission Rate</p>
+                                                <p>30%</p>
+                                            </div>                                  
+                                            <div class="col-md-6">
+                                                <p>Affiliate:Rule</p>
+                                                <p>First Subscription <i class="fa-regular fa-circle-question"></i></p>
+                                            </div>                                   
+                                      </div>
+                                 <div style="margin: 2%; margin-top: 0px;">
+                                       <form>
+                                          <label for="affiliateUrl">Affiliate URL</label>
+                                          <input type="text" id="affiliateUrl" name="affiliateUrl" placeholder="http://hype.sociusus.com/?ref=132hl6461b30d243f0"/>
+
+                                          <button type="button" onclick="copyToClipboard()">Copy</button>
+                                        </form>
+                                 </div>
+                             </div>                          
+                      
+                             <div class="card" style="margin-right: 3%;margin-left: 3%;margin-bottom: 3%; ">             
+                                      <div class="row" >
+                                         <div class="col" style="padding: 2%; padding-bottom: 0%;">                                     
+                                            <h4><i class="fa-solid fa-money-bill"></i>&nbsp;Commissions</h4>                    
+                                          </div>
+                                     </div>
+                                     <hr/>
+                                    
+                                   <div class="row"  style="background-color: gainsboro; margin-right: 2%;margin-left: 2%;">
+                                            <div class="col-md-1">  
+                                               
+                                           </div>
+                                             <div class="col-md-2">  
+                                                     <label>Commission</label>                                  
+                                             </div>
+                                            <div class="col-md-2">  
+                                                 <label>Total Amount</label>                                   
+                                            </div>
+                                             <div class="col-md-2">  
+                                                     <label>Commission Rate</label>                                     
+                                             </div>
+                                               <div class="col-md-1">  
+                                               
+                                               </div>
+                                            <div class="col-md-2">  
+                                                <label>Transaction ID</label>
+                                            </div>
+                                             <div class="col-md-2">  
+                                                     <label>Date</label>                                     
+                                             </div>
+                                          
+                                    </div>
+                                  <div class="row">
+                                         <div style="padding-left:36%; padding-right:35%;">  
+                                                 <label>No Result Found</label>                                      
+                                         </div>
+                                 </div>
+                                               
+                       </div>
   </div>
 <%--Dashboard part ends--%>
 
@@ -325,41 +377,17 @@ div.content {
 
         });
     </script>
-<%--script for graph--%>
-    <script>
-        const ctx = document.getElementById('myChart');
-
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ["01 May", "02 May", "03 May", "04 May", "05 May", "06 May", "07 May", "08 May", "09 May", "10 May", "11 May", "12 May", "13 May", "14 May", "15 May", "16 May", "17 May", "18 May", "19 May", "20 May", "21 May", "22 May", "23 May", "24 May", "25 May", "26 May", "27 May", "28 May", "29 May", "30 May", "31 May"],
-                // Information about the dataset
-                datasets: [{
-                    label: "Words Used Graphical Representation",
-                    backgroundColor: '#18469815',
-                    borderColor: '#184698',
-                    borderWidth: "3",
-                    data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                    pointRadius: 5,
-                    pointHoverRadius: 5,
-                    pointHitRadius: 10,
-                    pointBackgroundColor: "#fff",
-                    pointHoverBackgroundColor: "#fff",
-                    pointBorderWidth: "2",
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
+<%--script for Copy Button--%>
+  
+        <script>
+            function copyToClipboard() {
+            const affiliateUrlInput = document.getElementById('affiliateUrl');
+            affiliateUrlInput.select();
+            document.execCommand('copy');
+            alert('Affiliate URL copied to clipboard!');
             }
-        });
-    </script>
-
-
-
+       </script>
+ 
 
 </body>
 </html>
