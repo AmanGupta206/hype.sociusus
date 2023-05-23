@@ -869,9 +869,122 @@
         </div>
           </div>
         
-    </div>
-  </div>
+        </div>
       </div>
+      </div>
+        <hr/>
+      <%--  Membership Part--%>
+                     <div  >
+                           
+                               <center>
+                                     <h2>Memberhip Plan</h2>       
+                                   </center>
+                                                   
+                      </div>
+         <div class="container">
+                         <div class="row">
+                           <div class="col-md-12 mx-auto">
+                                <div class="row" style="padding-left: 422px;padding-bottom: 30px;">
+                                  
+                                    <div class="radform">
+                                        <div class="radio">
+                                            <input type="radio" name="radio-buttons" value="monthly" onchange="enableInputField(5)" />
+                                            Monthly&nbsp; &nbsp; &nbsp;
+              
+                                            <input type="radio" name="radio-buttons" value="yearly" onchange="enableInputField(50)" />
+                                            Yearly&nbsp; &nbsp; &nbsp;
+              
+                                            <input type="radio" name="radio-buttons" value="Lifetime" onchange="enableInputField(550)" />
+                                            Life Time&nbsp; &nbsp; &nbsp;
+               
+                                        </div>
+                                     </div>
+                                 </div>  
+                                <div class="row">
+                                     <div class="col-md-4">  
+                                          <div class="card">
+                                              <div class="card-body">
+                                                 <h4>Free Plan</h4>
+                                                  <div style="background-color: #f5f5f5; padding-left: 110px; padding-right: 100px;"><h2>Free</h2></div>
+                                                   
+                                                        <div class="card-body">           
+                                                            <ul class="list-unstyled mt-3 mb-4" style="text-align:left">
+                                                                <li><h5>Features of Free Plan</h5></li>
+                                                                <li>32 AI Document Templates<br /></li>
+                                                                <li>10,000 Words per month<br /></li>
+                                                                <li>100 Images per month<br /></li>
+                                                                <li>0 Speech to Text per month<br /></li>
+                                                                <li>0 MB Audio file size limit<br /></li>
+                                                                <li><i class="fa-solid fa-circle-xmark"></i> AI Chat <span class="font-weight-bold">?</span></li>
+                                                                <li><i class="fa-solid fa-circle-xmark"></i> AI Code <span class="font-weight-bold">?</span></li>
+                                                                <li><i class="fa-sharp fa-solid fa-square-check"></i> Hide Ads <span class="font-weight-bold"></span></li>
+                                                                <li><i class="fa-solid fa-circle-xmark"></i> Free Setup <span class="font-weight-bold"></span></li>
+                                                                <li><i class="fa-solid fa-circle-xmark"></i> Free Support <span class="font-weight-bold"></span></li>
+                                                            </ul>
+                                                            <a href="upgrade_membership_page2.aspx"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Upgrade</button></a>
+                                                          </div>
+                                                        
+                                                  </div>
+
+                                              </div>
+                                          </div>
+                                         
+
+                                       <div class="col-md-4">  
+                                             <div class="card">
+                                              <div class="card-body">
+                                                 <h4>Trial Plan</h4>
+                                                  <div style="background-color: #f5f5f5; padding-left: 110px; padding-right: 100px;"><h2>Trial</h2></div>                                                   
+                                                        <div class="card-body">          
+                                                            <ul class="list-unstyled mt-3 mb-4" style="text-align:left">
+                                                                <li><h5>Features of Trial Plan</h5></li>
+                                                               <li>61 AI Document Templates<br /></li>
+                                                                  <li>50,000 Words per month<br /></li>
+                                                                  <li>500 Images per month<br /></li>
+                                                                  <li>0 Speech to Text per month<br /></li>
+                                                                  <li>0 MB Audio file size limit<br /></li>
+                                                                   <li><i class="fa-solid fa-circle-xmark"></i> AI Chat <span class="font-weight-bold">?</span></li>
+                                                                   <li><i class="fa-solid fa-circle-xmark"></i> AI Code <span class="font-weight-bold">?</span></li>
+                                                                   <li><i class="fa-sharp fa-solid fa-square-check"></i> Hide Ads <span class="font-weight-bold"></span></li>
+                                                                   <li><i class="fa-solid fa-circle-xmark"></i> Free Setup <span class="font-weight-bold"></span></li>
+                                                                   <li><i class="fa-solid fa-circle-xmark"></i> Free Support <span class="font-weight-bold"></span></li>
+                                                            </ul>
+                                                            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Current Plan</button>
+                                                          </div>                                                        
+                                                  </div>
+                                              </div>
+                                             </div>
+                                       
+                                        <div class="col-md-4">  
+                                             <div class="card">
+                                              <div class="card-body">
+                                                 <h4>Extended Plan</h4>
+                                                  <div style="background-color: #f5f5f5; padding-left: 48px; padding-right: 70px;padding-top: 5px;padding-bottom: 5px;">
+                                                      <input class="labl" type="text" id="input-field" style="background-color: #f5f5f5; border-color: white;  "/>
+                                                  </div>                                                   
+                                                        <div class="card-body">          
+                                                            <ul class="list-unstyled mt-3 mb-4" style="text-align:left">
+                                                                <li><h5>Features of Trial Plan</h5></li>
+                                                               <li>61 AI Document Templates<br /></li>
+                                                                  <li>50,000 Words per month<br /></li>
+                                                                  <li>500 Images per month<br /></li>
+                                                                  <li>0 Speech to Text per month<br /></li>
+                                                                  <li>0 MB Audio file size limit<br /></li>
+                                                                   <li><i class="fa-solid fa-circle-xmark"></i> AI Chat <span class="font-weight-bold">?</span></li>
+                                                                   <li><i class="fa-solid fa-circle-xmark"></i> AI Code <span class="font-weight-bold">?</span></li>
+                                                                   <li><i class="fa-sharp fa-solid fa-square-check"></i> Hide Ads <span class="font-weight-bold"></span></li>
+                                                                   <li><i class="fa-sharp fa-solid fa-square-check"></i> Free Setup <span class="font-weight-bold"></span></li>
+                                                                   <li><i class="fa-sharp fa-solid fa-square-check"></i> Free Support <span class="font-weight-bold"></span></li>
+                                                            </ul>
+                                                            <a href="membership_billing_page.aspx"><button type="button" class="btn btn-lg bg-primary text-white btn-block btn-outline-primary">Upgrade</button></a>
+                                                          </div>                                                        
+                                                  </div>
+                                              </div>
+                                             </div>
+                                      </div> 
+                                </div> 
+                            </div>
+                          </div>
 
 
 
@@ -1200,7 +1313,36 @@
     });
     </script>
 
+<%--script for change amount options--%>
+    <script>
+        function enableInputField(value) {
+            const radioButtons = document.getElementsByName('radio-buttons');
+            const inputField = document.getElementById('input-field');
+            for (let i = 0; i < radioButtons.length; i++) {
+                if (radioButtons[i].checked) {
+                    inputField.disabled = false;
+                    switch (value) {
+                        case 5:
+                            inputField.value = "₹" + value + " /per month ";
+                            break;
+                        case 50:
+                            inputField.value = "₹" + value + " /per year";
+                            break;
+                        case 550:
+                            inputField.value = "₹" + value + " /lifetime";
+                            break;
+                        default:
+                            inputField.value = "";
+                            break;
+                    }
+                    return;
+                }
+            }
+            inputField.disabled = true;
+            inputField.value = "";
+        }
 
+    </script>
 
 <%--Java Script for templates filteration part--%>
      <script>

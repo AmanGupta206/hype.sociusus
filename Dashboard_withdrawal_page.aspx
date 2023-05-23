@@ -1,30 +1,35 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dashboard_page.aspx.cs" Inherits="hype.sociusus.dashboard_page" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Dashboard_withdrawal_page.aspx.cs" Inherits="hype.sociusus.Dashboard_withdrawal_page" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-     <%--bootstrap css--%>
+
+
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <%--bootstrap css--%>
     <link href="Bootstrap/cs/bootstrap.min.css" rel="stylesheet" />
-     <%--datatable css--%>
+    <%--datatable css--%>
     <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
-     <%--fontawesome css--%>
+    <%--fontawesome css--%>
     <link href="fontawesome/css/all.css" rel="stylesheet" />
 
 
-     <%--Custom css--%>
+    <%--Custom css--%>
     <link href="css/CustomStyleSheet.css" rel="stylesheet" />
 
 
     <%--jquery--%>
     <script src="Bootstrap/js/jquery-3.3.1.slim.min.js"></script>
-    <%--popper js--%>       
+    <%--popper js--%>
     <script src="Bootstrap/js/popper.min.js"></script>
     <%--bootstrap js--%>
     <script src="Bootstrap/js/bootstrap.min.js"></script>
-    <%--for graph--%>
-   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -120,7 +125,7 @@ div.content {
 
 </style>
 
-   <!--HEADER START-->
+ <!--HEADER START-->
               <div style="height:90px;position:fixed; border-bottom: solid;  z-index:1; background-color:white; width:100%; margin-top:-1px; " class="Header"> 
                  <div class ="row" style="height:90px;position:fixed;  z-index:1;background-color:white;width:100%;margin-top:0px; border-width:0.5px; border-bottom:solid " >
                         <div class="col-md-2"> 
@@ -128,17 +133,16 @@ div.content {
                                <img width:"20px" src="images/hype.%202023-04-17%20195423.png"/ style="   border: none;max-width: 100px;height: auto;" href="https://localhost:44367/homepage.aspx">
                              </a>
                        </div>      
-   <%--button for toggle--%>
+ <%--button for toggle--%>
                      <div class="col-md-8"> 
                                 <nav style="margin-left:185px; height: 31px; width: 869px;" class="navbar navbar-toggleable-md fixed-top">
                                     <button id="nav-btn"class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarDiv"  aria-expanded="true" aria-label="Toggle navigation">
                                         <span class="fa fa-bars"></span>
-
                                     </button>
                                </nav>
                      </div> 
 
-   <%--FOR DROP DOWN BUTTON IN TOP--%> 
+       <%--FOR DROP DOWN BUTTON IN TOP--%> 
             <div class="col-md-1" style="border-right: inset;border-left: outset;"> 
                          <div class="dropdown show"  style="padding-top:10px">
                                   <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink"  data-toggle="dropdown" >
@@ -237,41 +241,73 @@ div.content {
                   <div  class ="main"> 
                     <div class="row"  >
                            <div class="col-md-6"  style="padding-top: 100px"; >  
-                                     <h2  style="padding-top: 100px; padding-left:100px;">Dashboard</h2>                             
+                                     <h2  style="padding-top: 100px; padding-left:100px;">Withdrawals</h2>                             
                            </div>
-                           <div class="col-md-6"   style="padding-top: 200px; padding-left:275px;">  
-                              
-                               <asp:Button class="btn btn-secondary"  ID="Button1" runat="server" Text="Home >> Dashboard" OnClick="Button1_Click" /> 
-                               
+                           <div class="col-md-6"   style="padding-top: 200px; padding-left:275px;">           
+                               <a class="btn btn-secondary" href="homepage.aspx" role="button">Home >> Withdrawals</a>
                            </div>
                     </div>
                   <%-- main part code--%>
-                        <div class ="cards">
-                 <div class="card">             
-                          <div class="row">                  
-                                <div class="col-md-6"><h2>Words Used <p>0/10,000</p></h2></div>                                  
-                                <div class="col-md-6"><img src="images/Dashboard%20Icons%20images/Screenshot%202023-04-28%20185928.png" /></div>                                   
-                          </div>
-                 </div>
-                 <div class="card">             
-                           <div class="row">
-                                   <div class="col-md-6"><h2>Images Used <p>0/100</p></h2></div> 
-                                   <div class="col-md-6"><img src="images/Dashboard%20Icons%20images/Screenshot%202023-04-28%20190005.png" /></div>                                    
-                            </div>
-                  </div>
-                   <div class="card">             
-                           <div class="row">                    
-                                 <div class="col-md-6"><h2>Speech to text<p>0/0</p></h2></div> 
-                                 <div class="col-md-6"><img src="images/Dashboard%20Icons%20images/Screenshot%202023-04-28%20190034.png" /></div>                                    
-                            </div>
-                   </div>
-                </div>
+                    
 
-               <div>
-                  <h3>&nbsp;Words used this month</h3>
-                  <div >
-                   <canvas id="myChart" ></canvas>
-               </div>
+                        
+                             <div class="card" style="margin-right: 3%;margin-left: 3%; margin-bottom: 3%;">      
+                                 <div style="padding: 2%; padding-bottom: 0%;">  
+                                     <i class="fa-solid fa-share-nodes"></i> Start earning with the affiliate program
+                                 </div><hr/>
+                                 <div style="background-color: #e9f7fe;color: #3184ae; margin: 2%; margin-top: 0px;">
+                                     Invite new customers to our site using your affiliate link and when they purchase any membership plan, you will get a commission.
+                                 </div>
+                                      <div class="row" style="margin-left: 9%; margin-right: 7%; margin-top: 0%; margin-bottom: 0%; ">                  
+                                            <div class="col-md-6">
+                                                <p>Current:Commission Rate</p>
+                                                <p>30%</p>
+                                            </div>                                  
+                                            <div class="col-md-6">
+                                                <p>Affiliate:Rule</p>
+                                                <p>First Subscription <i class="fa-regular fa-circle-question"></i></p>
+                                            </div>                                   
+                                      </div>
+                                 <div style="margin: 2%; margin-top: 0px;">
+                                       <form>
+                                          <label for="affiliateUrl">Affiliate URL</label>
+                                          <input type="text" id="affiliateUrl" name="affiliateUrl" placeholder="http://hype.sociusus.com/?ref=132hl6461b30d243f0"/>
+
+                                          <button type="button" onclick="copyToClipboard()">Copy</button>
+                                        </form>
+                                 </div>
+                             </div>                          
+                      
+                             <div class="card" style="margin-right: 3%;margin-left: 3%;margin-bottom: 3%; ">             
+                                      <div class="row" >
+                                         <div class="col" style="padding: 2%; padding-bottom: 0%;">                                     
+                                            <h4><i class="fa-solid fa-rectangle-list"></i>&nbsp;Withdrawal Requests</h4>                    
+                                          </div>
+                                     </div>
+                                     <hr/>
+                                    
+                                   <div class="row"  style="background-color: #6c757d21; margin-right: 2%;margin-left: 2%;">
+                                           
+                                             <div class="col-md-3">  
+                                                     <label>Requested On</label>                                  
+                                             </div>
+                                            <div class="col-md-3">  
+                                                 <label>Amount</label>                                   
+                                            </div>
+                                             <div class="col-md-3">  
+                                                     <label>Payment Method</label>                                     
+                                             </div>                                         
+                                            <div class="col-md-3">  
+                                                <label>Status</label>
+                                            </div>
+                                    </div>
+                                  <div class="row">
+                                         <div style="padding-left:36%; padding-right:35%;">  
+                                                 <label>No result found.</label>                                      
+                                         </div>
+                                 </div>
+                                               
+                       </div>
   </div>
 <%--Dashboard part ends--%>
 
@@ -325,41 +361,15 @@ div.content {
 
         });
     </script>
-<%--script for graph--%>
-    <script>
-        const ctx = document.getElementById('myChart');
-
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ["01 May", "02 May", "03 May", "04 May", "05 May", "06 May", "07 May", "08 May", "09 May", "10 May", "11 May", "12 May", "13 May", "14 May", "15 May", "16 May", "17 May", "18 May", "19 May", "20 May", "21 May", "22 May", "23 May", "24 May", "25 May", "26 May", "27 May", "28 May", "29 May", "30 May", "31 May"],
-                // Information about the dataset
-                datasets: [{
-                    label: "Words Used Graphical Representation",
-                    backgroundColor: '#18469815',
-                    borderColor: '#184698',
-                    borderWidth: "3",
-                    data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                    pointRadius: 5,
-                    pointHoverRadius: 5,
-                    pointHitRadius: 10,
-                    pointBackgroundColor: "#fff",
-                    pointHoverBackgroundColor: "#fff",
-                    pointBorderWidth: "2",
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
+<%--script for Copy Button--%>
+  
+        <script>
+            function copyToClipboard() {
+            const affiliateUrlInput = document.getElementById('affiliateUrl');
+            affiliateUrlInput.select();
+            document.execCommand('copy');
+            alert('Affiliate URL copied to clipboard!');
             }
-        });
-    </script>
-
-
-
-
+        </script>
 </body>
 </html>

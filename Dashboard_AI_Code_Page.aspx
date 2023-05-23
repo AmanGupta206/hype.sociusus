@@ -148,24 +148,22 @@ div.content {
                                     </nav>
                      </div> 
 
-       <%--FOR DROP DOWN BUTTON IN TOP--%> 
+     <%--FOR DROP DOWN BUTTON IN TOP--%> 
             <div class="col-md-1" style="border-right: inset;border-left: outset;"> 
                          <div class="dropdown show"  style="padding-top:10px">
                                   <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink"  data-toggle="dropdown" >
                                       <img src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20154408.png" />
                                   </a>
-
                               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="dashboard_page.aspx"><img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard</a>                            
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-bars"></i> Templates</a>
-                                  <a class="dropdown-item" href="all_ai_image_page.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
-                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-comment"></i> AI Chat</a>
-                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
+                                  <a class="dropdown-item" href="dashboard_page.aspx"><img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard</a>                            
+                                  <a class="dropdown-item" href="template_page_inside_dashboard.aspx"><i class="fa-solid fa-bars"></i> Templates</a>
+                                  <a class="dropdown-item" href="AI_image_page_in_dashboard.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
+                                  <a class="dropdown-item" href="Dashboard_AI_Chat_Page2.aspx"><i class="fa-solid fa-comment"></i> AI Chat</a>
+                                  <a class="dropdown-item" href="Speech_to_text.aspx"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
                                   <a class="dropdown-item" href="all_documents_page.aspx"><i class="fa-solid fa-file"></i> All Documents</a>
                                   <a class="dropdown-item" href="Membership_page2.aspx"><i class="fa-solid fa-gift"></i> Membership</a>
-                                  <a class="dropdown-item" href="account_setting_page.aspx"><i class="fa-solid fa-gear"></i> Account Settings</a>
+                                  <a class="dropdown-item" href="account_setting_page.aspx "><i class="fa-solid fa-gear"></i> Account Settings</a>
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
-                    
                               </div>
                         </div>
                </div>
@@ -224,17 +222,25 @@ div.content {
                                  </div>
                             </div>
                       <h4>Organize And Manage</h4>
-                      <a href="#"><i class="fa-solid fa-bars"></i> Templates</a>
-                      <a href="AI_image_page_in_dashboard.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
-                      <a href="#"><i class="fa-solid fa-comment"></i> AI Chat</a>
-                      <a href="#"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
-                      <a href="#"><i class="fa-solid fa-code"></i> AI Code</a>        
-                      <h4>&nbsp;&nbsp;Account</h4> 
-                      <a href="#"><i class="fa-solid fa-share-nodes"></i> Affiliate Program</a>                   
-                      <a href="Membership_page2.aspx"><i class="fa-solid fa-gift"></i> Membership</a>
-                      <a href="transaction_page.aspx"><i class="fa-solid fa-money-bill"></i> Transaction</a>
-                      <a href="account_setting_page.aspx"><i class="fa-solid fa-gear"></i> Account Settings</a>
-                      <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                       <a href="template_page_inside_dashboard.aspx"><i class="fa-solid fa-bars"></i> Templates</a>
+                          <a href="AI_image_page_in_dashboard.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
+                          <a href="Dashboard_AI_Chat_Page2.aspx"><i class="fa-solid fa-comment"></i> AI Chat</a>
+                          <a href="Speech_to_text.aspx"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
+                          <a href="Dashboard_AI_Code_Page.aspx"><i class="fa-solid fa-code"></i> AI Code</a>        
+                          <h4>&nbsp;&nbsp;Account</h4> 
+                            <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle"  style="background: #f5f5f5; border-color: #f5f5f5;color:black" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa-solid fa-share-nodes"></i>&nbsp;Affiliate Program
+                                        </button>
+                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="Dashboard_Affiliate_Program.aspx">Affiliate Program</a>
+                                        <a class="dropdown-item" href="#">Withdrawls</a>                                  
+                                     </div>
+                                </div>
+                          <a href="Membership_page2.aspx"><i class="fa-solid fa-gift"></i> Membership</a>
+                          <a href="transaction_page.aspx"><i class="fa-solid fa-money-bill"></i> Transaction</a>
+                          <a href="account_setting_page.aspx"><i class="fa-solid fa-gear"></i> Account Settings</a>
+                          <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
                    </div>
                 </div>
                  <div class="col-md-10" id="main1"  style="padding-right: 0px;">
@@ -244,7 +250,7 @@ div.content {
                                              <div class="alldoc" style="display:flex"><h2 ">AI Code</h2><p><i class="fa-solid fa-chart-simple docicon"></i> 0/10000 Words Used</p></div>
                                    </div>
                                    <div class="col-md-6"   style="padding-top: 200px; padding-left:275px;">                              
-                                       <asp:Button class="btn btn-secondary"  ID="Button1" runat="server" Text="Home >>AI Code" />                             
+                                       <a class="btn btn-secondary" href="homepage.aspx" role="button">Home >> AI Code</a>
                                    </div>
                     </div>
 
@@ -354,26 +360,16 @@ height: 30px;
                 <div class="container-fluid"  >
                      <div class="row">
                         <div class="col-xl-12">
-                          <div style="color: white;" class="footer-row">
-                              
-                                 
-                                     <span style="color: Black;" class="footer-copyright-text">2023 Socius IGB Pvt Ltd, All right reserved</span>
-                              
-
-                                         <span style="float:right"> <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-twitter"></i> </a>
-                               
-
-                                  
-                                        <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>
-                            
-
-                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>
-                             
-                      
-                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-pinterest"></i></a>
-                             
-
-                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a></span></div>                        
+                          <div style="color: white;" class="footer-row">           
+                                     <span style="color: Black;" class="footer-copyright-text">2023 Socius IGB Pvt Ltd, All right reserved</span>                    
+                                        <span style="float:right"> 
+                                              <a href="https://twitter.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-twitter"></i></a>
+                                             <a href="https://www.instagram.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>                           
+                                             <a href="https://www.linkedin.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>      
+                                             <a href="https://in.pinterest.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-pinterest"></i></a>                           
+                                             <a href="https://www.youtube.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a>
+                                        </span>
+                                  </div>                        
                                 </div>                        
                             </div>
                         </div>
