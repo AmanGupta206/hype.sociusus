@@ -197,7 +197,6 @@
                       
                                          <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-pinterest"></i></a>
                              
-
                                          <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a></span></div>                        
                                     </div>                        
                                </div>
@@ -207,7 +206,7 @@
 
     </form>
 
-<%--Script for Hide and show--%>
+<%--Script for Hide and show / Toggle Button--%>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
     $(document).ready(function () {

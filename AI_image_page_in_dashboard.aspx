@@ -212,7 +212,7 @@ div.content {
                     <div class="sidebar" >    
                       <h4>&nbsp;&nbsp;My Account</h4>        
                       <a href="dashboard_page.aspx">
-                          <img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard
+                          <img width:"15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard
                       </a>
                       
                                      <div class="dropdown">

@@ -91,8 +91,7 @@ div.content {
 /*css color-profile main section*/
 .main{
     position:relative;
-    width:100%;
-    
+    width:100%;  
     min-height: calc(100vh-60px);
     background:#f5f5f5;
     
@@ -125,7 +124,7 @@ div.content {
                  <div class ="row" style="height:90px;position:fixed;  z-index:1;background-color:white;width:100%;margin-top:0px; border-width:0.5px; border-bottom:solid " >
                         <div class="col-md-2"> 
                              <a href="https://localhost:44367/homepage.aspx">
-                               <img width:"20px" src="images/hype.%202023-04-17%20195423.png"/ style="   border: none;max-width: 100px;height: auto;" href="https://localhost:44367/homepage.aspx">
+                               <img width:"20px" src="images/hype.%202023-04-17%20195423.png"/ style="   border: none;max-width: 100px;height: auto;" href="https://localhost:44367/homepage.aspx"/>
                              </a>
                        </div>      
    <%--button for toggle--%>
@@ -145,7 +144,7 @@ div.content {
                                       <img src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20154408.png" />
                                   </a>
                               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                  <a class="dropdown-item" href="dashboard_page.aspx"><img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard</a>                            
+                                  <a class="dropdown-item" href="dashboard_page.aspx"><img width:"15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard</a>                            
                                   <a class="dropdown-item" href="template_page_inside_dashboard.aspx"><i class="fa-solid fa-bars"></i> Templates</a>
                                   <a class="dropdown-item" href="AI_image_page_in_dashboard.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
                                   <a class="dropdown-item" href="Dashboard_AI_Chat_Page2.aspx"><i class="fa-solid fa-comment"></i> AI Chat</a>
@@ -245,8 +244,8 @@ div.content {
                                
                            </div>
                     </div>
-                  <%-- main part code--%>
-                        <div class ="cards">
+                <%-- main part code--%>
+             <div class ="cards">
                  <div class="card">             
                           <div class="row">                  
                                 <div class="col-md-6"><h2>Words Used <p>0/10,000</p></h2></div>                                  

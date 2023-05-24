@@ -251,32 +251,43 @@ div.content {
                     
 
                         
-                             <div class="card" style="margin-right: 3%;margin-left: 3%; margin-bottom: 3%;">      
-                                 <div style="padding: 2%; padding-bottom: 0%;">  
-                                     <i class="fa-solid fa-share-nodes"></i> Start earning with the affiliate program
-                                 </div><hr/>
-                                 <div style="background-color: #e9f7fe;color: #3184ae; margin: 2%; margin-top: 0px;">
-                                     Invite new customers to our site using your affiliate link and when they purchase any membership plan, you will get a commission.
-                                 </div>
-                                      <div class="row" style="margin-left: 9%; margin-right: 7%; margin-top: 0%; margin-bottom: 0%; ">                  
-                                            <div class="col-md-6">
-                                                <p>Current:Commission Rate</p>
-                                                <p>30%</p>
-                                            </div>                                  
-                                            <div class="col-md-6">
-                                                <p>Affiliate:Rule</p>
-                                                <p>First Subscription <i class="fa-regular fa-circle-question"></i></p>
-                                            </div>                                   
-                                      </div>
-                                 <div style="margin: 2%; margin-top: 0px;">
-                                       <form>
-                                          <label for="affiliateUrl">Affiliate URL</label>
-                                          <input type="text" id="affiliateUrl" name="affiliateUrl" placeholder="http://hype.sociusus.com/?ref=132hl6461b30d243f0"/>
+                       <div class="card" style="margin-right: 3%;margin-left: 3%; margin-bottom: 3%; ">                                   
+                             <div class="row" style="margin-left: 32%;margin-right: 29%; margin-top: 1%; ">                                            
+                                       <div >                                        
+                                           <i class="fa-solid fa-bell"></i>
+                                           <input  class="fa-solid fa-bars" type="button" id="togbtn" value=" Request WithDrawal &darr;"   style="transition: 0.6s;"/>                                     
+                                       </div>
+                              </div>
 
-                                          <button type="button" onclick="copyToClipboard()">Copy</button>
-                                        </form>
-                                 </div>
-                             </div>                          
+                               <div class="abc" style="padding:2%">      
+                                   <div class="card" style="padding: 3%;">
+                                       <div style="background-color:#e9f7fe;">
+                                           <p style="color:#3184ae;margin-top: 1rem; margin-bottom: 1rem ">The requested amount will be deducted from your wallet and the amount will be blocked until it get approved or rejected by the administrator. 
+                                           Once its approved, the requested amount will be manually pay to you.</p>
+                                       </div>
+                                        <div style="padding-top: 2rem;">
+                                            <h4>Withdrawal Amount (₹)</h4>
+                                            <input type="number" value="50"/>
+                                       </div>
+                                        <div style="padding-top: 2rem;">
+                                            <h4>Payment Method</h4>
+                                            <asp:RadioButtonList ID="RadioButtonList1"  runat="server" RepeatLayout="Flow">
+                                                    <asp:ListItem> Paypal</asp:ListItem>
+                                                    <asp:ListItem>  Bank Deposit</asp:ListItem>
+                                           </asp:RadioButtonList>
+                                       </div>
+                                        <div style="padding-top: 1rem;">
+                                            <h4>Account Details</h4>
+                                            <asp:TextBox ID="TextBox1" runat="server" placeholder="Write Payment Details"></asp:TextBox>
+                                            <p>Write here your payment id or payment details of selected payment gateways.</p>
+                                       </div>
+                                           <div style="padding-top: 1rem;">
+                                             <asp:Button class="btn btn-primary" ID="Button1"  runat="server" Text="Withdraw" />
+                                           </div>
+                                   </div>
+                                </div>           
+                             </div>                    
+                                             
                       
                              <div class="card" style="margin-right: 3%;margin-left: 3%;margin-bottom: 3%; ">             
                                       <div class="row" >
@@ -371,5 +382,19 @@ div.content {
             alert('Affiliate URL copied to clipboard!');
             }
         </script>
+
+
+ <%--Script for Hide and show / Toggle Button--%>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#togbtn").on("click", function () {
+
+                $(".abc").toggle();
+
+            });
+
+        });
+    </script>
 </body>
 </html>

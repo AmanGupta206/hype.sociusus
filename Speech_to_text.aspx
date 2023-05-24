@@ -354,7 +354,7 @@ div.content {
                                         </div>
                                         <div>
                                             <div class="toolbar">                                        
-                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('formatBlock', 'p')" value="Paragraph"/>                     
+                                                                  
                                                 <input class="btn btn-outline-dark" type="button" onclick="executeCommand('bold')" value="Bold"/>  
                                                 <input class="btn btn-outline-dark" type="button" onclick="executeCommand('italic')" value="Italic"/>
                                                 <input class="btn btn-outline-dark" type="button" onclick="executeCommand('underline')" value="Underline"/> 
