@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dashboard_page.aspx.cs" Inherits="hype.sociusus.dashboard_page" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dashboard_page(old).aspx.cs" Inherits="hype.sociusus.dashboard_page" %>
 
 <!DOCTYPE html>
 

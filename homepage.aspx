@@ -127,12 +127,14 @@
 
     <section>
  <%-- temp body --%>
-    <p style="font-size:20px;margin-left:600px"><b>Templates</b></p>
-    <p style="font-size:20px;margin-left:350px">Generate your required content with over 60+ content creation templates</p>
+        <div class="container">
+            <center>
+            <p style="font-size:20px;"><b>Templates</b></p>
+            <p style="font-size:20px;">Generate your required content with over 60+ content creation templates</p>
             <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-secondary rounded-5 shadow-sm" 
                 id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); 
-                --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);height:50px;width:990px;
-                margin-left:200px;font-size:13px;">
+                --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);height:50px;
+                font-size:13px;">
                       <li class="nav-item" role="presentation">
                         <button class="nav-link active rounded-5" onclick="toggleData()" id="All-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">All Templates</button>
                       </li>
@@ -158,6 +160,7 @@
                         <button class="nav-link rounded-5" onclick="toggleData()" id="other-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Other</button>
                       </li>
              </ul>
+            </div>
     <style>
         i{
             color:darkblue;
@@ -168,14 +171,14 @@
     </style>
     
     <div class="py-5">
-    <div class="container5" id="data" style="width:1000px;margin-left:200px">
-      <div class="row hidden-md-up" style="padding:20px 20px" id="data1">
+    <div class="container" id="data">
+      <div class="row hidden-md-up" id="data1">
                   <div class="template_head">
                      <h5>Article And Blogs</h5>
                      <hr>
                   </div>
        
-                <div class="col-md-4">
+                <div class="col-md-4 ">
                   <div class="card">
                     <div class="card6-block">
                       <h4 class="card-title"><i class="fa fa-comment" ></i></h4>
@@ -185,7 +188,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 ">
                   <div class="card">
                     <div class="card6-block">
                       <h4 class="card-title"><i class="fa fa-align-left" aria-hidden="true"></i></h4>
@@ -195,7 +198,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 ">
                   <div class="card">
                     <div class="card6-block">
                       <h4 class="card-title"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></h4>
@@ -1014,7 +1017,7 @@
     <style>
 .template_head{
     padding-left: 20px;
-    padding-right: 600px;
+    padding-right: 665px;
 }
 .hr {
     margin-top: 0rem;
@@ -1063,8 +1066,8 @@
 
 <%--Testimonials code starts--%>
       
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"   >
-          <div class="carousel-inner" style="background-color:LightGray;" >
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"   >
+               <div class="carousel-inner" style="background-color:LightGray;" >
                            <div style="padding-left: 575px;padding-right: 730px;">
                                 <h2>Testimonials</h2>
                             </div>    

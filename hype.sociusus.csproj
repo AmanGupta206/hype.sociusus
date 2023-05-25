@@ -101,12 +101,13 @@
     <Content Include="all_ai_image_page.aspx" />
     <Content Include="all_documents_page.aspx" />
     <Content Include="App_Data\hype.sociusus.mdf" />
+    <Content Include="css\CSS of Templates Subpages\Blog Idea css.css" />
     <Content Include="css\Dashboard_main_page.css" />
     <Content Include="Dashboard_Affiliate_Program.aspx" />
     <Content Include="Dashboard_AI_Chat_Page2.aspx" />
     <Content Include="Dashboard_AI_Code_Page.aspx" />
     <Content Include="Dashboard_main_page.aspx" />
-    <Content Include="dashboard_page.aspx" />
+    <Content Include="dashboard_page%28old%29.aspx" />
     <Content Include="Dashboard_withdrawal_page.aspx" />
     <Content Include="Footer_Contact_Page.aspx" />
     <Content Include="Footer_FAQ.aspx" />
@@ -2271,6 +2272,7 @@
     <Content Include="Membership_plan_payment_sheet.aspx" />
     <Content Include="recent_blog_internal_page.aspx" />
     <Content Include="Speech_to_text.aspx" />
+    <Content Include="Templates Subpages\Blog Idea.aspx" />
     <Content Include="template_page_inside_dashboard.aspx" />
     <Content Include="testimonials_inner_page.aspx" />
     <Content Include="transaction_page.aspx" />
@@ -2337,12 +2339,12 @@
     <Compile Include="Dashboard_main_page.aspx.designer.cs">
       <DependentUpon>Dashboard_main_page.aspx</DependentUpon>
     </Compile>
-    <Compile Include="dashboard_page.aspx.cs">
-      <DependentUpon>dashboard_page.aspx</DependentUpon>
+    <Compile Include="dashboard_page%28old%29.aspx.cs">
+      <DependentUpon>dashboard_page%28old%29.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="dashboard_page.aspx.designer.cs">
-      <DependentUpon>dashboard_page.aspx</DependentUpon>
+    <Compile Include="dashboard_page%28old%29.aspx.designer.cs">
+      <DependentUpon>dashboard_page%28old%29.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard_withdrawal_page.aspx.cs">
       <DependentUpon>Dashboard_withdrawal_page.aspx</DependentUpon>
@@ -2438,6 +2440,13 @@
     </Compile>
     <Compile Include="Speech_to_text.aspx.designer.cs">
       <DependentUpon>Speech_to_text.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates Subpages\Blog Idea.aspx.cs">
+      <DependentUpon>Blog Idea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates Subpages\Blog Idea.aspx.designer.cs">
+      <DependentUpon>Blog Idea.aspx</DependentUpon>
     </Compile>
     <Compile Include="template_page_inside_dashboard.aspx.cs">
       <DependentUpon>template_page_inside_dashboard.aspx</DependentUpon>

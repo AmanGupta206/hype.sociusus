@@ -57,7 +57,7 @@ body {
     border-style: none;
     border-color: inherit;
     border-width: medium;
-    background-color: white;
+    /*background-color: white;*/
     transform: scale(1);
     opacity: 1;
     visibility: visible;
@@ -67,6 +67,7 @@ body {
 
 .dropdown {
     border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
 }
 
 .btn #imgbtn:hover {
@@ -108,7 +109,7 @@ body {
 .selectlang {
     float: right;
     padding: 20px 20px;
-    border-left: 1px solid #e0e0e0;
+   /* border-left: 1px solid #e0e0e0;*/
 }
 
 #langbtn {

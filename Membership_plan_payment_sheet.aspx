@@ -77,14 +77,14 @@ body {
                         </div>
 
   <%--FOR DROP DOWN BUTTON IN TOP--%> 
-            <div class="col-md-1"> 
+                 <div class="col-md-1"> 
                          <div class="dropdown show"  style="padding-top:10px">
                                   <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink"  data-toggle="dropdown" >
                                       <img src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20154408.png" />
                                   </a>
                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                  <a class="dropdown-item" href="dashboard_page.aspx"><img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard</a>                            
-                                  <a class="dropdown-item" href="template_page_inside_dashboard.aspx"><i class="fa-solid fa-bars"></i> Templates</a>
+                                  <a class="dropdown-item" href="Dashboard_main_page.aspx"><i class="fas fa-bars"></i> Dashboard</a>                           
+                                  <a class="dropdown-item" href="template_page_inside_dashboard.aspx"><i class="fa-solid fa-layer-group"></i> Templates</a>
                                   <a class="dropdown-item" href="AI_image_page_in_dashboard.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
                                   <a class="dropdown-item" href="Dashboard_AI_Chat_Page2.aspx"><i class="fa-solid fa-comment"></i> AI Chat</a>
                                   <a class="dropdown-item" href="Speech_to_text.aspx"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
@@ -94,7 +94,7 @@ body {
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
                               </div>
                         </div>
-               </div>
+                 </div>
 
 <%-- END OF CODE FOR DROP DOWN--%>              
           <div class="col-md-1"> 

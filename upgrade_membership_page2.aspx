@@ -45,19 +45,16 @@
                                   <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink"  data-toggle="dropdown" >
                                       <img src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20154408.png" />
                                   </a>
-
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="#"><img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard</a>
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-file"></i> My Documents</a>
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-bars"></i> Templates</a>
-                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-image"></i> AI Images</a>
-                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-comment"></i> AI Chat</a>
-                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
-                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-file"></i> All Documents</a>
-                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-gift"></i> Membership</a>
-                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-gear"></i> Account Settings</a>
+                               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                  <a class="dropdown-item" href="Dashboard_main_page.aspx"><i class="fas fa-bars"></i> Dashboard</a>                           
+                                  <a class="dropdown-item" href="template_page_inside_dashboard.aspx"><i class="fa-solid fa-layer-group"></i> Templates</a>
+                                  <a class="dropdown-item" href="AI_image_page_in_dashboard.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
+                                  <a class="dropdown-item" href="Dashboard_AI_Chat_Page2.aspx"><i class="fa-solid fa-comment"></i> AI Chat</a>
+                                  <a class="dropdown-item" href="Speech_to_text.aspx"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
+                                  <a class="dropdown-item" href="all_documents_page.aspx"><i class="fa-solid fa-file"></i> All Documents</a>
+                                  <a class="dropdown-item" href="Membership_page2.aspx"><i class="fa-solid fa-gift"></i> Membership</a>
+                                  <a class="dropdown-item" href="account_setting_page.aspx "><i class="fa-solid fa-gear"></i> Account Settings</a>
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
-                    
                               </div>
                         </div>
                </div>
@@ -123,10 +120,8 @@ td, th {
                            <div class="col-md-6"  style="padding-top: 100px"; >  
                                      <h2  style="padding-top: 100px; padding-left:250px">Upgrade Membership</h2>                             
                            </div>
-                           <div class="col-md-6"   style="padding-top: 200px; padding-left:275px;">  
-                              
-                               <asp:Button class="btn btn-secondary"  ID="Button1" runat="server" Text="Home >> Upgrade" /> 
-                               
+                           <div class="col-md-6"   style="padding-top: 200px; padding-left:275px;">            
+                               <a class="btn btn-secondary" href="homepage.aspx" role="button">Home >> Upgrade</a>                              
                            </div>
                       </div>
              <div class="row">               
@@ -186,7 +181,8 @@ td, th {
                         <div style="color: white;" class="footer-links">
                             <h3>My Account</h3>
                                 <ul>
-                                    <li><a style="color: white;" href="#">Login</a></li><li><a style="color: white;" href="#">Register</a></li>                        
+                                    <li ><a style="color: white;" href="userlogin.aspx">Login</a></li>
+                                    <li><a style="color: white;" href="userregister.aspx">Register</a></li>                         
                                </ul>
                           </div>
                       </div>
@@ -194,9 +190,9 @@ td, th {
                         <div style="color: white;" class="footer-links">
                             <h3>Helpful Links</h3>
                                 <ul>
-                                    <li><a style="color: white;" href="#">Blog</a></li>                            
-                                    <li><a style="color: white;"  href="">Feedback</a></li>
-                                    <li><a style="color: white;"  href="#">Contact</a></li>
+                                    <li><a style="color: white;" href="recent_blog_internal_page.aspx">Blog</a></li>                            
+                                    <li><a style="color: white;"  href="Footer_Feedback_Page.aspx">Feedback</a></li>
+                                    <li><a style="color: white;"  href="Footer_Contact_Page.aspx">Contact</a></li>
                                 </ul>
                         </div>
                     </div>
@@ -204,8 +200,8 @@ td, th {
                         <div style="color: white;" class="footer-links">
                             <h3>Information</h3>
                                  <ul>
-                                    <li><a style="color: white;" href="#">FAQ</a></li>
-                                    <li><a style="color: white;" href="#">Testimonials</a></li>                        
+                                    <li><a style="color: white;" href="Footer_FAQ.aspx">FAQ</a></li>
+                                    <li><a style="color: white;" href="testimonials_inner_page.aspx">Testimonials</a></li>                        
                                 </ul>
                         </div>
                     </div>
@@ -222,21 +218,15 @@ td, th {
                                  
                                      <span style="float:left" class="footer-copyright-text">2023 Socius IGB Pvt Ltd, All right reserved</span>
                               
+                                           <span style="float:right"> 
+                                             <a href="https://twitter.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-twitter"></i></a>
+                                             <a href="https://www.instagram.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>                           
+                                             <a href="https://www.linkedin.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>      
+                                             <a href="https://in.pinterest.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-pinterest"></i></a>                           
+                                             <a href="https://www.youtube.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a>
+                                           </span>
 
-                                         <span style="float:right"> <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-twitter"></i> </a>
-                               
-
-                                  
-                                        <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>
-                            
-
-                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>
-                             
-                      
-                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-pinterest"></i></a>
-                             
-
-                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a></span></div>                        
+                          </div>                        
                                     </div>                        
                                </div>
                            </div>

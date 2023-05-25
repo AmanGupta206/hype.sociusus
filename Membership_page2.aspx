@@ -146,8 +146,8 @@ div.content {
                                       <img src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20154408.png" />
                                   </a>
                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                  <a class="dropdown-item" href="dashboard_page.aspx"><img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard</a>                            
-                                  <a class="dropdown-item" href="template_page_inside_dashboard.aspx"><i class="fa-solid fa-bars"></i> Templates</a>
+                                  <a class="dropdown-item" href="Dashboard_main_page.aspx"><i class="fas fa-bars"></i> Dashboard</a>                           
+                                  <a class="dropdown-item" href="template_page_inside_dashboard.aspx"><i class="fa-solid fa-layer-group"></i> Templates</a>
                                   <a class="dropdown-item" href="AI_image_page_in_dashboard.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
                                   <a class="dropdown-item" href="Dashboard_AI_Chat_Page2.aspx"><i class="fa-solid fa-comment"></i> AI Chat</a>
                                   <a class="dropdown-item" href="Speech_to_text.aspx"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
@@ -200,11 +200,18 @@ div.content {
                 <div class="col-md-2" id="side1"  style="padding-left: 0px; padding-right: 0px;" > 
                     <div class="sidebar" >    
                       <h4>&nbsp;&nbsp;My Account</h4>        
-                      <a href="dashboard_page.aspx">
-                          <img width="15px" src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20155743.png" /> Dashboard</a>
-                      <a href="#"><i class="fa-solid fa-file"></i> My Documents</a>
+                      <a href="Dashboard_main_page.aspx"><i class="fas fa-bars"></i> Dashboard</a>
+                      <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle"  style="background: #f5f5f5; border-color: #f5f5f5;color:black" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-solid fa-file"></i>&nbsp;My Documents
+                                    </button>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="all_documents_page.aspx">All Documents</a>
+                                    <a class="dropdown-item" href="all_ai_image_page.aspx">All AI Images</a>                                  
+                                 </div>
+                            </div>
                       <h4>Organize And Manage</h4>
-                          <a href="template_page_inside_dashboard.aspx"><i class="fa-solid fa-bars"></i> Templates</a>
+                          <a href="template_page_inside_dashboard.aspx"><i class="fa-solid fa-layer-group"></i> Templates</a>
                           <a href="AI_image_page_in_dashboard.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
                           <a href="Dashboard_AI_Chat_Page2.aspx"><i class="fa-solid fa-comment"></i> AI Chat</a>
                           <a href="Speech_to_text.aspx"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
