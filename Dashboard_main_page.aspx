@@ -33,15 +33,12 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
    <%-- Header Code--%>
         <div class="topbar">
-            <div class="logo">
-            
+            <div class="logo">       
                     <a href="https://localhost:44367/homepage.aspx">
                         <img width:"20px" src="images/hype.%202023-04-17%20195423.png"/ style="border: none;max-width: 100px;height: auto;"/>
-                    </a>
-               
+                    </a>              
             </div>
             <div>
                     <button id="nav-btn"class="navbar-toggler navbar-toggler-right" type="button" 

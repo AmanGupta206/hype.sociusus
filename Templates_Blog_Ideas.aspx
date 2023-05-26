@@ -1,16 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Blog Idea.aspx.cs" Inherits="hype.sociusus.Blog_Idea" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Templates_Blog_Ideas.aspx.cs" Inherits="hype.sociusus.Templates_Blog_Ideas" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-      <%--  For Responsiveness--%>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
-      <%--bootstrap css--%>
+     <%--bootstrap css--%>
     <link href="Bootstrap/cs/bootstrap.min.css" rel="stylesheet" />
      <%--datatable css--%>
     <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -19,8 +14,8 @@
 
 
      <%--Custom css--%>
-    <link href="C:\Users\USERD008\source\repos\hype.sociusus\css\CSS of Templates Subpages\Blog Idea css.css" rel="stylesheet" />
-    
+    <link href="css/Templates_Blog_Ideas.css" rel="stylesheet" />
+
 
     <%--jquery--%>
     <script src="Bootstrap/js/jquery-3.3.1.slim.min.js"></script>
@@ -28,17 +23,21 @@
     <script src="Bootstrap/js/popper.min.js"></script>
     <%--bootstrap js--%>
     <script src="Bootstrap/js/bootstrap.min.js"></script>
+    <%--for graph--%>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <%--  For responsiveness--%>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 </head>
 <body>
     <form id="form1" runat="server">
   <%-- Header Code--%>
         <div class="topbar">
-            <div class="logo">
-            
+            <div class="logo">       
                     <a href="https://localhost:44367/homepage.aspx">
                         <img width:"20px" src="images/hype.%202023-04-17%20195423.png"/ style="border: none;max-width: 100px;height: auto;"/>
-                    </a>
-               
+                    </a>              
             </div>
             <div>
                     <button id="nav-btn"class="navbar-toggler navbar-toggler-right" type="button" 
@@ -151,43 +150,98 @@
 
                 <div  class ="main"> 
                     <div class="row FirstRow">
-                           <div class="col-md-6">  
-                                     <h2>Dashboard</h2>                             
+                           <div class="col-md-6">   
+                                <div class="alldoc" style="display:flex"><h2>Blog Ideas</h2><p><i class="fa-solid fa-chart-simple docicon"></i> 0/10,000 Words Used</p></div>
                            </div>
-                           <div class="col-md-6"   >  
-                               <%--<asp:Button class="btn btn-secondary rtbtn"  ID="Button1" runat="server" Text="Home >> Dashboard"  /> --%>
-                               <a class="btn btn-secondary rtbtn" href="homepage.aspx" role="button">Home >> Dashboard</a>
+                           <div class="col-md-6">   
+                               <a class="btn btn-secondary rtbtn" href="homepage.aspx" role="button">Home >> Templates >> Blog Ideas</a>
                            </div>
                     </div>
-                <%-- main part code--%>
-             <div class ="cards">
-                 <div class="card">             
-                          <div class="row">                  
-                                <div class="col-md-6"><h2>Words Used <p>0/10,000</p></h2></div>                                  
-                                <div class="col-md-6"><img src="images/Dashboard%20Icons%20images/Screenshot%202023-04-28%20185928.png" /></div>                                   
-                          </div>
-                 </div>
-                 <div class="card">             
-                           <div class="row">
-                                   <div class="col-md-6"><h2>Images Used <p>0/100</p></h2></div> 
-                                   <div class="col-md-6"><img src="images/Dashboard%20Icons%20images/Screenshot%202023-04-28%20190005.png" /></div>                                    
-                            </div>
-                  </div>
-                   <div class="card">             
-                           <div class="row">                    
-                                 <div class="col-md-6"><h2>Speech to text<p>0/0</p></h2></div> 
-                                 <div class="col-md-6"><img src="images/Dashboard%20Icons%20images/Screenshot%202023-04-28%20190034.png" /></div>                                    
-                            </div>
-                   </div>
-                </div>
+  
+         <%-- main part code--%>
 
-               <div>
-                  <h3>&nbsp;Words used this month</h3>
-                  <div >
-                   <canvas id="myChart" ></canvas>
-               </div>
-  </div>
-<%--Dashboard part ends--%>
+                        <div class="row">   
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class ="card" style="padding: 9px;">
+                                    <div>
+                                       <h5><i class="fa fa-comment"></i>
+                                        <b>Blog Ideas</b></h5>
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        <p style="background-color: #e9f7fe; color:#3184ae"">Article/blog ideas that you can use to generate more traffic, leads, and sales for your business.</p>
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                           <h5>What is your blog is about?*</h5>
+                                          <textarea  id="myTextarea" maxlength="400"></textarea>
+                                          <p><span id="charCount">400</span> characters remaining</p>
+                                        </div>
+                                    </div>
+                                        
+                                    <div>
+                                        <h5 >Upload Media</h5>
+                                        <form action="/action_page.php">
+                                          <input type="file" id="myFile" name="filename"/ >
+                                        </form>
+                                       
+                                        <p>.mp3, .mp4, .mpeg, .mpga, .m4a, .wav, .webm allowed. Max file size: 0 MB</p>
+                                    </div>
+
+                                    <div>
+                                        <h5>Audio Description</h5>
+                                         <textarea class="textArea2" maxlength="200"></textarea>
+                                         <p id="charCount2">Characters remaining: 200</p>
+                                         <p>Describe the speech from the file to help the AI. (Optional)</p>
+                                    </div>
+
+                                    <div>
+                                        <button type="button" class="btn btn-primary">Generate</button>
+                                        <p style="background-color: #e9f7fe; color:#3184ae">Audio transcription may takes time due to the file size.</p>
+                                    </div>
+                                </div>
+                            </div>   
+<%--Codes for text editor--%>
+                            <div class="col-12 col-sm-6 col-md-9">
+                                <div class ="card" style="padding: 15px;"> 
+                                    <div>   
+                                        <div>
+                                            
+                                             <h5><i class="fa-sharp fa-solid fa-bars-progress fa-lg"></i>
+                                            <b>Generated Result</b></h5>
+                                        </div>
+                                        <div>
+                                            <div class="toolbar">                                        
+                                                                  
+                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('bold')" value="Bold"/>  
+                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('italic')" value="Italic"/>
+                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('underline')" value="Underline"/> 
+                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('strikeThrough')" value="Strike Through"/>  
+                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('justifyLeft')" value="Justify Left"/>
+                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('justifyCenter')" value="Justify Center"/>                     
+                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('justifyRight')" value="Justify Right"/>  
+                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('createLink', prompt('Enter the URL:'))" value="Insert/Edit Link"/>
+                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('insertHTML', createTableHTML())" value="Insert Table"/>                     
+                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('insertUnorderedList')" value="Unordered List"/>  
+                                                <input class="btn btn-outline-dark" type="button" onclick="executeCommand('insertOrderedList')" value="Ordered List"/>                             
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="textEditor" contenteditable="true">                                      
+                                    </div>
+                                    <div class="toolbar">
+                                         <input class="btn btn-outline-dark" type="button" onclick="exportAsWord()" value="Export as Word"/>                     
+                                         <input class="btn btn-outline-dark" type="button" onclick="exportAsText()" value="Export as Text"/>  
+                                         <input class="btn btn-outline-dark" type="button" onclick="copyText()" value="Copy Text"/>                  
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>  
+    
+
+               
+
 
  <!-- Footer -->
     <hr style="border-top: dotted 1px;" /> 
@@ -226,7 +280,7 @@
 
 
 
- </form>
+   </form>
 
 <%--Script for Toggle Option--%>
     <script>
@@ -236,38 +290,89 @@
 
         });
     </script>
-<%--script for graph--%>
-    <script>
-        const ctx = document.getElementById('myChart');
 
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ["01 May", "02 May", "03 May", "04 May", "05 May", "06 May", "07 May", "08 May", "09 May", "10 May", "11 May", "12 May", "13 May", "14 May", "15 May", "16 May", "17 May", "18 May", "19 May", "20 May", "21 May", "22 May", "23 May", "24 May", "25 May", "26 May", "27 May", "28 May", "29 May", "30 May", "31 May"],
-                // Information about the dataset
-                datasets: [{
-                    label: "Words Used Graphical Representation",
-                    backgroundColor: '#18469815',
-                    borderColor: '#184698',
-                    borderWidth: "3",
-                    data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                    pointRadius: 5,
-                    pointHoverRadius: 5,
-                    pointHitRadius: 10,
-                    pointBackgroundColor: "#fff",
-                    pointHoverBackgroundColor: "#fff",
-                    pointBorderWidth: "2",
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
+    <%--Java Script for 400 words text area 1--%>
+    <script>
+        const textarea = document.getElementById('myTextarea');
+        const charCount = document.getElementById('charCount');
+
+        textarea.addEventListener('input', function () {
+            let remainingChars = 400 - textarea.value.length;
+
+            charCount.innerText = remainingChars + (remainingChars === 1 ? ' character' : ' characters') + ' remaining';
+
+            // Prevent entering more than 400 characters
+            if (remainingChars < 0) {
+                textarea.value = textarea.value.slice(0, 400);
+                charCount.innerText = '0 characters remaining';
             }
         });
     </script>
+  <%--Java Script for 200 words text area 1--%>
+    <script>
+        const textArea = document.getElementById('textArea');
+        const charCount2 = document.getElementById('charCount2');
+
+        textArea.addEventListener('input', function () {
+            const remainingChars = 200 - textArea.value.length;
+            charCount2.textContent = `Characters remaining: ${remainingChars}`;
+        });
+    </script>
+
+  <%--Java Script for Text editor--%>
+        <script>
+            function executeCommand(command, value = null) {
+                document.execCommand(command, false, value);
+            }
+
+            function createTableHTML() {
+                const rows = prompt('Enter the number of rows:');
+                const columns = prompt('Enter the number of columns:');
+                let html = '<table>';
+
+                for (let i = 0; i < rows; i++) {
+                    html += '<tr>';
+                    for (let j = 0; j < columns; j++) {
+                        html += '<td contenteditable="true">Cell</td>';
+                    }
+                    html += '</tr>';
+                }
+
+                html += '</table>';
+                return html;
+            }
+
+            function exportAsWord() {
+                const content = document.getElementById('textEditor').innerHTML;
+                const filename = 'document.doc';
+                const blob = new Blob(['\ufeff', content], { type: 'application/msword' });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.setAttribute('download', filename);
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+
+            function exportAsText() {
+                const content = document.getElementById('textEditor').innerText;
+                const filename = 'document.txt';
+                const blob = new Blob([content], { type: 'text/plain' });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.setAttribute('download', filename);
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+
+            function copyText() {
+                const content = document.getElementById('textEditor').innerText;
+                navigator.clipboard.writeText(content);
+            }
+        </script>
 
 
 </body>

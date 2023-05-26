@@ -101,8 +101,9 @@
     <Content Include="all_ai_image_page.aspx" />
     <Content Include="all_documents_page.aspx" />
     <Content Include="App_Data\hype.sociusus.mdf" />
-    <Content Include="css\CSS of Templates Subpages\Blog Idea css.css" />
     <Content Include="css\Dashboard_main_page.css" />
+    <Content Include="css\Rich Text Editor.css" />
+    <Content Include="css\Templates_Blog_Ideas.css" />
     <Content Include="Dashboard_Affiliate_Program.aspx" />
     <Content Include="Dashboard_AI_Chat_Page2.aspx" />
     <Content Include="Dashboard_AI_Code_Page.aspx" />
@@ -2271,8 +2272,10 @@
     <Content Include="Membership_page2.aspx" />
     <Content Include="Membership_plan_payment_sheet.aspx" />
     <Content Include="recent_blog_internal_page.aspx" />
+    <Content Include="Rich Text Editor.aspx" />
     <Content Include="Speech_to_text.aspx" />
     <Content Include="Templates Subpages\Blog Idea.aspx" />
+    <Content Include="Templates_Blog_Ideas.aspx" />
     <Content Include="template_page_inside_dashboard.aspx" />
     <Content Include="testimonials_inner_page.aspx" />
     <Content Include="transaction_page.aspx" />
@@ -2427,6 +2430,13 @@
     <Compile Include="recent_blog_internal_page.aspx.designer.cs">
       <DependentUpon>recent_blog_internal_page.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Rich Text Editor.aspx.cs">
+      <DependentUpon>Rich Text Editor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rich Text Editor.aspx.designer.cs">
+      <DependentUpon>Rich Text Editor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2447,6 +2457,13 @@
     </Compile>
     <Compile Include="Templates Subpages\Blog Idea.aspx.designer.cs">
       <DependentUpon>Blog Idea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates_Blog_Ideas.aspx.cs">
+      <DependentUpon>Templates_Blog_Ideas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates_Blog_Ideas.aspx.designer.cs">
+      <DependentUpon>Templates_Blog_Ideas.aspx</DependentUpon>
     </Compile>
     <Compile Include="template_page_inside_dashboard.aspx.cs">
       <DependentUpon>template_page_inside_dashboard.aspx</DependentUpon>

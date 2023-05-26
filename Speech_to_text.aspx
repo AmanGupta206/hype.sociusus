@@ -133,7 +133,7 @@ div.content {
 
 </style>
 
- <!--HEADER START-->
+     <!--HEADER START-->
               <div style="height:90px;position:fixed; border-bottom: solid;  z-index:1; background-color:white; width:100%; margin-top:-1px; " class="Header"> 
                  <div class ="row" style="height:90px;position:fixed;  z-index:1;background-color:white;width:100%;margin-top:0px; border-width:0.5px; border-bottom:solid " >
                         <div class="col-md-2"> 
@@ -141,7 +141,7 @@ div.content {
                                <img width:"20px" src="images/hype.%202023-04-17%20195423.png"/ style="   border: none;max-width: 100px;height: auto;" href="https://localhost:44367/homepage.aspx">
                              </a>
                        </div>      
-     <%--button for toggle--%>
+      <%--button for toggle--%>
                      <div class="col-md-8"> 
                          <nav style="margin-left:185px; height: 31px; width: 869px;" class="navbar navbar-toggleable-md fixed-top">
                                     <button id="nav-btn"class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarDiv"  aria-expanded="true" aria-label="Toggle navigation">
@@ -157,16 +157,15 @@ div.content {
                                       <img src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20154408.png" />
                                   </a>
                               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="Dashboard_main_page.aspx"><i class="fas fa-bars"></i> Dashboard</a>                        
-                                <a class="dropdown-item" href="#"><i class="fa-solid fa-layer-group"></i> Templates</a>
+                                  <a class="dropdown-item" href="Dashboard_main_page.aspx"><i class="fas fa-bars"></i> Dashboard</a>                        
+                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-layer-group"></i> Templates</a>
                                   <a class="dropdown-item" href="all_ai_image_page.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-comment"></i> AI Chat</a>
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
                                   <a class="dropdown-item" href="all_documents_page.aspx"><i class="fa-solid fa-file"></i> All Documents</a>
                                   <a class="dropdown-item" href="Membership_page2.aspx"><i class="fa-solid fa-gift"></i> Membership</a>
                                   <a class="dropdown-item" href="account_setting_page.aspx"><i class="fa-solid fa-gear"></i> Account Settings</a>
-                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
-                    
+                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>                
                               </div>
                         </div>
                </div>

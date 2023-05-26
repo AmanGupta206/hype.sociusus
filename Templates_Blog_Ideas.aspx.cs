@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace hype.sociusus
 {
-    public partial class Blog_Idea : System.Web.UI.Page
+    public partial class Templates_Blog_Ideas : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

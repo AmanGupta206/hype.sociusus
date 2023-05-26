@@ -2,9 +2,9 @@
 body {
     margin: 0;
     padding: 0;
-    box-sizing:border-box;
-    
+    box-sizing: border-box;
 }
+
 .container-fluid {
     padding: 0;
     margin: 0px;
@@ -26,21 +26,19 @@ body {
 .logo {
     border-right: 1px solid #e0e0e0;
     justify-content: center;
-  padding:14px 30px;
+    padding: 14px 30px;
     width: 196px;
     margin: auto;
 }
 
-.dropdown top{
-
+.dropdown top {
 }
+
 .logoimg {
-   
     margin: 10px;
 }
 
 .avatarimg {
-    
     height: 3rem;
     width: 3rem;
 }
@@ -55,9 +53,9 @@ body {
 }
 
 .btn {
-    border-style: none;
-    border-color: inherit;
-    border-width: medium;
+  /*  border-style: none;*/
+   /* border-color: inherit;*/
+   /* border-width: medium;*/
     /*background-color: white;*/
     transform: scale(1);
     opacity: 1;
@@ -85,7 +83,7 @@ body {
         font-size: 12px;
         margin-left: 5px;
         width: 30px;
-        list-style:none;
+        list-style: none;
     }
 
         .dropdown-menu li a {
@@ -110,7 +108,7 @@ body {
 .selectlang {
     float: right;
     padding: 20px 20px;
-   /* border-left: 1px solid #e0e0e0;*/
+    /* border-left: 1px solid #e0e0e0;*/
 }
 
 #langbtn {
@@ -146,6 +144,7 @@ option {
         border-right: none;
         width: auto;
     }
+
     .rtbtn {
         float: left;
     }
@@ -166,17 +165,17 @@ option {
         height: 50px;
     }
 }
+
 .rtbtn {
-    float:right;
+    float: right;
 }
 
 
 
 /*form main row*/
 .MainRow {
-    
-    margin:0;
-    width:100%;
+    margin: 0;
+    width: 100%;
 }
 
 
@@ -208,7 +207,7 @@ option {
 
     .sidebar a {
         display: block;
-      color: black;
+        color: black;
         padding: 16px;
         text-decoration: none;
     }
@@ -228,14 +227,16 @@ option {
 .RightMainPart {
     padding: 0;
     background: #f5f5f5;
-    width:100%;
+    width: 100%;
 }
+
 .right-body {
     padding: 0px;
     margin: 0;
 }
+
 .main {
-      position: relative;
+    position: relative;
     width: 100%;
     min-height: calc(100vh-60px);
     background: #f5f5f5;
@@ -266,10 +267,66 @@ option {
 
 
 
-@media(max-width:990px){
-    .cards{
-        display:grid;
-        grid-template-columns:repeat(1,1fr);
+@media(max-width:990px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
     }
 }
 
+
+
+/*For Main Part Top*/
+.docicon {
+}
+
+.alldoc p {
+    background-color: #18469833;
+    margin: 7px;
+    padding: 5px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+
+
+/*CSS of below text editor*/
+#textEditor {
+    width: 90%;
+    height: 320px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.toolbar {
+    margin-top: 10px;
+}
+
+    .toolbar button {
+        padding: 5px 10px;
+    }
+
+.fa-align-left:before {
+    content: "\f036";
+}
+
+.fa-align-center:before {
+    content: "\f037";
+}
+
+.fa-align-right:before {
+    content: "\f038";
+}
+
+
+
+/*CSS for textarea */
+textarea {
+    width: 80%;
+    height: 50px;
+}
+
+.textarea2 {
+    width: 80%;
+    height: 70px;
+}
