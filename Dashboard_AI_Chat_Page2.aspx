@@ -331,6 +331,27 @@ div.content {
         });
     </script>
 
+    <%--Script for AI chat And API--%>
+    <script>
+        const data = null;
+
+        const xhr = new XMLHttpRequest();
+        xhr.withCredentials = true;
+
+        xhr.addEventListener('readystatechange', function () {
+            if (this.readyState === this.DONE) {
+                console.log(this.responseText);
+            }
+        });
+
+        xhr.open('GET', 'https://ai-chatbot.p.rapidapi.com/chat/free?message=What's % 20your % 20name % 3F & uid=user1');  
+xhr.setRequestHeader('X-RapidAPI-Key', '4c2053af92msh7be25846296e8eap1e5c7djsndf051fb2a894');
+        xhr.setRequestHeader('X-RapidAPI-Host', 'ai-chatbot.p.rapidapi.com');
+
+        xhr.send(data);
+    </script>
+
+
 
 </body>
 </html>
