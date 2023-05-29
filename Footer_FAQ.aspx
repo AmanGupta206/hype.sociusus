@@ -156,7 +156,7 @@
                         <div style="color: white;" class="footer-links">
                             <h3>Helpful Links</h3>
                                 <ul>
-                                     <li><a style="color: white;" href="recent_blog_internal_page.aspx">Blog</a></li>                            
+                                    <li><a style="color: white;" href="recent_blog_internal_page.aspx">Blog</a></li>                            
                                     <li><a style="color: white;"  href="Footer_Feedback_Page.aspx">Feedback</a></li>
                                     <li><a style="color: white;"  href="Footer_Contact_Page.aspx">Contact</a></li>
                                 </ul>
@@ -179,30 +179,19 @@
                 <div class="container-fluid"  >
                      <div class="row">
                         <div class="col-xl-12">
-                          <div style="color: white;" class="footer-row">
-                              
-                                 
+                          <div style="color: white;" class="footer-row">             
                                      <span style="float:left" class="footer-copyright-text">2023 Socius IGB Pvt Ltd, All right reserved</span>
-                              
-
-                                         <span style="float:right"> <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-twitter"></i> </a>
-                               
-
-                                  
-                                        <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>
-                            
-
-                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>
-                             
-                      
-                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-pinterest"></i></a>
-                             
-                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a></span></div>                        
+                                         <span style="float:right"> <a href="https://twitter.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-twitter"></i> </a>
+                                         <a href="https://www.instagram.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>                           
+                                         <a href="https://www.linkedin.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>      
+                                         <a href="https://in.pinterest.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-pinterest"></i></a>                           
+                                         <a href="https://www.youtube.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a></span>
                                     </div>                        
-                               </div>
-                           </div>
-                      </div>
-                </div>       
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+            </div>       
 
     </form>
 

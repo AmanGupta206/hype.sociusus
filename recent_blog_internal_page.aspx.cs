@@ -11,7 +11,7 @@ namespace hype.sociusus
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Redirect("homepage.aspx");
+           // Response.Redirect("recent_blog_internal_page.aspx");
         }
     }
 }

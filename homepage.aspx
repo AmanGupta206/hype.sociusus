@@ -886,28 +886,33 @@
                      <div class="container">
                                      <div class="row">
                                        <div class="col-md-12 mx-auto">
-                                            <div class="row" style="padding-left: 422px;padding-bottom: 30px;">
-                                  
-                                                <div class="radform">
-                                                    <div class="radio">
-                                                        <input type="radio" name="radio-buttons" value="monthly" onchange="enableInputField(5)" />
-                                                        Monthly&nbsp; &nbsp; &nbsp;
+                                           
+                                                <div class="row" style="padding-bottom: 2%;padding-left: 40%;padding-right: 40%;">
+                                                  
+                                                    <div class="radform">
+                                                        <div class="radio">
+                                                            <center>
+                                                            <input type="radio" name="radio-buttons" value="monthly" onchange="enableInputField(5)" />
+                                                            Monthly&nbsp; &nbsp; 
               
-                                                        <input type="radio" name="radio-buttons" value="yearly" onchange="enableInputField(50)" />
-                                                        Yearly&nbsp; &nbsp; &nbsp;
+                                                            <input type="radio" name="radio-buttons" value="yearly" onchange="enableInputField(50)" />
+                                                            Yearly&nbsp; &nbsp; &nbsp;
               
-                                                        <input type="radio" name="radio-buttons" value="Lifetime" onchange="enableInputField(550)" />
-                                                        Life Time&nbsp; &nbsp; &nbsp;
+                                                            <input type="radio" name="radio-buttons" value="Lifetime" onchange="enableInputField(550)" />
+                                                            Life Time&nbsp; &nbsp; &nbsp;
+                                                          
                
-                                                    </div>
-                                                 </div>
-                                             </div>  
+                                                        </div>
+                                                     </div>
+                                                      
+                                                 </div>  
+                                         
                                             <div class="row">
                                                  <div class="col-md-4">  
                                                       <div class="card">
                                                           <div class="card-body">
                                                              <h4>Free Plan</h4>
-                                                              <div style="background-color: #f5f5f5; padding-left: 110px; padding-right: 100px;"><h2>Free</h2></div>
+                                                              <div style="background-color: #f5f5f5; padding-left: 40%;padding-right: 30%;"><h2>Free</h2></div>
                                                    
                                                                     <div class="card-body">           
                                                                         <ul class="list-unstyled mt-3 mb-4" style="text-align:left">
@@ -936,7 +941,7 @@
                                                          <div class="card">
                                                           <div class="card-body">
                                                              <h4>Trial Plan</h4>
-                                                              <div style="background-color: #f5f5f5; padding-left: 110px; padding-right: 100px;"><h2>Trial</h2></div>                                                   
+                                                              <div style="background-color: #f5f5f5;padding-left:40%;padding-right:30%;"><h2>Trial</h2></div>                                                   
                                                                     <div class="card-body">          
                                                                         <ul class="list-unstyled mt-3 mb-4" style="text-align:left">
                                                                             <li><h5>Features of Trial Plan</h5></li>
@@ -961,8 +966,8 @@
                                                          <div class="card">
                                                           <div class="card-body">
                                                              <h4>Extended Plan</h4>
-                                                              <div style="background-color: #f5f5f5; padding-left: 48px; padding-right: 70px;padding-top: 5px;padding-bottom: 5px;">
-                                                                  <input class="labl" type="text" id="input-field" style="background-color: #f5f5f5; border-color: white;  "/>
+                                                              <div style="background-color: #f5f5f5;padding-left: 18%;padding-right: 18%;padding-top: 3%;padding-bottom: 3%;">
+                                                                  <input class="labl" type="text" id="input-field" style="background-color: #f5f5f5; border-color: white; width: 90%; "/>
                                                               </div>                                                   
                                                                     <div class="card-body">          
                                                                         <ul class="list-unstyled mt-3 mb-4" style="text-align:left">
@@ -1149,7 +1154,7 @@
                             <h3 class="text-dark">Recent Blog</h3>
                              </div>
                              <div>
-                            <a href="#" class="text-dark"  style="padding-left: 700px;">View Blog -></a>
+                            <a href="#" class="text-dark" style="float: right;">View Blog -></a>
                                  </div>
                          </div>
                         <div class="row" style="height: 325px;">                    

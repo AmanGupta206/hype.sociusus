@@ -6,8 +6,8 @@
 <head runat="server">
     <title></title>
      <%--bootstrap css--%>
-    <link href="Bootstrap/cs/bootstrap.min.css" rel="stylesheet" />
-     <%--datatable css--%>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" rel="stylesheet"/>    
+    <%--datatable css--%>
     <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
      <%--fontawesome css--%>
     <link href="fontawesome/css/all.css" rel="stylesheet" />
@@ -25,6 +25,7 @@
     <script src="Bootstrap/js/bootstrap.min.js"></script>
     <%--for graph--%>
    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
    <%--  For responsiveness--%>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />

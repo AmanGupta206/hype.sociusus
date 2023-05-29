@@ -6,7 +6,7 @@
 <head runat="server">
     <title></title>
      <%--bootstrap css--%>
-    <link href="Bootstrap/cs/bootstrap.min.css" rel="stylesheet" />
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" rel="stylesheet"/>  
      <%--datatable css--%>
     <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
      <%--fontawesome css--%>
@@ -16,7 +16,7 @@
      <%--Custom css--%>
     <link href="css/Templates_Blog_Ideas.css" rel="stylesheet" />
 
-
+    <link href="css/Templates_Blog_Ideas.css" rel="stylesheet" />
     <%--jquery--%>
     <script src="Bootstrap/js/jquery-3.3.1.slim.min.js"></script>
     <%--popper js--%>       
@@ -180,26 +180,88 @@
                                           <p><span id="charCount">400</span> characters remaining</p>
                                         </div>
                                     </div>
-                                        
+                                   
                                     <div>
-                                        <h5 >Upload Media</h5>
-                                        <form action="/action_page.php">
-                                          <input type="file" id="myFile" name="filename"/ >
-                                        </form>
-                                       
-                                        <p>.mp3, .mp4, .mpeg, .mpga, .m4a, .wav, .webm allowed. Max file size: 0 MB</p>
+                                        <h5 >Language</h5>                               
+                                           <div class="blogideadropdown" style="padding-bottom: 7%;">
+                                                <select  class="popup-with-zoom-anim button ripple-effect" style="background-color: #fff; width: 100%; height: 30px; border-radius: 4px 4px; color: #000b16;">
+                                                            <option value="EN">English</option>
+                                                            <option value="Ta">Tamil</option>
+                                                            <option value="Te">Telugu</option>            
+                                                            <option value=" Arabic "> Arabic </option>
+                                                            <option value="Bangali">Bangali</option>
+                                                            <option value="Bulgarian">Bulgarian</option>
+                                                            <option value="Chinese">Chinese</option>
+                                                            <option value="French">French</option>
+                                                            <option value="German">German</option>
+                                                            <option value="Hebrew">Hebrew</option>
+                                                            <option value="Hindi">Hindi</option>
+                                                            <option value="Italian">Italian</option>                  
+                                                            <option value="Japanese">Japanese</option>
+                                                            <option value="Polish">Polish</option>
+                                                            <option value="Romanian">Romanian</option>
+                                                            <option value="Russian">Russian</option>
+                                                            <option value="Spanish">Spanish</option>
+                                                            <option value="Swedish">Swedish</option>
+                                                            <option value="Thai">Thai</option>
+                                                            <option value="Turkish">Turkish</option>
+                                                            <option value="Urdu">Urdu</option>
+                                                            <option value="Vietnamese">Vietnamese</option>
+                                                </select>
+                                           </div>                             
+                                    </div>
+
+                                     <div>  
+                                        <h5>Quality type</h5>                               
+                                           <div class="blogideadropdown" style="padding-bottom: 7%;">
+                                                <select  class="popup-with-zoom-anim button ripple-effect" style="background-color: #fff; width: 100%; height: 30px; border-radius: 4px 4px; color: #000b16;">
+                                                            <option value="Ec">Economy</option>
+                                                            <option value="Av">Average</option>
+                                                            <option value="Go">Good</option>            
+                                                            <option value="Pr"> Premium </option>
+                                                </select>
+                                           </div>                             
+                                    </div>
+                                      <div>
+                                        <h5>Tone of Voice</h5>                               
+                                           <div class="blogideadropdown" style="padding-bottom: 7%;">
+                                                <select  class="popup-with-zoom-anim button ripple-effect" style="background-color: #fff; width: 100%; height: 30px; border-radius: 4px 4px; color: #000b16;">
+                                                            <option>Funny</option>
+                                                            <option>Casual</option>
+                                                            <option>Excited</option>            
+                                                            <option> Professional </option>
+                                                            <option>Witty</option>
+                                                            <option>Sarcastic</option>
+                                                            <option>Feminine</option>
+                                                            <option>Masculine</option>
+                                                            <option>Bold</option>
+                                                            <option>Dramatic</option>
+                                                            <option>Gumpy</option>
+                                                            <option>Secretive</option>                  
+                                                </select>
+                                           </div>                             
+                                    </div>
+                                      <div>
+                                        <h5>Number of Results</h5>                               
+                                           <div class="blogideadropdown" style="padding-bottom: 7%;">
+                                                <select  class="popup-with-zoom-anim button ripple-effect" style="background-color: #fff; width: 100%; height: 30px; border-radius: 4px 4px; color: #000b16;">
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>            
+                                                            <option>4</option>
+                                                            <option>5</option>                 
+                                                </select>
+                                           </div>                             
+                                    </div>
+                                     <div>
+                                        <h5>Max Results Length </h5>                               
+                                           <div  style="padding-bottom: 7%;">
+                                              <input type="number" value="200"/>
+                                           </div>                             
                                     </div>
 
                                     <div>
-                                        <h5>Audio Description</h5>
-                                         <textarea class="textArea2" maxlength="200"></textarea>
-                                         <p id="charCount2">Characters remaining: 200</p>
-                                         <p>Describe the speech from the file to help the AI. (Optional)</p>
-                                    </div>
-
-                                    <div>
-                                        <button type="button" class="btn btn-primary">Generate</button>
-                                        <p style="background-color: #e9f7fe; color:#3184ae">Audio transcription may takes time due to the file size.</p>
+                                        <button type="button" class="btn btn-primary" style="width: 100%;">Generate</button>                          
                                     </div>
                                 </div>
                             </div>   
@@ -309,16 +371,8 @@
             }
         });
     </script>
-  <%--Java Script for 200 words text area 1--%>
-    <script>
-        const textArea = document.getElementById('textArea');
-        const charCount2 = document.getElementById('charCount2');
+ 
 
-        textArea.addEventListener('input', function () {
-            const remainingChars = 200 - textArea.value.length;
-            charCount2.textContent = `Characters remaining: ${remainingChars}`;
-        });
-    </script>
 
   <%--Java Script for Text editor--%>
         <script>

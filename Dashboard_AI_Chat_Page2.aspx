@@ -89,13 +89,14 @@ div.content {
 /*css color-profile main section*/
 .main{
     position:relative;
-    width:100%;
+    width:101%;
     
     min-height: calc(100vh-60px);
     background:#f5f5f5;
-    
-
-}
+        top: -37px;
+        left: -17px;
+        margin-bottom: 1px;
+    }
 .cards{
   
     padding: 35px 20px;
@@ -267,6 +268,28 @@ div.content {
       overflow-y: scroll;
       margin-bottom: 10px;
     }
+
+    .chatMsgs{
+        margin-left: 30px
+        margin-top: 30px
+    }
+
+    .userMsg{
+        background-color: aquamarine;
+        display: block;
+        margin: 2.5%;
+        padding: 1.5%;
+        text-align: right;
+        margin-left: 20%;
+    }
+    .apiMsg{
+        background-color: greenyellow;
+        display: block;
+        margin: 2.5%;
+        padding: 1.5%;
+        text-align: left;
+        margin-right: 20%;
+    }
   </style>                     
                 <div class="card">
                       <div class="card-header">
@@ -282,10 +305,17 @@ div.content {
                           </div>
                         </div>
                         <div class="card-body">
-                            <div id="chatbox"></div>
-                            <input type="text" id="messageInput" placeholder="Type your message here..." style="width:84%;"/>
-                            <input type="button" id="sendButton" value="Send" />
-                          
+                            <div id="chatbox">
+                                <asp:Label ID="Label2" runat="server" Text="" Width="0"></asp:Label>
+                                <div  id="div1" runat="server" class="chatMsgs">
+                                    </div>
+
+                                
+                            </div>
+                           <%-- <input type="text" id="messageInput" placeholder="Type your message here..." style="width:84%;"/>--%>
+                       <%--     <input type="button" id="sendButton" value="Send" />--%>
+                            <asp:TextBox ID="TextBox1" runat="server" placeholder="Type your message here..." style="width:84%;"></asp:TextBox>
+                            <asp:Button ID="Button1" runat="server" Text="Sent" OnClick="Button1_Click"  />
                         </div>
                     </div>
                      
@@ -333,22 +363,7 @@ div.content {
 
     <%--Script for AI chat And API--%>
     <script>
-        const data = null;
-
-        const xhr = new XMLHttpRequest();
-        xhr.withCredentials = true;
-
-        xhr.addEventListener('readystatechange', function () {
-            if (this.readyState === this.DONE) {
-                console.log(this.responseText);
-            }
-        });
-
-        xhr.open('GET', 'https://ai-chatbot.p.rapidapi.com/chat/free?message=What's % 20your % 20name % 3F & uid=user1');  
-xhr.setRequestHeader('X-RapidAPI-Key', '4c2053af92msh7be25846296e8eap1e5c7djsndf051fb2a894');
-        xhr.setRequestHeader('X-RapidAPI-Host', 'ai-chatbot.p.rapidapi.com');
-
-        xhr.send(data);
+      
     </script>
 
 
