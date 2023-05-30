@@ -254,7 +254,7 @@ div.content {
                     </div>
                                <div class="row">    
                                    <div   style="margin-left: 6%; margin-right: 6%;margin-top: 2%;">
-                                     <p style="background-color:#ffe9e9; color: #de5959" >You can not use the chat feature with your OpenAI model. Upgrade your membership plan to use this feature.</p>    
+                                     <p style="background-color:#ffe9e9; color: #de5959; width: 85%;" >You can not use the chat feature with your OpenAI model. Upgrade your membership plan to use this feature.</p>    
                                    </div>
                                </div>
                             <br/> 
@@ -270,8 +270,8 @@ div.content {
     }
 
     .chatMsgs{
-        margin-left: 30px
-        margin-top: 30px
+        margin-left: 30px;
+        margin-top: 30px;
     }
 
     .userMsg{
@@ -291,7 +291,7 @@ div.content {
         margin-right: 20%;
     }
   </style>                     
-                <div class="card">
+                <div class="card" style="margin-left: 5%">
                       <div class="card-header">
                           <div class="row">
                                   <div class="col-sm-6 col-md-10">
@@ -306,14 +306,13 @@ div.content {
                         </div>
                         <div class="card-body">
                             <div id="chatbox">
-                                <asp:Label ID="Label2" runat="server" Text="" Width="0"></asp:Label>
+                                <%--<asp:Label ID="Label2" runat="server" Text="" Width="0"></asp:Label>--%>
                                 <div  id="div1" runat="server" class="chatMsgs">
-                                    </div>
+                                </div> 
 
                                 
                             </div>
-                           <%-- <input type="text" id="messageInput" placeholder="Type your message here..." style="width:84%;"/>--%>
-                       <%--     <input type="button" id="sendButton" value="Send" />--%>
+      
                             <asp:TextBox ID="TextBox1" runat="server" placeholder="Type your message here..." style="width:84%;"></asp:TextBox>
                             <asp:Button ID="Button1" runat="server" Text="Sent" OnClick="Button1_Click"  />
                         </div>

@@ -147,10 +147,12 @@
     <Content Include="all_documents_page.aspx" />
     <Content Include="App_Data\hype.sociusus.mdf" />
     <Content Include="Bootstrap\cs\bootstrap.min.css" />
+    <Content Include="css\Dashboard_AI_Chat_Page.css" />
     <Content Include="css\Dashboard_main_page.css" />
     <Content Include="css\Rich Text Editor.css" />
     <Content Include="css\Templates_Blog_Ideas.css" />
     <Content Include="Dashboard_Affiliate_Program.aspx" />
+    <Content Include="Dashboard_AI_Chat_Page.aspx" />
     <Content Include="Dashboard_AI_Chat_Page2.aspx" />
     <Content Include="Dashboard_AI_Code_Page.aspx" />
     <Content Include="Dashboard_main_page.aspx" />
@@ -2366,6 +2368,13 @@
     </Compile>
     <Compile Include="Dashboard_Affiliate_Program.aspx.designer.cs">
       <DependentUpon>Dashboard_Affiliate_Program.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_AI_Chat_Page.aspx.cs">
+      <DependentUpon>Dashboard_AI_Chat_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard_AI_Chat_Page.aspx.designer.cs">
+      <DependentUpon>Dashboard_AI_Chat_Page.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard_AI_Chat_Page2.aspx.cs">
       <DependentUpon>Dashboard_AI_Chat_Page2.aspx</DependentUpon>

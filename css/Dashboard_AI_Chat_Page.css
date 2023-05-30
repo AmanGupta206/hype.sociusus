@@ -1,0 +1,322 @@
+﻿/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0px;
+    background-color: #f5f5f5;
+}
+/*Header part*/
+.topbar {
+    position: fixed;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgb(0,0,0,0.08);
+    width: 100%;
+    height: 85px;
+    display: grid;
+    grid-template-columns: 2fr 7fr 0fr 1fr;
+    align-items: center;
+    z-index: 999;
+}
+
+.logo {
+    border-right: 1px solid #e0e0e0;
+    justify-content: center;
+    padding: 14px 30px;
+    width: 196px;
+    margin: auto;
+}
+
+.dropdown top {
+}
+
+.logoimg {
+    margin: 10px;
+}
+
+.avatarimg {
+    height: 3rem;
+    width: 3rem;
+}
+
+#avtrbtn {
+    margin: auto;
+}
+
+#Image1 {
+    height: 50px;
+    width: 50px;
+}
+
+.btn {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    /*background-color: white;*/
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    margin-right: 0px;
+}
+
+.dropdown {
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+
+.btn #imgbtn:hover {
+    background-color: blue;
+    border: none;
+}
+
+.dropdown-menu {
+    width: 20px;
+    right: 0px;
+}
+
+    .dropdown-menu li {
+        font-size: 12px;
+        margin-left: 5px;
+        width: 30px;
+        list-style: none;
+    }
+
+        .dropdown-menu li a {
+            margin-left: 0px;
+            color: grey;
+            display: block;
+            padding: 2px 0;
+            font-size: 12px;
+            color: #666;
+            transition: .3s;
+        }
+
+            .dropdown-menu li a i {
+                font-size: 15px;
+                margin-left: 5px;
+                color: grey;
+                padding-right: 10px;
+            }
+
+
+
+.selectlang {
+    float: right;
+    padding: 20px 20px;
+    /* border-left: 1px solid #e0e0e0;*/
+}
+
+#langbtn {
+    border: none;
+    background-color: #444444;
+    width: 70px;
+    height: 40px;
+    border-radius: 4px 4px;
+    color: white;
+}
+
+option {
+    background-color: white;
+    box-sizing: border-box;
+    color: black;
+}
+
+#langbtn:hover {
+    background-color: #314cc6;
+}
+
+
+
+
+@media(max-width:990px) {
+    .topbar {
+        border-right: none;
+        width: auto;
+        position: fixed;
+    }
+
+    .logo {
+        border-right: none;
+        width: auto;
+    }
+
+    .rtbtn {
+        float: left;
+    }
+}
+
+@media(max-width:300px) {
+    .openbtn {
+        visibility: collapse;
+        width: 0px;
+    }
+
+    .logo {
+        width: auto;
+    }
+
+    .logoimg {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.rtbtn {
+    float: right;
+}
+
+
+
+/*form main row*/
+.MainRow {
+    margin: 0;
+    width: 100%;
+}
+
+
+
+
+/*Side Navigation Part part*/
+.LeftSideBar {
+    padding: 0;
+    max-width: 24%;
+}
+
+.sidebar {
+    top: 90px;
+    /* width:80%;*/
+    max-width: 21%;
+    padding: 0;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: calc(100% - 70px);
+    overflow: scroll;
+    margin-bottom: 90px;
+    margin: 0;
+    padding: 0px;
+}
+
+    .sidebar ul li {
+        list-style: none;
+    }
+
+    .sidebar a {
+        display: block;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+        .sidebar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .sidebar a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+
+
+/*Main Body Part part*/
+.RightMainPart {
+    padding: 0;
+    background: #f5f5f5;
+    width: 100%;
+    z-index:10;
+}
+
+.right-body {
+    padding: 0px;
+    margin: 0;
+}
+
+.main {
+    height: 620px;
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh-60px);
+    background: #f5f5f5;
+}
+
+.FirstRow {
+    padding-top: 100px;
+    margin: 1%;
+}
+
+.cards {
+    padding: 35px 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+}
+
+    .cards .card {
+        padding: 5px;
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 7px 25px 0 inherit;
+    }
+
+
+
+@media(max-width:990px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+
+.docicon {
+}
+
+.alldoc p {
+    background-color: #18469833;
+    margin: 7px;
+    padding: 5px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+/*Code for AI Chat box and functionality */
+
+#chatbox {
+    width: 100%;
+    height: 230px;
+    border: 1px solid #ccc;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+}
+
+.chatMsgs {
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.userMsg {
+    background-color: aquamarine;
+    display: block;
+    margin: 2.5%;
+    padding: 1.5%;
+    text-align: right;
+    margin-left: 20%;
+}
+
+.apiMsg {
+    background-color: greenyellow;
+    display: block;
+    margin: 0.5%;
+    padding: 1.5%;
+    text-align: left;
+    margin-right: 20%;
+}
