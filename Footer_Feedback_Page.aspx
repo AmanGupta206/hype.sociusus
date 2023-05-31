@@ -86,7 +86,7 @@ body {
                                 <a class="dropdown-item" href="Dashboard_main_page.aspx"><i class="fas fa-bars"></i> Dashboard</a>
                                 <a class="dropdown-item" href="template_page_inside_dashboard.aspx"><i class="fa-solid fa-layer-group"></i> Templates</a>
                                 <a class="dropdown-item" href="AI_image_page_in_dashboard.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
-                                <a class="dropdown-item" href="Dashboard_AI_Chat_Page2.aspx"><i class="fa-solid fa-comment"></i> AI Chat</a>
+                                <a class="dropdown-item" href="Dashboard_AI_Chat_Page.aspx"><i class="fa-solid fa-comment"></i> AI Chat</a>
                                 <a class="dropdown-item" href="Speech_to_text.aspx"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
                                 <a class="dropdown-item" href="all_documents_page.aspx"><i class="fa-solid fa-file"></i> All Documents</a>
                                 <a class="dropdown-item" href="Membership_page2.aspx"><i class="fa-solid fa-gift"></i> Membership</a>
@@ -259,38 +259,44 @@ body {
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="card-body">                                            
-                            <i class="fa-solid fa-quote-left testiconleft" ></i><br />
-                            <p style="width:auto" > Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paria tur.
+                        <div class="carousel-item active">
+                            <div class="card-body">
+                                <i class="fa-solid fa-quote-left testiconleft"></i>
+                                <br />
+                                <p style="width: auto">
+                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paria tur.
                                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                            <i class="fa-solid fa-quote-right "></i>  
-                            <div style="display:flex">
-                                <img src="images/default_user.png" style="width:80px;height:75px;border-radius:50px" />
-                                <div style="Margin-left:25px; padding-top: 10px; "><h5>Tony Stark</h5>
-                                <h6 style="color:#184698">Social Marketing</h6>
-                                    </div>
-                            </div>
-                            </div>
-                    </div>
-                    <div class="carousel-item">
-
-                        <div class="card-body">
-                            <i class="fa-solid fa-quote-left testiconleft" ></i><br />
-                            <p  style="width:auto" > Elitsed do eiusmod tempor incididunt ut labore laboris nisi ut aliquip ex ea et dolore magna aliqua Ut enim ad minim veniam, 
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip e
-
-                            </p>
-                            <i class="fa-solid fa-quote-right "></i>   
-                                <div style="display:flex">
-                                <img src="images/default_user.png" style="width:80px;height:75px;border-radius:50px" />
-                                <div style="Margin-left:25px; padding-top: 10px; "><h5>Steve Roger</h5>
-                                <h6 style="color:#184698">Content Writer</h6>
+                                </p>
+                                <i class="fa-solid fa-quote-right "></i>
+                                <div style="display: flex">
+                                    <img src="images/default_user.png" style="width: 80px; height: 75px; border-radius: 50px" />
+                                    <div style="margin-left: 25px; padding-top: 10px;">
+                                        <h5>Tony Stark</h5>
+                                        <h6 style="color: #184698">Social Marketing</h6>
                                     </div>
                                 </div>
+                            </div>
                         </div>
-                    </div>
+                        <div class="carousel-item">
+
+                            <div class="card-body">
+                                <i class="fa-solid fa-quote-left testiconleft"></i>
+                                <br />
+                                <p style="width: auto">
+                                    Elitsed do eiusmod tempor incididunt ut labore laboris nisi ut aliquip ex ea et dolore magna aliqua Ut enim ad minim veniam, 
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip e
+
+                                </p>
+                                <i class="fa-solid fa-quote-right "></i>
+                                <div style="display: flex">
+                                    <img src="images/default_user.png" style="width: 80px; height: 75px; border-radius: 50px" />
+                                    <div style="margin-left: 25px; padding-top: 10px;">
+                                        <h5>Steve Roger</h5>
+                                        <h6 style="color: #184698">Content Writer</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     <div class="carousel-item">
                         <div class="card-body">
                             <i class="fa-solid fa-quote-left testiconleft" ></i><br />
@@ -321,13 +327,7 @@ body {
              
                 <div style="Padding-top: 2rem;">
                     <h3>Social Profiles</h3>
-             <%--       <i class="fa-brands fa-facebook-f  blogicon"></i>
-                    <i class="fa-brands fa-twitter blogicon"></i>
-                    <i class="fa-brands fa-instagram blogicon"></i>
-                    <i class="fa-brands fa-linkedin-in blogicon"></i>
-                    <i class="fa-brands fa-pinterest  blogicon"></i>
-
-                  --%> 
+          
                      <span> 
                         <a href="https://twitter.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-twitter"></i> </a>
                         <a href="https://www.instagram.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>                           

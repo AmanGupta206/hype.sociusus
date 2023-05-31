@@ -180,8 +180,9 @@
                             <div class="col-md-4 ">
                               <div class="card">
                                 <div class="card6-block">
-                                  <h4 class="card-title"><i class="fa fa-comment" ></i></h4>
+                                <a href="Templates_Blog_Ideas.aspx"><h4 class="card-title"><i class="fa fa-comment" ></i></h4>
                                    <p class="card-subtitle text-muted">Blogs Ideas</p> 
+                                </a>
                                   <p class="card-text p-y-1">Article/blog ideas that you can use to generate more traffic, leads,<br /> and sales for your business.</p>
               
                                 </div>

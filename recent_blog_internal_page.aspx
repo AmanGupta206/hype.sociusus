@@ -88,7 +88,7 @@ body {
                                   <a class="dropdown-item" href="Dashboard_main_page.aspx"><i class="fas fa-bars"></i> Dashboard</a>                           
                                   <a class="dropdown-item" href="template_page_inside_dashboard.aspx"><i class="fa-solid fa-layer-group"></i> Templates</a>
                                   <a class="dropdown-item" href="AI_image_page_in_dashboard.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
-                                  <a class="dropdown-item" href="Dashboard_AI_Chat_Page2.aspx"><i class="fa-solid fa-comment"></i> AI Chat</a>
+                                  <a class="dropdown-item" href="Dashboard_AI_Chat_Page.aspx"><i class="fa-solid fa-comment"></i> AI Chat</a>
                                   <a class="dropdown-item" href="Speech_to_text.aspx"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
                                   <a class="dropdown-item" href="all_documents_page.aspx"><i class="fa-solid fa-file"></i> All Documents</a>
                                   <a class="dropdown-item" href="Membership_page2.aspx"><i class="fa-solid fa-gift"></i> Membership</a>
@@ -169,23 +169,25 @@ body {
                    <div class="col-md-12 mx-auto" style="display: flex;">
                      <div class="col-md-8"  style="background-color: rgba(230, 230, 230, 0.1);">
                             <div class="container_of_recent_blog  bg-light" >
-                                <div  style="margin-left: 0px;margin-top: 50px; background-color: #f5f5f5; padding-left: 250px;">
-                                 <div style="margin-top:0px; margin-bottom: 45px ;">
+                                <div style="margin-left: 0px; margin-top: 50px; background-color: #f5f5f5; padding-left: 25%;">
+                                    <div style="margin-top: 0px; margin-bottom: 45px;">
                                         <h3 class="text-dark">Recent Blog</h3>
-                                        
-                                 </div>
-                                <div class="row" style="height: 325px;">
-                    
-                                     <div class="col-md-4">
-                                          <a href="#"><img src="images/Other%20Images/image%20logo.png" alt="Image Logo" style="width:100%;">
-                                         <div class="top-bottom text-dark">Admin</div></a>
                                     </div>
-                                    <div class="col-md-6" style="margin-bottom: 188px;background-color: white;">                                   
-                                          <div class="bottom-left text-dark" ><h4 style="background-color: white;">First Blog</h4> 
-                                          <p class="text-dark" style="background-color: white;">Consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore    et dolore magna aliqua Ut eni...</p>                 
-                                         </div>
-                                  </div>
-                               </div>
+                                    <div class="row" style="height: 325px;">
+
+                                        <div class="col-md-4">
+                                            <a href="#">
+                                                <img src="images/Other%20Images/image%20logo.png" alt="Image Logo" style="width: 100%;">
+                                                <div class="top-bottom text-dark">Admin</div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6" style="margin-bottom: 188px; background-color: white;">
+                                            <div class="bottom-left text-dark">
+                                                <h4 style="background-color: white;">First Blog</h4>
+                                                <p class="text-dark" style="background-color: white;">Consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore    et dolore magna aliqua Ut eni...</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                      </div>

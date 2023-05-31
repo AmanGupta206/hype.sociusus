@@ -49,7 +49,7 @@
                                   <a class="dropdown-item" href="Dashboard_main_page.aspx"><i class="fas fa-bars"></i> Dashboard</a>                           
                                   <a class="dropdown-item" href="template_page_inside_dashboard.aspx"><i class="fa-solid fa-layer-group"></i> Templates</a>
                                   <a class="dropdown-item" href="AI_image_page_in_dashboard.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
-                                  <a class="dropdown-item" href="Dashboard_AI_Chat_Page2.aspx"><i class="fa-solid fa-comment"></i> AI Chat</a>
+                                  <a class="dropdown-item" href="Dashboard_AI_Chat_Page.aspx"><i class="fa-solid fa-comment"></i> AI Chat</a>
                                   <a class="dropdown-item" href="Speech_to_text.aspx"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
                                   <a class="dropdown-item" href="all_documents_page.aspx"><i class="fa-solid fa-file"></i> All Documents</a>
                                   <a class="dropdown-item" href="Membership_page2.aspx"><i class="fa-solid fa-gift"></i> Membership</a>
@@ -126,7 +126,7 @@ td, th {
                       </div>
              <div class="row">               
                <div class="col-md-12 mx-auto" style="background: white;">
-                 <div class="card" style="width: 865px; margin-top: 100px; margin-bottom: 100px;  margin-left: 255px; margin-right: 100px ";>
+                 <div class="card" style="margin:10%";>
                      
                       <div class="row">
                          <div class="col-md-9" style="background-color:#f5f5f5;">                       
@@ -140,7 +140,7 @@ td, th {
                                <div style="width: 20%;"><asp:Button class="btn btn-primary btn-block btn-lg" ID="Button3" runat="server" Text="Submit" /></div>                            
                           </div>
                            <div class="col-md-3" style="background-color: gainsboro";>  
-                                  <table>
+                                  <table style="margin:0px;padding:0px">
                                       <tr>
                                         <td>Membership</td>
                                         <td style="padding-right: 0;">Free Plan</td>  

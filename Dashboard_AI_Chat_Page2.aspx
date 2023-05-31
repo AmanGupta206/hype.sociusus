@@ -313,8 +313,8 @@ div.content {
                                 
                             </div>
       
-                            <asp:TextBox ID="TextBox1" runat="server" placeholder="Type your message here..." style="width:84%;"></asp:TextBox>
-                            <asp:Button ID="Button1" runat="server" Text="Sent" OnClick="Button1_Click"  />
+                          <%--  <asp:TextBox ID="TextBox1" runat="server" placeholder="Type your message here..." style="width:84%;"></asp:TextBox>
+                            <asp:Button ID="Button1" runat="server" Text="Sent" OnClick="Button1_Click"  />--%>
                         </div>
                     </div>
                      
