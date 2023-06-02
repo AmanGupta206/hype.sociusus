@@ -144,9 +144,11 @@
     <Content Include="account_setting_page.aspx" />
     <Content Include="AI_image_page_in_dashboard.aspx" />
     <Content Include="all_ai_image_page.aspx" />
+    <Content Include="all_documents_page%28non responsive%29.aspx" />
     <Content Include="all_documents_page.aspx" />
     <Content Include="App_Data\hype.sociusus.mdf" />
     <Content Include="Bootstrap\cs\bootstrap.min.css" />
+    <Content Include="css\all_documents_page.css" />
     <Content Include="css\Dashboard_AI_Chat_Page.css" />
     <Content Include="css\Dashboard_main_page.css" />
     <Content Include="css\Rich Text Editor.css" />
@@ -2354,6 +2356,13 @@
     </Compile>
     <Compile Include="all_ai_image_page.aspx.designer.cs">
       <DependentUpon>all_ai_image_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="all_documents_page%28non responsive%29.aspx.cs">
+      <DependentUpon>all_documents_page%28non responsive%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="all_documents_page%28non responsive%29.aspx.designer.cs">
+      <DependentUpon>all_documents_page%28non responsive%29.aspx</DependentUpon>
     </Compile>
     <Compile Include="all_documents_page.aspx.cs">
       <DependentUpon>all_documents_page.aspx</DependentUpon>
