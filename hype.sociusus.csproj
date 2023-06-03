@@ -142,20 +142,29 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="account_setting_page.aspx" />
+    <Content Include="AI_image_page_in_dashboard%28non responsive%29.aspx" />
     <Content Include="AI_image_page_in_dashboard.aspx" />
+    <Content Include="all_ai_image_page%28non responsive%29.aspx" />
     <Content Include="all_ai_image_page.aspx" />
     <Content Include="all_documents_page%28non responsive%29.aspx" />
     <Content Include="all_documents_page.aspx" />
     <Content Include="App_Data\hype.sociusus.mdf" />
     <Content Include="Bootstrap\cs\bootstrap.min.css" />
+    <Content Include="css\AI_image_page_in_dashboard.css" />
+    <Content Include="css\all_ai_image_page.css" />
     <Content Include="css\all_documents_page.css" />
+    <Content Include="css\Dashboard_Affiliate_Program.css" />
     <Content Include="css\Dashboard_AI_Chat_Page.css" />
+    <Content Include="css\Dashboard_AI_Code_Page.css" />
     <Content Include="css\Dashboard_main_page.css" />
     <Content Include="css\Rich Text Editor.css" />
+    <Content Include="css\Speech_to_text.css" />
     <Content Include="css\Templates_Blog_Ideas.css" />
+    <Content Include="Dashboard_Affiliate_Program%28non responsive%29.aspx" />
     <Content Include="Dashboard_Affiliate_Program.aspx" />
     <Content Include="Dashboard_AI_Chat_Page.aspx" />
     <Content Include="Dashboard_AI_Chat_Page2.aspx" />
+    <Content Include="Dashboard_AI_Code_Page%28non responsive%29.aspx" />
     <Content Include="Dashboard_AI_Code_Page.aspx" />
     <Content Include="Dashboard_main_page.aspx" />
     <Content Include="dashboard_page%28old%29.aspx" />
@@ -2323,6 +2332,7 @@
     <Content Include="Rapid Api Demo.aspx" />
     <Content Include="recent_blog_internal_page.aspx" />
     <Content Include="Rich Text Editor.aspx" />
+    <Content Include="Speech_to_text%28not responsive%29.aspx" />
     <Content Include="Speech_to_text.aspx" />
     <Content Include="Templates Subpages\Blog Idea.aspx" />
     <Content Include="Templates_Blog_Ideas.aspx" />
@@ -2343,12 +2353,26 @@
     <Compile Include="account_setting_page.aspx.designer.cs">
       <DependentUpon>account_setting_page.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AI_image_page_in_dashboard%28non responsive%29.aspx.cs">
+      <DependentUpon>AI_image_page_in_dashboard%28non responsive%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AI_image_page_in_dashboard%28non responsive%29.aspx.designer.cs">
+      <DependentUpon>AI_image_page_in_dashboard%28non responsive%29.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AI_image_page_in_dashboard.aspx.cs">
       <DependentUpon>AI_image_page_in_dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AI_image_page_in_dashboard.aspx.designer.cs">
       <DependentUpon>AI_image_page_in_dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="all_ai_image_page%28non responsive%29.aspx.cs">
+      <DependentUpon>all_ai_image_page%28non responsive%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="all_ai_image_page%28non responsive%29.aspx.designer.cs">
+      <DependentUpon>all_ai_image_page%28non responsive%29.aspx</DependentUpon>
     </Compile>
     <Compile Include="all_ai_image_page.aspx.cs">
       <DependentUpon>all_ai_image_page.aspx</DependentUpon>
@@ -2371,6 +2395,13 @@
     <Compile Include="all_documents_page.aspx.designer.cs">
       <DependentUpon>all_documents_page.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard_Affiliate_Program%28non responsive%29.aspx.cs">
+      <DependentUpon>Dashboard_Affiliate_Program%28non responsive%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard_Affiliate_Program%28non responsive%29.aspx.designer.cs">
+      <DependentUpon>Dashboard_Affiliate_Program%28non responsive%29.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard_Affiliate_Program.aspx.cs">
       <DependentUpon>Dashboard_Affiliate_Program.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2391,6 +2422,13 @@
     </Compile>
     <Compile Include="Dashboard_AI_Chat_Page2.aspx.designer.cs">
       <DependentUpon>Dashboard_AI_Chat_Page2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_AI_Code_Page%28non responsive%29.aspx.cs">
+      <DependentUpon>Dashboard_AI_Code_Page%28non responsive%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard_AI_Code_Page%28non responsive%29.aspx.designer.cs">
+      <DependentUpon>Dashboard_AI_Code_Page%28non responsive%29.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard_AI_Code_Page.aspx.cs">
       <DependentUpon>Dashboard_AI_Code_Page.aspx</DependentUpon>
@@ -2514,6 +2552,13 @@
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Speech_to_text%28not responsive%29.aspx.cs">
+      <DependentUpon>Speech_to_text%28not responsive%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Speech_to_text%28not responsive%29.aspx.designer.cs">
+      <DependentUpon>Speech_to_text%28not responsive%29.aspx</DependentUpon>
     </Compile>
     <Compile Include="Speech_to_text.aspx.cs">
       <DependentUpon>Speech_to_text.aspx</DependentUpon>

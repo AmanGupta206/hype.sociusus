@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="all_documents_page(non responsive).aspx.cs" Inherits="hype.sociusus.all_documents_page" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="all_ai_image_page(non responsive).aspx.cs" Inherits="hype.sociusus.all_ai_image_page" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-     <%--bootstrap css--%>
+      <%--bootstrap css--%>
     <link href="Bootstrap/cs/bootstrap.min.css" rel="stylesheet" />
      <%--datatable css--%>
     <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -132,7 +132,7 @@ div.content {
 
 </style>
 
-   <!--HEADER START-->
+ <!--HEADER START-->
               <div style="height:90px;position:fixed; border-bottom: solid;  z-index:1; background-color:white; width:100%; margin-top:-1px; " class="Header"> 
                  <div class ="row" style="height:90px;position:fixed;  z-index:1;background-color:white;width:100%;margin-top:0px; border-width:0.5px; border-bottom:solid " >
                         <div class="col-md-2"> 
@@ -140,7 +140,7 @@ div.content {
                                <img width:"20px" src="images/hype.%202023-04-17%20195423.png"/ style="   border: none;max-width: 100px;height: auto;" href="https://localhost:44367/homepage.aspx">
                              </a>
                        </div>      
-   <%--button for toggle--%>
+ <%--button for toggle--%>
                      <div class="col-md-8"> 
                          <nav style="margin-left:185px; height: 31px; width: 869px;" class="navbar navbar-toggleable-md fixed-top">
                                     <button id="nav-btn"class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarDiv"  aria-expanded="true" aria-label="Toggle navigation">
@@ -150,7 +150,7 @@ div.content {
                                     </nav>
                      </div> 
 
-    <%--FOR DROP DOWN BUTTON IN TOP--%> 
+  <%--FOR DROP DOWN BUTTON IN TOP--%> 
             <div class="col-md-1" style="border-right: inset;border-left: outset;"> 
                          <div class="dropdown show"  style="padding-top:10px">
                                   <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink"  data-toggle="dropdown" >
@@ -212,14 +212,14 @@ div.content {
                 <div class="col-md-2" id="side1"  style="padding-left: 0px; padding-right: 0px;" > 
                     <div class="sidebar" >    
                       <h4>&nbsp;&nbsp;My Account</h4>        
-                        <a href="Dashboard_main_page.aspx"><i class="fas fa-bars"></i> Dashboard</a>                    
+                         <a href="Dashboard_main_page.aspx"><i class="fas fa-bars"></i> Dashboard</a>
                                      <div class="dropdown">
                                           <button class="btn btn-secondary dropdown-toggle"  style="background: #f5f5f5; border-color: #f5f5f5;color:black" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fa-solid fa-file"></i>&nbsp;My Documents
                                           </button>
                                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <a class="dropdown-item" href="all_documents_page.aspx">All Documents</a>
-                                            <a class="dropdown-item" href="all_ai_image_page.aspx">All AI Images</a>                                   
+                                            <a class="dropdown-item" href="all_ai_image_page.aspx">All AI Images</a>                                    
                                           </div>
                                     </div>
                       <h4>Organize And Manage</h4>
@@ -229,7 +229,15 @@ div.content {
                           <a href="Speech_to_text.aspx"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
                           <a href="Dashboard_AI_Code_Page.aspx"><i class="fa-solid fa-code"></i> AI Code</a>        
                           <h4>&nbsp;&nbsp;Account</h4> 
-                          <a href="#"><i class="fa-solid fa-share-nodes"></i> Affiliate Program</a>                   
+                            <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle"  style="background: #f5f5f5; border-color: #f5f5f5;color:black" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa-solid fa-share-nodes"></i>&nbsp;Affiliate Program
+                                        </button>
+                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="Dashboard_Affiliate_Program.aspx">Affiliate Program</a>
+                                        <a class="dropdown-item" href="#">Withdrawls</a>                                  
+                                     </div>
+                                </div>
                           <a href="Membership_page2.aspx"><i class="fa-solid fa-gift"></i> Membership</a>
                           <a href="transaction_page.aspx"><i class="fa-solid fa-money-bill"></i> Transaction</a>
                           <a href="account_setting_page.aspx"><i class="fa-solid fa-gear"></i> Account Settings</a>
@@ -240,10 +248,12 @@ div.content {
                   <div  class ="main"> 
                     <div class="row"  >
                            <div class="col-md-6 "  style="padding-top: 200px;padding-left:100px;display:flex" >  
-                                     <div class="alldoc" style="display:flex"><h2>All Documents</h2><p><i class="fa-solid fa-chart-simple docicon"></i> 0/50,000 words used</p></div>
+                                     <div class="alldoc" style="display:flex"><h2 ">All Images</h2><p><i class="fa-solid fa-chart-simple docicon"></i> 0/500 words used</p></div>
                            </div>
                            <div class="col-md-6"   style="padding-top: 200px; padding-left:275px;">  
-                               <a class="btn btn-secondary" href="homepage.aspx" role="button">Home >> All Documents</a>                            
+                              
+                               <asp:Button class="btn btn-secondary"  ID="Button1" runat="server" Text="Home >> All AI Images" OnClick="Button1_Click1" /> 
+                               
                            </div>
                     </div>
                     <div class="row">                
@@ -251,20 +261,21 @@ div.content {
                          <div class="card" style="width: 80%; margin-top: 100px; margin-bottom: 100px;  margin-left: 100px; margin-right: 100px ";>                     
                            <div class="card-body">
                               <div class="row">
-                                  <div class="col">                       
-                                    <h4><i class="fa-solid fa-file"></i>&nbsp;All Documents</h4>                                                   
+                                 <div class="col">                       
+                                    <h4><i class="fa-solid fa-file"></i>&nbsp;All Images</h4>                                                   
                                   </div>
                              </div>
                              <div class="row">
                                 <div class="col"><hr></div>
                              </div>
+
                              <div class="row"  style="background-color: gainsboro;">
                                          <div class="col-md-3">  
-                                                 <label>Documents</label>                                  
+                                                 <label>Image</label>                                  
                                          </div>
 
                                        <div class="col-md-3">  
-                                             <label>Content</label>                                   
+                                             <label>Resolution</label>                                   
                                        </div>
                                          <div class="col-md-3">  
                                                  <label>Date</label>                                     
@@ -273,9 +284,10 @@ div.content {
                                             <label>Action</label>
                                        </div>
                              </div>
-                            <div class="row" style="padding-left: 310px;padding-right: 300px;">
+
+                            <div class="row" style="padding-left: 320px;padding-right: 300px;">
                                          <div>  
-                                                 <center>No Documents Found</center>                                       
+                                                 <center>No Image Found</center>                                       
                                          </div>                                      
                                 </div>                              
                             </div>
@@ -296,14 +308,13 @@ div.content {
                               
                                  
                                      <span style="color: Black;" class="footer-copyright-text">2023 Socius IGB Pvt Ltd, All right reserved</span>
-                                       <span style="float:right"> 
-                                         <a href="https://twitter.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-twitter"></i></a>
-                                         <a href="https://www.instagram.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>                           
-                                         <a href="https://www.linkedin.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>      
-                                         <a href="https://in.pinterest.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-pinterest"></i></a>                           
-                                         <a href="https://www.youtube.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a>
-                                       </span>
-                                     </div>                        
+                                           <span style="float:right"> 
+                                             <a href="https://twitter.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-twitter"></i></a>
+                                             <a href="https://www.instagram.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>                           
+                                             <a href="https://www.linkedin.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>      
+                                             <a href="https://in.pinterest.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-pinterest"></i></a>                           
+                                             <a href="https://www.youtube.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a>
+                                           </span></div>                        
                                    </div>                        
                              </div>
                           </div>
@@ -330,6 +341,5 @@ div.content {
 
         });
     </script>
-
 </body>
 </html>

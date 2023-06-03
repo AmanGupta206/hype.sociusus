@@ -53,9 +53,9 @@ body {
 }
 
 .btn {
-    border-style: none;
+   /* border-style: none;*/
     border-color: inherit;
-    border-width: medium;
+   /* border-width: medium;*/
     /*background-color: white;*/
     transform: scale(1);
     opacity: 1;
@@ -139,8 +139,9 @@ option {
         width: auto;
         position: fixed;
     }
-    .LeftSideBar{
-        display:none;
+
+    .LeftSideBar {
+        display: none;
     }
 
 
@@ -245,6 +246,7 @@ option {
     min-height: calc(100vh-60px);
     background: #f5f5f5;
 }
+
 .alldoc-body {
     padding-bottom: 100px;
 }
@@ -280,26 +282,63 @@ option {
         box-shadow: 0 7px 25px 0 inherit;
     }
 
-/*For the table given*/
-table {
-    font-family: arial, sans-serif;
-    min-width: 100%;
-}
-
-th {
-    border: 1px solid #dddddd;
-    text-align: center;
-    padding: 8px;
-    background-color: #dddddd;
-}
-.below_table_data {
-    margin-left: 38%;
-    margin-right: 37%;
-}
 
 @media(max-width:990px) {
     .cards {
         display: grid;
         grid-template-columns: repeat(1,1fr);
     }
+}
+
+#myTextarea {
+    width: 90%;
+    height: 30px;
+}
+.textarea2 {
+    width: 95%;
+    min-height: 70px;
+}
+
+.speechupload {
+    border: 1px solid #184698;
+    color: var(--white);
+    padding: 8px 15px;
+    border-radius: 8px;
+    background-color: #007bff;
+}
+
+
+/*style="
+border: 1px solid #184698;
+color: var(--white);
+padding: 8px 15px;
+border-radius: 8px;
+background-color: #007bff;
+"*/
+/*CSS of below text editor*/
+#textEditor {
+    width: 90%;
+    height: 320px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.toolbar {
+    margin-top: 10px;
+}
+
+    .toolbar button {
+        padding: 5px 10px;
+    }
+
+.fa-align-left:before {
+    content: "\f036";
+}
+
+.fa-align-center:before {
+    content: "\f037";
+}
+
+.fa-align-right:before {
+    content: "\f038";
 }

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace hype.sociusus
 {
-    public partial class Speech_to_text : System.Web.UI.Page
+    public partial class Speech_to_text1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

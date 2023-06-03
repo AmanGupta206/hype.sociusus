@@ -11,7 +11,7 @@ namespace hype.sociusus
 {
 
 
-    public partial class AI_image_page_in_dashboard1
+    public partial class AI_image_page_in_dashboard
     {
 
         /// <summary>

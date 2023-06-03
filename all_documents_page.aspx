@@ -151,7 +151,7 @@
                 <div  class ="main"> 
                     <div class="row FirstRow">
                            <div class="col-md-6">  
-                                     <h2>All Documents</h2>                             
+                                    <div class="alldoc" style="display:flex"><h2>All Documents</h2><p><i class="fa-solid fa-chart-simple docicon"></i> 0/50,000 words used</p></div>                            
                            </div>
                            <div class="col-md-6"   >  
                                <%--<asp:Button class="btn btn-secondary rtbtn"  ID="Button1" runat="server" Text="Home >> Dashboard"  /> --%>
@@ -181,7 +181,6 @@
                                       </tr>
                                     </table>
                                </div>
-
                                <div class="row">
                                     <div class="below_table_data">  
                                           No Documents Found                                      
