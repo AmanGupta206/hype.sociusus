@@ -11,7 +11,7 @@ namespace hype.sociusus
 {
 
 
-    public partial class account_setting_page1
+    public partial class account_setting_page
     {
 
         /// <summary>

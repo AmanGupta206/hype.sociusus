@@ -141,6 +141,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="account_setting_page%28non responsive%29.aspx" />
     <Content Include="account_setting_page.aspx" />
     <Content Include="AI_image_page_in_dashboard%28non responsive%29.aspx" />
     <Content Include="AI_image_page_in_dashboard.aspx" />
@@ -150,6 +151,7 @@
     <Content Include="all_documents_page.aspx" />
     <Content Include="App_Data\hype.sociusus.mdf" />
     <Content Include="Bootstrap\cs\bootstrap.min.css" />
+    <Content Include="css\account_setting_page.css" />
     <Content Include="css\AI_image_page_in_dashboard.css" />
     <Content Include="css\all_ai_image_page.css" />
     <Content Include="css\all_documents_page.css" />
@@ -157,6 +159,8 @@
     <Content Include="css\Dashboard_AI_Chat_Page.css" />
     <Content Include="css\Dashboard_AI_Code_Page.css" />
     <Content Include="css\Dashboard_main_page.css" />
+    <Content Include="css\Dashboard_withdrawal_page.css" />
+    <Content Include="css\Membership_page2.css" />
     <Content Include="css\Rich Text Editor.css" />
     <Content Include="css\Speech_to_text.css" />
     <Content Include="css\Templates_Blog_Ideas.css" />
@@ -168,6 +172,7 @@
     <Content Include="Dashboard_AI_Code_Page.aspx" />
     <Content Include="Dashboard_main_page.aspx" />
     <Content Include="dashboard_page%28old%29.aspx" />
+    <Content Include="Dashboard_withdrawal_page%28Non responsive%29.aspx" />
     <Content Include="Dashboard_withdrawal_page.aspx" />
     <Content Include="Footer_Contact_Page.aspx" />
     <Content Include="Footer_FAQ.aspx" />
@@ -2327,6 +2332,7 @@
     <Content Include="images\Social Media\Screenshot 2023-04-23 130429.png" />
     <Content Include="images\Websites\Screenshot 2023-04-24 085918.png" />
     <Content Include="membership_billing_page.aspx" />
+    <Content Include="Membership_page2%28non responsive%29.aspx" />
     <Content Include="Membership_page2.aspx" />
     <Content Include="Membership_plan_payment_sheet.aspx" />
     <Content Include="Rapid Api Demo.aspx" />
@@ -2346,6 +2352,13 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="account_setting_page%28non responsive%29.aspx.cs">
+      <DependentUpon>account_setting_page%28non responsive%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="account_setting_page%28non responsive%29.aspx.designer.cs">
+      <DependentUpon>account_setting_page%28non responsive%29.aspx</DependentUpon>
+    </Compile>
     <Compile Include="account_setting_page.aspx.cs">
       <DependentUpon>account_setting_page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2451,6 +2464,13 @@
     <Compile Include="dashboard_page%28old%29.aspx.designer.cs">
       <DependentUpon>dashboard_page%28old%29.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard_withdrawal_page%28Non responsive%29.aspx.cs">
+      <DependentUpon>Dashboard_withdrawal_page%28Non responsive%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard_withdrawal_page%28Non responsive%29.aspx.designer.cs">
+      <DependentUpon>Dashboard_withdrawal_page%28Non responsive%29.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard_withdrawal_page.aspx.cs">
       <DependentUpon>Dashboard_withdrawal_page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2509,6 +2529,13 @@
     </Compile>
     <Compile Include="membership_billing_page.aspx.designer.cs">
       <DependentUpon>membership_billing_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Membership_page2%28non responsive%29.aspx.cs">
+      <DependentUpon>Membership_page2%28non responsive%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Membership_page2%28non responsive%29.aspx.designer.cs">
+      <DependentUpon>Membership_page2%28non responsive%29.aspx</DependentUpon>
     </Compile>
     <Compile Include="Membership_page2.aspx.cs">
       <DependentUpon>Membership_page2.aspx</DependentUpon>

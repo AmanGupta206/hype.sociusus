@@ -11,7 +11,7 @@ namespace hype.sociusus
 {
 
 
-    public partial class Dashboard_withdrawal_page1
+    public partial class Dashboard_withdrawal_page
     {
 
         /// <summary>

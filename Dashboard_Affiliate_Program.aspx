@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-        <%--bootstrap css--%>
+   <%--bootstrap css--%>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" rel="stylesheet"/>    
     <%--datatable css--%>
     <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -209,11 +209,11 @@
 
                <div class="row">                
                        <div class="col-md-12 mx-auto alldoc-body">
-                         <div class="card" style="width: 80%; margin: 10%;";>                     
+                         <div class="card" style="width: 96%; margin: 2%;";>                     
                            <div class="card-body">
                               <div class="row">
                                   <div class="col">                       
-                                    <h4><i class="fa-solid fa-file"></i>&nbsp;All Documents</h4>                                                   
+                                    <h4><i class="fa-solid fa-money-bill"></i>&nbsp;Commissions</h4>                                                  
                                   </div>
                              </div>
                              <div class="row">
@@ -222,10 +222,10 @@
                                <div class="table-responsive">
                                    <table>
                                       <tr>
-                                        <th>Documents</th>
-                                        <th>Content</th>
-                                        <th>Date</th>
-                                        <th>Action</th>
+                                        <th>Commission</th>
+                                        <th>Total Amount</th>
+                                        <th>Commission Rate</th>
+                                        <th>Transaction ID</th>
                                       </tr>
                                     </table>
                                </div>
