@@ -40,7 +40,7 @@
             <div class="container-fluid" style="margin-left: 0px; margin-right: 0px; padding-left:0px;padding-right:0px; ">
                 <div class="row">
                     <div class="col-md-12" style="display:flex" >  
-                        <label style="min-height:50px;width:100%;padding:10px 10px 10px 135px;background-color:lightgoldenrodyellow;"><i class="fa fa-lock" aria-hidden="true">
+                        <label style="min-height:50px;width:100%;padding:10px 10px 10px 10px;background-color:lightgoldenrodyellow;"><i class="fa fa-lock" aria-hidden="true">
                             Your email address is not verified. Please verify your email address to use all the features.</i></label>  
                          <button onclick="myFunction()" style="background-color:gray;margin-left:0px;width:134px;height:48px">Verify Email</button>
                           <p id="click"></p>

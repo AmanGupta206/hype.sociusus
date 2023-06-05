@@ -1,17 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Footer_FAQ.aspx.cs" Inherits="hype.sociusus.Footer_FAQ" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="transaction_page(non responsive).aspx.cs" Inherits="hype.sociusus.transaction_page" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-        <!-- Required meta tags -->
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-
-     <!-- Bootstrap 4 CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
-
      <%--bootstrap css--%>
     <link href="Bootstrap/cs/bootstrap.min.css" rel="stylesheet" />
      <%--datatable css--%>
@@ -21,7 +14,7 @@
 
 
      <%--Custom css--%>
-  <%--  <link href="css/CustomStyleSheet.css" rel="stylesheet" />--%>
+    <link href="css/CustomStyleSheet.css" rel="stylesheet" />
 
 
     <%--jquery--%>
@@ -30,24 +23,29 @@
     <script src="Bootstrap/js/popper.min.js"></script>
     <%--bootstrap js--%>
     <script src="Bootstrap/js/bootstrap.min.js"></script>
+    <%--for graph--%>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>  
+<body>
     <form id="form1" runat="server">
-
 <!--HEADER START-->
-        <div style="position:sticky;  z-index:4;">
-            <div class="row" >
-                <div class="col-4 col-sm-8 col-md-10"> <%--for extra small than small than medium device--%>
-                    <a href="https://localhost:44367/homepage.aspx">
-                     <img src="images/hype.%202023-04-17%20195423.png"/ href="https://localhost:44367/homepage.aspx"/>
-                    </a>
-                 </div>
-                 <div class="col-4 col-sm-2 col-md-1 " style="padding-top: 3px;"> 
-                         <div class="dropdown show" >
+
+         
+              <div style="height:90px;position:fixed;  z-index:1;background-color:white;width:100%;margin-top:-1px;" class="Header"> 
+                 <div  style="height:90px;position:fixed;  z-index:1;background-color:white;width:100%;margin-top:0px;" class ="row" >
+                        <div class="col-md-10"> 
+                         <a href="https://localhost:44367/homepage.aspx">
+                           <img width:"20px" src="images/hype.%202023-04-17%20195423.png"/ style="   border: none;max-width: 100px;height: auto;" href="https://localhost:44367/homepage.aspx">
+                         </a>
+                        </div>
+
+<%--FOR DROP DOWN BUTTON IN TOP--%> 
+            <div class="col-md-1"> 
+                         <div class="dropdown show"  style="padding-top:10px">
                                   <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink"  data-toggle="dropdown" >
                                       <img src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20154408.png" />
                                   </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                   <a class="dropdown-item" href="Dashboard_main_page.aspx"><i class="fas fa-bars"></i> Dashboard</a>                           
                                   <a class="dropdown-item" href="template_page_inside_dashboard.aspx"><i class="fa-solid fa-layer-group"></i> Templates</a>
                                   <a class="dropdown-item" href="AI_image_page_in_dashboard.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
@@ -59,9 +57,12 @@
                                   <a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
                               </div>
                         </div>
-                 </div>
-                <div class="col-4 col-sm-2 col-md-1" style="padding-top: 15px;padding-left: 0;" > 
-                   <div <%--style="position: relative;display: inline-block; margin-bottom:auto ; padding-top:40px;"--%>>
+               </div>
+
+<%-- END OF CODE FOR DROP DOWN--%>
+              
+          <div class="col-md-1"> 
+                   <div style="position: relative;display: inline-block; margin-bottom:auto ; padding-top:40px;">
                        <label for="Language"></label>
                        <select name="Languge" id="Languge">
                            <option value="English">English</option>
@@ -90,48 +91,70 @@
                      </div>              
                 </div>
            </div>
-            </div>
-   
+        </div>
+                 
+
+              
+
+
+<!--HEADER ENDS-->
 <%--Codes for main body--%>
-       
-      <div style="height:calc(100%-60px);background-color: #f5f5f5; padding-bottom:100px" class ="main"> 
-          <div style="padding-top:5%; padding-bottom:5%;">
-               <div class="row">                    
-                           <div class="col-md-10 faqbtn"  >  
-                                     <h2 style="padding-left:3%;">Frequently Asked Question</h2>                             
-                           </div>                   
-                           <div class="col-md-2" >                        
-                               <a class="btn btn-secondary" href="homepage.aspx" role="button">Home >> FAQ</a>
-                           </div>                    
-                </div>
-          </div>
 
-<%--Main part of FAQ--%>    
-            <div class="row" >            
-                  <div class="col-md-12 mx-auto">
-                   <div style="margin-right: 4%;margin-left: 4%;">  
-                       <input class="btn btn-primary" type="button" id="togbtn" value="Lorem ipsum dolor sit amet"   style="width: 100%;  transition: 0.6s;"/>
-                   </div>
- 
+             <div style="height:calc(100%-60px);background-color: #f5f5f5;" class ="main"  > 
+                     <div class="row"  >
+                           <div class="col-md-6"  style="padding-top: 100px"; >  
+                                     <h2  style="padding-top: 100px; padding-left:250px">Transactions</h2>                             
+                           </div>
+                           <div class="col-md-6"   style="padding-top: 200px; padding-left:215px;">  
+                               <a class="btn btn-secondary" href="homepage.aspx" role="button">Home >> Transactions</a>                           
+                           </div>
+                      </div>
+            <div class="row">      
+               <div class="col-md-12 mx-auto">
+                 <div class="card" style="width: 800px; margin-top: 100px; margin-bottom: 100px;  margin-left: 255px; margin-right: 100px ";>
+                   <div class="card-body">
+                      <div class="row">
+                         <div class="col">                       
+                            <h4>&nbsp;Transactions</h4>  
+                             <div><b>Free</b></div>
+                          </div>
+                     </div>
+                     <div class="row">
+                        <div class="col"><hr></div>
+                     </div>
+                     <div class="row"  style="background-color: gainsboro;">
+                                 <div class="col-md-2">  
+                                         <label>Title</label>                                  
+                                 </div>
+                               <div class="col-md-2">  
+                                     <label>Amount</label>                                   
+                               </div>
+                                 <div class="col-md-2">  
+                                         <label>Premium</label>                                     
+                                 </div>
+                               <div class="col-md-2">  
+                                    <label>Payment Method</label>
+                               </div>
+                              <div class="col-md-2">  
+                                         <label>Date</label>                                     
+                                 </div>
+                               <div class="col-md-2">  
+                                    <label>Status</label>
+                               </div>
+                     </div>
 
-
-                   <div class="abc" style="padding: 10px 60px 60px;">      
-                       <div class="card">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vestibulum rhoncus libero ut condimentum. 
-                            Etiam pretium diam odio, vitae varius dolor tristique quis. Fusce sodales dolor commodo iaculis vehicula. 
-                            Maecenas laoreet leo massa, ut sagittis nulla pellentesque vel. In hac habitasse platea dictumst. In rhoncus vehicula tristique. 
-                            Fusce auctor iaculis ornare. 
-                            Duis condimentum est non massa lobortis, quis pellentesque nisi pulvinar. </p>
+                    <div class="row">
+                                 <div style="padding-left: 315px; padding-right: 315px">  
+                                         <label>No Result Found</label>                                      
+                                 </div>
+                              </div>
+                         </div>
                        </div>
-                    </div>           
-                 </div>                    
-            </div>
-
-      </div>
-           
-
-     <!-- Footer -->
-     <div id="footer" style="background-color:#303030">
+                     </div>
+                  </div>
+               </div>
+<!-- Footer -->
+      <div id="footer" style="background-color:#303030">
         <div class="footer-middle-section">
             <div class="container">
                 <div class="row">
@@ -147,7 +170,7 @@
                         <div style="color: white;" class="footer-links">
                             <h3>My Account</h3>
                                 <ul>
-                                   <li ><a style="color: white;" href="userlogin.aspx">Login</a></li>
+                                    <li ><a style="color: white;" href="userlogin.aspx">Login</a></li>
                                     <li><a style="color: white;" href="userregister.aspx">Register</a></li>                        
                                </ul>
                           </div>
@@ -179,34 +202,32 @@
                 <div class="container-fluid"  >
                      <div class="row">
                         <div class="col-xl-12">
-                          <div style="color: white;" class="footer-row">             
+                          <div style="color: white;" class="footer-row">
+                              
+                                 
                                      <span style="float:left" class="footer-copyright-text">2023 Socius IGB Pvt Ltd, All right reserved</span>
-                                         <span style="float:right"> <a href="https://twitter.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-twitter"></i> </a>
-                                         <a href="https://www.instagram.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>                           
-                                         <a href="https://www.linkedin.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>      
-                                         <a href="https://in.pinterest.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-pinterest"></i></a>                           
-                                         <a href="https://www.youtube.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a></span>
+                              
+
+                                         <span style="float:right"> <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-twitter"></i> </a>
+                               
+
+                                  
+                                        <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>
+                            
+
+                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>
+                             
+                      
+                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-pinterest"></i></a>
+                             
+
+                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a></span></div>                        
                                     </div>                        
-                                </div>                        
-                            </div>
-                        </div>
-                    </div>
-            </div>       
+                               </div>
+                           </div>
+                      </div>
+                </div>
 
     </form>
-
-<%--Script for Hide and show / Toggle Button--%>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script>
-    $(document).ready(function () {
-        $("#togbtn").on("click", function () {
-
-            $(".abc").toggle();
-
-        });
-       
-    });
-</script>
-
 </body>
 </html>

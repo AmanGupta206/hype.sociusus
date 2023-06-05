@@ -161,9 +161,11 @@
     <Content Include="css\Dashboard_main_page.css" />
     <Content Include="css\Dashboard_withdrawal_page.css" />
     <Content Include="css\Membership_page2.css" />
+    <Content Include="css\recent_blog_internal_page.css" />
     <Content Include="css\Rich Text Editor.css" />
     <Content Include="css\Speech_to_text.css" />
     <Content Include="css\Templates_Blog_Ideas.css" />
+    <Content Include="css\transaction_page.css" />
     <Content Include="Dashboard_Affiliate_Program%28non responsive%29.aspx" />
     <Content Include="Dashboard_Affiliate_Program.aspx" />
     <Content Include="Dashboard_AI_Chat_Page.aspx" />
@@ -2336,6 +2338,7 @@
     <Content Include="Membership_page2.aspx" />
     <Content Include="Membership_plan_payment_sheet.aspx" />
     <Content Include="Rapid Api Demo.aspx" />
+    <Content Include="recent_blog_internal_page%28non responsive%29.aspx" />
     <Content Include="recent_blog_internal_page.aspx" />
     <Content Include="Rich Text Editor.aspx" />
     <Content Include="Speech_to_text%28not responsive%29.aspx" />
@@ -2344,6 +2347,7 @@
     <Content Include="Templates_Blog_Ideas.aspx" />
     <Content Include="template_page_inside_dashboard.aspx" />
     <Content Include="testimonials_inner_page.aspx" />
+    <Content Include="transaction_page%28non responsive%29.aspx" />
     <Content Include="transaction_page.aspx" />
     <Content Include="upgrade_membership_page2.aspx" />
     <Content Include="userlogin.aspx" />
@@ -2559,6 +2563,13 @@
     <Compile Include="Rapid Api Demo.aspx.designer.cs">
       <DependentUpon>Rapid Api Demo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="recent_blog_internal_page%28non responsive%29.aspx.cs">
+      <DependentUpon>recent_blog_internal_page%28non responsive%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recent_blog_internal_page%28non responsive%29.aspx.designer.cs">
+      <DependentUpon>recent_blog_internal_page%28non responsive%29.aspx</DependentUpon>
+    </Compile>
     <Compile Include="recent_blog_internal_page.aspx.cs">
       <DependentUpon>recent_blog_internal_page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2621,6 +2632,13 @@
     </Compile>
     <Compile Include="testimonials_inner_page.aspx.designer.cs">
       <DependentUpon>testimonials_inner_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="transaction_page%28non responsive%29.aspx.cs">
+      <DependentUpon>transaction_page%28non responsive%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="transaction_page%28non responsive%29.aspx.designer.cs">
+      <DependentUpon>transaction_page%28non responsive%29.aspx</DependentUpon>
     </Compile>
     <Compile Include="transaction_page.aspx.cs">
       <DependentUpon>transaction_page.aspx</DependentUpon>

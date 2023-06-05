@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="transaction_page.aspx.cs" Inherits="hype.sociusus.transaction_page" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="transaction_page.aspx.cs" Inherits="hype.sociusus.transaction_page1" %>
 
 <!DOCTYPE html>
 
@@ -6,16 +6,15 @@
 <head runat="server">
     <title></title>
      <%--bootstrap css--%>
-    <link href="Bootstrap/cs/bootstrap.min.css" rel="stylesheet" />
-     <%--datatable css--%>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" rel="stylesheet"/>    
+    <%--datatable css--%>
     <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
      <%--fontawesome css--%>
     <link href="fontawesome/css/all.css" rel="stylesheet" />
 
 
      <%--Custom css--%>
-    <link href="css/CustomStyleSheet.css" rel="stylesheet" />
-
+    <link href="css/transaction_page.css" rel="stylesheet" />
 
     <%--jquery--%>
     <script src="Bootstrap/js/jquery-3.3.1.slim.min.js"></script>
@@ -23,60 +22,57 @@
     <script src="Bootstrap/js/popper.min.js"></script>
     <%--bootstrap js--%>
     <script src="Bootstrap/js/bootstrap.min.js"></script>
-    <%--for graph--%>
-   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+
+   <%--  For responsiveness--%>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 </head>
 <body>
     <form id="form1" runat="server">
-<!--HEADER START-->
+ <%-- Header Code--%>
+    <div class="topbar">
+            <div class="logo">       
+                    <a href="https://localhost:44367/homepage.aspx">
+                        <img width:"20px" src="images/hype.%202023-04-17%20195423.png"/ style="border: none;max-width: 100px;height: auto;"/>
+                    </a>              
+            </div>
 
-         
-              <div style="height:90px;position:fixed;  z-index:1;background-color:white;width:100%;margin-top:-1px;" class="Header"> 
-                 <div  style="height:90px;position:fixed;  z-index:1;background-color:white;width:100%;margin-top:0px;" class ="row" >
-                        <div class="col-md-10"> 
-                         <a href="https://localhost:44367/homepage.aspx">
-                           <img width:"20px" src="images/hype.%202023-04-17%20195423.png"/ style="   border: none;max-width: 100px;height: auto;" href="https://localhost:44367/homepage.aspx">
-                         </a>
-                        </div>
+            <div></div>
+       
 
-<%--FOR DROP DOWN BUTTON IN TOP--%> 
-            <div class="col-md-1"> 
-                         <div class="dropdown show"  style="padding-top:10px">
-                                  <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink"  data-toggle="dropdown" >
-                                      <img src="images/Dashboard%20Icons%20images/Screenshot%202023-05-02%20154408.png" />
-                                  </a>
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                  <a class="dropdown-item" href="Dashboard_main_page.aspx"><i class="fas fa-bars"></i> Dashboard</a>                           
-                                  <a class="dropdown-item" href="template_page_inside_dashboard.aspx"><i class="fa-solid fa-layer-group"></i> Templates</a>
-                                  <a class="dropdown-item" href="AI_image_page_in_dashboard.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
-                                  <a class="dropdown-item" href="Dashboard_AI_Chat_Page.aspx"><i class="fa-solid fa-comment"></i> AI Chat</a>
-                                  <a class="dropdown-item" href="Speech_to_text.aspx"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
-                                  <a class="dropdown-item" href="all_documents_page.aspx"><i class="fa-solid fa-file"></i> All Documents</a>
-                                  <a class="dropdown-item" href="Membership_page2.aspx"><i class="fa-solid fa-gift"></i> Membership</a>
-                                  <a class="dropdown-item" href="account_setting_page.aspx "><i class="fa-solid fa-gear"></i> Account Settings</a>
-                                  <a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
-                              </div>
-                        </div>
-               </div>
+            <div class="dropdown top">
+                        <a class="btn btn-secondary " href="#" role="button" id="dropdownMenuLink"  data-toggle="dropdown" >
+                            <img class="avatarimg" src="images/default_user.png" />
+                        </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="Dashboard_main_page.aspx"><i class="fas fa-bars"></i> Dashboard</a>
+                        <a class="dropdown-item" href="template_page_inside_dashboard.aspx"><i class="fa-solid fa-layer-group"></i> Templates</a>
+                        <a class="dropdown-item" href="AI_image_page_in_dashboard.aspx"><i class="fa-solid fa-image"></i> AI Images</a>
+                        <a class="dropdown-item" href="Dashboard_AI_Chat_Page.aspx"><i class="fa-solid fa-comment"></i> AI Chat</a>
+                        <a class="dropdown-item" href="Speech_to_text.aspx"><i class="fa-solid fa-headphones"></i> Speech to Text</a>
+                        <a class="dropdown-item" href="all_documents_page.aspx"><i class="fa-solid fa-file"></i> All Documents</a>
+                        <a class="dropdown-item" href="Membership_page2.aspx"><i class="fa-solid fa-gift"></i> Membership</a>
+                        <a class="dropdown-item" href="account_setting_page.aspx "><i class="fa-solid fa-gear"></i> Account Settings</a>
+                        <a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                    </div>
+            </div>
 
-<%-- END OF CODE FOR DROP DOWN--%>
-              
-          <div class="col-md-1"> 
-                   <div style="position: relative;display: inline-block; margin-bottom:auto ; padding-top:40px;">
-                       <label for="Language"></label>
-                       <select name="Languge" id="Languge">
-                           <option value="English">English</option>
+            <div class="selectlang">
+                <select id="langbtn" class="popup-with-zoom-anim button ripple-effect">
+                            <option value="EN">English</option>
+                            <option value="Ta">Tamil</option>
+                            <option value="Te">Telugu</option>            
                            <option value=" Arabic "> Arabic </option>
                            <option value="Bangali">Bangali</option>
                            <option value="Bulgarian">Bulgarian</option>
                            <option value="Chinese">Chinese</option>
-                           <option value="English">English</option>
                            <option value="French">French</option>
                            <option value="German">German</option>
                            <option value="Hebrew">Hebrew</option>
                            <option value="Hindi">Hindi</option>
-                           <option value="Italian">Italian</option>
-                           <option value="Hindi">Hindi</option>
+                           <option value="Italian">Italian</option>                  
                            <option value="Japanese">Japanese</option>
                            <option value="Polish">Polish</option>
                            <option value="Romanian">Romanian</option>
@@ -87,74 +83,66 @@
                            <option value="Turkish">Turkish</option>
                            <option value="Urdu">Urdu</option>
                            <option value="Vietnamese">Vietnamese</option>
-                        </select>
-                     </div>              
-                </div>
-           </div>
+                </select>
+            </div>
         </div>
-                 
+   <%--sidebar and main part code starts--%>
+            
+    <div class="container-fluid">
+        <div class="row MainRow">
+         
 
-              
+            <div class="col-lg-12 RightMainPart">
 
-
-<!--HEADER ENDS-->
-<%--Codes for main body--%>
-
-             <div style="height:calc(100%-60px);background-color: #f5f5f5;" class ="main"  > 
-                     <div class="row"  >
-                           <div class="col-md-6"  style="padding-top: 100px"; >  
-                                     <h2  style="padding-top: 100px; padding-left:250px">Transactions</h2>                             
+                <div  class ="main"> 
+                    <div class="row FirstRow">
+                           <div class="col-md-6">  
+                                    <div class="alldoc" style="display:flex; padding-left: 15%;"><h2>Transactions</h2></div>                            
                            </div>
-                           <div class="col-md-6"   style="padding-top: 200px; padding-left:215px;">  
-                               <a class="btn btn-secondary" href="homepage.aspx" role="button">Home >> Transactions</a>                           
+                           <div class="col-md-6"  style="padding-right: 9%;" >  
+                             
+                               <a class="btn btn-secondary rtbtn" href="homepage.aspx" role="button">Home >> Transactions</a>
                            </div>
-                      </div>
-            <div class="row">      
-               <div class="col-md-12 mx-auto">
-                 <div class="card" style="width: 800px; margin-top: 100px; margin-bottom: 100px;  margin-left: 255px; margin-right: 100px ";>
-                   <div class="card-body">
-                      <div class="row">
-                         <div class="col">                       
-                            <h4>&nbsp;Transactions</h4>  
-                             <div><b>Free</b></div>
-                          </div>
-                     </div>
-                     <div class="row">
-                        <div class="col"><hr></div>
-                     </div>
-                     <div class="row"  style="background-color: gainsboro;">
-                                 <div class="col-md-2">  
-                                         <label>Title</label>                                  
-                                 </div>
-                               <div class="col-md-2">  
-                                     <label>Amount</label>                                   
+                    </div>
+                <%-- main part code--%>
+               <div class="row">                
+                       <div class="col-md-12 mx-auto alldoc-body">
+                         <div class="card" style="width: 80%; margin: 10%;";>                     
+                           <div class="card-body">
+                              <div class="row">
+                                  <div class="col">                       
+                                    <h4>Transactions (Free)</h4>                                                   
+                                  </div>
+                             </div>
+                             <div class="row">
+                                <div class="col"><hr></div>
+                             </div>
+                               <div class="table-responsive">
+                                   <table>
+                                      <tr>
+                                        <th>Title</th>
+                                        <th>Amount</th>
+                                        <th>Premium</th>
+                                        <th>Payment Method</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                      </tr>
+                                    </table>
                                </div>
-                                 <div class="col-md-2">  
-                                         <label>Premium</label>                                     
-                                 </div>
-                               <div class="col-md-2">  
-                                    <label>Payment Method</label>
-                               </div>
-                              <div class="col-md-2">  
-                                         <label>Date</label>                                     
-                                 </div>
-                               <div class="col-md-2">  
-                                    <label>Status</label>
-                               </div>
-                     </div>
+                               <div class="row">
+                                    <div class="below_table_data">  
+                                          No Result Found                                      
+                                    </div>                                      
+                                </div>                              
+                            </div>
+                        </div>
+                    </div>
+                 </div>             
+            </div>
 
-                    <div class="row">
-                                 <div style="padding-left: 315px; padding-right: 315px">  
-                                         <label>No Result Found</label>                                      
-                                 </div>
-                              </div>
-                         </div>
-                       </div>
-                     </div>
-                  </div>
-               </div>
-<!-- Footer -->
-      <div id="footer" style="background-color:#303030">
+
+     <!-- Footer -->
+     <div id="footer" style="background-color:#303030">
         <div class="footer-middle-section">
             <div class="container">
                 <div class="row">
@@ -170,7 +158,7 @@
                         <div style="color: white;" class="footer-links">
                             <h3>My Account</h3>
                                 <ul>
-                                    <li ><a style="color: white;" href="userlogin.aspx">Login</a></li>
+                                   <li ><a style="color: white;" href="userlogin.aspx">Login</a></li>
                                     <li><a style="color: white;" href="userregister.aspx">Register</a></li>                        
                                </ul>
                           </div>
@@ -201,33 +189,25 @@
         <div class="footer-bottom-section">                   
                 <div class="container-fluid"  >
                      <div class="row">
-                        <div class="col-xl-12">
-                          <div style="color: white;" class="footer-row">
-                              
-                                 
+                        <div class="col-xl-12" style="background-color:#303030;">
+                          <div style="color: white;" class="footer-row">             
                                      <span style="float:left" class="footer-copyright-text">2023 Socius IGB Pvt Ltd, All right reserved</span>
-                              
-
-                                         <span style="float:right"> <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-twitter"></i> </a>
-                               
-
-                                  
-                                        <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>
-                            
-
-                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>
-                             
-                      
-                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-pinterest"></i></a>
-                             
-
-                                         <a href="#" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a></span></div>                        
+                                         <span style="float:right"> <a href="https://twitter.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-twitter"></i> </a>
+                                         <a href="https://www.instagram.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>                           
+                                         <a href="https://www.linkedin.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>      
+                                         <a href="https://in.pinterest.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-pinterest"></i></a>                           
+                                         <a href="https://www.youtube.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a></span>
                                     </div>                        
-                               </div>
-                           </div>
-                      </div>
-                </div>
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+            </div>       
+                 
+            </div>
+       </div>
+    </div>
+ </form>
 
-    </form>
 </body>
 </html>
