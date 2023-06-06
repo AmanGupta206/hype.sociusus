@@ -21,6 +21,7 @@ body {
     grid-template-columns: 2fr 8fr 1fr 1fr;
     align-items: center;
     z-index: 999;
+    top:0px;
 }
 
 .logo {
@@ -242,9 +243,13 @@ option {
         box-shadow: 0 7px 25px 0 inherit;
     }
 
-.blogicon {
+.blogicon  {
+    padding: 1px;
+}
+
+.blogicon a {
     padding: 8px;
-} 
+}
 
 @media(max-width:990px) {
     .cards {

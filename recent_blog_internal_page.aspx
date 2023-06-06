@@ -106,14 +106,14 @@
                     </div>
                 <%--Recent blogs codes start--%>
                 <div class="row">
-                   <div class="col-md-12 mx-auto" style="display: flex;">
+                
                      <div class="col-md-8"  style="background-color: rgba(230, 230, 230, 0.1);">
                             <div class="container_of_recent_blog  bg-light" >
                                 <div style="margin-left: 0px; margin-top: 50px; background-color: #f5f5f5; padding-left: 25%;">
                                     <div style="margin-top: 0px; margin-bottom: 45px;">
                                         <h3 class="text-dark">Recent Blog</h3>
                                     </div>
-                                    <div class="row" style="height: 325px;">
+                                    <div class="row">
 
                                         <div class="col-md-4">
                                             <a href="#">
@@ -121,7 +121,7 @@
                                                 <div class="top-bottom text-dark">Admin</div>
                                             </a>
                                         </div>
-                                        <div class="col-md-6" style="margin-bottom: 188px; background-color: white;">
+                                        <div class="col-md-6" style=" background-color: white;">
                                             <div class="bottom-left text-dark">
                                                 <h4 style="background-color: white;">First Blog</h4>
                                                 <p class="text-dark" style="background-color: white;">Consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore    et dolore magna aliqua Ut eni...</p>
@@ -215,16 +215,19 @@
                 <p style="padding-top: 10px;"><span style="background-color: rgba(0,123,255,.25);">travel fun</span>&nbsp;
                     <span style="background-color: rgba(0,123,255,.25);">love</span></p>
                 <div>
-                    <h3>Social Profiles</h3>
-                    <i class="fa-brands fa-facebook-f  blogicon"></i>
-                    <i class="fa-brands fa-twitter blogicon"></i>
-                    <i class="fa-brands fa-instagram blogicon"></i>
-                    <i class="fa-brands fa-linkedin-in blogicon"></i>
-                    <i class="fa-brands fa-pinterest  blogicon"></i>
-                </div>
+                        <h3>Social Profiles</h3>
+
+                        <span class="blogicon">
+                            <a href="https://twitter.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://in.pinterest.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-pinterest"></i></a>
+                            <a href="https://www.youtube.com/" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a>
+                        </span>
+                    </div>
 
             </div>  
-        </div>
+        
     </div>          
             </div>
 

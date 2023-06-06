@@ -11,7 +11,7 @@ namespace hype.sociusus
 {
 
 
-    public partial class Footer_Feedback_Page1
+    public partial class Footer_Feedback_Page
     {
 
         /// <summary>
