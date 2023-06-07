@@ -160,6 +160,7 @@
     <Content Include="css\Dashboard_AI_Code_Page.css" />
     <Content Include="css\Dashboard_main_page.css" />
     <Content Include="css\Dashboard_withdrawal_page.css" />
+    <Content Include="css\Footer_Contact_Page.css" />
     <Content Include="css\Footer_Feedback_Page.css" />
     <Content Include="css\Membership_page2.css" />
     <Content Include="css\recent_blog_internal_page.css" />
@@ -177,6 +178,7 @@
     <Content Include="dashboard_page%28old%29.aspx" />
     <Content Include="Dashboard_withdrawal_page%28Non responsive%29.aspx" />
     <Content Include="Dashboard_withdrawal_page.aspx" />
+    <Content Include="Footer_Contact_Page%28non responsive%29.aspx" />
     <Content Include="Footer_Contact_Page.aspx" />
     <Content Include="Footer_FAQ.aspx" />
     <Content Include="Footer_Feedback_Page%28non responsive%29.aspx" />
@@ -2483,6 +2485,13 @@
     </Compile>
     <Compile Include="Dashboard_withdrawal_page.aspx.designer.cs">
       <DependentUpon>Dashboard_withdrawal_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Footer_Contact_Page%28non responsive%29.aspx.cs">
+      <DependentUpon>Footer_Contact_Page%28non responsive%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Footer_Contact_Page%28non responsive%29.aspx.designer.cs">
+      <DependentUpon>Footer_Contact_Page%28non responsive%29.aspx</DependentUpon>
     </Compile>
     <Compile Include="Footer_Contact_Page.aspx.cs">
       <DependentUpon>Footer_Contact_Page.aspx</DependentUpon>
