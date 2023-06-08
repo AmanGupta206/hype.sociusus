@@ -11,7 +11,7 @@ namespace hype.sociusus
 {
 
 
-    public partial class testimonials_inner_page1
+    public partial class Membership_plan_payment_sheet
     {
 
         /// <summary>

@@ -163,10 +163,12 @@
     <Content Include="css\Footer_Contact_Page.css" />
     <Content Include="css\Footer_Feedback_Page.css" />
     <Content Include="css\Membership_page2.css" />
+    <Content Include="css\Membership_plan_payment_sheet.css" />
     <Content Include="css\recent_blog_internal_page.css" />
     <Content Include="css\Rich Text Editor.css" />
     <Content Include="css\Speech_to_text.css" />
     <Content Include="css\Templates_Blog_Ideas.css" />
+    <Content Include="css\testimonials_inner_page.css" />
     <Content Include="css\transaction_page.css" />
     <Content Include="Dashboard_Affiliate_Program%28non responsive%29.aspx" />
     <Content Include="Dashboard_Affiliate_Program.aspx" />
@@ -2340,6 +2342,7 @@
     <Content Include="membership_billing_page.aspx" />
     <Content Include="Membership_page2%28non responsive%29.aspx" />
     <Content Include="Membership_page2.aspx" />
+    <Content Include="Membership_plan_payment_sheet%28non responsive%29.aspx" />
     <Content Include="Membership_plan_payment_sheet.aspx" />
     <Content Include="Rapid Api Demo.aspx" />
     <Content Include="recent_blog_internal_page%28non responsive%29.aspx" />
@@ -2350,6 +2353,7 @@
     <Content Include="Templates Subpages\Blog Idea.aspx" />
     <Content Include="Templates_Blog_Ideas.aspx" />
     <Content Include="template_page_inside_dashboard.aspx" />
+    <Content Include="testimonials_inner_page%28non responsive%29.aspx" />
     <Content Include="testimonials_inner_page.aspx" />
     <Content Include="transaction_page%28non responsive%29.aspx" />
     <Content Include="transaction_page.aspx" />
@@ -2566,6 +2570,13 @@
     <Compile Include="Membership_page2.aspx.designer.cs">
       <DependentUpon>Membership_page2.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Membership_plan_payment_sheet%28non responsive%29.aspx.cs">
+      <DependentUpon>Membership_plan_payment_sheet%28non responsive%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Membership_plan_payment_sheet%28non responsive%29.aspx.designer.cs">
+      <DependentUpon>Membership_plan_payment_sheet%28non responsive%29.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Membership_plan_payment_sheet.aspx.cs">
       <DependentUpon>Membership_plan_payment_sheet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2643,6 +2654,13 @@
     </Compile>
     <Compile Include="template_page_inside_dashboard.aspx.designer.cs">
       <DependentUpon>template_page_inside_dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testimonials_inner_page%28non responsive%29.aspx.cs">
+      <DependentUpon>testimonials_inner_page%28non responsive%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testimonials_inner_page%28non responsive%29.aspx.designer.cs">
+      <DependentUpon>testimonials_inner_page%28non responsive%29.aspx</DependentUpon>
     </Compile>
     <Compile Include="testimonials_inner_page.aspx.cs">
       <DependentUpon>testimonials_inner_page.aspx</DependentUpon>

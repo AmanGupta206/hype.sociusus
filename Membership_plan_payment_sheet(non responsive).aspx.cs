@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace hype.sociusus
 {
-    public partial class Membership_plan_payment_sheet1 : System.Web.UI.Page
+    public partial class Membership_plan_payment_sheet : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
